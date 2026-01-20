@@ -51,7 +51,7 @@ export default function Header() {
               <img 
                 src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`}
                 alt="Bienestar y Cuidado en el Hogar Logo"
-                className="w-12 h-12 lg:w-16 lg:h-16 object-contain"
+                className="w-2/3 lg:w-1/2 h-12 object-contain"
               />
             </motion.div>
           </Link>
