@@ -68,7 +68,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center space-x-3">
               <div className="flex justify-center items-center w-12 h-12">
                 <img 
-                  src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`} 
+                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=80&h=80&fit=crop&crop=center" 
                   alt="Bienestar y Cuidado en el Hogar" 
                   className="w-auto h-12 object-contain"
                 />

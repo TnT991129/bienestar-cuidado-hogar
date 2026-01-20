@@ -49,7 +49,7 @@ export default function Header() {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <img 
-                src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`} 
+                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=200&h=80&fit=crop&crop=center" 
                 alt="Bienestar y Cuidado en el Hogar" 
                 className="lg:w-2/3 object-contain"
               />
