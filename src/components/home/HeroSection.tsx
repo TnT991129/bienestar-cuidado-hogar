@@ -258,7 +258,7 @@ export default function HeroSection() {
               {/* Hero Image */}
               <div className="relative bg-gradient-to-br from-primary-100 to-secondary-100 shadow-2xl rounded-2xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=600&h=400&fit=crop&crop=center"
+                  src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/imagen hero.png`}
                   alt="Cuidadora profesional con adulto mayor sonriendo en el hogar"
                   className="rounded-2xl w-full h-auto object-cover"
                 />
