@@ -7,24 +7,16 @@ import { Bars3Icon, XMarkIcon, PhoneIcon, LanguageIcon } from '@heroicons/react/
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-const navigation = [
-  { name: 'Inicio', href: '/' },
-  { name: 'Sobre Nosotros', href: '/sobre-nosotros' },
-  { name: 'Servicios', href: '/servicios' },
-  { name: 'Nuestro Equipo', href: '/equipo' },
-  { name: 'Contacto', href: '/contacto' },
-]
-
-const languages = [
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-]
-
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
   const pathname = usePathname()
+
+  const languages = [
+    { code: 'es' as const, name: 'Español', flag: '🇪🇸' },
+    { code: 'en' as const, name: 'English', flag: '🇺🇸' },
+  ]
 
   const navigation = [
     { name: t('nav.home'), href: '/' },
@@ -267,12 +259,15 @@ export default function Header() {
                   <div className="space-y-4 py-6">
                     {/* Language Selector Mobile */}
                     <div className="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
-                      <span className="font-medium text-gray-700 text-sm">Idioma:</span>
+                      <span className="font-medium text-gray-700 text-sm">{t('nav.language') || 'Idioma'}:</span>
                       <div className="flex space-x-2">
                         {languages.map((lang) => (
                           <button
                             key={lang.code}
-                            onClick={() => handleLanguageChange(lang.code)}
+                            onClick={() => {
+                              console.log('Mobile language change to:', lang.code);
+                              handleLanguageChange(lang.code);
+                            }}
                             className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-200 flex items-center space-x-1 ${
                               language === lang.code
                                 ? 'bg-blue-600 text-white'

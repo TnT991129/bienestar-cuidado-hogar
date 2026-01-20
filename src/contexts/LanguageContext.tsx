@@ -14,7 +14,12 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('es')
+  const [language, setLanguageState] = useState<Language>('es')
+
+  const setLanguage = (lang: Language) => {
+    console.log('Setting language to:', lang)
+    setLanguageState(lang)
+  }
 
   const t = (key: string): string => {
     const keys = key.split('.')
@@ -24,7 +29,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       if (value && typeof value === 'object' && k in value) {
         value = value[k]
       } else {
-        console.warn(`Translation key not found: ${key}`)
+        console.warn(`Translation key not found: ${key} for language: ${language}`)
         return key
       }
     }

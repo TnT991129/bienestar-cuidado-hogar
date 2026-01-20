@@ -8,7 +8,8 @@ export const translations = {
       team: 'Nuestro Equipo',
       contact: 'Contacto',
       callNow: 'Llamar Ahora',
-      freeEvaluation: 'Evaluación Gratuita'
+      freeEvaluation: 'Evaluación Gratuita',
+      language: 'Idioma'
     },
     // Hero Section
     hero: {
@@ -105,7 +106,8 @@ export const translations = {
       team: 'Our Team',
       contact: 'Contact',
       callNow: 'Call Now',
-      freeEvaluation: 'Free Evaluation'
+      freeEvaluation: 'Free Evaluation',
+      language: 'Language'
     },
     // Hero Section
     hero: {
