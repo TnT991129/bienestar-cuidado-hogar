@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import Image from 'next/image'
 import { 
   HeartIcon, 
   ShieldCheckIcon, 
@@ -274,13 +273,10 @@ export default function HeroSection() {
             <div className="mx-auto w-full max-w-sm lg:max-w-md xl:max-w-lg">
               {/* Hero Image */}
               <div className="relative bg-gradient-to-br from-primary-100 to-secondary-100 shadow-2xl rounded-2xl overflow-hidden">
-                <Image
-                  src="/imagen-hero.png"
+                <img
+                  src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/imagen-hero.png`}
                   alt="Cuidadora profesional con adulto mayor sonriendo en el hogar"
-                  width={500}
-                  height={380}
                   className="rounded-2xl w-full h-auto object-cover"
-                  priority
                 />
                 {/* Overlay gradient for better text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl" />

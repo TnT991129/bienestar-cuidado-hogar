@@ -49,9 +49,9 @@ export default function Header() {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <img 
-                src="/logo.png" 
+                src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`} 
                 alt="Bienestar y Cuidado en el Hogar" 
-                className="w-2/3 object-contain"
+                className="lg:w-2/3 object-contain"
               />
             </motion.div>
           </Link>
