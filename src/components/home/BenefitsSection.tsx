@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 import { 
   HeartIcon,
   HomeIcon,
@@ -50,6 +51,47 @@ const benefits = [
 ]
 
 export default function BenefitsSection() {
+  const { t } = useLanguage()
+
+  const benefits = [
+    {
+      id: 1,
+      name: t('benefits.items.personalized.title'),
+      description: t('benefits.items.personalized.description'),
+      icon: HeartIcon,
+    },
+    {
+      id: 2,
+      name: t('benefits.items.professionals.title'),
+      description: t('benefits.items.professionals.description'),
+      icon: UserGroupIcon,
+    },
+    {
+      id: 3,
+      name: t('benefits.items.availability.title'),
+      description: t('benefits.items.availability.description'),
+      icon: ClockIcon,
+    },
+    {
+      id: 4,
+      name: t('benefits.items.security.title'),
+      description: t('benefits.items.security.description'),
+      icon: ShieldCheckIcon,
+    },
+    {
+      id: 5,
+      name: t('benefits.items.flexible.title'),
+      description: t('benefits.items.flexible.description'),
+      icon: HomeIcon,
+    },
+    {
+      id: 6,
+      name: t('benefits.items.quality.title'),
+      description: t('benefits.items.quality.description'),
+      icon: StarIcon,
+    }
+  ]
+
   return (
     <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 py-16 sm:py-20 overflow-hidden">
       <div className="relative mx-auto px-6 lg:px-8 max-w-7xl">
@@ -61,10 +103,10 @@ export default function BenefitsSection() {
           viewport={{ once: true }}
         >
           <h2 className="mb-4 font-bold text-gray-900 text-3xl sm:text-4xl tracking-tight">
-            ¿Por Qué Elegirnos?
+            {t('benefits.title')}
           </h2>
           <p className="text-gray-600 text-lg leading-7">
-            Calidad y confianza en cada detalle.
+            {t('benefits.description')}
           </p>
         </motion.div>
 

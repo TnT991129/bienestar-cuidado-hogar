@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Bars3Icon, XMarkIcon, PhoneIcon, LanguageIcon } from '@heroicons/react/24/outline'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const navigation = [
   { name: 'Inicio', href: '/' },
@@ -22,13 +23,20 @@ const languages = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false)
-  const [currentLanguage, setCurrentLanguage] = useState('es')
+  const { language, setLanguage, t } = useLanguage()
   const pathname = usePathname()
 
-  const handleLanguageChange = (langCode: string) => {
-    setCurrentLanguage(langCode)
+  const navigation = [
+    { name: t('nav.home'), href: '/' },
+    { name: t('nav.about'), href: '/sobre-nosotros' },
+    { name: t('nav.services'), href: '/servicios' },
+    { name: t('nav.team'), href: '/equipo' },
+    { name: t('nav.contact'), href: '/contacto' },
+  ]
+
+  const handleLanguageChange = (langCode: 'es' | 'en') => {
+    setLanguage(langCode)
     setLanguageMenuOpen(false)
-    // Aquí implementarías la lógica real de cambio de idioma
   }
 
   return (
@@ -118,8 +126,8 @@ export default function Header() {
               whileTap={{ scale: 0.98 }}
             >
               <LanguageIcon className="w-4 h-4 text-gray-600" />
-              <span className="text-base">{languages.find(lang => lang.code === currentLanguage)?.flag}</span>
-              <span className="font-semibold text-sm">{languages.find(lang => lang.code === currentLanguage)?.name}</span>
+              <span className="text-base">{languages.find(lang => lang.code === language)?.flag}</span>
+              <span className="font-semibold text-sm">{languages.find(lang => lang.code === language)?.name}</span>
               <svg 
                 className="w-3 h-3 text-gray-500 transition-transform duration-300"
                 style={{ transform: languageMenuOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
@@ -146,7 +154,7 @@ export default function Header() {
                         key={lang.code}
                         onClick={() => handleLanguageChange(lang.code)}
                         className={`flex items-center space-x-3 w-full px-4 py-3 text-sm transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 ${
-                          currentLanguage === lang.code
+                          language === lang.code
                             ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold'
                             : 'text-gray-700 hover:text-gray-900'
                         }`}
@@ -157,7 +165,7 @@ export default function Header() {
                       >
                         <span className="text-lg">{lang.flag}</span>
                         <span className="font-medium">{lang.name}</span>
-                        {currentLanguage === lang.code && (
+                        {language === lang.code && (
                           <motion.span 
                             className="ml-auto text-white"
                             initial={{ scale: 0 }}
@@ -184,7 +192,7 @@ export default function Header() {
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <PhoneIcon className="w-5 h-5" />
-            <span>Llamar Ahora</span>
+            <span>{t('nav.callNow')}</span>
           </motion.a>
 
           {/* Main CTA */}
@@ -197,7 +205,7 @@ export default function Header() {
               href="/contacto"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 hover:from-blue-600 to-blue-600 hover:to-blue-700 shadow-md hover:shadow-lg px-6 py-2.5 rounded-xl font-semibold text-white transition-all duration-300"
             >
-              Evaluación Gratuita
+              {t('nav.freeEvaluation')}
             </Link>
           </motion.div>
         </motion.div>
@@ -266,7 +274,7 @@ export default function Header() {
                             key={lang.code}
                             onClick={() => handleLanguageChange(lang.code)}
                             className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors duration-200 flex items-center space-x-1 ${
-                              currentLanguage === lang.code
+                              language === lang.code
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
                             }`}
@@ -283,7 +291,7 @@ export default function Header() {
                       className="flex justify-center items-center space-x-2 bg-secondary-600 hover:bg-secondary-700 px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300"
                     >
                       <PhoneIcon className="w-5 h-5" />
-                      <span>Llamar Ahora</span>
+                      <span>{t('nav.callNow')}</span>
                     </a>
                     
                     <Link
@@ -291,7 +299,7 @@ export default function Header() {
                       className="flex justify-center items-center w-full btn-primary"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Evaluación Gratuita
+                      {t('nav.freeEvaluation')}
                     </Link>
                   </div>
                 </div>

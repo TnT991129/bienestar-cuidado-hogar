@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
 import { 
   HeartIcon, 
   ShieldCheckIcon, 
@@ -11,6 +12,7 @@ import {
 } from '@heroicons/react/24/outline'
 
 export default function HeroSection() {
+  const { t } = useLanguage()
   return (
     <section className="relative flex justify-center items-center bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 min-h-screen overflow-hidden">
       {/* Enhanced Background decoration */}
@@ -127,7 +129,7 @@ export default function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7, duration: 0.8 }}
                 >
-                  Cuidado Profesional
+                  {t('hero.title')}
                 </motion.span>
                 <br />
                 <motion.span 
@@ -136,16 +138,7 @@ export default function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.9, duration: 0.8 }}
                 >
-                  en la Comodidad
-                </motion.span>
-                <br />
-                <motion.span 
-                  className="text-gray-800"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.1, duration: 0.8 }}
-                >
-                  del Hogar
+                  {t('hero.subtitle')}
                 </motion.span>
               </motion.h1>
             </div>
@@ -156,16 +149,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
             >
-              Brindamos servicios de atención domiciliaria no médica para adultos mayores, 
-              con cuidadores profesionales capacitados que ofrecen{' '}
-              <motion.strong 
-                className="font-bold text-blue-600"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                compañía, cuidado personal y apoyo emocional
-              </motion.strong>{' '}
-              las 24 horas del día.
+              {t('hero.description')}
             </motion.p>
 
             {/* Enhanced Key Benefits */}
@@ -211,7 +195,7 @@ export default function HeroSection() {
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 hover:from-blue-600 to-blue-600 hover:to-blue-700 shadow-xl hover:shadow-2xl px-4 sm:px-6 py-2.5 sm:py-3 border-2 border-transparent hover:border-blue-300 rounded-2xl font-bold text-white text-sm sm:text-base transition-all duration-300"
                 >
                   <HeartIcon className="w-5 h-5" />
-                  Solicitar Evaluación Gratuita
+                  {t('nav.freeEvaluation')}
                 </Link>
               </motion.div>
               

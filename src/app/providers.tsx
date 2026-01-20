@@ -1,6 +1,7 @@
 'use client'
 
 import { ReactNode } from 'react'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 interface ProvidersProps {
   children: ReactNode
@@ -8,8 +9,8 @@ interface ProvidersProps {
 
 export function Providers({ children }: ProvidersProps) {
   return (
-    <>
+    <LanguageProvider>
       {children}
-    </>
+    </LanguageProvider>
   )
 }

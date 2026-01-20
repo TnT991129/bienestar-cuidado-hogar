@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="xl:gap-8 xl:grid xl:grid-cols-3">
           {/* Company Info */}
           <div className="space-y-8">
-            <Link href="/" className="flex items-center justify-center lg:justify-start">
+            <Link href="/" className="flex justify-center lg:justify-start items-center">
               <img 
                 src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`}
                 alt="Bienestar y Cuidado en el Hogar Logo"
