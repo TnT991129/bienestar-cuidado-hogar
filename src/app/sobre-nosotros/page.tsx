@@ -123,13 +123,13 @@ export default function AboutPage() {
       <AboutSection />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50 py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-primary-50 to-secondary-50 py-16 sm:py-20 overflow-hidden">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-trust-900 sm:text-5xl">
+            <h1 className="font-bold text-trust-900 text-4xl sm:text-5xl tracking-tight">
               Nuestra Historia
             </h1>
-            <p className="mt-6 text-lg leading-8 text-trust-600">
+            <p className="mt-6 text-trust-600 text-lg leading-8">
               Más de 15 años cuidando familias con amor, profesionalismo y dedicación. 
               Conoce nuestra historia completa, valores y el equipo que hace posible el mejor cuidado domiciliario.
             </p>
@@ -139,16 +139,16 @@ export default function AboutPage() {
 
       {/* Mission Section */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Nuestra Misión</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestra Misión</h2>
+            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
               Cuidando Familias con Amor y Profesionalismo
             </p>
           </div>
 
           <div className="mx-auto mt-16 max-w-5xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="items-center gap-12 grid grid-cols-1 lg:grid-cols-2">
               {/* Mission Text */}
               <div>
                 <div className="space-y-6 text-trust-600 text-lg leading-relaxed">
@@ -172,8 +172,8 @@ export default function AboutPage() {
                 </div>
 
                 {/* Vision */}
-                <div className="mt-12 p-6 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl">
-                  <h3 className="text-xl font-bold text-trust-900 mb-4">Nuestra Visión</h3>
+                <div className="bg-gradient-to-r from-primary-50 to-secondary-50 mt-12 p-6 rounded-2xl">
+                  <h3 className="mb-4 font-bold text-trust-900 text-xl">Nuestra Visión</h3>
                   <p className="text-trust-700">
                     Ser la empresa líder en servicios de cuidado domiciliario en la región, reconocida por 
                     nuestra excelencia, compasión y compromiso inquebrantable con el bienestar de nuestros 
@@ -183,13 +183,13 @@ export default function AboutPage() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 gap-8">
+              <div className="gap-8 grid grid-cols-2">
                 {stats.map((stat, index) => (
-                  <div key={stat.name} className="text-center bg-white rounded-2xl p-6 shadow-lg">
-                    <dt className="text-3xl font-bold text-primary-600 sm:text-4xl">
+                  <div key={stat.name} className="bg-white shadow-lg p-6 rounded-2xl text-center">
+                    <dt className="font-bold text-primary-600 text-3xl sm:text-4xl">
                       {stat.value}
                     </dt>
-                    <dd className="mt-2 text-sm font-medium text-trust-600">{stat.name}</dd>
+                    <dd className="mt-2 font-medium text-trust-600 text-sm">{stat.name}</dd>
                   </div>
                 ))}
               </div>
@@ -199,14 +199,14 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-trust-50 to-primary-50/30">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-trust-50 to-primary-50/30 py-24 sm:py-32">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Nuestra Historia</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestra Historia</h2>
+            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
               15 Años de Crecimiento y Dedicación
             </p>
-            <p className="mt-6 text-lg leading-8 text-trust-600">
+            <p className="mt-6 text-trust-600 text-lg leading-8">
               Desde nuestros humildes inicios hasta convertirnos en líderes regionales en cuidado domiciliario.
             </p>
           </div>
@@ -214,7 +214,7 @@ export default function AboutPage() {
           <div className="mx-auto mt-16 max-w-4xl">
             <div className="relative">
               {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-200 to-secondary-200"></div>
+              <div className="left-1/2 absolute bg-gradient-to-b from-primary-200 to-secondary-200 w-1 h-full -translate-x-1/2 transform"></div>
 
               <div className="space-y-12">
                 {timeline.map((event, index) => (
@@ -222,17 +222,17 @@ export default function AboutPage() {
                     index % 2 === 0 ? 'justify-start' : 'justify-end'
                   }`}>
                     {/* Timeline Dot */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center z-10">
-                      <event.icon className="h-6 w-6 text-white" />
+                    <div className="left-1/2 z-10 absolute flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full w-12 h-12 -translate-x-1/2 transform">
+                      <event.icon className="w-6 h-6 text-white" />
                     </div>
 
                     {/* Content */}
                     <div className={`w-5/12 ${
                       index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'
                     }`}>
-                      <div className="bg-white rounded-2xl p-6 shadow-lg">
-                        <div className="text-2xl font-bold text-primary-600 mb-2">{event.year}</div>
-                        <h3 className="text-xl font-semibold text-trust-900 mb-3">{event.title}</h3>
+                      <div className="bg-white shadow-lg p-6 rounded-2xl">
+                        <div className="mb-2 font-bold text-primary-600 text-2xl">{event.year}</div>
+                        <h3 className="mb-3 font-semibold text-trust-900 text-xl">{event.title}</h3>
                         <p className="text-trust-600">{event.description}</p>
                       </div>
                     </div>
@@ -246,29 +246,29 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Nuestros Valores</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestros Valores</h2>
+            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
               Los Principios que Nos Guían
             </p>
-            <p className="mt-6 text-lg leading-8 text-trust-600">
+            <p className="mt-6 text-trust-600 text-lg leading-8">
               Estos valores fundamentales definen cómo trabajamos y cómo tratamos a cada familia que confía en nosotros.
             </p>
           </div>
 
           <div className="mx-auto mt-16 max-w-5xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="gap-8 grid grid-cols-1 md:grid-cols-2">
               {values.map((value) => (
-                <div key={value.name} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <div key={value.name} className="bg-white shadow-lg p-8 border border-gray-100 rounded-2xl">
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
-                        <value.icon className="h-6 w-6 text-white" />
+                      <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg w-12 h-12">
+                        <value.icon className="w-6 h-6 text-white" />
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-trust-900 mb-3">{value.name}</h3>
+                      <h3 className="mb-3 font-bold text-trust-900 text-xl">{value.name}</h3>
                       <p className="text-trust-600 leading-relaxed">{value.description}</p>
                     </div>
                   </div>
@@ -280,32 +280,32 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-primary-50 to-secondary-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-primary-50 to-secondary-50 py-24 sm:py-32">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Nuestro Equipo</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestro Equipo</h2>
+            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
               Liderazgo Experimentado y Comprometido
             </p>
-            <p className="mt-6 text-lg leading-8 text-trust-600">
+            <p className="mt-6 text-trust-600 text-lg leading-8">
               Conoce a los profesionales que dirigen nuestro equipo y garantizan la excelencia en cada aspecto de nuestros servicios.
             </p>
           </div>
 
           <div className="mx-auto mt-16 max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="gap-8 grid grid-cols-1 md:grid-cols-2">
               {team.map((member) => (
-                <div key={member.name} className="bg-white rounded-2xl p-8 shadow-lg">
+                <div key={member.name} className="bg-white shadow-lg p-8 rounded-2xl">
                   <div className="flex items-start space-x-6">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-gradient-to-br from-primary-200 to-secondary-200 rounded-full flex items-center justify-center text-2xl">
+                      <div className="flex justify-center items-center bg-gradient-to-br from-primary-200 to-secondary-200 rounded-full w-16 h-16 text-2xl">
                         {member.image}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-trust-900 mb-1">{member.name}</h3>
-                      <p className="text-primary-600 font-semibold mb-2">{member.role}</p>
-                      <p className="text-sm text-trust-500 mb-3">{member.credentials}</p>
+                      <h3 className="mb-1 font-bold text-trust-900 text-xl">{member.name}</h3>
+                      <p className="mb-2 font-semibold text-primary-600">{member.role}</p>
+                      <p className="mb-3 text-trust-500 text-sm">{member.credentials}</p>
                       <p className="text-trust-600 text-sm leading-relaxed">{member.description}</p>
                     </div>
                   </div>
@@ -318,29 +318,29 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white">
-              <h2 className="text-3xl font-bold mb-4">
+            <div className="bg-gradient-to-r from-primary-600 to-secondary-600 p-8 rounded-2xl text-white">
+              <h2 className="mb-4 font-bold text-3xl">
                 ¿Te Gustaría Ser Parte de Nuestra Familia?
               </h2>
-              <p className="text-primary-100 mb-6">
+              <p className="mb-6 text-primary-100">
                 Si compartes nuestros valores y te apasiona el cuidado de adultos mayores, 
                 nos encantaría conocerte. También estamos aquí para ayudarte si necesitas 
                 nuestros servicios para tu ser querido.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex sm:flex-row flex-col justify-center gap-4">
                 <a
                   href="/contacto"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl text-primary-600 bg-white hover:bg-primary-50 transition-colors duration-200 shadow-lg"
+                  className="inline-flex justify-center items-center bg-white hover:bg-primary-50 shadow-lg px-6 py-3 border border-transparent rounded-xl font-medium text-primary-600 text-base transition-colors duration-200"
                 >
                   Contactar Ahora
                 </a>
                 <a
                   href="tel:+1234567890"
-                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-white/30 text-base font-medium rounded-xl text-white hover:bg-white/10 transition-colors duration-200"
+                  className="inline-flex justify-center items-center hover:bg-white/10 px-6 py-3 border-2 border-white/30 rounded-xl font-medium text-white text-base transition-colors duration-200"
                 >
-                  <PhoneIcon className="h-5 w-5 mr-2" />
+                  <PhoneIcon className="mr-2 w-5 h-5" />
                   (234) 567-890
                 </a>
               </div>

@@ -213,13 +213,13 @@ export default function ServicesPage() {
       <ServicesSection />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50 py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-primary-50 to-secondary-50 py-16 sm:py-20 overflow-hidden">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-trust-900 sm:text-5xl">
+            <h1 className="font-bold text-trust-900 text-4xl sm:text-5xl tracking-tight">
               Servicios Completos de Cuidado
             </h1>
-            <p className="mt-6 text-lg leading-8 text-trust-600">
+            <p className="mt-6 text-trust-600 text-lg leading-8">
               Servicios completos de atención domiciliaria no médica para adultos mayores. 
               Cuidado personalizado, profesional y con amor en la comodidad del hogar.
             </p>
@@ -229,19 +229,19 @@ export default function ServicesPage() {
 
       {/* Main Services */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Nuestros Servicios</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestros Servicios</h2>
+            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
               Cuidado Integral No Médico
             </p>
-            <p className="mt-6 text-lg leading-8 text-trust-600">
+            <p className="mt-6 text-trust-600 text-lg leading-8">
               Ofrecemos una gama completa de servicios diseñados para mantener la independencia, 
               dignidad y calidad de vida de tu ser querido.
             </p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div className="gap-8 grid grid-cols-1 lg:grid-cols-3 mx-auto lg:mx-0 mt-16 lg:max-w-none max-w-2xl">
             {mainServices.map((service) => (
               <div 
                 key={service.id} 
@@ -256,8 +256,8 @@ export default function ServicesPage() {
               >
                 {/* Popular Badge */}
                 {service.popular && (
-                  <div className="absolute -top-px -right-px">
-                    <div className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-2xl text-xs font-semibold">
+                  <div className="-top-px -right-px absolute">
+                    <div className="bg-gradient-to-r from-primary-500 to-secondary-500 px-4 py-1 rounded-tr-2xl rounded-bl-lg font-semibold text-white text-xs">
                       Más Solicitado
                     </div>
                   </div>
@@ -271,36 +271,36 @@ export default function ServicesPage() {
                     : 'bg-gradient-to-br from-trust-500 to-primary-500'
                   }
                 `}>
-                  <service.icon className="h-8 w-8 text-white" />
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-semibold text-trust-900 mb-4">
+                <h3 className="mb-4 font-semibold text-trust-900 text-xl">
                   {service.name}
                 </h3>
-                <p className="text-trust-600 mb-6">
+                <p className="mb-6 text-trust-600">
                   {service.description}
                 </p>
 
                 {/* Features */}
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-start text-sm text-trust-700">
-                      <CheckCircleIcon className="w-4 h-4 text-primary-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <li key={index} className="flex items-start text-trust-700 text-sm">
+                      <CheckCircleIcon className="flex-shrink-0 mt-0.5 mr-2 w-4 h-4 text-primary-500" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 {/* Pricing and Availability */}
-                <div className="border-t border-gray-200 pt-4 mt-auto">
+                <div className="mt-auto pt-4 border-gray-200 border-t">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-trust-600">Precio:</span>
+                    <span className="text-trust-600 text-sm">Precio:</span>
                     <span className="font-semibold text-primary-600">{service.pricing}</span>
                   </div>
                   <div className="flex justify-between items-center mb-4">
-                    <span className="text-sm text-trust-600">Disponibilidad:</span>
-                    <span className="text-sm text-trust-800">{service.availability}</span>
+                    <span className="text-trust-600 text-sm">Disponibilidad:</span>
+                    <span className="text-trust-800 text-sm">{service.availability}</span>
                   </div>
                   
                   <button className={`
@@ -320,20 +320,20 @@ export default function ServicesPage() {
       </section>
 
       {/* Care Packages */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-trust-50 to-primary-50/30">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-trust-50 to-primary-50/30 py-24 sm:py-32">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Paquetes de Cuidado</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Paquetes de Cuidado</h2>
+            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
               Planes Diseñados para Cada Necesidad
             </p>
-            <p className="mt-6 text-lg leading-8 text-trust-600">
+            <p className="mt-6 text-trust-600 text-lg leading-8">
               Selecciona el nivel de cuidado que mejor se adapte a las necesidades de tu ser querido. 
               Todos nuestros planes son personalizables.
             </p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div className="gap-8 grid grid-cols-1 lg:grid-cols-3 mx-auto lg:mx-0 mt-16 lg:max-w-none max-w-2xl">
             {carePackages.map((packageItem, index) => (
               <div 
                 key={packageItem.name} 
@@ -343,27 +343,27 @@ export default function ServicesPage() {
                 `}
               >
                 {packageItem.popular && (
-                  <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-center py-2 text-sm font-semibold">
+                  <div className="top-0 right-0 left-0 absolute bg-gradient-to-r from-primary-500 to-secondary-500 py-2 font-semibold text-white text-sm text-center">
                     Plan Más Popular
                   </div>
                 )}
                 
                 <div className={`p-8 ${packageItem.popular ? 'pt-16' : ''}`}>
-                  <h3 className="text-2xl font-bold text-trust-900 mb-2">{packageItem.name}</h3>
-                  <p className="text-trust-600 mb-4">{packageItem.description}</p>
+                  <h3 className="mb-2 font-bold text-trust-900 text-2xl">{packageItem.name}</h3>
+                  <p className="mb-4 text-trust-600">{packageItem.description}</p>
                   
                   <div className="mb-6">
                     <div className="flex items-baseline">
-                      <span className="text-3xl font-bold text-primary-600">{packageItem.price}</span>
+                      <span className="font-bold text-primary-600 text-3xl">{packageItem.price}</span>
                     </div>
-                    <p className="text-sm text-trust-600">{packageItem.hours}</p>
+                    <p className="text-trust-600 text-sm">{packageItem.hours}</p>
                   </div>
                   
                   <ul className="space-y-3 mb-8">
                     {packageItem.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
-                        <CheckCircleIcon className="w-5 h-5 text-primary-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-trust-700">{feature}</span>
+                        <CheckCircleIcon className="flex-shrink-0 mt-0.5 mr-3 w-5 h-5 text-primary-500" />
+                        <span className="text-trust-700 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -386,28 +386,28 @@ export default function ServicesPage() {
 
       {/* Specialized Services */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Servicios Especializados</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Servicios Especializados</h2>
+            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
               Atención Especializada para Necesidades Específicas
             </p>
-            <p className="mt-6 text-lg leading-8 text-trust-600">
+            <p className="mt-6 text-trust-600 text-lg leading-8">
               Contamos con protocolos y personal especializado para situaciones que requieren cuidado específico.
             </p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="gap-6 grid grid-cols-1 md:grid-cols-2 mx-auto mt-16 max-w-4xl">
             {specializedServices.map((service) => (
-              <div key={service.name} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+              <div key={service.name} className="bg-white shadow-lg p-6 border border-gray-100 rounded-2xl">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <service.icon className="h-6 w-6 text-white" />
+                  <div className="flex flex-shrink-0 justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg w-12 h-12">
+                    <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-trust-900 mb-2">{service.name}</h3>
-                    <p className="text-trust-600 mb-3">{service.description}</p>
-                    <p className="text-sm text-primary-600 font-medium">{service.duration}</p>
+                    <h3 className="mb-2 font-semibold text-trust-900 text-lg">{service.name}</h3>
+                    <p className="mb-3 text-trust-600">{service.description}</p>
+                    <p className="font-medium text-primary-600 text-sm">{service.duration}</p>
                   </div>
                 </div>
               </div>
@@ -417,53 +417,53 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-primary-50 to-secondary-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-primary-50 to-secondary-50 py-24 sm:py-32">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Proceso Simple</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Proceso Simple</h2>
+            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
               Cómo Comenzar con Nuestros Servicios
             </p>
           </div>
 
           <div className="mx-auto mt-16 max-w-5xl">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="gap-8 grid grid-cols-1 md:grid-cols-4">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
+                <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-4 rounded-full w-16 h-16 font-bold text-white text-xl">
                   1
                 </div>
-                <h3 className="font-semibold text-trust-900 mb-2">Evaluación Gratuita</h3>
-                <p className="text-sm text-trust-600">
+                <h3 className="mb-2 font-semibold text-trust-900">Evaluación Gratuita</h3>
+                <p className="text-trust-600 text-sm">
                   Visitamos tu hogar para evaluar necesidades y diseñar un plan personalizado
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
+                <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-4 rounded-full w-16 h-16 font-bold text-white text-xl">
                   2
                 </div>
-                <h3 className="font-semibold text-trust-900 mb-2">Selección del Cuidador</h3>
-                <p className="text-sm text-trust-600">
+                <h3 className="mb-2 font-semibold text-trust-900">Selección del Cuidador</h3>
+                <p className="text-trust-600 text-sm">
                   Elegimos al cuidador perfecto basado en personalidad y necesidades específicas
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
+                <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-4 rounded-full w-16 h-16 font-bold text-white text-xl">
                   3
                 </div>
-                <h3 className="font-semibold text-trust-900 mb-2">Inicio del Servicio</h3>
-                <p className="text-sm text-trust-600">
+                <h3 className="mb-2 font-semibold text-trust-900">Inicio del Servicio</h3>
+                <p className="text-trust-600 text-sm">
                   Comenzamos el cuidado con una transición suave y supervisión cercana
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
+                <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-4 rounded-full w-16 h-16 font-bold text-white text-xl">
                   4
                 </div>
-                <h3 className="font-semibold text-trust-900 mb-2">Monitoreo Continuo</h3>
-                <p className="text-sm text-trust-600">
+                <h3 className="mb-2 font-semibold text-trust-900">Monitoreo Continuo</h3>
+                <p className="text-trust-600 text-sm">
                   Evaluamos regularmente la calidad del servicio y ajustamos según sea necesario
                 </p>
               </div>
@@ -474,28 +474,28 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-white">
-              <h2 className="text-3xl font-bold mb-4">
+            <div className="bg-gradient-to-r from-primary-600 to-secondary-600 p-8 rounded-2xl text-white">
+              <h2 className="mb-4 font-bold text-3xl">
                 ¿Listo para Comenzar el Mejor Cuidado para Tu Ser Querido?
               </h2>
-              <p className="text-primary-100 mb-6">
+              <p className="mb-6 text-primary-100">
                 Nuestro equipo está disponible para una evaluación gratuita y sin compromiso. 
                 Descubre cómo podemos ayudar a mejorar la calidad de vida de tu familia.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex sm:flex-row flex-col justify-center gap-4">
                 <a
                   href="/contacto"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl text-primary-600 bg-white hover:bg-primary-50 transition-colors duration-200 shadow-lg"
+                  className="inline-flex justify-center items-center bg-white hover:bg-primary-50 shadow-lg px-6 py-3 border border-transparent rounded-xl font-medium text-primary-600 text-base transition-colors duration-200"
                 >
                   Evaluación Gratuita
                 </a>
                 <a
                   href="tel:+1234567890"
-                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-white/30 text-base font-medium rounded-xl text-white hover:bg-white/10 transition-colors duration-200"
+                  className="inline-flex justify-center items-center hover:bg-white/10 px-6 py-3 border-2 border-white/30 rounded-xl font-medium text-white text-base transition-colors duration-200"
                 >
-                  <PhoneIcon className="h-5 w-5 mr-2" />
+                  <PhoneIcon className="mr-2 w-5 h-5" />
                   Llamar: (234) 567-890
                 </a>
               </div>

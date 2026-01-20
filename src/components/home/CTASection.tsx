@@ -62,8 +62,8 @@ const officeInfo = {
 
 export default function CTASection() {
   return (
-    <section className="py-24 sm:py-32 bg-gradient-to-br from-white to-primary-50/30">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-gradient-to-br from-white to-primary-50/30 py-24 sm:py-32">
+      <div className="mx-auto px-6 lg:px-8 max-w-7xl">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -71,11 +71,11 @@ export default function CTASection() {
           transition={{ duration: 0.8 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="text-base font-semibold leading-7 text-primary-600">Contáctanos Hoy</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+          <h2 className="font-semibold text-primary-600 text-base leading-7">Contáctanos Hoy</h2>
+          <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
             Comienza el Cuidado de Tu Ser Querido Ahora Mismo
           </p>
-          <p className="mt-6 text-lg leading-8 text-trust-600">
+          <p className="mt-6 text-trust-600 text-lg leading-8">
             Nuestro equipo de especialistas está listo para ayudarte. Evaluación gratuita, 
             sin compromiso y disponibilidad inmediata para situaciones urgentes.
           </p>
@@ -86,7 +86,7 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-auto mt-16 max-w-4xl"
         >
           {contactMethods.map((method) => (
             <div key={method.name} className="group">
@@ -154,25 +154,25 @@ export default function CTASection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mx-auto mt-16 max-w-4xl"
         >
-          <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-6">
-            <div className="flex items-center justify-center text-center">
+          <div className="bg-red-50 p-6 border-2 border-red-200 rounded-2xl">
+            <div className="flex justify-center items-center text-center">
               <div className="flex-shrink-0 mr-4">
-                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center animate-pulse">
-                  <PhoneIcon className="h-6 w-6 text-white" />
+                <div className="flex justify-center items-center bg-red-500 rounded-full w-12 h-12 animate-pulse">
+                  <PhoneIcon className="w-6 h-6 text-white" />
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-red-800 mb-1">
+                <h3 className="mb-1 font-semibold text-red-800 text-lg">
                   ¿Necesitas Cuidado Urgente?
                 </h3>
-                <p className="text-red-700 mb-3">
+                <p className="mb-3 text-red-700">
                   Para situaciones de emergencia o necesidades inmediatas de cuidado, llámanos ahora.
                 </p>
                 <a
                   href="tel:+1234567890"
-                  className="inline-flex items-center px-4 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-200"
+                  className="inline-flex items-center bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-white transition-colors duration-200"
                 >
-                  <PhoneIcon className="h-4 w-4 mr-2" />
+                  <PhoneIcon className="mr-2 w-4 h-4" />
                   Llamar Ahora: (234) 567-890
                 </a>
               </div>
@@ -187,15 +187,15 @@ export default function CTASection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mx-auto mt-16 max-w-4xl"
         >
-          <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="bg-white shadow-lg p-8 border border-gray-100 rounded-2xl">
+            <div className="gap-8 grid grid-cols-1 lg:grid-cols-2">
               {/* Office Address */}
               <div>
                 <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center mr-3">
-                    <MapPinIcon className="h-5 w-5 text-white" />
+                  <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mr-3 rounded-lg w-10 h-10">
+                    <MapPinIcon className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-trust-900">Nuestra Oficina</h3>
+                  <h3 className="font-semibold text-trust-900 text-xl">Nuestra Oficina</h3>
                 </div>
                 
                 <div className="space-y-2 text-trust-600">
@@ -208,9 +208,9 @@ export default function CTASection() {
                     href="https://maps.google.com/?q=Bienestar+y+Cuidado+en+el+Hogar"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"
+                    className="inline-flex items-center font-medium text-primary-600 hover:text-primary-700"
                   >
-                    <MapPinIcon className="h-4 w-4 mr-2" />
+                    <MapPinIcon className="mr-2 w-4 h-4" />
                     Ver en Google Maps
                   </a>
                 </div>
@@ -219,17 +219,17 @@ export default function CTASection() {
               {/* Office Hours */}
               <div>
                 <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-secondary-500 to-primary-500 rounded-lg flex items-center justify-center mr-3">
-                    <ClockIcon className="h-5 w-5 text-white" />
+                  <div className="flex justify-center items-center bg-gradient-to-br from-secondary-500 to-primary-500 mr-3 rounded-lg w-10 h-10">
+                    <ClockIcon className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-trust-900">Horarios de Atención</h3>
+                  <h3 className="font-semibold text-trust-900 text-xl">Horarios de Atención</h3>
                 </div>
                 
                 <div className="space-y-2 text-trust-600">
                   <p>{officeInfo.hours.weekdays}</p>
                   <p>{officeInfo.hours.saturday}</p>
                   <p>{officeInfo.hours.sunday}</p>
-                  <p className="text-red-600 font-semibold">{officeInfo.hours.emergency}</p>
+                  <p className="font-semibold text-red-600">{officeInfo.hours.emergency}</p>
                 </div>
               </div>
             </div>
@@ -243,32 +243,32 @@ export default function CTASection() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mx-auto mt-16 max-w-4xl text-center"
         >
-          <div className="bg-gradient-to-r from-trust-600 via-primary-600 to-secondary-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
+          <div className="bg-gradient-to-r from-trust-600 via-primary-600 to-secondary-600 p-8 rounded-2xl text-white">
+            <h3 className="mb-4 font-bold text-2xl">
               ¿Listo para Brindar la Mejor Atención a Tu Ser Querido?
             </h3>
-            <p className="text-trust-100 mb-6 max-w-2xl mx-auto">
+            <p className="mx-auto mb-6 max-w-2xl text-trust-100">
               No esperes más. Cada día cuenta cuando se trata del bienestar de tu familia. 
               Nuestro equipo está listo para comenzar hoy mismo.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex sm:flex-row flex-col justify-center items-center gap-4">
               <a
                 href="/contacto"
-                className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-xl text-primary-600 bg-white hover:bg-primary-50 transition-colors duration-200 shadow-lg"
+                className="inline-flex justify-center items-center bg-white hover:bg-primary-50 shadow-lg px-8 py-4 border border-transparent rounded-xl font-semibold text-primary-600 text-lg transition-colors duration-200"
               >
                 Evaluación Gratuita Ahora
               </a>
               <a
                 href="tel:+1234567890"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-lg font-semibold rounded-xl text-white hover:bg-white/10 transition-colors duration-200"
+                className="inline-flex justify-center items-center hover:bg-white/10 px-8 py-4 border-2 border-white/30 rounded-xl font-semibold text-white text-lg transition-colors duration-200"
               >
-                <PhoneIcon className="h-5 w-5 mr-2" />
+                <PhoneIcon className="mr-2 w-5 h-5" />
                 (234) 567-890
               </a>
             </div>
 
-            <p className="text-primary-100 text-sm mt-4">
+            <p className="mt-4 text-primary-100 text-sm">
               ✓ Evaluación gratuita sin compromiso  •  ✓ Disponibilidad inmediata  •  ✓ Cuidadores verificados
             </p>
           </div>
@@ -281,24 +281,24 @@ export default function CTASection() {
           transition={{ duration: 0.8, delay: 1 }}
           className="mx-auto mt-12 max-w-4xl"
         >
-          <div className="flex flex-wrap justify-center items-center gap-8 text-center opacity-60">
+          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60 text-center">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs font-bold">✓</span>
+              <div className="flex justify-center items-center bg-green-500 rounded-full w-8 h-8">
+                <span className="font-bold text-white text-xs">✓</span>
               </div>
               <span className="text-trust-600 text-sm">Licenciado y Asegurado</span>
             </div>
             
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs font-bold">⭐</span>
+              <div className="flex justify-center items-center bg-blue-500 rounded-full w-8 h-8">
+                <span className="font-bold text-white text-xs">⭐</span>
               </div>
               <span className="text-trust-600 text-sm">15+ Años de Experiencia</span>
             </div>
             
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs font-bold">500+</span>
+              <div className="flex justify-center items-center bg-purple-500 rounded-full w-8 h-8">
+                <span className="font-bold text-white text-xs">500+</span>
               </div>
               <span className="text-trust-600 text-sm">Familias Satisfechas</span>
             </div>

@@ -43,19 +43,19 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+    <section className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20">
+      <div className="mx-auto px-6 lg:px-8 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-12 text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
+          <h2 className="mb-4 font-bold text-gray-900 text-3xl sm:text-4xl tracking-tight">
             Preguntas Frecuentes
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-gray-600 text-lg">
             Resolvemos las dudas más comunes sobre nuestros servicios de cuidado domiciliario
           </p>
         </motion.div>
@@ -68,13 +68,13 @@ export default function FAQSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden"
+              className="bg-white shadow-md border border-gray-100 rounded-2xl overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                className="flex justify-between items-center hover:bg-gray-50 px-6 py-5 w-full text-left transition-colors duration-200"
               >
-                <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                <h3 className="pr-4 font-semibold text-gray-900 text-lg">
                   {faq.question}
                 </h3>
                 <motion.div
@@ -82,7 +82,7 @@ export default function FAQSection() {
                   transition={{ duration: 0.3 }}
                   className="flex-shrink-0"
                 >
-                  <ChevronDownIcon className="h-5 w-5 text-gray-500" />
+                  <ChevronDownIcon className="w-5 h-5 text-gray-500" />
                 </motion.div>
               </button>
               
@@ -95,7 +95,7 @@ export default function FAQSection() {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-5 pt-2">
+                    <div className="px-6 pt-2 pb-5">
                       <p className="text-gray-600 leading-relaxed">
                         {faq.answer}
                       </p>
@@ -112,14 +112,14 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-12"
+          className="mt-12 text-center"
         >
-          <p className="text-gray-600 mb-6">
+          <p className="mb-6 text-gray-600">
             ¿No encontraste la respuesta que buscabas?
           </p>
           <motion.a
             href="/contacto"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 hover:from-blue-600 to-blue-600 hover:to-blue-700 shadow-md hover:shadow-lg px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >

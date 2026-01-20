@@ -110,34 +110,34 @@ export default function ContactPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 to-secondary-50 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-primary-50 to-secondary-50 py-24 sm:py-32 overflow-hidden">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-trust-900 sm:text-6xl">
+            <h1 className="font-bold text-trust-900 text-4xl sm:text-6xl tracking-tight">
               Contáctanos Hoy
             </h1>
-            <p className="mt-6 text-lg leading-8 text-trust-600">
+            <p className="mt-6 text-trust-600 text-lg leading-8">
               Estamos aquí para ayudarte. Evaluación gratuita, disponibilidad 24/7 para emergencias 
               y respuesta inmediata a todas tus consultas sobre el cuidado de tu ser querido.
             </p>
             
             {/* Emergency Contact */}
-            <div className="mt-8 bg-red-50 border-2 border-red-200 rounded-2xl p-6">
-              <div className="flex items-center justify-center">
+            <div className="bg-red-50 mt-8 p-6 border-2 border-red-200 rounded-2xl">
+              <div className="flex justify-center items-center">
                 <div className="flex-shrink-0 mr-4">
-                  <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center animate-pulse">
-                    <PhoneIcon className="h-6 w-6 text-white" />
+                  <div className="flex justify-center items-center bg-red-500 rounded-full w-12 h-12 animate-pulse">
+                    <PhoneIcon className="w-6 h-6 text-white" />
                   </div>
                 </div>
                 <div className="text-center">
-                  <h3 className="text-lg font-semibold text-red-800 mb-1">
+                  <h3 className="mb-1 font-semibold text-red-800 text-lg">
                     ¿Emergencia o Necesidad Urgente?
                   </h3>
                   <a
                     href="tel:+1234567890"
-                    className="inline-flex items-center px-4 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-200"
+                    className="inline-flex items-center bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-white transition-colors duration-200"
                   >
-                    <PhoneIcon className="h-4 w-4 mr-2" />
+                    <PhoneIcon className="mr-2 w-4 h-4" />
                     Llamar Ahora: (234) 567-890
                   </a>
                 </div>
@@ -149,18 +149,18 @@ export default function ContactPage() {
 
       {/* Contact Methods */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Formas de Contacto</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Formas de Contacto</h2>
+            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
               Elige la Forma Más Conveniente para Ti
             </p>
-            <p className="mt-6 text-lg leading-8 text-trust-600">
+            <p className="mt-6 text-trust-600 text-lg leading-8">
               Múltiples opciones de comunicación para brindarte la mejor atención y respuesta rápida.
             </p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-auto mt-16 max-w-4xl">
             {contactMethods.map((method) => (
               <div key={method.name} className="group">
                 <a
@@ -223,86 +223,86 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-trust-50 to-primary-50/30">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-trust-50 to-primary-50/30 py-24 sm:py-32">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl">
-            <div className="text-center mb-16">
-              <h2 className="text-base font-semibold leading-7 text-primary-600">Solicitud de Información</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <div className="mb-16 text-center">
+              <h2 className="font-semibold text-primary-600 text-base leading-7">Solicitud de Información</h2>
+              <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
                 Solicita tu Evaluación Gratuita
               </p>
-              <p className="mt-6 text-lg leading-8 text-trust-600">
+              <p className="mt-6 text-trust-600 text-lg leading-8">
                 Completa el formulario y nos pondremos en contacto contigo en menos de 2 horas 
                 para programar una evaluación gratuita en tu hogar.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+            <div className="bg-white shadow-xl p-8 border border-gray-100 rounded-2xl">
               <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="gap-6 grid grid-cols-1 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-trust-900 mb-2">
+                    <label htmlFor="firstName" className="block mb-2 font-medium text-trust-900 text-sm">
                       Nombre
                     </label>
                     <input
                       type="text"
                       name="firstName"
                       id="firstName"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                      className="px-4 py-3 border border-gray-300 focus:border-primary-500 rounded-xl focus:ring-2 focus:ring-primary-500 w-full transition-colors"
                       placeholder="Tu nombre"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-trust-900 mb-2">
+                    <label htmlFor="lastName" className="block mb-2 font-medium text-trust-900 text-sm">
                       Apellido
                     </label>
                     <input
                       type="text"
                       name="lastName"
                       id="lastName"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                      className="px-4 py-3 border border-gray-300 focus:border-primary-500 rounded-xl focus:ring-2 focus:ring-primary-500 w-full transition-colors"
                       placeholder="Tu apellido"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="gap-6 grid grid-cols-1 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-trust-900 mb-2">
+                    <label htmlFor="phone" className="block mb-2 font-medium text-trust-900 text-sm">
                       Teléfono
                     </label>
                     <input
                       type="tel"
                       name="phone"
                       id="phone"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                      className="px-4 py-3 border border-gray-300 focus:border-primary-500 rounded-xl focus:ring-2 focus:ring-primary-500 w-full transition-colors"
                       placeholder="(234) 567-890"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-trust-900 mb-2">
+                    <label htmlFor="email" className="block mb-2 font-medium text-trust-900 text-sm">
                       Email
                     </label>
                     <input
                       type="email"
                       name="email"
                       id="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                      className="px-4 py-3 border border-gray-300 focus:border-primary-500 rounded-xl focus:ring-2 focus:ring-primary-500 w-full transition-colors"
                       placeholder="tu@email.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="relationship" className="block text-sm font-medium text-trust-900 mb-2">
+                  <label htmlFor="relationship" className="block mb-2 font-medium text-trust-900 text-sm">
                     Relación con la persona a cuidar
                   </label>
                   <select
                     name="relationship"
                     id="relationship"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                    className="px-4 py-3 border border-gray-300 focus:border-primary-500 rounded-xl focus:ring-2 focus:ring-primary-500 w-full transition-colors"
                   >
                     <option>Selecciona una opción</option>
                     <option>Hijo/a</option>
@@ -316,13 +316,13 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="urgency" className="block text-sm font-medium text-trust-900 mb-2">
+                  <label htmlFor="urgency" className="block mb-2 font-medium text-trust-900 text-sm">
                     ¿Qué tan pronto necesitas el servicio?
                   </label>
                   <select
                     name="urgency"
                     id="urgency"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                    className="px-4 py-3 border border-gray-300 focus:border-primary-500 rounded-xl focus:ring-2 focus:ring-primary-500 w-full transition-colors"
                   >
                     <option>Inmediatamente (24-48 horas)</option>
                     <option>Esta semana</option>
@@ -333,10 +333,10 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="services" className="block text-sm font-medium text-trust-900 mb-2">
+                  <label htmlFor="services" className="block mb-2 font-medium text-trust-900 text-sm">
                     Servicios de interés (puedes seleccionar varios)
                   </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+                  <div className="gap-3 grid grid-cols-1 sm:grid-cols-2 mt-3">
                     {[
                       'Compañía y apoyo emocional',
                       'Cuidado personal e higiene',
@@ -350,23 +350,23 @@ export default function ContactPage() {
                       <label key={service} className="flex items-center">
                         <input
                           type="checkbox"
-                          className="h-4 w-4 text-primary-600 rounded border-gray-300 focus:ring-2 focus:ring-primary-500"
+                          className="border-gray-300 rounded focus:ring-2 focus:ring-primary-500 w-4 h-4 text-primary-600"
                         />
-                        <span className="ml-2 text-sm text-trust-700">{service}</span>
+                        <span className="ml-2 text-trust-700 text-sm">{service}</span>
                       </label>
                     ))}
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-trust-900 mb-2">
+                  <label htmlFor="message" className="block mb-2 font-medium text-trust-900 text-sm">
                     Cuéntanos más sobre tus necesidades
                   </label>
                   <textarea
                     name="message"
                     id="message"
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                    className="px-4 py-3 border border-gray-300 focus:border-primary-500 rounded-xl focus:ring-2 focus:ring-primary-500 w-full transition-colors"
                     placeholder="Describe la situación actual, necesidades específicas, horarios preferidos, etc..."
                   />
                 </div>
@@ -375,9 +375,9 @@ export default function ContactPage() {
                   <input
                     type="checkbox"
                     id="privacy"
-                    className="h-4 w-4 text-primary-600 rounded border-gray-300 focus:ring-2 focus:ring-primary-500 mt-1"
+                    className="mt-1 border-gray-300 rounded focus:ring-2 focus:ring-primary-500 w-4 h-4 text-primary-600"
                   />
-                  <label htmlFor="privacy" className="ml-3 text-sm text-trust-600">
+                  <label htmlFor="privacy" className="ml-3 text-trust-600 text-sm">
                     Acepto recibir información sobre servicios de cuidado domiciliario y entiendo que 
                     puedo cancelar estas comunicaciones en cualquier momento. 
                     <a href="/privacidad" className="text-primary-600 hover:text-primary-700">
@@ -388,12 +388,12 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-primary-600 to-secondary-600 text-white font-semibold py-4 px-6 rounded-xl hover:from-primary-700 hover:to-secondary-700 transition-colors duration-200 shadow-lg"
+                  className="bg-gradient-to-r from-primary-600 hover:from-primary-700 to-secondary-600 hover:to-secondary-700 shadow-lg px-6 py-4 rounded-xl w-full font-semibold text-white transition-colors duration-200"
                 >
                   Solicitar Evaluación Gratuita
                 </button>
 
-                <p className="text-center text-sm text-trust-500">
+                <p className="text-trust-500 text-sm text-center">
                   ✓ Evaluación completamente gratuita • ✓ Sin compromiso • ✓ Respuesta en menos de 2 horas
                 </p>
               </form>
@@ -404,23 +404,23 @@ export default function ContactPage() {
 
       {/* Office Locations */}
       <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Nuestras Oficinas</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestras Oficinas</h2>
+            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
               Ubicaciones y Horarios de Atención
             </p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="gap-8 grid grid-cols-1 lg:grid-cols-2 mx-auto mt-16 max-w-5xl">
             {officeLocations.map((location) => (
-              <div key={location.name} className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+              <div key={location.name} className="bg-white shadow-lg p-8 border border-gray-100 rounded-2xl">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPinIcon className="h-6 w-6 text-white" />
+                  <div className="flex flex-shrink-0 justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg w-12 h-12">
+                    <MapPinIcon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-trust-900 mb-3">{location.name}</h3>
+                    <h3 className="mb-3 font-bold text-trust-900 text-xl">{location.name}</h3>
                     
                     <div className="space-y-2 mb-4">
                       <p className="text-trust-700">{location.address}</p>
@@ -429,13 +429,13 @@ export default function ContactPage() {
 
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center">
-                        <PhoneIcon className="h-4 w-4 text-primary-600 mr-2" />
+                        <PhoneIcon className="mr-2 w-4 h-4 text-primary-600" />
                         <a href={`tel:${location.phone}`} className="text-primary-600 hover:text-primary-700">
                           {location.phone}
                         </a>
                       </div>
                       <div className="flex items-center">
-                        <EnvelopeIcon className="h-4 w-4 text-primary-600 mr-2" />
+                        <EnvelopeIcon className="mr-2 w-4 h-4 text-primary-600" />
                         <a href={`mailto:${location.email}`} className="text-primary-600 hover:text-primary-700">
                           {location.email}
                         </a>
@@ -444,10 +444,10 @@ export default function ContactPage() {
 
                     <div className="mb-4">
                       <div className="flex items-center mb-2">
-                        <ClockIcon className="h-4 w-4 text-primary-600 mr-2" />
+                        <ClockIcon className="mr-2 w-4 h-4 text-primary-600" />
                         <span className="font-medium text-trust-900">Horarios:</span>
                       </div>
-                      <div className="text-sm text-trust-600 space-y-1 ml-6">
+                      <div className="space-y-1 ml-6 text-trust-600 text-sm">
                         <p>{location.hours.weekdays}</p>
                         <p>{location.hours.saturday}</p>
                         {location.hours.sunday !== 'Cerrado' && <p>{location.hours.sunday}</p>}
@@ -456,10 +456,10 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <span className="font-medium text-trust-900 mb-2 block">Servicios disponibles:</span>
+                      <span className="block mb-2 font-medium text-trust-900">Servicios disponibles:</span>
                       <div className="flex flex-wrap gap-2">
                         {location.services.map((service) => (
-                          <span key={service} className="bg-primary-100 text-primary-700 text-xs px-2 py-1 rounded-full">
+                          <span key={service} className="bg-primary-100 px-2 py-1 rounded-full text-primary-700 text-xs">
                             {service}
                           </span>
                         ))}
@@ -474,11 +474,11 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-primary-50 to-secondary-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-primary-50 to-secondary-50 py-24 sm:py-32">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Preguntas Frecuentes</h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-trust-900 sm:text-4xl">
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Preguntas Frecuentes</h2>
+            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
               Respuestas a las Consultas Más Comunes
             </p>
           </div>
@@ -486,20 +486,20 @@ export default function ContactPage() {
           <div className="mx-auto mt-16 max-w-4xl">
             <div className="space-y-6">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-                  <h3 className="text-lg font-semibold text-trust-900 mb-3">{faq.question}</h3>
+                <div key={index} className="bg-white shadow-lg p-6 border border-gray-100 rounded-2xl">
+                  <h3 className="mb-3 font-semibold text-trust-900 text-lg">{faq.question}</h3>
                   <p className="text-trust-600 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
 
             <div className="mt-12 text-center">
-              <p className="text-trust-600 mb-4">¿No encontraste la respuesta que buscabas?</p>
+              <p className="mb-4 text-trust-600">¿No encontraste la respuesta que buscabas?</p>
               <a
                 href="tel:+1234567890"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 transition-colors duration-200 shadow-lg"
+                className="inline-flex items-center bg-gradient-to-r from-primary-600 hover:from-primary-700 to-secondary-600 hover:to-secondary-700 shadow-lg px-6 py-3 border border-transparent rounded-xl font-medium text-white text-base transition-colors duration-200"
               >
-                <PhoneIcon className="h-5 w-5 mr-2" />
+                <PhoneIcon className="mr-2 w-5 h-5" />
                 Llámanos: (234) 567-890
               </a>
             </div>
@@ -509,33 +509,33 @@ export default function ContactPage() {
 
       {/* Trust Indicators */}
       <section className="py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
+          <div className="gap-8 grid grid-cols-1 md:grid-cols-3 text-center">
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+              <div className="flex justify-center items-center bg-green-100 mb-4 rounded-full w-12 h-12">
                 <ShieldCheckIcon className="w-6 h-6 text-green-600" />
               </div>
-              <h3 className="text-lg font-semibold text-trust-900 mb-2">Respuesta Garantizada</h3>
+              <h3 className="mb-2 font-semibold text-trust-900 text-lg">Respuesta Garantizada</h3>
               <p className="text-trust-600 text-sm">
                 Te contactaremos en menos de 2 horas durante horario de oficina
               </p>
             </div>
             
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <div className="flex justify-center items-center bg-blue-100 mb-4 rounded-full w-12 h-12">
                 <HeartIcon className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="text-lg font-semibold text-trust-900 mb-2">Evaluación Gratuita</h3>
+              <h3 className="mb-2 font-semibold text-trust-900 text-lg">Evaluación Gratuita</h3>
               <p className="text-trust-600 text-sm">
                 Sin costo ni compromiso, incluye visita domiciliaria completa
               </p>
             </div>
             
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+              <div className="flex justify-center items-center bg-purple-100 mb-4 rounded-full w-12 h-12">
                 <UserGroupIcon className="w-6 h-6 text-purple-600" />
               </div>
-              <h3 className="text-lg font-semibold text-trust-900 mb-2">15+ Años de Experiencia</h3>
+              <h3 className="mb-2 font-semibold text-trust-900 text-lg">15+ Años de Experiencia</h3>
               <p className="text-trust-600 text-sm">
                 Más de 500 familias han confiado en nuestros servicios
               </p>
