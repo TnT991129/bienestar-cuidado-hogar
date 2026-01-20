@@ -10,6 +10,8 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <PageNavigation />
+      {/* Espaciado para navegación fija en móvil */}
+      <div className="lg:hidden h-16"></div>
       <section id="hero">
         <HeroSection />
       </section>
