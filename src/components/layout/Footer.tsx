@@ -9,6 +9,7 @@ import {
   UserGroupIcon,
   HomeIcon
 } from '@heroicons/react/24/outline'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const navigation = {
   servicios: [
@@ -55,10 +56,56 @@ const valores = [
 ]
 
 export default function Footer() {
+  const { t } = useLanguage()
+
+  const navigation = {
+    servicios: [
+      { name: t('nav.services'), href: '/servicios#cuidado-domiciliario' },
+      { name: 'Compañía', href: '/servicios#acompanamiento' },
+      { name: 'Asistencia Personal', href: '/servicios#asistencia-personal' },
+      { name: 'Apoyo Emocional', href: '/servicios#apoyo-emocional' },
+    ],
+    empresa: [
+      { name: t('nav.about'), href: '/sobre-nosotros' },
+      { name: t('nav.team'), href: '/equipo' },
+      { name: 'Cómo Funciona', href: '/como-funciona' },
+      { name: 'Testimonios', href: '/testimonios' },
+    ],
+    recursos: [
+      { name: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
+      { name: t('nav.contact'), href: '/contacto' },
+      { name: 'Política de Privacidad', href: '/privacidad' },
+      { name: 'Términos y Condiciones', href: '/terminos' },
+    ],
+  }
+
+  const valores = [
+    {
+      name: 'Confianza',
+      description: 'Cuidadores certificados y verificados',
+      icon: ShieldCheckIcon,
+    },
+    {
+      name: 'Humanidad',
+      description: 'Trato cálido y respetuoso',
+      icon: HeartIcon,
+    },
+    {
+      name: 'Profesionalismo',
+      description: 'Servicios de la más alta calidad',
+      icon: UserGroupIcon,
+    },
+    {
+      name: 'Hogar',
+      description: 'Atención en la comodidad del hogar',
+      icon: HomeIcon,
+    },
+  ]
+
   return (
     <footer className="bg-trust-800" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
-        Footer
+        {t('footer.contact')}
       </h2>
       <div className="mx-auto px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 pb-8 max-w-7xl">
         {/* Main Footer Content */}
@@ -73,9 +120,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-trust-300 text-sm leading-6">
-              Brindamos servicios profesionales de cuidado domiciliario para adultos mayores, 
-              con un enfoque humano y personalizado que garantiza el bienestar y la dignidad 
-              de nuestros usuarios en la comodidad de su hogar.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-6">
               {/* Social media links could go here */}
@@ -86,7 +131,7 @@ export default function Footer() {
           <div className="gap-8 grid grid-cols-2 xl:col-span-2 mt-16 xl:mt-0">
             <div className="md:gap-8 md:grid md:grid-cols-2">
               <div>
-                <h3 className="font-semibold text-white text-sm leading-6">Servicios</h3>
+                <h3 className="font-semibold text-white text-sm leading-6">{t('footer.ourServices')}</h3>
                 <ul role="list" className="space-y-4 mt-6">
                   {navigation.servicios.map((item) => (
                     <li key={item.name}>
@@ -98,7 +143,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="font-semibold text-white text-sm leading-6">Empresa</h3>
+                <h3 className="font-semibold text-white text-sm leading-6">{t('footer.company')}</h3>
                 <ul role="list" className="space-y-4 mt-6">
                   {navigation.empresa.map((item) => (
                     <li key={item.name}>
@@ -112,7 +157,7 @@ export default function Footer() {
             </div>
             <div className="md:gap-8 md:grid md:grid-cols-2">
               <div>
-                <h3 className="font-semibold text-white text-sm leading-6">Recursos</h3>
+                <h3 className="font-semibold text-white text-sm leading-6">{t('footer.quickLinks')}</h3>
                 <ul role="list" className="space-y-4 mt-6">
                   {navigation.recursos.map((item) => (
                     <li key={item.name}>
@@ -124,7 +169,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="font-semibold text-white text-sm leading-6">Contacto</h3>
+                <h3 className="font-semibold text-white text-sm leading-6">{t('footer.contactInfo')}</h3>
                 <ul role="list" className="space-y-4 mt-6">
                   <li className="flex items-center space-x-3">
                     <PhoneIcon className="w-5 h-5 text-primary-400" />

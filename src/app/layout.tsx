@@ -18,10 +18,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cuidado Senior - Atención Domiciliaria Profesional para Adultos Mayores',
-    template: '%s | Cuidado Senior'
+    default: 'Bienestar y Cuidado en el Hogar - Professional Home Care for Seniors | Cuidado Domiciliario Profesional',
+    template: '%s | Bienestar y Cuidado en el Hogar'
   },
-  description: 'Servicios profesionales de cuidado domiciliario para adultos mayores. Atención personalizada, cuidadores capacitados y trato humano las 24 horas.',
+  description: 'Professional home care services for seniors. Personalized attention, trained caregivers and human treatment 24 hours. | Servicios profesionales de cuidado domiciliario para adultos mayores. Atención personalizada, cuidadores capacitados y trato humano las 24 horas.',
   keywords: [
     'cuidado adultos mayores',
     'atención domiciliaria',
