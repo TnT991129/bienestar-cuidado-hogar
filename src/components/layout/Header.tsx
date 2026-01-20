@@ -167,7 +167,6 @@ export default function Header() {
                             ✓
                           </motion.span>
                         )}
-                        )}
                       </motion.button>
                     ))}
                   </div>
