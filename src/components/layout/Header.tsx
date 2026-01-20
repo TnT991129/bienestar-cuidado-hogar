@@ -222,14 +222,12 @@ export default function Header() {
               className="right-0 z-[9999] fixed inset-y-0 bg-white shadow-xl px-6 py-6 w-full max-w-sm overflow-y-auto"
             >
               <div className="flex justify-between items-center">
-                <Link href="/" className="flex items-center space-x-3 -m-1.5 p-1.5">
-                  <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg w-8 h-8">
-                    <span className="font-bold text-white text-sm">CS</span>
-                  </div>
-                  <div>
-                    <span className="font-bold text-trust-800 text-lg">Cuidado</span>
-                    <span className="ml-1 font-bold text-primary-600 text-lg">Senior</span>
-                  </div>
+                <Link href="/" className="flex items-center -m-1.5 p-1.5">
+                  <img 
+                    src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`}
+                    alt="Bienestar y Cuidado en el Hogar Logo"
+                    className="w-12 h-12 object-contain"
+                  />
                 </Link>
                 <button
                   type="button"
