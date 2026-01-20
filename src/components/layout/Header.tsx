@@ -49,9 +49,11 @@ export default function Header() {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <div className="flex items-center space-x-3">
-                <div className="flex justify-center items-center bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg rounded-xl w-10 h-10">
-                  <span className="font-bold text-white text-sm">BC</span>
-                </div>
+                <img 
+                  src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`}
+                  alt="Bienestar y Cuidado en el Hogar Logo"
+                  className="w-10 h-10 lg:w-12 lg:h-12 object-contain"
+                />
                 <div className="flex flex-col">
                   <span className="font-bold text-blue-600 text-xl lg:text-2xl leading-tight">Bienestar y Cuidado</span>
                   <span className="font-semibold text-emerald-600 text-sm lg:text-lg leading-tight">en el Hogar</span>

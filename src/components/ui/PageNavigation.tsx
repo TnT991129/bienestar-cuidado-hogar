@@ -72,7 +72,7 @@ export default function PageNavigation() {
   return (
     <>
       {/* Versión Desktop - Vertical (esquina derecha) */}
-      <div className="hidden lg:block top-1/2 right-6 z-50 fixed -translate-y-1/2 transform">
+      <div className="hidden lg:block top-1/2 right-6 z-50 fixed -translate-y-1/3 transform">
         <motion.nav 
           className="bg-white/95 shadow-xl backdrop-blur-md p-2 border border-gray-200/60 rounded-2xl"
           initial={{ opacity: 0, x: 50 }}
@@ -108,7 +108,7 @@ export default function PageNavigation() {
       </div>
 
       {/* Versión Móvil - Horizontal (separado del header) */}
-      <div className="lg:hidden fixed top-24 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-gray-200/60 border-b shadow-sm">
+      <div className="lg:hidden top-24 right-0 left-0 z-40 fixed bg-white/95 shadow-sm backdrop-blur-sm border-gray-200/60 border-b">
         <div className="px-4 py-3">
           <div className="flex space-x-1 overflow-x-auto scrollbar-hide">
             {navItems.map((item) => {

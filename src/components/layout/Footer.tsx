@@ -66,9 +66,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-8">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="flex justify-center items-center bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg rounded-xl w-12 h-12">
-                <span className="font-bold text-white text-lg">BC</span>
-              </div>
+              <img 
+                src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`}
+                alt="Bienestar y Cuidado en el Hogar Logo"
+                className="w-12 h-12 object-contain"
+              />
               <div>
                 <span className="font-bold text-white text-xl">Bienestar y Cuidado</span>
                 <span className="block ml-1 font-bold text-blue-300 text-lg">en el Hogar</span>
