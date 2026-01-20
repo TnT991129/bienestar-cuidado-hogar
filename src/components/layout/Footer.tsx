@@ -66,12 +66,8 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-8">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="flex justify-center items-center w-12 h-12">
-                <img 
-                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=80&h=80&fit=crop&crop=center" 
-                  alt="Bienestar y Cuidado en el Hogar" 
-                  className="w-auto h-12 object-contain"
-                />
+              <div className="flex justify-center items-center bg-blue-600 rounded-xl w-12 h-12">
+                <span className="font-bold text-white text-lg">BC</span>
               </div>
               <div>
                 <span className="font-bold text-white text-xl">Bienestar y Cuidado</span>

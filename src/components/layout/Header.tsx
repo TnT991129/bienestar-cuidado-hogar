@@ -48,11 +48,10 @@ export default function Header() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <img 
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=200&h=80&fit=crop&crop=center" 
-                alt="Bienestar y Cuidado en el Hogar" 
-                className="lg:w-2/3 object-contain"
-              />
+              <div className="flex flex-col">
+                <span className="font-bold text-blue-600 text-2xl lg:text-3xl leading-tight">Bienestar y Cuidado</span>
+                <span className="font-semibold text-emerald-600 text-lg lg:text-xl leading-tight">en el Hogar</span>
+              </div>
             </motion.div>
           </Link>
         </div>

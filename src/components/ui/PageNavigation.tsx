@@ -108,7 +108,7 @@ export default function PageNavigation() {
       </div>
 
       {/* Versión Móvil - Horizontal (separado del header) */}
-      <div className="lg:hidden fixed top-20 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-gray-200/60 border-b shadow-sm">
+      <div className="lg:hidden fixed top-24 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-gray-200/60 border-b shadow-sm">
         <div className="px-4 py-3">
           <div className="flex space-x-1 overflow-x-auto scrollbar-hide">
             {navItems.map((item) => {
