@@ -69,7 +69,7 @@ export default function Footer() {
               <img 
                 src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`}
                 alt="Bienestar y Cuidado en el Hogar Logo"
-                className="w-16 h-16 object-contain"
+                className="w-24 h-24 object-contain"
               />
             </Link>
             <p className="text-trust-300 text-sm leading-6">
