@@ -72,7 +72,7 @@ export default function PageNavigation() {
   return (
     <>
       {/* Versión Desktop - Vertical (esquina derecha) */}
-      <div className="hidden lg:block top-1/2 right-6 z-50 fixed -translate-y-1/4 transform">
+      <div className="hidden lg:block top-2/3 right-6 z-50 fixed -translate-y-1/4 transform">
         <motion.nav 
           className="bg-white/95 shadow-xl backdrop-blur-md p-2 border border-gray-200/60 rounded-2xl"
           initial={{ opacity: 0, x: 50 }}
