@@ -48,13 +48,11 @@ export default function Header() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <div className="flex items-center space-x-3">
-                <img 
-                  src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`}
-                  alt="Bienestar y Cuidado en el Hogar Logo"
-                  className="w-10 lg:w-12 h-10 lg:h-12 object-contain"
-                />
-              </div>
+              <img 
+                src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`}
+                alt="Bienestar y Cuidado en el Hogar Logo"
+                className="w-12 h-12 lg:w-16 lg:h-16 object-contain"
+              />
             </motion.div>
           </Link>
         </div>

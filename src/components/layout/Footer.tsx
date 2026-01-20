@@ -65,16 +65,12 @@ export default function Footer() {
         <div className="xl:gap-8 xl:grid xl:grid-cols-3">
           {/* Company Info */}
           <div className="space-y-8">
-            <Link href="/" className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center justify-center lg:justify-start">
               <img 
                 src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/logo.png`}
                 alt="Bienestar y Cuidado en el Hogar Logo"
-                className="w-12 h-12 object-contain"
+                className="w-16 h-16 object-contain"
               />
-              <div>
-                <span className="font-bold text-white text-xl">Bienestar y Cuidado</span>
-                <span className="block ml-1 font-bold text-blue-300 text-lg">en el Hogar</span>
-              </div>
             </Link>
             <p className="text-trust-300 text-sm leading-6">
               Brindamos servicios profesionales de cuidado domiciliario para adultos mayores, 
