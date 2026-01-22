@@ -260,7 +260,7 @@ export default function Footer() {
       </div>
 
       {/* Legal Disclaimer */}
-      <div className="bg-trust-900 border-t border-trust-700">
+      <div className="bg-trust-900 border-trust-700 border-t">
         <div className="mx-auto px-6 sm:px-6 lg:px-8 py-4 max-w-7xl">
           <div className="text-center">
             <p className="text-trust-300 text-xs leading-relaxed">
