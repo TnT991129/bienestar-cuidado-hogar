@@ -161,8 +161,7 @@ export default function HeroSection() {
             >
               {[
                 { icon: HeartIcon, textKey: "benefits.items.personalized.title", color: "text-red-500" },
-                { icon: ShieldCheckIcon, textKey: "benefits.items.security.title", color: "text-emerald-500" },
-                { icon: ClockIcon, textKey: "benefits.items.availability.title", color: "text-blue-500" }
+                { icon: ShieldCheckIcon, textKey: "benefits.items.security.title", color: "text-emerald-500" }
               ].map((item, index) => (
                 <motion.div 
                   key={item.textKey}

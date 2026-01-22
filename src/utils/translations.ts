@@ -13,7 +13,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      title: 'Acompañamiento y Apoyo',
+      title: 'Asistencia Personal',
       subtitle: 'en el Hogar',
       description: 'Cuidamos de quienes más amas, como si fueran parte de nuestra familia. Acompañamos a adultos mayores y personas con discapacidad con atención no médica en el hogar, brindando compañía, apoyo y tranquilidad todos los días.',
       startButton: 'Comenzar Ahora',
@@ -196,7 +196,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      title: 'Companionship & Support',
+      title: 'Personal Assistance',
       subtitle: 'at Home',
       description: 'We care for those you love most, as if they were part of our family. We accompany seniors and people with disabilities with non-medical attention at home, providing companionship, support and peace of mind every day.',
       startButton: 'Get Started',
