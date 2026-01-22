@@ -20,7 +20,7 @@ export const translations = {
       learnMore: 'Conocer Más',
       videoText1: 'Ver cómo cuidamos',
       videoText2: 'a tu familia',
-      caregiverName: 'María González',
+      caregiverName: 'Mirian González',
       caregiverRole: 'Cuidadora Certificada',
       yearsLabel: 'Años',
       familiesLabel: 'Familias',

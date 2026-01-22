@@ -14,7 +14,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Contacto - Bienestar y Cuidado en el Hogar | Evaluación Gratuita 24/7',
-  description: 'Contáctanos para una evaluación gratuita de cuidado domiciliario. Disponible 24/7 para emergencias. Llama al (234) 567-890 o solicita información sin compromiso.',
+  description: 'Contáctanos para una evaluación gratuita de cuidado domiciliario. Disponible 24/7 para emergencias. Llama al +1 (786) 2693 o solicita información sin compromiso.',
 }
 
 const contactMethods = [
@@ -22,8 +22,8 @@ const contactMethods = [
     name: 'Llamada de Emergencia 24/7',
     description: 'Para situaciones urgentes y consultas inmediatas',
     icon: PhoneIcon,
-    contact: '(234) 567-890',
-    action: 'tel:+1234567890',
+    contact: '+1 (786) 2693',
+    action: 'tel:+17862693',
     primary: true,
     available: '24 horas, 7 días'
   },
@@ -31,8 +31,8 @@ const contactMethods = [
     name: 'WhatsApp Business',
     description: 'Respuesta rápida por chat, fotos y documentos',
     icon: ChatBubbleLeftRightIcon,
-    contact: '(234) 567-891',
-    action: 'https://wa.me/1234567891',
+    contact: '+1 (786) 2693',
+    action: 'https://wa.me/17862693',
     primary: false,
     available: 'Lun-Dom: 7AM-10PM'
   },
@@ -62,7 +62,7 @@ const officeLocations = [
     address: 'Av. Principal 1234, Piso 3',
     city: 'Centro, Ciudad',
     zipCode: '12345',
-    phone: '(234) 567-890',
+    phone: '+1 (786) 2693',
     email: 'info@bienestarhogar.com',
     hours: {
       weekdays: 'Lunes - Viernes: 8:00 AM - 8:00 PM',
@@ -76,7 +76,7 @@ const officeLocations = [
     address: 'Calle Norte 567',
     city: 'Zona Norte, Ciudad',
     zipCode: '12346',
-    phone: '(234) 567-892',
+    phone: '+1 (786) 2693',
     email: 'norte@bienestarhogar.com',
     hours: {
       weekdays: 'Lunes - Viernes: 9:00 AM - 6:00 PM',
@@ -134,11 +134,11 @@ export default function ContactPage() {
                     ¿Emergencia o Necesidad Urgente?
                   </h3>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+17862693"
                     className="inline-flex items-center bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-white transition-colors duration-200"
                   >
                     <PhoneIcon className="mr-2 w-4 h-4" />
-                    Llamar Ahora: (234) 567-890
+                    Llamar Ahora: +1 (786) 2693
                   </a>
                 </div>
               </div>
@@ -277,7 +277,7 @@ export default function ContactPage() {
                       name="phone"
                       id="phone"
                       className="px-4 py-3 border border-gray-300 focus:border-primary-500 rounded-xl focus:ring-2 focus:ring-primary-500 w-full transition-colors"
-                      placeholder="(234) 567-890"
+                      placeholder="+1 (786) 2693"
                     />
                   </div>
                   
@@ -500,7 +500,7 @@ export default function ContactPage() {
                 className="inline-flex items-center bg-gradient-to-r from-primary-600 hover:from-primary-700 to-secondary-600 hover:to-secondary-700 shadow-lg px-6 py-3 border border-transparent rounded-xl font-medium text-white text-base transition-colors duration-200"
               >
                 <PhoneIcon className="mr-2 w-5 h-5" />
-                Llámanos: (234) 567-890
+                Llámanos: +1 (786) 2693
               </a>
             </div>
           </div>

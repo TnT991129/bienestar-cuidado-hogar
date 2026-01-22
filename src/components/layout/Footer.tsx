@@ -176,7 +176,7 @@ export default function Footer() {
                   <li className="flex items-center space-x-3">
                     <PhoneIcon className="w-5 h-5 text-primary-400" />
                     <a href="tel:+1234567890" className="text-trust-300 hover:text-white text-sm leading-6 transition-colors duration-200">
-                      +1 (234) 567-890
+                      +1 (786) 2693
                     </a>
                   </li>
                   <li className="flex items-center space-x-3">

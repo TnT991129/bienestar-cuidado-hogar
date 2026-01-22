@@ -232,7 +232,7 @@ export default function HowItWorksSection() {
                 className="inline-flex items-center bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold text-white transition-colors duration-200"
               >
                 <PhoneIcon className="mr-2 w-5 h-5" />
-                Llamar para Emergencia: (234) 567-890
+                Llamar para Emergencia: +1 (786) 2693
               </a>
             </div>
           </div>
@@ -266,7 +266,7 @@ export default function HowItWorksSection() {
                 className="inline-flex justify-center items-center hover:bg-white/10 px-6 py-3 border-2 border-white/30 rounded-xl font-medium text-white text-base transition-colors duration-200"
               >
                 <PhoneIcon className="mr-2 w-5 h-5" />
-                (234) 567-890
+                +1 (786) 2693
               </a>
             </div>
           </div>

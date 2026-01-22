@@ -200,7 +200,7 @@ export default function HeroSection() {
               </motion.div>
               
               <motion.a
-                href="tel:+1234567890"
+                href="tel:+17862693"
                 className="group flex items-center space-x-2 bg-white bg-opacity-70 hover:bg-opacity-80 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-2.5 border border-gray-200 rounded-2xl text-gray-700 hover:text-blue-600 transition-all duration-300"
                 whileHover={{ scale: 1.03, x: 5 }}
                 whileTap={{ scale: 0.98 }}
@@ -214,7 +214,7 @@ export default function HeroSection() {
                 </motion.div>
                 <div>
                   <div className="font-semibold text-xs">{t('nav.callNow')}</div>
-                  <div className="font-bold text-blue-600 text-sm">(234) 567-890</div>
+                  <div className="font-bold text-blue-600 text-sm">+1 (786) 2693</div>
                 </div>
               </motion.a>
             </motion.div>

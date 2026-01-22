@@ -177,7 +177,7 @@ export default function Header() {
 
           {/* Phone CTA */}
           <motion.a
-            href="tel:+1234567890"
+            href="tel:+17862693"
             className="flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-600 shadow-md hover:shadow-lg px-4 py-2 rounded-xl font-semibold text-white transition-all duration-300"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
@@ -282,7 +282,7 @@ export default function Header() {
                     </div>
 
                     <a
-                      href="tel:+1234567890"
+                      href="tel:+17862693"
                       className="flex justify-center items-center space-x-2 bg-secondary-600 hover:bg-secondary-700 px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300"
                     >
                       <PhoneIcon className="w-5 h-5" />
