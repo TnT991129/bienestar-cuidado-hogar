@@ -159,13 +159,13 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.5, duration: 0.8 }}
             >
-              {
+              {[
                 { icon: HeartIcon, textKey: "benefits.items.personalized.title", color: "text-red-500" },
                 { icon: ShieldCheckIcon, textKey: "benefits.items.security.title", color: "text-emerald-500" },
                 { icon: ClockIcon, textKey: "benefits.items.availability.title", color: "text-blue-500" }
               ].map((item, index) => (
                 <motion.div 
-                  key={item.text}
+                  key={item.textKey}
                   className="flex items-center space-x-1.5 sm:space-x-2 bg-white bg-opacity-70 backdrop-blur-sm px-2.5 sm:px-3 py-1.5 sm:py-2 border border-gray-200 rounded-2xl"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
