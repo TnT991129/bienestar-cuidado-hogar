@@ -23,7 +23,7 @@ const contactMethods = [
     description: 'Para situaciones urgentes y consultas inmediatas',
     icon: PhoneIcon,
     contact: '+1 (786) 2693',
-    action: 'tel:+17862693',
+    action: 'https://wa.me/17862693',
     primary: true,
     available: '24 horas, 7 días'
   },
@@ -134,7 +134,7 @@ export default function ContactPage() {
                     ¿Emergencia o Necesidad Urgente?
                   </h3>
                   <a
-                    href="tel:+17862693"
+                    href="https://wa.me/17862693"
                     className="inline-flex items-center bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-white transition-colors duration-200"
                   >
                     <PhoneIcon className="mr-2 w-4 h-4" />
@@ -430,7 +430,7 @@ export default function ContactPage() {
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center">
                         <PhoneIcon className="mr-2 w-4 h-4 text-primary-600" />
-                        <a href={`tel:${location.phone}`} className="text-primary-600 hover:text-primary-700">
+                        <a href={`https://wa.me/17862693`} className="text-primary-600 hover:text-primary-700">
                           {location.phone}
                         </a>
                       </div>
@@ -496,7 +496,7 @@ export default function ContactPage() {
             <div className="mt-12 text-center">
               <p className="mb-4 text-trust-600">¿No encontraste la respuesta que buscabas?</p>
               <a
-                href="tel:+1234567890"
+                href="https://wa.me/17862693"
                 className="inline-flex items-center bg-gradient-to-r from-primary-600 hover:from-primary-700 to-secondary-600 hover:to-secondary-700 shadow-lg px-6 py-3 border border-transparent rounded-xl font-medium text-white text-base transition-colors duration-200"
               >
                 <PhoneIcon className="mr-2 w-5 h-5" />

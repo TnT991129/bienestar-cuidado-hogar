@@ -200,7 +200,7 @@ export default function HeroSection() {
               </motion.div>
               
               <motion.a
-                href="tel:+17862693"
+                href="https://wa.me/17862693"
                 className="group flex items-center space-x-2 bg-white bg-opacity-70 hover:bg-opacity-80 backdrop-blur-sm px-3 sm:px-4 py-2 sm:py-2.5 border border-gray-200 rounded-2xl text-gray-700 hover:text-blue-600 transition-all duration-300"
                 whileHover={{ scale: 1.03, x: 5 }}
                 whileTap={{ scale: 0.98 }}
