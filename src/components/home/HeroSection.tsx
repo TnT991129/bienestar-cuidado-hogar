@@ -294,7 +294,7 @@ export default function HeroSection() {
                     <div className="text-trust-600 text-xs">{t('hero.yearsLabel')}</div>
                   </div>
                   <div>
-                    <div className="font-bold text-primary-600 text-sm sm:text-base">500+</div>
+                    <div className="font-bold text-primary-600 text-sm sm:text-base">100+</div>
                     <div className="text-trust-600 text-xs">{t('hero.familiesLabel')}</div>
                   </div>
                 </div>
@@ -318,7 +318,7 @@ export default function HeroSection() {
                     </div>
                   </div>
                   <div className="ml-1">
-                    <p className="font-semibold text-trust-800 text-xs">500+</p>
+                    <p className="font-semibold text-trust-800 text-xs">100+</p>
                     <p className="text-trust-600 text-xs">{t('hero.satisfiedLabel')}</p>
                   </div>
                 </div>
