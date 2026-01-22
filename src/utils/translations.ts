@@ -17,7 +17,14 @@ export const translations = {
       subtitle: 'en el Hogar',
       description: 'Brindamos servicios de cuidado domiciliario de alta calidad para adultos mayores, con profesionales capacitados que garantizan bienestar, seguridad y compañía en la comodidad del hogar.',
       startButton: 'Comenzar Ahora',
-      learnMore: 'Conocer Más'
+      learnMore: 'Conocer Más',
+      videoText1: 'Ver cómo cuidamos',
+      videoText2: 'a tu familia',
+      caregiverName: 'María González',
+      caregiverRole: 'Cuidadora Certificada',
+      yearsLabel: 'Años',
+      familiesLabel: 'Familias',
+      satisfiedLabel: 'Satisfechas'
     },
     // Benefits Section
     benefits: {
@@ -192,7 +199,14 @@ export const translations = {
       subtitle: 'at Home',
       description: 'We provide high-quality home care services for seniors, with trained professionals who guarantee well-being, safety and companionship in the comfort of home.',
       startButton: 'Get Started',
-      learnMore: 'Learn More'
+      learnMore: 'Learn More',
+      videoText1: 'See how we care',
+      videoText2: 'for your family',
+      caregiverName: 'Mary Johnson',
+      caregiverRole: 'Certified Caregiver',
+      yearsLabel: 'Years',
+      familiesLabel: 'Families',
+      satisfiedLabel: 'Satisfied'
     },
     // Benefits Section
     benefits: {

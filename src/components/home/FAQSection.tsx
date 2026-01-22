@@ -25,12 +25,12 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="mb-4 font-bold text-gray-900 text-3xl md:text-4xl">
             {t('faq.title')}
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-gray-600 text-xl">
             {t('faq.description')}
           </p>
         </motion.div>
@@ -47,7 +47,7 @@ export default function FAQSection() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center"
+                className="flex justify-between items-center bg-gray-50 hover:bg-gray-100 px-6 py-4 w-full text-left transition-colors"
               >
                 <span className="font-semibold text-gray-900">
                   {faq.question}
@@ -68,7 +68,7 @@ export default function FAQSection() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 py-4 bg-white">
+                    <div className="bg-white px-6 py-4">
                       <p className="text-gray-600">
                         {faq.answer}
                       </p>

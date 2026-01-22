@@ -103,7 +103,7 @@ export default function HeroSection() {
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <ShieldCheckIcon className="mr-2 w-4 sm:w-5 h-4 sm:h-5 text-emerald-500" />
-                <span className="font-bold text-gray-700 text-xs">Cuidadores Certificados</span>
+                <span className="font-bold text-gray-700 text-xs">{t('benefits.items.professionals.title')}</span>
               </motion.div>
               <motion.div 
                 className="flex items-center bg-white bg-opacity-95 shadow-xl backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 border border-gray-200 rounded-2xl"
@@ -111,7 +111,7 @@ export default function HeroSection() {
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <ClockIcon className="mr-2 w-4 sm:w-5 h-4 sm:h-5 text-blue-500" />
-                <span className="font-bold text-gray-700 text-xs">Disponible 24/7</span>
+                <span className="font-bold text-gray-700 text-xs">{t('benefits.items.availability.title')}</span>
               </motion.div>
             </motion.div>
 
@@ -159,10 +159,10 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.5, duration: 0.8 }}
             >
-              {[
-                { icon: HeartIcon, text: "Trato Humano y Respetuoso", color: "text-red-500" },
-                { icon: ShieldCheckIcon, text: "Personal Verificado", color: "text-emerald-500" },
-                { icon: ClockIcon, text: "Disponibilidad 24/7", color: "text-blue-500" }
+              {
+                { icon: HeartIcon, textKey: "benefits.items.personalized.title", color: "text-red-500" },
+                { icon: ShieldCheckIcon, textKey: "benefits.items.security.title", color: "text-emerald-500" },
+                { icon: ClockIcon, textKey: "benefits.items.availability.title", color: "text-blue-500" }
               ].map((item, index) => (
                 <motion.div 
                   key={item.text}
@@ -173,7 +173,7 @@ export default function HeroSection() {
                   whileHover={{ scale: 1.05, x: 5 }}
                 >
                   <item.icon className={`h-3.5 w-3.5 sm:h-4 sm:w-4 ${item.color}`} />
-                  <span className="font-semibold text-gray-700 text-xs">{item.text}</span>
+                  <span className="font-semibold text-gray-700 text-xs">{t(item.textKey)}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -213,7 +213,7 @@ export default function HeroSection() {
                   <PhoneIcon className="w-4 h-4 text-emerald-600" />
                 </motion.div>
                 <div>
-                  <div className="font-semibold text-xs">Llamar Ahora</div>
+                  <div className="font-semibold text-xs">{t('nav.callNow')}</div>
                   <div className="font-bold text-blue-600 text-sm">(234) 567-890</div>
                 </div>
               </motion.a>
@@ -238,8 +238,8 @@ export default function HeroSection() {
                   <PlayCircleIcon className="w-6 h-6" />
                 </motion.div>
                 <div className="text-left">
-                  <div className="font-medium text-xs">Ver cómo cuidamos</div>
-                  <div className="font-bold text-sm">a tu familia</div>
+                  <div className="font-medium text-xs">{t('hero.videoText1')}</div>
+                  <div className="font-bold text-sm">{t('hero.videoText2')}</div>
                 </div>
               </motion.button>
             </motion.div>
@@ -277,8 +277,8 @@ export default function HeroSection() {
                     <span className="text-sm sm:text-lg">👩‍⚕️</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-trust-800 text-xs">María González</p>
-                    <p className="text-trust-600 text-xs">Cuidadora Certificada</p>
+                    <p className="font-semibold text-trust-800 text-xs">{t('hero.caregiverName')}</p>
+                    <p className="text-trust-600 text-xs">{t('hero.caregiverRole')}</p>
                   </div>
                 </div>
               </motion.div>
@@ -292,11 +292,11 @@ export default function HeroSection() {
                 <div className="gap-1.5 sm:gap-2 grid grid-cols-2 text-center">
                   <div>
                     <div className="font-bold text-primary-600 text-sm sm:text-base">15+</div>
-                    <div className="text-trust-600 text-xs">Años</div>
+                    <div className="text-trust-600 text-xs">{t('hero.yearsLabel')}</div>
                   </div>
                   <div>
                     <div className="font-bold text-primary-600 text-sm sm:text-base">500+</div>
-                    <div className="text-trust-600 text-xs">Familias</div>
+                    <div className="text-trust-600 text-xs">{t('hero.familiesLabel')}</div>
                   </div>
                 </div>
               </motion.div>
@@ -320,7 +320,7 @@ export default function HeroSection() {
                   </div>
                   <div className="ml-1">
                     <p className="font-semibold text-trust-800 text-xs">500+</p>
-                    <p className="text-trust-600 text-xs">Satisfechas</p>
+                    <p className="text-trust-600 text-xs">{t('hero.satisfiedLabel')}</p>
                   </div>
                 </div>
               </motion.div>
