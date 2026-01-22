@@ -21,7 +21,7 @@ export const translations = {
       videoText1: 'Ver cómo cuidamos',
       videoText2: 'a tu familia',
       caregiverName: 'Mirian González',
-      caregiverRole: 'Especialista en Cuidados',
+      caregiverRole: 'Acompañante Profesional',
       yearsLabel: 'Años',
       familiesLabel: 'Familias',
       satisfiedLabel: 'Satisfechas'
@@ -204,7 +204,7 @@ export const translations = {
       videoText1: 'See how we care',
       videoText2: 'for your family',
       caregiverName: 'Mary Johnson',
-      caregiverRole: 'Care Specialist',
+      caregiverRole: 'Professional Companion',
       yearsLabel: 'Years',
       familiesLabel: 'Families',
       satisfiedLabel: 'Satisfied'
