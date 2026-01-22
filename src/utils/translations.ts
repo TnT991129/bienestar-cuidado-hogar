@@ -15,7 +15,7 @@ export const translations = {
     hero: {
       title: 'Cuidado Profesional',
       subtitle: 'en el Hogar',
-      description: 'Brindamos servicios de cuidado domiciliario de alta calidad para adultos mayores, con profesionales capacitados que garantizan bienestar, seguridad y compañía en la comodidad del hogar.',
+      description: 'Cuidamos de quienes más amas, como si fueran parte de nuestra familia. Acompañamos a adultos mayores y personas con discapacidad con atención no médica en el hogar, brindando compañía, apoyo y tranquilidad todos los días.',
       startButton: 'Comenzar Ahora',
       learnMore: 'Conocer Más',
       videoText1: 'Ver cómo cuidamos',
@@ -197,7 +197,7 @@ export const translations = {
     hero: {
       title: 'Professional Care',
       subtitle: 'at Home',
-      description: 'We provide high-quality home care services for seniors, with trained professionals who guarantee well-being, safety and companionship in the comfort of home.',
+      description: 'We care for those you love most, as if they were part of our family. We accompany seniors and people with disabilities with non-medical attention at home, providing companionship, support and peace of mind every day.',
       startButton: 'Get Started',
       learnMore: 'Learn More',
       videoText1: 'See how we care',
