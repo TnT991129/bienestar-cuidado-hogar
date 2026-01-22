@@ -18,17 +18,19 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Bienestar y Cuidado en el Hogar - Professional Home Care for Seniors | Cuidado Domiciliario Profesional',
+    default: 'Bienestar y Cuidado en el Hogar - Companionship & Non-Medical Support | Acompañamiento y Apoyo No Médico',
     template: '%s | Bienestar y Cuidado en el Hogar'
   },
-  description: 'Professional home care services for seniors. Personalized attention, trained caregivers and human treatment 24 hours. | Servicios profesionales de cuidado domiciliario para adultos mayores. Atención personalizada, cuidadores capacitados y trato humano las 24 horas.',
+  description: 'Non-medical companionship and support services for seniors at home. Personalized attention, trained companions and caring treatment 24 hours. | Servicios de acompañamiento y apoyo no médico para adultos mayores en el hogar. Atención personalizada, acompañantes capacitados y trato humano las 24 horas.',
   keywords: [
-    'cuidado adultos mayores',
-    'atención domiciliaria',
-    'cuidadores profesionales',
-    'servicios geriátricos',
-    'acompañamiento ancianos',
-    'cuidado en casa'
+    'acompañamiento adultos mayores',
+    'apoyo no médico',
+    'acompañantes domiciliarios',
+    'servicios de compañía',
+    'cuidado no médico',
+    'apoyo en casa',
+    'companionship services',
+    'non medical support'
   ],
   authors: [{ name: 'Cuidado Senior' }],
   creator: 'Cuidado Senior',
@@ -40,8 +42,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://cuidadosenior.com'),
   openGraph: {
-    title: 'Cuidado Senior - Atención Domiciliaria Profesional',
-    description: 'Servicios profesionales de cuidado domiciliario para adultos mayores con cuidadores capacitados y trato humano.',
+    title: 'Bienestar y Cuidado - Acompañamiento No Médico en el Hogar',
+    description: 'Servicios de acompañamiento y apoyo no médico para adultos mayores con personal capacitado y trato humano.',
     type: 'website',
     locale: 'es_ES',
     url: 'https://cuidadosenior.com',
@@ -49,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cuidado Senior - Atención Domiciliaria Profesional',
-    description: 'Servicios profesionales de cuidado domiciliario para adultos mayores con cuidadores capacitados y trato humano.',
+    title: 'Bienestar y Cuidado - Acompañamiento No Médico en el Hogar',
+    description: 'Servicios de acompañamiento y apoyo no médico para adultos mayores con personal capacitado y trato humano.',
   },
   robots: {
     index: true,

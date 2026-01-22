@@ -37,7 +37,7 @@ const navigation = {
 const valores = [
   {
     name: 'Confianza',
-    description: 'Cuidadores certificados y verificados',
+    description: 'Personal capacitado y verificado',
     icon: ShieldCheckIcon,
   },
   {
@@ -46,13 +46,13 @@ const valores = [
     icon: HeartIcon,
   },
   {
-    name: 'Profesionalismo',
-    description: 'Servicios de la más alta calidad',
+    name: 'Compromiso',
+    description: 'Acompañamiento de la más alta calidad',
     icon: UserGroupIcon,
   },
   {
     name: 'Hogar',
-    description: 'Atención en la comodidad del hogar',
+    description: 'Apoyo en la comodidad del hogar',
     icon: HomeIcon,
   },
 ]
@@ -254,6 +254,17 @@ export default function Footer() {
               >
                 +1 (786) 260-2693
               </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Legal Disclaimer */}
+      <div className="bg-trust-900 border-t border-trust-700">
+        <div className="mx-auto px-6 sm:px-6 lg:px-8 py-4 max-w-7xl">
+          <div className="text-center">
+            <p className="text-trust-300 text-xs leading-relaxed">
+              {t('footer.legalDisclaimer')}
             </p>
           </div>
         </div>

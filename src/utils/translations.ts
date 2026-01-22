@@ -13,7 +13,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      title: 'Cuidado Profesional',
+      title: 'Acompañamiento y Apoyo',
       subtitle: 'en el Hogar',
       description: 'Cuidamos de quienes más amas, como si fueran parte de nuestra familia. Acompañamos a adultos mayores y personas con discapacidad con atención no médica en el hogar, brindando compañía, apoyo y tranquilidad todos los días.',
       startButton: 'Comenzar Ahora',
@@ -21,7 +21,7 @@ export const translations = {
       videoText1: 'Ver cómo cuidamos',
       videoText2: 'a tu familia',
       caregiverName: 'Mirian González',
-      caregiverRole: 'Cuidadora Certificada',
+      caregiverRole: 'Especialista en Cuidados',
       yearsLabel: 'Años',
       familiesLabel: 'Familias',
       satisfiedLabel: 'Satisfechas'
@@ -36,8 +36,8 @@ export const translations = {
           description: 'Planes de atención adaptados a necesidades específicas.'
         },
         professionals: {
-          title: 'Profesionales Certificados',
-          description: 'Personal altamente capacitado y certificado.'
+          title: 'Personal Capacitado',
+          description: 'Acompañantes con experiencia en cuidado no médico.'
         },
         availability: {
           title: 'Disponibilidad 24/7',
@@ -71,8 +71,8 @@ export const translations = {
           description: 'Diseñamos un plan de cuidado adaptado'
         },
         implementation: {
-          title: 'Implementación',
-          description: 'Iniciamos el cuidado con profesionales certificados'
+          title: 'Inicio del Acompañamiento',
+          description: 'Iniciamos el cuidado no médico con personal capacitado'
         },
         monitoring: {
           title: 'Seguimiento Continuo',
@@ -86,7 +86,7 @@ export const translations = {
       description: 'Testimonios reales de familias satisfechas',
       items: [
         {
-          text: 'El cuidado que recibió mi madre fue excepcional. Los cuidadores fueron muy profesionales y cariñosos.',
+          text: 'El cuidado que recibió mi madre fue excepcional. Los acompañantes fueron muy atentos y cariñosos.',
           author: 'María González',
           role: 'Hija de usuaria'
         },
@@ -136,7 +136,7 @@ export const translations = {
       company: 'Empresa',
       services: 'Servicios',
       contact: 'Contacto',
-      description: 'Brindamos servicios profesionales de cuidado domiciliario para adultos mayores, con un enfoque humano y personalizado que garantiza el bienestar y la dignidad de nuestros usuarios en la comodidad de su hogar.',
+      description: 'Brindamos servicios de acompañamiento y apoyo no médico en el hogar para adultos mayores, con un enfoque humano y personalizado que garantiza el bienestar y la compañía de nuestros usuarios en la comodidad de su hogar.',
       quickLinks: 'Enlaces Rápidos',
       ourServices: 'Nuestros Servicios',
       contactInfo: 'Información de Contacto',
@@ -144,7 +144,8 @@ export const translations = {
       email: 'Email',
       address: 'Dirección',
       followUs: 'Síguenos',
-      allRightsReserved: 'Todos los derechos reservados.'
+      allRightsReserved: 'Todos los derechos reservados.',
+      legalDisclaimer: 'IMPORTANTE: Nuestros servicios son de acompañamiento y apoyo NO MÉDICO. No proporcionamos servicios médicos, de enfermería o tratamientos de salud. Siempre consulte con profesionales médicos para necesidades de atención sanitaria.'
     },
     // About Page
     about: {
@@ -167,7 +168,7 @@ export const translations = {
     // Team Page
     team: {
       title: 'Nuestro Equipo',
-      subtitle: 'Profesionales dedicados al cuidado'
+      subtitle: 'Personal dedicado al acompañamiento y apoyo'
     },
     // Contact Page
     contact: {
@@ -195,7 +196,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      title: 'Professional Care',
+      title: 'Companionship & Support',
       subtitle: 'at Home',
       description: 'We care for those you love most, as if they were part of our family. We accompany seniors and people with disabilities with non-medical attention at home, providing companionship, support and peace of mind every day.',
       startButton: 'Get Started',
@@ -203,7 +204,7 @@ export const translations = {
       videoText1: 'See how we care',
       videoText2: 'for your family',
       caregiverName: 'Mary Johnson',
-      caregiverRole: 'Certified Caregiver',
+      caregiverRole: 'Care Specialist',
       yearsLabel: 'Years',
       familiesLabel: 'Families',
       satisfiedLabel: 'Satisfied'
@@ -218,8 +219,8 @@ export const translations = {
           description: 'Care plans adapted to specific needs.'
         },
         professionals: {
-          title: 'Certified Professionals',
-          description: 'Highly trained and certified staff.'
+          title: 'Trained Staff',
+          description: 'Companions with experience in non-medical care.'
         },
         availability: {
           title: '24/7 Availability',
@@ -253,8 +254,8 @@ export const translations = {
           description: 'We design an adapted care plan'
         },
         implementation: {
-          title: 'Implementation',
-          description: 'We start care with certified professionals'
+          title: 'Start Companionship',
+          description: 'We start non-medical care with trained staff'
         },
         monitoring: {
           title: 'Continuous Monitoring',
@@ -268,9 +269,9 @@ export const translations = {
       description: 'Real testimonials from satisfied families',
       items: [
         {
-          text: 'The care my mother received was exceptional. The caregivers were very professional and caring.',
+          text: 'The care my mother received was exceptional. The companions were very attentive and caring.',
           author: 'Mary Johnson',
-          role: 'User\'s daughter'
+          role: "User's daughter"
         },
         {
           text: 'Thanks to this service, my father was able to stay at home with the care he needed. Excellent service.',
@@ -294,8 +295,8 @@ export const translations = {
           answer: 'It includes companionship, help with daily activities, medication administration, meal preparation, and emotional support.'
         },
         {
-          question: 'Are the caregivers certified?',
-          answer: 'Yes, all our caregivers are certified and have experience in caring for seniors.'
+          question: 'Are the companions trained?',
+          answer: 'Yes, all our companions are trained and have experience in non-medical care for seniors.'
         },
         {
           question: 'Can I choose the care schedule?',
@@ -318,7 +319,7 @@ export const translations = {
       company: 'Company',
       services: 'Services',
       contact: 'Contact',
-      description: 'We provide professional home care services for seniors, with a human and personalized approach that guarantees the well-being and dignity of our users in the comfort of their home.',
+      description: 'We provide companionship and non-medical support services at home for seniors, with a human and personalized approach that guarantees well-being and companionship for our users in the comfort of their home.',
       quickLinks: 'Quick Links',
       ourServices: 'Our Services',
       contactInfo: 'Contact Information',
@@ -326,7 +327,8 @@ export const translations = {
       email: 'Email',
       address: 'Address',
       followUs: 'Follow Us',
-      allRightsReserved: 'All rights reserved.'
+      allRightsReserved: 'All rights reserved.',
+      legalDisclaimer: 'IMPORTANT: Our services are NON-MEDICAL companionship and support. We do not provide medical services, nursing, or health treatments. Always consult with medical professionals for healthcare needs.'
     },
     // About Page
     about: {
@@ -349,7 +351,7 @@ export const translations = {
     // Team Page
     team: {
       title: 'Our Team',
-      subtitle: 'Professionals dedicated to care'
+      subtitle: 'Staff dedicated to companionship and support'
     },
     // Contact Page
     contact: {
