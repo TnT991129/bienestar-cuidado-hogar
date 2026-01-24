@@ -111,7 +111,7 @@ export default function BenefitsSection() {
         </motion.div>
 
         <div className="mx-auto mt-10 sm:mt-12 lg:mt-14 lg:max-w-none max-w-2xl">
-          <div className="items-center gap-6 grid grid-cols-1 lg:grid-cols-3 lg:max-w-none max-w-xl">
+          <div className="justify-center items-center gap-6 grid grid-cols-1 lg:grid-cols-3 lg:max-w-none max-w-xl">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.id}
