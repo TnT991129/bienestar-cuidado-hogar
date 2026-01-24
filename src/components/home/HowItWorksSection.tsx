@@ -141,10 +141,10 @@ export default function HowItWorksSection() {
                     </div>
 
                     {/* Details */}
-                    <ul className="space-y-2 text-trust-600 text-sm">
+                    <ul className="justify-center items-center space-y-2 text-trust-600 text-sm">
                       {step.details.map((detail, detailIndex) => (
                         <li key={detailIndex} className="flex items-start">
-                          <CheckCircleIcon className="flex-shrink-0 mt-0.5 mr-2 w-4 h-4 text-secondary-500" />
+                          <CheckCircleIcon className="flex-shrink-0 items-center mt-0.5 mr-2 w-4 h-4 text-secondary-500" />
                           {detail}
                         </li>
                       ))}
