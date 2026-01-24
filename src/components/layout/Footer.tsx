@@ -175,8 +175,8 @@ export default function Footer() {
                 <ul role="list" className="space-y-4 mt-6">
                   <li className="flex items-center space-x-3">
                     <PhoneIcon className="w-5 h-5 text-primary-400" />
-                    <a href="https://wa.me/17862602693" className="text-trust-300 hover:text-white text-sm leading-6 transition-colors duration-200">
-                      +1 (786) 260-2693
+                    <a href="https://wa.me/17867527884" className="text-trust-300 hover:text-white text-sm leading-6 transition-colors duration-200">
+                      +1 (786) 752-7884
                     </a>
                   </li>
                   <li className="flex items-center space-x-3">
@@ -249,10 +249,10 @@ export default function Footer() {
               <span className="md:hidden">Emergencia 24/7: </span>
               <span className="hidden md:inline">¿Necesita atención inmediata? Estamos disponibles 24/7: </span>
               <a
-                href="https://wa.me/17862602693"
+                href="https://wa.me/17867527884"
                 className="font-bold hover:text-secondary-100 underline transition-colors duration-200"
               >
-                +1 (786) 260-2693
+                +1 (786) 752-7884
               </a>
             </p>
           </div>

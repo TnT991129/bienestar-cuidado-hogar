@@ -14,7 +14,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Contacto - Bienestar y Cuidado en el Hogar | Evaluación Gratuita 24/7',
-  description: 'Contáctanos para una evaluación gratuita de cuidado domiciliario. Disponible 24/7 para emergencias. Llama al +1 (786) 260-2693 o solicita información sin compromiso.',
+  description: 'Contáctanos para una evaluación gratuita de cuidado domiciliario. Disponible 24/7 para emergencias. Llama al +1 (786) 752-7884 o solicita información sin compromiso.',
 }
 
 const contactMethods = [
@@ -22,8 +22,8 @@ const contactMethods = [
     name: 'Llamada de Emergencia 24/7',
     description: 'Para situaciones urgentes y consultas inmediatas',
     icon: PhoneIcon,
-    contact: '+1 (786) 260-2693',
-    action: 'https://wa.me/17862602693',
+    contact: '+1 (786) 752-7884',
+    action: 'https://wa.me/17867527884',
     primary: true,
     available: '24 horas, 7 días'
   },
@@ -31,8 +31,8 @@ const contactMethods = [
     name: 'WhatsApp Business',
     description: 'Respuesta rápida por chat, fotos y documentos',
     icon: ChatBubbleLeftRightIcon,
-    contact: '+1 (786) 260-2693',
-    action: 'https://wa.me/17862602693',
+    contact: '+1 (786) 752-7884',
+    action: 'https://wa.me/17867527884',
     primary: false,
     available: 'Lun-Dom: 7AM-10PM'
   },

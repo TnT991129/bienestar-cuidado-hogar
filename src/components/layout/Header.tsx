@@ -282,7 +282,7 @@ export default function Header() {
                     </div>
 
                     <a
-                      href="https://wa.me/17862602693"
+                      href="https://wa.me/17867527884"
                       className="flex justify-center items-center space-x-2 bg-secondary-600 hover:bg-secondary-700 px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300"
                     >
                       <PhoneIcon className="w-5 h-5" />
