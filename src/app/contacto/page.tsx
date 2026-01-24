@@ -134,11 +134,11 @@ export default function ContactPage() {
                     ¿Emergencia o Necesidad Urgente?
                   </h3>
                   <a
-                    href="https://wa.me/17862602693"
+                    href="https://wa.me/17867527884"
                     className="inline-flex items-center bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-white transition-colors duration-200"
                   >
                     <PhoneIcon className="mr-2 w-4 h-4" />
-                    Llamar Ahora: +1 (786) 260-2693
+                    Llamar Ahora: +1 (786) 752-7884
                   </a>
                 </div>
               </div>
@@ -277,7 +277,7 @@ export default function ContactPage() {
                       name="phone"
                       id="phone"
                       className="px-4 py-3 border border-gray-300 focus:border-primary-500 rounded-xl focus:ring-2 focus:ring-primary-500 w-full transition-colors"
-                      placeholder="+1 (786) 260-2693"
+                      placeholder="+1 (786) 752-7884"
                     />
                   </div>
                   
@@ -430,7 +430,7 @@ export default function ContactPage() {
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center">
                         <PhoneIcon className="mr-2 w-4 h-4 text-primary-600" />
-                        <a href={`https://wa.me/17862602693`} className="text-primary-600 hover:text-primary-700">
+                        <a href={`https://wa.me/17867527884`} className="text-primary-600 hover:text-primary-700">
                           {location.phone}
                         </a>
                       </div>
@@ -496,11 +496,11 @@ export default function ContactPage() {
             <div className="mt-12 text-center">
               <p className="mb-4 text-trust-600">¿No encontraste la respuesta que buscabas?</p>
               <a
-                href="https://wa.me/17862602693"
+                href="https://wa.me/17867527884"
                 className="inline-flex items-center bg-gradient-to-r from-primary-600 hover:from-primary-700 to-secondary-600 hover:to-secondary-700 shadow-lg px-6 py-3 border border-transparent rounded-xl font-medium text-white text-base transition-colors duration-200"
               >
                 <PhoneIcon className="mr-2 w-5 h-5" />
-                Llámanos: +1 (786) 260-2693
+                Llámanos: +1 (786) 752-7884
               </a>
             </div>
           </div>
