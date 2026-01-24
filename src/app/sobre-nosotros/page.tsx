@@ -14,13 +14,13 @@ import {
 
 export const metadata: Metadata = {
   title: 'Sobre Nosotros - Bienestar y Cuidado en el Hogar | 15+ Años de Experiencia',
-  description: 'Conoce nuestra historia de más de 15 años cuidando familias. Empresa familiar dedicada al cuidado domiciliario no médico de adultos mayores con valores de compasión, profesionalismo y confiabilidad.',
+  description: 'Conoce nuestra historia de más de 15 años acompañando familias. Empresa familiar dedicada al acompañamiento no médico de adultos mayores con valores de compasión, profesionalismo y confiabilidad.',
 }
 
 const stats = [
   { name: 'Años de experiencia', value: '15+' },
   { name: 'Familias atendidas', value: '500+' },
-  { name: 'Cuidadores certificados', value: '50+' },
+  { name: 'Acompañantes capacitados', value: '50+' },
   { name: 'Satisfacción del cliente', value: '98%' }
 ]
 
@@ -28,13 +28,13 @@ const timeline = [
   {
     year: '2008',
     title: 'Fundación de la Empresa',
-    description: 'María Elena Rodríguez funda Bienestar y Cuidado en el Hogar con la visión de ofrecer cuidado domiciliario humano y profesional.',
+    description: 'María Elena Rodríguez funda Bienestar y Cuidado en el Hogar con la visión de ofrecer acompañamiento no médico humano y brindado con profesionalismo.',
     icon: HeartIcon
   },
   {
     year: '2010',
     title: 'Primera Expansión',
-    description: 'Alcanzamos las 25 familias atendidas y expandimos nuestro equipo a 10 cuidadores certificados.',
+    description: 'Alcanzamos las 25 familias atendidas y expandimos nuestro equipo a 10 acompañantes capacitados.',
     icon: UserGroupIcon
   },
   {
@@ -90,22 +90,15 @@ const team = [
   {
     name: 'María Elena Rodríguez',
     role: 'Fundadora y Directora General',
-    credentials: 'Enfermera Registrada, BSN, 25+ años de experiencia',
-    description: 'Enfermera con más de 25 años de experiencia en cuidado geriátrico. Fundó la empresa con la visión de humanizar el cuidado domiciliario.',
+    credentials: 'Administración de Servicios de Acompañamiento, 25+ años de experiencia',
+    description: 'Especialista en servicios de bienestar para adultos mayores con más de 25 años de experiencia. Fundó la empresa con la visión de humanizar el acompañamiento no médico en el hogar.',
     image: '👩‍⚕️'
   },
   {
-    name: 'Dr. Carlos Mendoza',
-    role: 'Director Médico Consultor',
-    credentials: 'Médico Geriatra, Certificado en Cuidados Paliativos',
-    description: 'Supervisa los protocolos médicos y asegura que nuestros servicios complementen el cuidado médico de cada cliente.',
-    image: '👨‍⚕️'
-  },
-  {
     name: 'Ana Patricia Silva',
-    role: 'Coordinadora de Cuidadores',
-    credentials: 'Trabajadora Social, MSW, Especialista en Gerontología',
-    description: 'Responsable de la selección, capacitación y supervisión continua de nuestro equipo de cuidadores profesionales.',
+    role: 'Coordinadora de Acompañantes',
+    credentials: 'Trabajadora Social, MSW, Especialista en Bienestar del Adulto Mayor',
+    description: 'Responsable de la selección, capacitación y supervisión continua de nuestro equipo de acompañantes especializados.',
     image: '👩‍💼'
   },
   {
@@ -131,7 +124,7 @@ export default function AboutPage() {
             </h1>
             <p className="mt-6 text-trust-600 text-lg leading-8">
               Más de 15 años cuidando familias con amor, profesionalismo y dedicación. 
-              Conoce nuestra historia completa, valores y el equipo que hace posible el mejor cuidado domiciliario.
+              Conoce nuestra historia completa, valores y el equipo que hace posible el mejor acompañamiento no médico.
             </p>
           </div>
         </div>
@@ -153,7 +146,7 @@ export default function AboutPage() {
               <div>
                 <div className="space-y-6 text-trust-600 text-lg leading-relaxed">
                   <p>
-                    Nuestra misión es proporcionar servicios de cuidado domiciliario de la más alta calidad 
+                    Nuestra misión es proporcionar servicios de acompañamiento no médico de la más alta calidad 
                     que permitan a los adultos mayores mantener su <strong className="text-trust-800">independencia, 
                     dignidad y calidad de vida</strong> en la comodidad de su propio hogar.
                   </p>
@@ -175,7 +168,7 @@ export default function AboutPage() {
                 <div className="bg-gradient-to-r from-primary-50 to-secondary-50 mt-12 p-6 rounded-2xl">
                   <h3 className="mb-4 font-bold text-trust-900 text-xl">Nuestra Visión</h3>
                   <p className="text-trust-700">
-                    Ser la empresa líder en servicios de cuidado domiciliario en la región, reconocida por 
+                    Ser la empresa líder en servicios de acompañamiento no médico en la región, reconocida por 
                     nuestra excelencia, compasión y compromiso inquebrantable con el bienestar de nuestros 
                     clientes y sus familias, transformando la forma en que se brinda el cuidado a los adultos mayores.
                   </p>
@@ -207,7 +200,7 @@ export default function AboutPage() {
               15 Años de Crecimiento y Dedicación
             </p>
             <p className="mt-6 text-trust-600 text-lg leading-8">
-              Desde nuestros humildes inicios hasta convertirnos en líderes regionales en cuidado domiciliario.
+              Desde nuestros humildes inicios hasta convertirnos en líderes regionales en acompañamiento no médico.
             </p>
           </div>
 
@@ -337,11 +330,11 @@ export default function AboutPage() {
                   Contactar Ahora
                 </a>
                 <a
-                  href="https://wa.me/17862602693"
+                  href="https://wa.me/17867527884"
                   className="inline-flex justify-center items-center hover:bg-white/10 px-6 py-3 border-2 border-white/30 rounded-xl font-medium text-white text-base transition-colors duration-200"
                 >
                   <PhoneIcon className="mr-2 w-5 h-5" />
-                  +1 (786) 260-2693
+                  +1 (786) 752-7884
                 </a>
               </div>
             </div>

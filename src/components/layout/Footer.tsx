@@ -15,9 +15,9 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const navigation = {
   servicios: [
-    { name: 'Cuidado Domiciliario', href: '/servicios#cuidado-domiciliario' },
-    { name: 'Acompañamiento', href: '/servicios#acompanamiento' },
-    { name: 'Asistencia Personal', href: '/servicios#asistencia-personal' },
+    { name: 'Acompañamiento en el Hogar', href: '/servicios#acompanamiento-hogar' },
+    { name: 'Compañía y Acompañamiento', href: '/servicios#acompanamiento' },
+    { name: 'Asistencia Personal NO Médica', href: '/servicios#asistencia-personal' },
     { name: 'Apoyo Emocional', href: '/servicios#apoyo-emocional' },
   ],
   empresa: [
@@ -84,7 +84,7 @@ export default function Footer() {
   const valores = [
     {
       name: 'Confianza',
-      description: 'Cuidadores certificados y verificados',
+      description: 'Acompañantes capacitados y verificados',
       icon: ShieldCheckIcon,
     },
     {

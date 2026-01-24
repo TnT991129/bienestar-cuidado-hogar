@@ -14,7 +14,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Contacto - Bienestar y Cuidado en el Hogar | Evaluación Gratuita 24/7',
-  description: 'Contáctanos para una evaluación gratuita de cuidado domiciliario. Disponible 24/7 para emergencias. Llama al +1 (786) 752-7884 o solicita información sin compromiso.',
+  description: 'Contáctanos para una evaluación gratuita de acompañamiento en el hogar. Disponible 24/7 para emergencias. Llama al +1 (786) 752-7884 o solicita información sin compromiso.',
 }
 
 const contactMethods = [
@@ -378,7 +378,7 @@ export default function ContactPage() {
                     className="mt-1 border-gray-300 rounded focus:ring-2 focus:ring-primary-500 w-4 h-4 text-primary-600"
                   />
                   <label htmlFor="privacy" className="ml-3 text-trust-600 text-sm">
-                    Acepto recibir información sobre servicios de cuidado domiciliario y entiendo que 
+                    Acepto recibir información sobre servicios de acompañamiento en el hogar y entiendo que 
                     puedo cancelar estas comunicaciones en cualquier momento. 
                     <a href="/privacidad" className="text-primary-600 hover:text-primary-700">
                       Ver política de privacidad.

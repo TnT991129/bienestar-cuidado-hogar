@@ -108,12 +108,12 @@ export const translations = {
       description: 'Resolvemos tus dudas más comunes',
       items: [
         {
-          question: '¿Qué servicios incluye el cuidado domiciliario?',
-          answer: 'Incluye compañía, ayuda con actividades diarias, administración de medicamentos, preparación de comidas, y apoyo emocional.'
+          question: '¿Qué servicios incluye el acompañamiento en el hogar?',
+          answer: 'Incluye compañía, ayuda con actividades diarias, recordatorios amigables, preparación de comidas, y apoyo emocional no médico.'
         },
         {
-          question: '¿Los cuidadores están certificados?',
-          answer: 'Sí, todos nuestros cuidadores están certificados y tienen experiencia en el cuidado de adultos mayores.'
+          question: '¿Los acompañantes están capacitados?',
+          answer: 'Sí, todos nuestros acompañantes están capacitados y tienen experiencia en el acompañamiento no médico de adultos mayores.'
         },
         {
           question: '¿Puedo elegir el horario de atención?',
@@ -121,7 +121,7 @@ export const translations = {
         },
         {
           question: '¿Qué pasa si no estoy satisfecho con el servicio?',
-          answer: 'Garantizamos la calidad del servicio. Si no está satisfecho, cambiaremos el cuidador o ajustaremos el plan.'
+          answer: 'Garantizamos la calidad del servicio. Si no está satisfecho, cambiaremos el acompañante o ajustaremos el plan.'
         }
       ]
     },
@@ -151,7 +151,7 @@ export const translations = {
     about: {
       title: 'Sobre Nosotros',
       subtitle: 'Dedicados al cuidado de adultos mayores',
-      description: 'Somos una empresa especializada en brindar servicios de cuidado domiciliario para adultos mayores...',
+      description: 'Somos una empresa especializada en brindar servicios de acompañamiento no médico en el hogar para adultos mayores...',
       mission: 'Nuestra Misión',
       vision: 'Nuestra Visión',
       values: 'Nuestros Valores'
@@ -160,10 +160,10 @@ export const translations = {
     services: {
       title: 'Nuestros Servicios',
       subtitle: 'Cuidado integral para adultos mayores',
-      personalCare: 'Cuidado Personal',
-      companionship: 'Compañía',
-      medication: 'Administración de Medicamentos',
-      housekeeping: 'Tareas del Hogar'
+      personalCare: 'Asistencia Personal NO Médica',
+      companionship: 'Compañía y Acompañamiento',
+      medication: 'Recordatorios Amigables',
+      housekeeping: 'Apoyo con Tareas del Hogar'
     },
     // Team Page
     team: {
@@ -291,8 +291,8 @@ export const translations = {
       description: 'We answer your most common questions',
       items: [
         {
-          question: 'What services does home care include?',
-          answer: 'It includes companionship, help with daily activities, medication administration, meal preparation, and emotional support.'
+          question: 'What services does home companionship include?',
+          answer: 'It includes companionship, help with daily activities, friendly reminders, meal preparation, and non-medical emotional support.'
         },
         {
           question: 'Are the companions trained?',
@@ -304,7 +304,7 @@ export const translations = {
         },
         {
           question: 'What if I\'m not satisfied with the service?',
-          answer: 'We guarantee service quality. If you\'re not satisfied, we\'ll change the caregiver or adjust the plan.'
+          answer: 'We guarantee service quality. If you\'re not satisfied, we\'ll change the companion or adjust the plan.'
         }
       ]
     },
@@ -343,10 +343,10 @@ export const translations = {
     services: {
       title: 'Our Services',
       subtitle: 'Comprehensive care for seniors',
-      personalCare: 'Personal Care',
+      personalCare: 'NON-Medical Personal Care',
       companionship: 'Companionship',
-      medication: 'Medication Management',
-      housekeeping: 'Housekeeping'
+      medication: 'Friendly Reminders',
+      housekeeping: 'Household Support'
     },
     // Team Page
     team: {

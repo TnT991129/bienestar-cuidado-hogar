@@ -258,7 +258,7 @@ export default function HeroSection() {
               <div className="relative bg-gradient-to-br from-primary-100 to-secondary-100 shadow-2xl rounded-2xl overflow-hidden">
                 <img
                   src={`${process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''}/imagen-hero.png`}
-                  alt="Cuidadora profesional con adulto mayor sonriendo en el hogar"
+                  alt="Acompañante capacitada con adulto mayor sonriendo en el hogar"
                   className="rounded-2xl w-full h-auto object-cover"
                 />
                 {/* Overlay gradient for better text readability */}

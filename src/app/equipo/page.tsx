@@ -11,44 +11,35 @@ import {
 } from '@heroicons/react/24/outline'
 
 export const metadata: Metadata = {
-  title: 'Nuestro Equipo - Bienestar y Cuidado en el Hogar | Cuidadores Certificados',
-  description: 'Conoce a nuestro equipo de cuidadores profesionales certificados. Personal con experiencia, capacitación continua y dedicación al cuidado de adultos mayores.',
+  title: 'Nuestro Equipo - Bienestar y Cuidado en el Hogar | Acompañantes Capacitados',
+  description: 'Conoce a nuestro equipo de acompañantes capacitados. Personal con experiencia, capacitación continua y dedicación al acompañamiento no médico de adultos mayores.',
 }
 
 const leadership = [
   {
     name: 'María Elena Rodríguez',
     role: 'Fundadora y Directora General',
-    credentials: 'Enfermera Registrada, BSN, 25+ años de experiencia',
-    description: 'Fundó la empresa en 2008 con la visión de humanizar el cuidado domiciliario. Especialista en cuidado geriátrico con más de 25 años de experiencia en hospitales y centros de cuidado especializado.',
-    specialties: ['Administración de cuidado geriátrico', 'Capacitación de personal', 'Planes de atención personalizados'],
+    credentials: 'Administración de Servicios de Acompañamiento, 25+ años de experiencia',
+    description: 'Fundó la empresa en 2008 con la visión de humanizar el acompañamiento no médico en el hogar. Especialista en servicios de bienestar para adultos mayores con más de 25 años de experiencia en servicios de acompañamiento.',
+    specialties: ['Administración de servicios de acompañamiento', 'Capacitación de personal', 'Planes de atención personalizada no médica'],
     image: '👩‍⚕️',
     contact: 'maria@bienestarhogar.com'
   },
   {
-    name: 'Dr. Carlos Mendoza',
-    role: 'Director Médico Consultor',
-    credentials: 'Médico Geriatra, Certificado en Cuidados Paliativos',
-    description: 'Supervisa todos los protocolos médicos y colabora con los médicos de familia para asegurar continuidad en el cuidado. Especialista en geriatría con 20 años de experiencia.',
-    specialties: ['Medicina geriátrica', 'Cuidados paliativos', 'Coordinación médica'],
-    image: '👨‍⚕️',
-    contact: 'dr.mendoza@bienestarhogar.com'
-  },
-  {
     name: 'Ana Patricia Silva',
-    role: 'Coordinadora de Cuidadores',
-    credentials: 'Trabajadora Social, MSW, Especialista en Gerontología',
-    description: 'Responsable de la selección, capacitación y supervisión continua de nuestro equipo de cuidadores. Experta en evaluaciones psicosociales y desarrollo de planes de cuidado.',
-    specialties: ['Trabajo social gerontológico', 'Supervisión de personal', 'Evaluaciones familiares'],
+    role: 'Coordinadora de Acompañantes',
+    credentials: 'Trabajadora Social, MSW, Especialista en Bienestar del Adulto Mayor',
+    description: 'Responsable de la selección, capacitación y supervisión continua de nuestro equipo de acompañantes. Experta en evaluaciones de bienestar y desarrollo de planes de acompañamiento no médico.',
+    specialties: ['Trabajo social gerontológico', 'Supervisión de personal', 'Evaluaciones de bienestar familiar'],
     image: '👩‍💼',
     contact: 'ana@bienestarhogar.com'
   },
   {
     name: 'Roberto Vásquez',
     role: 'Gerente de Operaciones',
-    credentials: 'Administración en Salud, 15 años en servicios domiciliarios',
-    description: 'Coordina las operaciones diarias, programación de servicios y asegura la calidad en todos nuestros casos activos. Experto en logística de cuidado domiciliario.',
-    specialties: ['Operaciones de cuidado domiciliario', 'Control de calidad', 'Logística de servicios'],
+    credentials: 'Administración de Servicios, 15 años en servicios de acompañamiento en el hogar',
+    description: 'Coordina las operaciones diarias, programación de servicios y asegura la calidad en todos nuestros casos activos. Experto en logística de servicios de acompañamiento no médico.',
+    specialties: ['Operaciones de acompañamiento en el hogar', 'Control de calidad', 'Logística de servicios'],
     image: '👨‍💼',
     contact: 'roberto@bienestarhogar.com'
   }
@@ -58,8 +49,8 @@ const caregiverProfiles = [
   {
     name: 'Carmen Morales',
     experience: '12 años',
-    specialties: ['Cuidado personal', 'Demencia temprana', 'Movilidad limitada'],
-    certifications: ['CNA Certificada', 'Primeros Auxilios', 'CPR'],
+    specialties: ['Asistencia personal no médica', 'Acompañamiento especializado', 'Apoyo con movilidad'],
+    certifications: ['Acompañante Capacitada', 'Primeros Auxilios', 'RCP'],
     languages: ['Español', 'Inglés'],
     personality: 'Paciente, cariñosa y muy detallista. Le encanta la jardinería y cocinar.',
     image: '👩‍🦳'
@@ -67,8 +58,8 @@ const caregiverProfiles = [
   {
     name: 'Luis Hernández',
     experience: '8 años',
-    specialties: ['Cuidado post-hospitalario', 'Rehabilitación', 'Transporte médico'],
-    certifications: ['CNA Certificado', 'Primeros Auxilios', 'Manejo defensivo'],
+    specialties: ['Apoyo post-hospitalario no médico', 'Acompañamiento en recuperación', 'Transporte de acompañamiento'],
+    certifications: ['Acompañante Capacitado', 'Primeros Auxilios', 'Manejo defensivo'],
     languages: ['Español', 'Inglés básico'],
     personality: 'Alegre, confiable y muy fuerte físicamente. Aficionado al deporte.',
     image: '👨‍⚕️'
@@ -76,8 +67,8 @@ const caregiverProfiles = [
   {
     name: 'Patricia Jiménez',
     experience: '15 años',
-    specialties: ['Alzheimer avanzado', 'Cuidados paliativos', 'Apoyo familiar'],
-    certifications: ['CNA Certificada', 'Especialización en demencia', 'Cuidados paliativos'],
+    specialties: ['Acompañamiento especializado en Alzheimer', 'Apoyo emocional y familiar', 'Apoyo en situaciones difíciles'],
+    certifications: ['Acompañante Especializada', 'Capacitación en demencia', 'Apoyo emocional'],
     languages: ['Español', 'Inglés fluido'],
     personality: 'Muy empática y espiritual. Experta en manejo de comportamientos difíciles.',
     image: '👩‍⚕️'
@@ -85,17 +76,17 @@ const caregiverProfiles = [
   {
     name: 'Miguel Torres',
     experience: '10 años',
-    specialties: ['Cuidado nocturno', 'Emergencias médicas', 'Supervisión 24/7'],
-    certifications: ['EMT Básico', 'CNA Certificado', 'Manejo de crisis'],
+    specialties: ['Acompañamiento nocturno', 'Apoyo en situaciones de urgencia', 'Supervisión 24/7 no médica'],
+    certifications: ['Acompañante Nocturno Especializado', 'Primeros Auxilios', 'Manejo de situaciones difíciles'],
     languages: ['Español', 'Inglés'],
-    personality: 'Muy atento y responsable. Experiencia en cuidados intensivos.',
+    personality: 'Muy atento y responsable. Experiencia en acompañamiento especializado.',
     image: '👨‍🦲'
   },
   {
     name: 'Esperanza Ruiz',
     experience: '18 años',
-    specialties: ['Cuidado infantil de adultos', 'Nutrición geriátrica', 'Actividades terapéuticas'],
-    certifications: ['CNA Certificada', 'Nutrición geriátrica', 'Terapia recreativa'],
+    specialties: ['Acompañamiento integral', 'Apoyo nutricional no médico', 'Actividades recreativas'],
+    certifications: ['Acompañante Capacitada', 'Nutrición saludable', 'Actividades recreativas'],
     languages: ['Español', 'Inglés'],
     personality: 'Muy creativa y nutritiva. Especialista en cocina saludable para adultos mayores.',
     image: '👵'
@@ -103,8 +94,8 @@ const caregiverProfiles = [
   {
     name: 'Jorge Mendoza',
     experience: '6 años',
-    specialties: ['Tecnología asistiva', 'Ejercicio terapéutico', 'Compañía masculina'],
-    certifications: ['CNA Certificado', 'Fitness para adultos mayores', 'Tecnología médica'],
+    specialties: ['Tecnología de apoyo', 'Actividades físicas recreativas', 'Acompañamiento masculino'],
+    certifications: ['Acompañante Capacitado', 'Actividades físicas para adultos mayores', 'Tecnología asistiva'],
     languages: ['Español', 'Inglés'],
     personality: 'Paciente y técnico. Excelente con clientes masculinos que prefieren compañía masculina.',
     image: '👨'
@@ -129,8 +120,8 @@ export default function TeamPage() {
               Nuestro Equipo
             </h1>
             <p className="mt-6 text-trust-600 text-lg leading-8">
-              Conoce a los profesionales que hacen posible el mejor cuidado domiciliario. 
-              Personal certificado, con experiencia y genuina vocación de servicio.
+              Conoce al equipo que hace posible el mejor acompañamiento no médico en el hogar. 
+              Personal capacitado, con experiencia y genuina vocación de servicio.
             </p>
           </div>
 
@@ -159,8 +150,8 @@ export default function TeamPage() {
               Nuestro Equipo Directivo
             </p>
             <p className="mt-6 text-trust-600 text-lg leading-8">
-              Profesionales experimentados que dirigen nuestro equipo con pasión, 
-              experiencia y compromiso con la excelencia en el cuidado.
+              Equipo experimentado que dirige nuestra organización con pasión, 
+              experiencia y compromiso con la excelencia en el acompañamiento no médico.
             </p>
           </div>
 
@@ -210,13 +201,13 @@ export default function TeamPage() {
       <section className="bg-gradient-to-br from-trust-50 to-primary-50/30 py-24 sm:py-32">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestros Cuidadores</h2>
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestros Acompañantes</h2>
             <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
-              Cuidadores Profesionales Certificados
+              Acompañantes Capacitados Especializados
             </p>
             <p className="mt-6 text-trust-600 text-lg leading-8">
-              Cada miembro de nuestro equipo de cuidadores ha sido cuidadosamente seleccionado, 
-              capacitado y certificado para brindar el más alto nivel de atención.
+              Cada miembro de nuestro equipo de acompañantes ha sido cuidadosamente seleccionado, 
+              capacitado y preparado para brindar el más alto nivel de acompañamiento no médico.
             </p>
           </div>
 
@@ -291,7 +282,7 @@ export default function TeamPage() {
               Proceso Riguroso de Selección y Capacitación
             </p>
             <p className="mt-6 text-trust-600 text-lg leading-8">
-              Nuestro proceso de selección garantiza que solo los mejores profesionales formen parte de nuestro equipo.
+              Nuestro proceso de selección garantiza que solo los mejores acompañantes formen parte de nuestro equipo.
             </p>
           </div>
 
@@ -301,9 +292,9 @@ export default function TeamPage() {
                 <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-4 rounded-full w-16 h-16 font-bold text-white text-xl">
                   <AcademicCapIcon className="w-8 h-8" />
                 </div>
-                <h3 className="mb-2 font-semibold text-trust-900">Certificaciones Requeridas</h3>
+                <h3 className="mb-2 font-semibold text-trust-900">Capacitación Requerida</h3>
                 <p className="text-trust-600 text-sm">
-                  CNA, primeros auxilios, CPR y certificaciones especializadas según el área
+                  Capacitación especializada, primeros auxilios, RCP y formación específica según el área de acompañamiento
                 </p>
               </div>
 
@@ -452,11 +443,11 @@ export default function TeamPage() {
                   Trabaja con Nosotros
                 </a>
                 <a
-                  href="https://wa.me/17862602693"
+                  href="https://wa.me/17867527884"
                   className="inline-flex justify-center items-center hover:bg-white/10 px-6 py-3 border-2 border-white/30 rounded-xl font-medium text-white text-base transition-colors duration-200"
                 >
                   <PhoneIcon className="mr-2 w-5 h-5" />
-                  Necesito Cuidadores: +1 (786) 260-2693
+                  Necesito Cuidadores: +1 (786) 752-7884
                 </a>
               </div>
             </div>

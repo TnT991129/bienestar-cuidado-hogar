@@ -134,7 +134,7 @@ export default function ServicesSection() {
             Cuidado Integral No Médico en el Hogar
           </p>
           <p className="mt-6 text-trust-600 text-lg leading-8">
-            Ofrecemos una gama completa de servicios de cuidado domiciliario diseñados para mantener 
+            Ofrecemos una gama completa de servicios de acompañamiento no médico diseñados para mantener 
             la independencia, dignidad y calidad de vida de tu ser querido en su propio hogar.
           </p>
         </motion.div>

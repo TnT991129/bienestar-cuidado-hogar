@@ -27,7 +27,7 @@ const benefits = [
   {
     id: 3,
     name: 'Equipo Profesional',
-    description: 'Cuidadores certificados con experiencia especializada.',
+    description: 'Acompañantes capacitados con experiencia especializada.',
     icon: UserGroupIcon,
   },
   {

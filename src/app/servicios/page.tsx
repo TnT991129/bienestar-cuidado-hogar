@@ -15,15 +15,15 @@ import {
 } from '@heroicons/react/24/outline'
 
 export const metadata: Metadata = {
-  title: 'Servicios de Cuidado Domiciliario - Bienestar y Cuidado en el Hogar',
-  description: 'Servicios completos de cuidado domiciliario no médico para adultos mayores: cuidado personal, compañía, tareas domésticas, transporte y más. Planes personalizados 24/7.',
+  title: 'Servicios de Acompañamiento en el Hogar - Bienestar y Cuidado en el Hogar',
+  description: 'Servicios completos de acompañamiento no médico para adultos mayores: asistencia personal, compañía, apoyo con tareas del hogar, acompañamiento y más. Planes personalizados 24/7.',
 }
 
 const mainServices = [
   {
     id: 1,
-    name: 'Cuidado Personal e Higiene',
-    description: 'Asistencia profesional con todas las actividades de cuidado personal diario.',
+    name: 'Asistencia Personal NO Médica',
+    description: 'Asistencia especializada no médica con todas las actividades de cuidado personal diario.',
     icon: HeartIcon,
     features: [
       'Aseo e higiene personal completa',
@@ -172,7 +172,7 @@ const carePackages = [
       'Cuidado nocturno especializado',
       'Enfermero de guardia disponible',
       'Respuesta inmediata a emergencias',
-      'Cuidadores rotativos certificados',
+      'Acompañantes rotativos capacitados',
       'Supervisión médica continua',
       'Apoyo familiar 24/7'
     ],
@@ -492,11 +492,11 @@ export default function ServicesPage() {
                   Evaluación Gratuita
                 </a>
                 <a
-                  href="https://wa.me/17862602693"
+                  href="https://wa.me/17867527884"
                   className="inline-flex justify-center items-center hover:bg-white/10 px-6 py-3 border-2 border-white/30 rounded-xl font-medium text-white text-base transition-colors duration-200"
                 >
                   <PhoneIcon className="mr-2 w-5 h-5" />
-                  Llamar: +1 (786) 260-2693
+                  Llamar: +1 (786) 752-7884
                 </a>
               </div>
             </div>

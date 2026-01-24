@@ -14,7 +14,7 @@ const steps = [
   {
     step: 1,
     title: 'Contacto Inicial',
-    description: 'Llamas o nos escribes para contarnos sobre tus necesidades de cuidado',
+    description: 'Llamas o nos escribes para contarnos sobre tus necesidades de acompañamiento',
     details: [
       'Conversación telefónica sin compromiso',
       'Evaluamos necesidades básicas',
@@ -39,11 +39,11 @@ const steps = [
   },
   {
     step: 3,
-    title: 'Selección del Cuidador',
-    description: 'Elegimos al cuidador perfecto basado en personalidad y necesidades',
+    title: 'Selección del Acompañante',
+    description: 'Elegimos al acompañante perfecto basado en personalidad y necesidades',
     details: [
       'Matching personalizado',
-      'Presentación del cuidador',
+      'Presentación del acompañante',
       'Período de prueba',
       'Ajustes si es necesario'
     ],
@@ -52,7 +52,7 @@ const steps = [
   },
   {
     step: 4,
-    title: 'Inicio del Cuidado',
+    title: 'Inicio del Acompañamiento',
     description: 'Comenzamos el servicio con supervisión cercana y seguimiento continuo',
     details: [
       'Primera semana supervisada',
@@ -100,7 +100,7 @@ export default function HowItWorksSection() {
             Un Proceso Simple y Transparente
           </p>
           <p className="mt-6 text-trust-600 text-lg leading-8">
-            Desde el primer contacto hasta el inicio del cuidado, nuestro proceso está diseñado 
+            Desde el primer contacto hasta el inicio del acompañamiento, nuestro proceso está diseñado 
             para ser claro, rápido y completamente adaptado a tus necesidades.
           </p>
         </motion.div>
@@ -169,7 +169,7 @@ export default function HowItWorksSection() {
             </h3>
             <p className="mx-auto max-w-3xl text-trust-600">
               Hemos perfeccionado nuestro proceso durante más de 15 años para garantizar 
-              la mejor experiencia tanto para las familias como para nuestros cuidadores.
+              la mejor experiencia tanto para las familias como para nuestros acompañantes.
             </p>
           </div>
 
@@ -205,10 +205,10 @@ export default function HowItWorksSection() {
                 <PhoneIcon className="w-8 h-8 text-white animate-pulse" />
               </div>
               <h3 className="mb-4 font-bold text-red-800 text-2xl">
-                ¿Necesitas Cuidado Urgente?
+                ¿Necesitas Acompañamiento Urgente?
               </h3>
               <p className="mx-auto mb-6 max-w-2xl text-red-700">
-                Para situaciones de emergencia o cuando necesitas cuidado inmediato, 
+                Para situaciones de emergencia o cuando necesitas acompañamiento inmediato, 
                 tenemos un proceso acelerado que puede comenzar el mismo día.
               </p>
               
@@ -219,20 +219,20 @@ export default function HowItWorksSection() {
                 </div>
                 <div className="bg-white p-4 rounded-lg">
                   <div className="font-bold text-red-600 text-2xl">2 horas</div>
-                  <div className="text-red-700 text-sm">Cuidador disponible</div>
+                  <div className="text-red-700 text-sm">Acompañante disponible</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
                   <div className="font-bold text-red-600 text-2xl">Mismo día</div>
-                  <div className="text-red-700 text-sm">Inicio del cuidado</div>
+                  <div className="text-red-700 text-sm">Inicio del acompañamiento</div>
                 </div>
               </div>
 
               <a
-                href="https://wa.me/17862602693"
+                href="https://wa.me/17867527884"
                 className="inline-flex items-center bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-semibold text-white transition-colors duration-200"
               >
                 <PhoneIcon className="mr-2 w-5 h-5" />
-                Llamar para Emergencia: +1 (786) 260-2693
+                Llamar para Emergencia: +1 (786) 752-7884
               </a>
             </div>
           </div>
@@ -262,11 +262,11 @@ export default function HowItWorksSection() {
                 Comenzar Ahora
               </a>
               <a
-                href="https://wa.me/17862602693"
+                href="https://wa.me/17867527884"
                 className="inline-flex justify-center items-center hover:bg-white/10 px-6 py-3 border-2 border-white/30 rounded-xl font-medium text-white text-base transition-colors duration-200"
               >
                 <PhoneIcon className="mr-2 w-5 h-5" />
-                +1 (786) 260-2693
+                +1 (786) 752-7884
               </a>
             </div>
           </div>

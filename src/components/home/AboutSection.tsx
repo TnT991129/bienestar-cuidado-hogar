@@ -13,7 +13,7 @@ import {
 const stats = [
   { name: 'Años de experiencia', value: '15+' },
   { name: 'Familias atendidas', value: '100+' },
-  { name: 'Cuidadores certificados', value: '10' },
+  { name: 'Acompañantes capacitados', value: '10' },
   { name: 'Satisfacción del cliente', value: '98%' }
 ]
 
@@ -56,7 +56,7 @@ export default function AboutSection() {
             Cuidando Familias con Amor y Profesionalismo por <br /><span className='bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-500 text-transparent'>Más de 15 Años</span>
           </p>
           <p className="mt-6 text-trust-600 text-lg leading-8">
-            Somos una empresa familiar dedicada al cuidado domiciliario no médico de adultos mayores. 
+            Somos una empresa familiar dedicada al acompañamiento no médico de adultos mayores. 
             Entendemos lo importante que es mantener a tus seres queridos seguros, cómodos y felices 
             en la comodidad de su propio hogar.
           </p>
@@ -101,7 +101,7 @@ export default function AboutSection() {
               
               <div className="space-y-6 text-trust-600">
                 <p>
-                  Fundada en 2008 por María Elena Rodríguez, una enfermera con más de 20 años de experiencia, 
+                  Fundada en 2008 por María Elena Rodríguez, una especialista en servicios de acompañamiento con más de 20 años de experiencia, 
                   <strong className="text-trust-800"> Bienestar y Cuidado en el Hogar</strong> nació del deseo 
                   de ofrecer una alternativa humana y personalizada al cuidado institucional.
                 </p>
@@ -131,7 +131,7 @@ export default function AboutSection() {
                 <div>
                   <h4 className="font-semibold text-trust-900 text-lg">María Elena Rodríguez</h4>
                   <p className="text-trust-600">Fundadora y Directora General</p>
-                  <p className="text-trust-500 text-sm">Enfermera Registrada, 25+ años de experiencia</p>
+                  <p className="text-trust-500 text-sm">Especialista en Servicios de Acompañamiento, 25+ años de experiencia</p>
                 </div>
               </div>
             </div>
@@ -169,7 +169,7 @@ export default function AboutSection() {
                 <div className="space-y-2 text-trust-600 text-sm">
                   <div className="flex items-center space-x-2">
                     <ShieldCheckIcon className="w-4 h-4 text-primary-600" />
-                    <span>Licencia Estatal de Cuidado Domiciliario</span>
+                    <span>Licencia Estatal de Servicios de Acompañamiento</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <ShieldCheckIcon className="w-4 h-4 text-primary-600" />
@@ -206,7 +206,7 @@ export default function AboutSection() {
                 <h3 className="font-bold text-2xl">Nuestra Misión</h3>
               </div>
               <p className="text-primary-100 leading-relaxed">
-                Proporcionar servicios de cuidado domiciliario de la más alta calidad que permitan a los 
+                Proporcionar servicios de acompañamiento no médico de la más alta calidad que permitan a los 
                 adultos mayores mantener su independencia, dignidad y calidad de vida en la comodidad de 
                 su propio hogar, mientras brindamos tranquilidad y apoyo a sus familias.
               </p>
@@ -221,7 +221,7 @@ export default function AboutSection() {
                 <h3 className="font-bold text-2xl">Nuestra Visión</h3>
               </div>
               <p className="text-trust-100 leading-relaxed">
-                Ser la empresa líder en servicios de cuidado domiciliario en la región, reconocida por 
+                Ser la empresa líder en servicios de acompañamiento no médico en la región, reconocida por 
                 nuestra excelencia, compasión y compromiso inquebrantable con el bienestar de nuestros 
                 clientes y sus familias, transformando la forma en que se brinda el cuidado a los adultos mayores.
               </p>
@@ -242,7 +242,7 @@ export default function AboutSection() {
               ¿Te Gustaría Conocer a Nuestro Equipo?
             </h3>
             <p className="mx-auto mb-6 max-w-2xl text-trust-600">
-              Todos nuestros cuidadores son profesionales certificados con experiencia comprobada 
+              Todos nuestros acompañantes son personal capacitado con experiencia comprobada 
               y un genuino amor por ayudar a los demás. Conoce al equipo que cuidará de tu familia.
             </p>
             <div className="flex sm:flex-row flex-col justify-center gap-4">
