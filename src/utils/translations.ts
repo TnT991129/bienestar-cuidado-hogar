@@ -203,7 +203,7 @@ export const translations = {
       learnMore: 'Learn More',
       videoText1: 'See how we care',
       videoText2: 'for your family',
-      caregiverName: 'Mary Johnson',
+      caregiverName: 'Mirian González',
       caregiverRole: 'Trained Companion',
       yearsLabel: 'Years',
       familiesLabel: 'Families',
@@ -270,7 +270,7 @@ export const translations = {
       items: [
         {
           text: 'The care my mother received was exceptional. The companions were very attentive and caring.',
-          author: 'Mary Johnson',
+          author: 'Mirian González',
           role: "User's daughter"
         },
         {
@@ -334,7 +334,7 @@ export const translations = {
     about: {
       title: 'About Us',
       subtitle: 'Dedicated to senior care',
-      description: 'We are a company specialized in providing home care services for seniors...',
+      description: 'We are a company specialized in providing NON-medical companionship services for seniors...',
       mission: 'Our Mission',
       vision: 'Our Vision',
       values: 'Our Values'

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import { motion } from 'framer-motion'
-import AboutSection from '@/components/home/AboutSection'
+// import { motion } from 'framer-motion' // No usado en esta optimización
 import { 
   HeartIcon,
   UserGroupIcon,
@@ -13,118 +12,85 @@ import {
 } from '@heroicons/react/24/outline'
 
 export const metadata: Metadata = {
-  title: 'Sobre Nosotros - Bienestar y Cuidado en el Hogar | 15+ Años de Experiencia',
-  description: 'Conoce nuestra historia de más de 15 años acompañando familias. Empresa familiar dedicada al acompañamiento no médico de adultos mayores con valores de compasión, profesionalismo y confiabilidad.',
+  title: 'Sobre Nosotros - Bienestar y Cuidado en el Hogar | Historia Familiar',
+  description: 'Conoce nuestra historia familiar brindando acompañamiento no médico. Empresa familiar dedicada al bienestar de adultos mayores con valores de amor y respeto.',
 }
 
 const stats = [
-  { name: 'Años de experiencia', value: '15+' },
-  { name: 'Familias atendidas', value: '500+' },
-  { name: 'Acompañantes capacitados', value: '50+' },
-  { name: 'Satisfacción del cliente', value: '98%' }
+  { name: 'Años de experiencia', value: 'Varios' },
+  { name: 'Familias acompañadas', value: '300+' },
+  { name: 'Acompañantes capacitados', value: '25+' },
+  { name: 'Satisfacción familiar', value: '98%' }
 ]
 
 const timeline = [
   {
-    year: '2008',
-    title: 'Fundación de la Empresa',
-    description: 'María Elena Rodríguez funda Bienestar y Cuidado en el Hogar con la visión de ofrecer acompañamiento no médico humano y brindado con profesionalismo.',
+    year: '2010',
+    title: 'Un Sueño Familiar',
+    description: 'Mirian González Guillén inicia con la visión de brindar acompañamiento cálido y humano a adultos mayores en sus hogares.',
     icon: HeartIcon
   },
   {
-    year: '2010',
-    title: 'Primera Expansión',
-    description: 'Alcanzamos las 25 familias atendidas y expandimos nuestro equipo a 10 acompañantes capacitados.',
+    year: '2015',
+    title: 'Crecimiento con Valores',
+    description: 'Más familias confían en nosotros y desarrollamos nuestros principios de acompañamiento basados en paciencia y empatía.',
     icon: UserGroupIcon
   },
   {
-    year: '2013',
-    title: 'Certificación de Calidad',
-    description: 'Obtenemos nuestra primera certificación de calidad AAA y establecemos protocolos estrictos de servicio.',
-    icon: AcademicCapIcon
-  },
-  {
-    year: '2016',
-    title: 'Expansión Regional',
-    description: 'Expandimos nuestros servicios a toda la región metropolitana, alcanzando 200 familias atendidas.',
+    year: '2020',
+    title: 'Fortalecimiento',
+    description: 'Ampliamos nuestros servicios manteniendo el enfoque personal y familiar, llegando a más hogares con nuestro acompañamiento.',
     icon: MapPinIcon
   },
   {
-    year: '2019',
-    title: 'Innovación Digital',
-    description: 'Implementamos sistema de monitoreo digital y comunicación en tiempo real con las familias.',
-    icon: ClockIcon
-  },
-  {
-    year: '2023',
-    title: 'Líder en la Región',
-    description: 'Celebramos 15 años sirviendo a más de 500 familias con el 98% de satisfacción del cliente.',
+    year: '2024',
+    title: 'Una Gran Familia',
+    description: 'Somos una familia extendida que acompaña a cientos de hogares con valores de amor, respeto y paciencia.',
     icon: StarIcon
   }
 ]
 
 const values = [
   {
-    name: 'Compasión',
-    description: 'Tratamos a cada persona con el amor y respeto que merecen, como si fueran parte de nuestra propia familia. Entendemos que el cuidado va más allá de las tareas básicas; se trata de conexión humana genuina.',
+    name: 'Amor Familiar',
+    description: 'Tratamos a cada persona como si fuera un miembro querido de nuestra propia familia, con genuino cariño y profundo respeto.',
     icon: HeartIcon
   },
   {
-    name: 'Profesionalismo',
-    description: 'Nuestros cuidadores están altamente capacitados y mantienen los más altos estándares de atención. Educación continua, certificaciones actualizadas y supervisión constante garantizan la excelencia.',
-    icon: AcademicCapIcon
-  },
-  {
-    name: 'Confiabilidad',
-    description: 'Cumplimos nuestras promesas y estamos disponibles cuando más nos necesitas. La tranquilidad de las familias es nuestra prioridad, por eso mantenemos comunicación constante y transparente.',
+    name: 'Confianza Total',
+    description: 'Las familias pueden estar tranquilas sabiendo que sus seres queridos están en buenas manos. Mantenemos comunicación abierta y honesta.',
     icon: ShieldCheckIcon
   },
   {
-    name: 'Flexibilidad',
-    description: 'Entendemos que cada familia tiene necesidades únicas. Adaptamos nuestros servicios y horarios para crear soluciones personalizadas que se ajusten perfectamente a cada situación.',
+    name: 'Paciencia Infinita',
+    description: 'Nos adaptamos con paciencia a cada personalidad, creando un ambiente de acompañamiento personalizado y cómodo para todos.',
     icon: ClockIcon
   }
 ]
 
 const team = [
   {
-    name: 'María Elena Rodríguez',
-    role: 'Fundadora y Directora General',
-    credentials: 'Administración de Servicios de Acompañamiento, 25+ años de experiencia',
-    description: 'Especialista en servicios de bienestar para adultos mayores con más de 25 años de experiencia. Fundó la empresa con la visión de humanizar el acompañamiento no médico en el hogar.',
-    image: '👩‍⚕️'
-  },
-  {
-    name: 'Ana Patricia Silva',
-    role: 'Coordinadora de Acompañantes',
-    credentials: 'Trabajadora Social, MSW, Especialista en Bienestar del Adulto Mayor',
-    description: 'Responsable de la selección, capacitación y supervisión continua de nuestro equipo de acompañantes especializados.',
-    image: '👩‍💼'
-  },
-  {
-    name: 'Roberto Vásquez',
-    role: 'Gerente de Operaciones',
-    credentials: 'Administración en Salud, 15 años en servicios domiciliarios',
-    description: 'Coordina las operaciones diarias y asegura la calidad del servicio en todos nuestros casos activos.',
-    image: '👨‍💼'
+    name: 'Mirian González Guillén',
+    role: 'Fundadora',
+    credentials: 'Experiencia en acompañamiento familiar',
+    description: 'Inició esta hermosa labor movida por el amor hacia los adultos mayores y el deseo de crear un espacio donde reciban la compañía que merecen.',
+    image: '👩‍🦳'
   }
 ]
 
 export default function AboutPage() {
   return (
     <div className="bg-white">
-      <AboutSection />
-      
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-50 to-secondary-50 py-16 sm:py-20 overflow-hidden">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="font-bold text-trust-900 text-4xl sm:text-5xl tracking-tight">
-              Nuestra Historia
+              Nuestra Historia Familiar
             </h1>
             <p className="mt-6 text-trust-600 text-lg leading-8">
-              Más de 15 años cuidando familias con amor, profesionalismo y dedicación. 
-              Conoce nuestra historia completa, valores y el equipo que hace posible el mejor acompañamiento no médico.
+              Acompañando familias con amor, respeto y dedicación. 
+              Conoce cómo iniciamos este hermoso camino de brindar acompañamiento no médico.
             </p>
           </div>
         </div>
@@ -134,9 +100,9 @@ export default function AboutPage() {
       <section className="py-24 sm:py-32">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestra Misión</h2>
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Quiénes Somos</h2>
             <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
-              Cuidando Familias con Amor y Profesionalismo
+              Una Familia que Acompaña a Otras Familias
             </p>
           </div>
 
@@ -146,31 +112,45 @@ export default function AboutPage() {
               <div>
                 <div className="space-y-6 text-trust-600 text-lg leading-relaxed">
                   <p>
-                    Nuestra misión es proporcionar servicios de acompañamiento no médico de la más alta calidad 
-                    que permitan a los adultos mayores mantener su <strong className="text-trust-800">independencia, 
-                    dignidad y calidad de vida</strong> en la comodidad de su propio hogar.
+                    <strong className="text-trust-800">Bienestar y Cuidado en el Hogar</strong> nace como una iniciativa familiar 
+                    con un propósito claro: ofrecer acompañamiento y apoyo no médico en el hogar, brindando tranquilidad 
+                    tanto a las personas que cuidamos como a sus familias.
                   </p>
                   
                   <p>
-                    Creemos firmemente que el hogar es el lugar donde las personas se sienten más seguras 
-                    y felices. Por eso, trabajamos incansablemente para hacer posible que nuestros clientes 
-                    permanezcan en su entorno familiar, rodeados de sus recuerdos, mascotas y seres queridos.
+                    Contamos con varios años de experiencia en el acompañamiento diario de adultos mayores y personas 
+                    con necesidades especiales, siempre desde un enfoque humano, respetuoso y responsable. Nuestro equipo 
+                    ha recibido formación y capacitación en <strong className="text-primary-600">asistencia no médica</strong>, 
+                    lo que nos permite brindar un servicio confiable, cercano y adaptado a cada situación.
                   </p>
                   
                   <p>
-                    No solo cuidamos a nuestros clientes; también brindamos <strong className="text-primary-600">
-                    tranquilidad y apoyo a sus familias</strong>, porque entendemos que el cuidado de un ser 
-                    querido afecta a toda la familia.
+                    Creemos que el cuidado comienza con la presencia, la paciencia y la empatía. Por eso, nuestro compromiso 
+                    es ofrecer compañía, apoyo y bienestar en la comodidad del hogar, <strong className="text-trust-800">
+                    respetando la dignidad y la rutina</strong> de cada persona.
                   </p>
+
+                  <p>
+                    <strong className="text-primary-600">Nuestros servicios son estrictamente no médicos</strong> y están orientados 
+                    a mejorar la calidad de vida a través del acompañamiento y la asistencia diaria.
+                  </p>
+
+                  <div className="bg-blue-50 mt-6 p-4 rounded-lg">
+                    <p className="font-semibold text-blue-800 text-sm">
+                      Bienestar y Cuidado en el Hogar ofrece servicios de acompañamiento y apoyo no médico. 
+                      No brindamos servicios médicos ni sustituimos la atención médica profesional.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Vision */}
                 <div className="bg-gradient-to-r from-primary-50 to-secondary-50 mt-12 p-6 rounded-2xl">
-                  <h3 className="mb-4 font-bold text-trust-900 text-xl">Nuestra Visión</h3>
+                  <h3 className="mb-4 font-bold text-trust-900 text-xl">Nuestro Sueño</h3>
                   <p className="text-trust-700">
-                    Ser la empresa líder en servicios de acompañamiento no médico en la región, reconocida por 
-                    nuestra excelencia, compasión y compromiso inquebrantable con el bienestar de nuestros 
-                    clientes y sus familias, transformando la forma en que se brinda el cuidado a los adultos mayores.
+                    Queremos que cada adulto mayor se sienta acompañado, querido y valorado. 
+                    Aspiramos a ser la familia extendida que brinda compañía, escucha con paciencia, 
+                    comparte momentos especiales y hace que cada día sea un poco más brillante 
+                    para quienes han dado tanto a sus familias y comunidades.
                   </p>
                 </div>
               </div>
@@ -195,12 +175,13 @@ export default function AboutPage() {
       <section className="bg-gradient-to-br from-trust-50 to-primary-50/30 py-24 sm:py-32">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestra Historia</h2>
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestro Camino</h2>
             <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
-              15 Años de Crecimiento y Dedicación
+              Años de Acompañamiento y Dedicación
             </p>
             <p className="mt-6 text-trust-600 text-lg leading-8">
-              Desde nuestros humildes inicios hasta convertirnos en líderes regionales en acompañamiento no médico.
+              Nuestro crecimiento a través de los años, siempre manteniendo 
+              nuestros valores familiares de amor y dedicación.
             </p>
           </div>
 
@@ -276,12 +257,12 @@ export default function AboutPage() {
       <section className="bg-gradient-to-br from-primary-50 to-secondary-50 py-24 sm:py-32">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestro Equipo</h2>
+            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestra Fundadora</h2>
             <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
-              Liderazgo Experimentado y Comprometido
+              El Corazón de Nuestra Familia
             </p>
             <p className="mt-6 text-trust-600 text-lg leading-8">
-              Conoce a los profesionales que dirigen nuestro equipo y garantizan la excelencia en cada aspecto de nuestros servicios.
+              Conoce a quien inició esta hermosa labor de acompañamiento no médico.
             </p>
           </div>
 
@@ -315,12 +296,11 @@ export default function AboutPage() {
           <div className="mx-auto max-w-2xl text-center">
             <div className="bg-gradient-to-r from-primary-600 to-secondary-600 p-8 rounded-2xl text-white">
               <h2 className="mb-4 font-bold text-3xl">
-                ¿Te Gustaría Ser Parte de Nuestra Familia?
+                ¿Necesitas Acompañamiento?
               </h2>
               <p className="mb-6 text-primary-100">
-                Si compartes nuestros valores y te apasiona el cuidado de adultos mayores, 
-                nos encantaría conocerte. También estamos aquí para ayudarte si necesitas 
-                nuestros servicios para tu ser querido.
+                Si necesitas nuestros servicios de acompañamiento no médico para tu ser querido, 
+                estamos aquí para ayudarte con todo nuestro cariño.
               </p>
               <div className="flex sm:flex-row flex-col justify-center gap-4">
                 <a

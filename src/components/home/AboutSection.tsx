@@ -11,10 +11,10 @@ import {
 } from '@heroicons/react/24/outline'
 
 const stats = [
-  { name: 'Años de experiencia', value: '15+' },
-  { name: 'Familias atendidas', value: '100+' },
-  { name: 'Acompañantes capacitados', value: '10' },
-  { name: 'Satisfacción del cliente', value: '98%' }
+  { name: 'Años de experiencia', value: 'Varios' },
+  { name: 'Familias acompañadas', value: '300+' },
+  { name: 'Acompañantes capacitados', value: '25+' },
+  { name: 'Satisfacción familiar', value: '98%' }
 ]
 
 const values = [
@@ -53,7 +53,7 @@ export default function AboutSection() {
         >
           <h2 className="font-semibold text-primary-600 text-base leading-7">Sobre Nosotros</h2>
           <p className="mt-2 font-bold text-trust-900 text-4xl sm:text-6xl tracking-tight">
-            Cuidando Familias con Amor y Profesionalismo por <br /><span className='bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-500 text-transparent'>Más de 15 Años</span>
+            Acompañando Familias con Amor y Dedicación <br /><span className='bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-500 text-transparent'>Desde el 2010</span>
           </p>
           <p className="mt-6 text-trust-600 text-lg leading-8">
             Somos una empresa familiar dedicada al acompañamiento no médico de adultos mayores. 
@@ -101,37 +101,48 @@ export default function AboutSection() {
               
               <div className="space-y-6 text-trust-600">
                 <p>
-                  Fundada en 2008 por María Elena Rodríguez, una especialista en servicios de acompañamiento con más de 20 años de experiencia, 
-                  <strong className="text-trust-800"> Bienestar y Cuidado en el Hogar</strong> nació del deseo 
-                  de ofrecer una alternativa humana y personalizada al cuidado institucional.
+                  <strong className="text-trust-800">Bienestar y Cuidado en el Hogar</strong> nace como una iniciativa familiar 
+                  con un propósito claro: ofrecer acompañamiento y apoyo no médico en el hogar, brindando tranquilidad 
+                  tanto a las personas que cuidamos como a sus familias.
                 </p>
                 
                 <p>
-                  Después de ver cómo muchos adultos mayores perdían su independencia al ser trasladados a 
-                  centros de cuidado, María Elena decidió crear un servicio que permitiera a las personas 
-                  envejecer con dignidad en la comodidad de su propio hogar, rodeados de sus recuerdos, 
-                  mascotas y seres queridos.
+                  Contamos con varios años de experiencia en el acompañamiento diario de adultos mayores y personas 
+                  con necesidades especiales, siempre desde un enfoque humano, respetuoso y responsable. Nuestro equipo 
+                  ha recibido formación y capacitación en asistencia no médica, lo que nos permite brindar un servicio 
+                  confiable, cercano y adaptado a cada situación.
                 </p>
                 
                 <p>
-                  Hoy, más de 15 años después, seguimos siendo una <strong className="text-primary-600">
-                  empresa familiar</strong> que ha expandido sus servicios para atender a más de 500 familias 
-                  en la región, manteniendo siempre nuestros valores fundamentales de compasión, respeto y 
-                  excelencia en el cuidado.
+                  Creemos que el cuidado comienza con la presencia, la paciencia y la empatía. Por eso, nuestro compromiso 
+                  es ofrecer compañía, apoyo y bienestar en la comodidad del hogar, respetando la dignidad y la rutina 
+                  de cada persona.
                 </p>
+
+                <p>
+                  <strong className="text-primary-600">Nuestros servicios son estrictamente no médicos</strong> y están orientados 
+                  a mejorar la calidad de vida a través del acompañamiento y la asistencia diaria.
+                </p>
+
+                <div className="bg-blue-50 mt-6 p-4 rounded-lg">
+                  <p className="font-semibold text-blue-800 text-sm">
+                    Bienestar y Cuidado en el Hogar ofrece servicios de acompañamiento y apoyo no médico. 
+                    No brindamos servicios médicos ni sustituimos la atención médica profesional.
+                  </p>
+                </div>
               </div>
 
               <div className="flex items-center space-x-4 mt-8">
                 <div className="flex-shrink-0">
                   {/* Placeholder for founder photo */}
                   <div className="flex justify-center items-center bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full w-16 h-16">
-                    <span className="font-bold text-white text-xl">MR</span>
+                    <span className="font-bold text-white text-xl">MG</span>
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-trust-900 text-lg">María Elena Rodríguez</h4>
-                  <p className="text-trust-600">Fundadora y Directora General</p>
-                  <p className="text-trust-500 text-sm">Especialista en Servicios de Acompañamiento, 25+ años de experiencia</p>
+                  <h4 className="font-semibold text-trust-900 text-lg">Mirian González Guillén</h4>
+                  <p className="text-trust-600">Fundadora y Corazón de la Empresa</p>
+                  <p className="text-trust-500 text-sm">Dedicada al acompañamiento no médico desde el 2010</p>
                 </div>
               </div>
             </div>
@@ -163,13 +174,13 @@ export default function AboutSection() {
                 ))}
               </div>
 
-              {/* Certifications */}
+              {/* Trust and Safety */}
               <div className="mt-8 pt-6 border-gray-200 border-t">
-                <h4 className="mb-4 font-semibold text-trust-900">Certificaciones y Licencias</h4>
+                <h4 className="mb-4 font-semibold text-trust-900">Nuestro Compromiso</h4>
                 <div className="space-y-2 text-trust-600 text-sm">
                   <div className="flex items-center space-x-2">
                     <ShieldCheckIcon className="w-4 h-4 text-primary-600" />
-                    <span>Licencia Estatal de Servicios de Acompañamiento</span>
+                    <span>Servicios de Acompañamiento NO Médico</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <ShieldCheckIcon className="w-4 h-4 text-primary-600" />
@@ -177,11 +188,11 @@ export default function AboutSection() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <ShieldCheckIcon className="w-4 h-4 text-primary-600" />
-                    <span>Certificación en Primeros Auxilios</span>
+                    <span>Personal Capacitado en Seguridad</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <ShieldCheckIcon className="w-4 h-4 text-primary-600" />
-                    <span>Acreditación de Calidad AAA</span>
+                    <span>Compromiso con Valores Familiares</span>
                   </div>
                 </div>
               </div>
@@ -206,9 +217,9 @@ export default function AboutSection() {
                 <h3 className="font-bold text-2xl">Nuestra Misión</h3>
               </div>
               <p className="text-primary-100 leading-relaxed">
-                Proporcionar servicios de acompañamiento no médico de la más alta calidad que permitan a los 
-                adultos mayores mantener su independencia, dignidad y calidad de vida en la comodidad de 
-                su propio hogar, mientras brindamos tranquilidad y apoyo a sus familias.
+                Brindar acompañamiento y apoyo no médico con amor y dedicación familiar, permitiendo que los 
+                adultos mayores permanezcan cómodos y felices en su propio hogar, rodeados de sus recuerdos 
+                y seres queridos, mientras ofrecemos tranquilidad y apoyo a sus familias.
               </p>
             </div>
 
@@ -221,9 +232,9 @@ export default function AboutSection() {
                 <h3 className="font-bold text-2xl">Nuestra Visión</h3>
               </div>
               <p className="text-trust-100 leading-relaxed">
-                Ser la empresa líder en servicios de acompañamiento no médico en la región, reconocida por 
-                nuestra excelencia, compasión y compromiso inquebrantable con el bienestar de nuestros 
-                clientes y sus familias, transformando la forma en que se brinda el cuidado a los adultos mayores.
+                Ser la familia extendida que cada adulto mayor merece tener: una compañía confiable, 
+                cálida y dedicada que haga que cada día sea especial, manteniendo siempre nuestros 
+                valores de amor, respeto y dedicación en cada hogar que visitamos.
               </p>
             </div>
           </div>

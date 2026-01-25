@@ -17,10 +17,10 @@ export const metadata: Metadata = {
 
 const leadership = [
   {
-    name: 'María Elena Rodríguez',
+    name: 'Mirian González Guillén',
     role: 'Fundadora y Directora General',
-    credentials: 'Administración de Servicios de Acompañamiento, 25+ años de experiencia',
-    description: 'Fundó la empresa en 2008 con la visión de humanizar el acompañamiento no médico en el hogar. Especialista en servicios de bienestar para adultos mayores con más de 25 años de experiencia en servicios de acompañamiento.',
+    credentials: 'Administración de Servicios de Acompañamiento, experiencia desde 2010',
+    description: 'Fundó la empresa en 2010 con la visión de humanizar el acompañamiento no médico en el hogar. Especialista en servicios de bienestar para adultos mayores con experiencia en servicios de acompañamiento.',
     specialties: ['Administración de servicios de acompañamiento', 'Capacitación de personal', 'Planes de atención personalizada no médica'],
     image: '👩‍⚕️',
     contact: 'maria@bienestarhogar.com'
