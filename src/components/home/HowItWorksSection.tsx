@@ -86,16 +86,16 @@ const benefits = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="bg-gradient-to-br from-white via-primary-50/20 to-secondary-50/10 py-24 sm:py-32 relative overflow-hidden">
+    <section className="relative bg-gradient-to-br from-white via-primary-50/20 to-secondary-50/10 py-24 sm:py-32 overflow-hidden">
       {/* Modern Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-primary-200/20 to-primary-300/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-br from-secondary-200/15 to-secondary-300/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="floating-element absolute top-1/4 left-1/4 w-4 h-4 bg-gradient-to-br from-primary-400/60 to-primary-500/60 rounded-full"></div>
-        <div className="floating-element-delayed absolute bottom-1/3 right-1/3 w-6 h-6 bg-gradient-to-br from-secondary-400/50 to-secondary-500/50 rounded-full"></div>
+        <div className="top-20 right-10 absolute bg-gradient-to-br from-primary-200/20 to-primary-300/20 blur-3xl rounded-full w-64 h-64 animate-pulse"></div>
+        <div className="bottom-20 left-10 absolute bg-gradient-to-br from-secondary-200/15 to-secondary-300/15 blur-3xl rounded-full w-72 h-72 animate-pulse delay-1000"></div>
+        <div className="top-1/4 left-1/4 absolute bg-gradient-to-br from-primary-400/60 to-primary-500/60 rounded-full w-4 h-4 floating-element"></div>
+        <div className="right-1/3 bottom-1/3 absolute bg-gradient-to-br from-secondary-400/50 to-secondary-500/50 rounded-full w-6 h-6 floating-element-delayed"></div>
       </div>
       
-      <div className="mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
+      <div className="z-10 relative mx-auto px-6 lg:px-8 max-w-7xl">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -103,10 +103,10 @@ export default function HowItWorksSection() {
           transition={{ duration: 0.8 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <div className="inline-flex items-center bg-gradient-to-r from-primary-100/80 to-secondary-100/80 backdrop-blur-sm border border-primary-200/30 px-4 py-2 rounded-full font-semibold text-primary-600 text-sm shadow-lg mb-4">
+          <div className="inline-flex items-center bg-gradient-to-r from-primary-100/80 to-secondary-100/80 shadow-lg backdrop-blur-sm mb-4 px-4 py-2 border border-primary-200/30 rounded-full font-semibold text-primary-600 text-sm">
             <span>Cómo Funciona</span>
           </div>
-          <h2 className="mt-2 font-bold text-3xl sm:text-4xl tracking-tight text-shadow">
+          <h2 className="text-shadow mt-2 font-bold text-3xl sm:text-4xl tracking-tight">
             <span className="gradient-text">Un Proceso Simple</span>{' '}
             <span className="text-trust-900">y Transparente</span>
           </h2>
@@ -155,7 +155,7 @@ export default function HowItWorksSection() {
                   {/* Step Circle and Number for Mobile */}
                   <div className="relative flex-shrink-0">
                     <motion.div 
-                      className="flex justify-center items-center bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-500 shadow-2xl rounded-2xl w-16 h-16 group"
+                      className="group flex justify-center items-center bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-500 shadow-2xl rounded-2xl w-16 h-16"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{ 
@@ -206,12 +206,12 @@ export default function HowItWorksSection() {
                     
                     {/* Duration for Mobile */}
                     <motion.div 
-                      className="inline-flex items-center bg-gradient-to-r from-primary-100/90 to-primary-200/90 backdrop-blur-sm border border-primary-200/50 shadow-lg mb-3 px-3 py-1.5 rounded-full font-semibold text-primary-700 text-xs"
+                      className="inline-flex items-center bg-gradient-to-r from-primary-100/90 to-primary-200/90 shadow-lg backdrop-blur-sm mb-3 px-3 py-1.5 border border-primary-200/50 rounded-full font-semibold text-primary-700 text-xs"
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: (index * 0.15) + 0.5 }}
                     >
-                      <div className="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse"></div>
+                      <div className="bg-primary-500 mr-2 rounded-full w-2 h-2 animate-pulse"></div>
                       Duración: {step.duration}
                     </motion.div>
 

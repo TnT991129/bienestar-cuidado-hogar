@@ -61,7 +61,7 @@ export default function Header() {
           {/* Mobile Phone CTA */}
           <motion.a
             href="https://wa.me/17867527884"
-            className="flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 shadow-md hover:shadow-lg w-10 h-10 rounded-full text-white transition-all duration-300"
+            className="flex justify-center items-center bg-gradient-to-r from-green-500 hover:from-green-600 to-green-600 hover:to-green-700 shadow-md hover:shadow-lg rounded-full w-10 h-10 text-white transition-all duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -72,7 +72,7 @@ export default function Header() {
           {/* Modern Hamburger Menu Button */}
           <motion.button
             type="button"
-            className="relative inline-flex justify-center items-center bg-gradient-to-r from-primary-50 to-secondary-50 hover:from-primary-100 hover:to-secondary-100 border border-primary-200/50 shadow-sm hover:shadow-md -m-2.5 p-3 rounded-xl text-primary-700 transition-all duration-300 group"
+            className="group inline-flex relative justify-center items-center bg-gradient-to-r from-primary-50 hover:from-primary-100 to-secondary-50 hover:to-secondary-100 shadow-sm hover:shadow-md -m-2.5 p-3 border border-primary-200/50 rounded-xl text-primary-700 transition-all duration-300"
             onClick={() => setMobileMenuOpen(true)}
             whileHover={{ scale: 1.05, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
@@ -81,7 +81,7 @@ export default function Header() {
             <span className="sr-only">Abrir menú principal</span>
             <div className="relative">
               <Bars3Icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
-              <div className="absolute -top-1 -right-1 bg-gradient-to-r from-secondary-400 to-secondary-500 w-2 h-2 rounded-full animate-pulse"></div>
+              <div className="-top-1 -right-1 absolute bg-gradient-to-r from-secondary-400 to-secondary-500 rounded-full w-2 h-2 animate-pulse"></div>
             </div>
           </motion.button>
         </div>
@@ -245,14 +245,14 @@ export default function Header() {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: '100%', opacity: 0 }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              className="right-0 z-[9999] fixed inset-y-0 bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/20 backdrop-blur-xl border-l border-white/20 shadow-2xl px-0 w-full sm:max-w-sm overflow-y-auto"
+              className="right-0 z-[9999] fixed inset-y-0 bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/20 shadow-2xl backdrop-blur-xl px-0 border-white/20 border-l w-full sm:max-w-sm overflow-y-auto"
             >
               {/* Enhanced Header */}
-              <div className="relative bg-gradient-to-r from-primary-600 via-primary-700 to-secondary-700 px-6 py-8 shadow-lg">
+              <div className="relative bg-gradient-to-r from-primary-600 via-primary-700 to-secondary-700 shadow-lg px-6 py-8">
                 {/* Decorative Background Elements */}
                 <div className="absolute inset-0 overflow-hidden">
-                  <div className="absolute -top-4 -right-4 bg-white/10 w-24 h-24 rounded-full blur-2xl"></div>
-                  <div className="absolute -bottom-4 -left-4 bg-secondary-300/20 w-32 h-32 rounded-full blur-3xl"></div>
+                  <div className="-top-4 -right-4 absolute bg-white/10 blur-2xl rounded-full w-24 h-24"></div>
+                  <div className="-bottom-4 -left-4 absolute bg-secondary-300/20 blur-3xl rounded-full w-32 h-32"></div>
                 </div>
                 
                 <div className="relative flex justify-between items-center">
@@ -262,26 +262,26 @@ export default function Header() {
                     transition={{ delay: 0.1 }}
                     className="flex items-center"
                   >
-                    <Link href="/" className="flex items-center -m-1.5 p-1.5 group" onClick={() => setMobileMenuOpen(false)}>
-                      <div className="relative bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg px-4 py-3 rounded-2xl">
+                    <Link href="/" className="group flex items-center -m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
+                      <div className="relative bg-white/20 shadow-lg backdrop-blur-sm px-4 py-3 border border-white/30 rounded-2xl">
                         <div className="text-center">
-                          <h1 className="text-white font-bold text-lg leading-tight group-hover:scale-105 transition-transform duration-300">
-                            <span className="bg-gradient-to-r from-white via-primary-100 to-white bg-clip-text text-transparent">
+                          <h1 className="font-bold text-white text-lg leading-tight group-hover:scale-105 transition-transform duration-300">
+                            <span className="bg-clip-text bg-gradient-to-r from-white via-primary-100 to-white text-transparent">
                               Bienestar y Cuidado
                             </span>
                           </h1>
-                          <p className="text-white/90 font-medium text-xs mt-0.5 tracking-wide">
+                          <p className="mt-0.5 font-medium text-white/90 text-xs tracking-wide">
                             EN EL HOGAR
                           </p>
                         </div>
-                        <div className="absolute -top-1 -right-1 bg-gradient-to-r from-green-400 to-green-500 w-3 h-3 rounded-full animate-pulse"></div>
+                        <div className="-top-1 -right-1 absolute bg-gradient-to-r from-green-400 to-green-500 rounded-full w-3 h-3 animate-pulse"></div>
                       </div>
                     </Link>
                   </motion.div>
                   
                   <motion.button
                     type="button"
-                    className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 shadow-lg -m-2.5 p-3 rounded-xl text-white transition-all duration-300 group"
+                    className="group bg-white/20 hover:bg-white/30 shadow-lg backdrop-blur-sm -m-2.5 p-3 border border-white/30 rounded-xl text-white transition-all duration-300"
                     onClick={() => setMobileMenuOpen(false)}
                     whileHover={{ scale: 1.1, rotate: 90 }}
                     whileTap={{ scale: 0.9 }}
@@ -296,11 +296,11 @@ export default function Header() {
               </div>
 
               {/* Menu Content */}
-              <div className="relative flex flex-col h-full px-6 py-8">
+              <div className="relative flex flex-col px-6 py-8 h-full">
                 {/* Navigation Links */}
                 <div className="space-y-1 mb-8">
                   <motion.h3 
-                    className="text-trust-500 mb-4 font-medium text-sm uppercase tracking-wider"
+                    className="mb-4 font-medium text-trust-500 text-sm uppercase tracking-wider"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.3 }}
@@ -345,15 +345,15 @@ export default function Header() {
 
                 {/* Language Selector - Enhanced */}
                 <motion.div 
-                  className="bg-gradient-to-r from-white/60 to-white/40 backdrop-blur-sm border border-white/40 shadow-lg p-4 rounded-2xl mb-8"
+                  className="bg-gradient-to-r from-white/60 to-white/40 shadow-lg backdrop-blur-sm mb-8 p-4 border border-white/40 rounded-2xl"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
                 >
-                  <h4 className="text-trust-600 mb-3 font-medium text-sm uppercase tracking-wider">
+                  <h4 className="mb-3 font-medium text-trust-600 text-sm uppercase tracking-wider">
                     {t('nav.language') || 'Idioma'}
                   </h4>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="gap-2 grid grid-cols-2">
                     {languages.map((lang, index) => (
                       <motion.button
                         key={lang.code}
@@ -392,7 +392,7 @@ export default function Header() {
                 <div className="space-y-4 mt-auto">
                   <motion.a
                     href="https://wa.me/17867527884"
-                    className="flex items-center justify-center space-x-3 bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:from-green-600 hover:via-green-700 hover:to-green-800 shadow-xl hover:shadow-2xl px-6 py-4 rounded-2xl font-semibold text-white text-lg transition-all duration-300 group"
+                    className="group flex justify-center items-center space-x-3 bg-gradient-to-r from-green-500 hover:from-green-600 via-green-600 hover:via-green-700 to-green-700 hover:to-green-800 shadow-xl hover:shadow-2xl px-6 py-4 rounded-2xl font-semibold text-white text-lg transition-all duration-300"
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     initial={{ opacity: 0, y: 30 }}
@@ -401,7 +401,7 @@ export default function Header() {
                   >
                     <PhoneIcon className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                     <span>{t('nav.callNow')}</span>
-                    <div className="bg-white/20 w-2 h-2 rounded-full animate-pulse"></div>
+                    <div className="bg-white/20 rounded-full w-2 h-2 animate-pulse"></div>
                   </motion.a>
                   
                   <motion.div
@@ -411,7 +411,7 @@ export default function Header() {
                   >
                     <Link
                       href="/contacto"
-                      className="flex items-center justify-center space-x-2 bg-gradient-to-r from-primary-600 via-primary-700 to-secondary-700 hover:from-primary-700 hover:via-primary-800 hover:to-secondary-800 shadow-xl hover:shadow-2xl px-6 py-4 rounded-2xl font-semibold text-white text-lg transition-all duration-300 w-full group"
+                      className="group flex justify-center items-center space-x-2 bg-gradient-to-r from-primary-600 hover:from-primary-700 via-primary-700 hover:via-primary-800 to-secondary-700 hover:to-secondary-800 shadow-xl hover:shadow-2xl px-6 py-4 rounded-2xl w-full font-semibold text-white text-lg transition-all duration-300"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <span>{t('nav.freeEvaluation')}</span>
@@ -427,7 +427,7 @@ export default function Header() {
                   
                   {/* Contact Info Footer */}
                   <motion.div 
-                    className="bg-white/30 backdrop-blur-sm border border-white/40 p-4 rounded-xl text-center mt-6"
+                    className="bg-white/30 backdrop-blur-sm mt-6 p-4 border border-white/40 rounded-xl text-center"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.4 }}
@@ -435,7 +435,7 @@ export default function Header() {
                     <p className="text-trust-600 text-sm">
                       <span className="font-semibold text-primary-700">(786) 752-7884</span>
                     </p>
-                    <p className="text-trust-500 text-xs mt-1">
+                    <p className="mt-1 text-trust-500 text-xs">
                       Disponible 24/7 para emergencias
                     </p>
                   </motion.div>

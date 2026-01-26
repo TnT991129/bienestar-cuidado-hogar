@@ -145,7 +145,7 @@ export default function PageNavigation() {
             exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.5, type: "spring", stiffness: 300 }}
           >
-            <nav className="bg-white/80 backdrop-blur-xl shadow-2xl border border-white/40 p-3 rounded-3xl overflow-hidden">
+            <nav className="bg-white/80 shadow-2xl backdrop-blur-xl p-3 border border-white/40 rounded-3xl overflow-hidden">
               <div className="flex flex-col space-y-2">
                 {navItems.map((item, index) => {
                   const IconComponent = item.icon
@@ -181,12 +181,12 @@ export default function PageNavigation() {
                       <div className={`relative z-10 p-1 rounded-xl ${isActive ? 'bg-white/20' : 'bg-transparent group-hover:bg-white/30'} transition-all duration-300`}>
                         <IconComponent className={`w-4 h-4 ${isActive ? 'text-white' : 'text-current'}`} />
                       </div>
-                      <span className="relative z-10 whitespace-nowrap font-semibold">{item.label}</span>
+                      <span className="z-10 relative font-semibold whitespace-nowrap">{item.label}</span>
                       
                       {/* Indicador de progreso */}
                       {isActive && (
                         <motion.div
-                          className="absolute right-2 w-2 h-2 bg-white rounded-full"
+                          className="right-2 absolute bg-white rounded-full w-2 h-2"
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ type: "spring", stiffness: 400 }}
@@ -201,7 +201,7 @@ export default function PageNavigation() {
 
           {/* Versión Móvil - Completamente rediseñada */}
           <motion.div 
-            className="lg:hidden bottom-6 right-4 z-50 fixed"
+            className="lg:hidden right-4 bottom-6 z-50 fixed"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -217,8 +217,8 @@ export default function PageNavigation() {
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="bg-white/90 backdrop-blur-xl shadow-2xl border border-white/50 p-3 rounded-3xl">
-                    <div className="grid grid-cols-2 gap-2">
+                  <div className="bg-white/90 shadow-2xl backdrop-blur-xl p-3 border border-white/50 rounded-3xl">
+                    <div className="gap-2 grid grid-cols-2">
                       {navItems.map((item, index) => {
                         const IconComponent = item.icon
                         const isActive = activeSection === item.id
@@ -253,12 +253,12 @@ export default function PageNavigation() {
                             <div className={`relative z-10 p-2 rounded-xl mb-1 ${isActive ? 'bg-white/20' : 'bg-transparent group-hover:bg-white/30'} transition-all duration-300`}>
                               <IconComponent className={`w-4 h-4 ${isActive ? 'text-white' : 'text-current'}`} />
                             </div>
-                            <span className="relative z-10 font-semibold leading-tight text-center">{item.shortLabel}</span>
+                            <span className="z-10 relative font-semibold text-center leading-tight">{item.shortLabel}</span>
                             
                             {/* Indicador activo */}
                             {isActive && (
                               <motion.div
-                                className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full shadow-sm"
+                                className="-top-1 -right-1 absolute bg-white shadow-sm rounded-full w-3 h-3"
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
                                 transition={{ type: "spring", stiffness: 400 }}
@@ -298,7 +298,7 @@ export default function PageNavigation() {
               {/* Icono de la sección activa */}
               {activeItem && (
                 <motion.div
-                  className="relative z-10"
+                  className="z-10 relative"
                   key={activeItem.id}
                   initial={{ scale: 0, rotate: -180 }}
                   animate={{ scale: 1, rotate: 0 }}
@@ -310,7 +310,7 @@ export default function PageNavigation() {
 
               {/* Indicador de expandido */}
               <motion.div
-                className="absolute -top-1 -right-1 bg-white text-gray-700 w-5 h-5 rounded-full flex items-center justify-center shadow-sm"
+                className="-top-1 -right-1 absolute flex justify-center items-center bg-white shadow-sm rounded-full w-5 h-5 text-gray-700"
                 animate={{ rotate: isExpanded ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
               >
@@ -322,7 +322,7 @@ export default function PageNavigation() {
               </motion.div>
 
               {/* Pulso de actividad */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/0 rounded-2xl animate-pulse opacity-30"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/0 opacity-30 rounded-2xl animate-pulse"></div>
             </motion.button>
           </motion.div>
         </>

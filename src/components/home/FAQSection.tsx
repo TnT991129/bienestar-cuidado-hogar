@@ -20,16 +20,16 @@ export default function FAQSection() {
   console.log('Processed FAQs:', faqs)
 
   return (
-    <section className="bg-gradient-to-br from-white via-primary-50/10 to-secondary-50/10 py-16 sm:py-20 relative overflow-hidden">
+    <section className="relative bg-gradient-to-br from-white via-primary-50/10 to-secondary-50/10 py-16 sm:py-20 overflow-hidden">
       {/* Modern Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 right-10 w-40 h-40 bg-gradient-to-br from-primary-200/20 to-primary-300/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 left-10 w-48 h-48 bg-gradient-to-br from-secondary-200/15 to-secondary-300/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="floating-element absolute top-1/4 left-1/4 w-4 h-4 bg-gradient-to-br from-primary-400/50 to-primary-500/50 rounded-full"></div>
-        <div className="floating-element-delayed absolute bottom-1/3 right-1/3 w-3 h-3 bg-gradient-to-br from-secondary-400/60 to-secondary-500/60 rounded-full"></div>
+        <div className="top-10 right-10 absolute bg-gradient-to-br from-primary-200/20 to-primary-300/20 blur-3xl rounded-full w-40 h-40 animate-pulse"></div>
+        <div className="bottom-10 left-10 absolute bg-gradient-to-br from-secondary-200/15 to-secondary-300/15 blur-3xl rounded-full w-48 h-48 animate-pulse delay-1000"></div>
+        <div className="top-1/4 left-1/4 absolute bg-gradient-to-br from-primary-400/50 to-primary-500/50 rounded-full w-4 h-4 floating-element"></div>
+        <div className="right-1/3 bottom-1/3 absolute bg-gradient-to-br from-secondary-400/60 to-secondary-500/60 rounded-full w-3 h-3 floating-element-delayed"></div>
       </div>
       
-      <div className="mx-auto px-6 lg:px-8 max-w-4xl relative z-10">
+      <div className="z-10 relative mx-auto px-6 lg:px-8 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -37,14 +37,14 @@ export default function FAQSection() {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <div className="inline-flex items-center bg-gradient-to-r from-primary-100/80 to-secondary-100/80 backdrop-blur-sm border border-primary-200/30 px-4 py-2 rounded-full font-semibold text-primary-600 text-sm shadow-lg mb-4">
+          <div className="inline-flex items-center bg-gradient-to-r from-primary-100/80 to-secondary-100/80 shadow-lg backdrop-blur-sm mb-4 px-4 py-2 border border-primary-200/30 rounded-full font-semibold text-primary-600 text-sm">
             <span>FAQ</span>
           </div>
-          <h2 className="mb-4 font-bold text-3xl md:text-4xl text-shadow">
+          <h2 className="text-shadow mb-4 font-bold text-3xl md:text-4xl">
             <span className="gradient-text">Preguntas</span>{' '}
             <span className="text-trust-900">Frecuentes</span>
           </h2>
-          <p className="text-trust-600 text-xl max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-trust-600 text-xl">
             {t('faq.description')}
           </p>
         </motion.div>
@@ -57,11 +57,11 @@ export default function FAQSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass-card group hover:shadow-xl transition-all duration-300 overflow-hidden"
+              className="group hover:shadow-xl overflow-hidden transition-all duration-300 glass-card"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="flex justify-between items-center w-full text-left p-6 group-hover:bg-white/20 transition-all duration-300"
+                className="flex justify-between items-center group-hover:bg-white/20 p-6 w-full text-left transition-all duration-300"
               >
                 <span className="font-semibold text-trust-900 group-hover:text-primary-700 transition-colors duration-300">
                   {faq.question}
@@ -69,9 +69,9 @@ export default function FAQSection() {
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="p-2 bg-gradient-to-br from-primary-100 to-primary-200 group-hover:from-primary-200 group-hover:to-primary-300 rounded-lg transition-all duration-300"
+                  className="bg-gradient-to-br from-primary-100 group-hover:from-primary-200 to-primary-200 group-hover:to-primary-300 p-2 rounded-lg transition-all duration-300"
                 >
-                  <ChevronDownIcon className="h-5 w-5 text-primary-600" />
+                  <ChevronDownIcon className="w-5 h-5 text-primary-600" />
                 </motion.div>
               </button>
               
@@ -84,8 +84,8 @@ export default function FAQSection() {
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-6 pt-2">
-                      <div className="bg-gradient-to-br from-primary-50/50 to-secondary-50/30 backdrop-blur-sm border border-primary-100/30 rounded-xl p-4">
+                    <div className="px-6 pt-2 pb-6">
+                      <div className="bg-gradient-to-br from-primary-50/50 to-secondary-50/30 backdrop-blur-sm p-4 border border-primary-100/30 rounded-xl">
                         <p className="text-trust-600 leading-relaxed">
                           {faq.answer}
                         </p>

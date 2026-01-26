@@ -96,13 +96,13 @@ export default function BenefitsSection() {
     <section className="relative bg-gradient-to-br from-primary-50/30 via-white to-secondary-50/20 py-16 sm:py-20 overflow-hidden">
       {/* Modern Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-br from-primary-200/20 to-primary-300/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 left-10 w-72 h-72 bg-gradient-to-br from-secondary-200/20 to-secondary-300/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="floating-element absolute top-1/2 left-20 w-4 h-4 bg-gradient-to-br from-primary-400/60 to-primary-500/60 rounded-full"></div>
-        <div className="floating-element-delayed absolute top-1/4 right-20 w-6 h-6 bg-gradient-to-br from-secondary-400/50 to-secondary-500/50 rounded-full"></div>
+        <div className="top-10 right-10 absolute bg-gradient-to-br from-primary-200/20 to-primary-300/20 blur-3xl rounded-full w-64 h-64 animate-pulse"></div>
+        <div className="bottom-10 left-10 absolute bg-gradient-to-br from-secondary-200/20 to-secondary-300/20 blur-3xl rounded-full w-72 h-72 animate-pulse delay-1000"></div>
+        <div className="top-1/2 left-20 absolute bg-gradient-to-br from-primary-400/60 to-primary-500/60 rounded-full w-4 h-4 floating-element"></div>
+        <div className="top-1/4 right-20 absolute bg-gradient-to-br from-secondary-400/50 to-secondary-500/50 rounded-full w-6 h-6 floating-element-delayed"></div>
       </div>
       
-      <div className="relative mx-auto px-6 lg:px-8 max-w-7xl z-10">
+      <div className="z-10 relative mx-auto px-6 lg:px-8 max-w-7xl">
         <motion.div 
           className="mx-auto max-w-2xl text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -110,10 +110,10 @@ export default function BenefitsSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-4 font-bold text-3xl sm:text-4xl tracking-tight text-shadow">
+          <h2 className="text-shadow mb-4 font-bold text-3xl sm:text-4xl tracking-tight">
             <span className="gradient-text">{t('benefits.title')}</span>
           </h2>
-          <p className="text-trust-600 text-lg leading-7 max-w-xl mx-auto">
+          <p className="mx-auto max-w-xl text-trust-600 text-lg leading-7">
             {t('benefits.description')}
           </p>
         </motion.div>
@@ -134,7 +134,7 @@ export default function BenefitsSection() {
               return (
                 <motion.div
                   key={benefit.id}
-                  className="glass-card group hover:shadow-2xl transition-all duration-500 text-center relative overflow-hidden"
+                  className="group relative hover:shadow-2xl overflow-hidden text-center transition-all duration-500 glass-card"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -142,9 +142,9 @@ export default function BenefitsSection() {
                   whileHover={{ y: -12, scale: 1.03 }}
                 >
                   {/* Decorative floating element */}
-                  <div className="floating-element absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-primary-300/40 to-secondary-300/40 rounded-full"></div>
+                  <div className="-top-2 -right-2 absolute bg-gradient-to-br from-primary-300/40 to-secondary-300/40 rounded-full w-6 h-6 floating-element"></div>
                   
-                  <div className="mb-6 relative">
+                  <div className="relative mb-6">
                     <motion.div 
                       className={`flex justify-center items-center bg-gradient-to-br ${colorScheme.bg} mx-auto rounded-2xl w-16 h-16 shadow-lg group-hover:shadow-xl transition-all duration-300`}
                       whileHover={{ scale: 1.1, rotate: 5 }}
@@ -155,16 +155,16 @@ export default function BenefitsSection() {
                   </div>
 
                   <div>
-                    <h3 className="mb-3 font-semibold text-xl group-hover:text-primary-700 transition-colors duration-300">
+                    <h3 className="mb-3 font-semibold group-hover:text-primary-700 text-xl transition-colors duration-300">
                       {benefit.name}
                     </h3>
-                    <p className="text-trust-600 leading-relaxed group-hover:text-trust-700 transition-colors duration-300">
+                    <p className="text-trust-600 group-hover:text-trust-700 leading-relaxed transition-colors duration-300">
                       {benefit.description}
                     </p>
                   </div>
                   
                   {/* Hover effect overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary-50/0 to-secondary-50/0 group-hover:from-primary-50/20 group-hover:to-secondary-50/20 rounded-2xl transition-all duration-500 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-50/0 group-hover:from-primary-50/20 to-secondary-50/0 group-hover:to-secondary-50/20 rounded-2xl transition-all duration-500 pointer-events-none"></div>
                 </motion.div>
               )
             })}

@@ -45,9 +45,9 @@ export default function AboutPage() {
       <section className="relative bg-gradient-to-br from-primary-600/10 via-secondary-500/10 to-primary-400/5 py-20 sm:py-32 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-200/30 to-secondary-200/30 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-secondary-200/30 to-primary-200/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-primary-100/20 to-secondary-100/20 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="-top-40 -right-40 absolute bg-gradient-to-br from-primary-200/30 to-secondary-200/30 blur-3xl rounded-full w-80 h-80 animate-pulse"></div>
+          <div className="-bottom-40 -left-40 absolute bg-gradient-to-br from-secondary-200/30 to-primary-200/30 blur-3xl rounded-full w-80 h-80 animate-pulse delay-1000"></div>
+          <div className="top-1/2 left-1/2 absolute bg-gradient-to-br from-primary-100/20 to-secondary-100/20 blur-3xl rounded-full w-96 h-96 -translate-x-1/2 -translate-y-1/2 animate-pulse delay-500"></div>
         </div>
         
         <div className="relative container-max section-padding">
@@ -58,7 +58,7 @@ export default function AboutPage() {
             className="text-center"
           >
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-8 text-shadow"
+              className="text-shadow mb-8 font-bold text-4xl md:text-6xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -68,7 +68,7 @@ export default function AboutPage() {
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl text-trust-600 mb-8 max-w-3xl mx-auto leading-relaxed"
+              className="mx-auto mb-8 max-w-3xl text-trust-600 text-xl md:text-2xl leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -77,42 +77,42 @@ export default function AboutPage() {
             </motion.p>
             
             <motion.div
-              className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-lg px-6 py-3 rounded-full shadow-xl"
+              className="inline-flex items-center gap-3 bg-white/80 shadow-xl backdrop-blur-lg px-6 py-3 rounded-full"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <MapPinIcon className="w-5 h-5 text-primary-600" />
-              <span className="text-trust-700 font-medium">Disponibles en toda la isla</span>
+              <span className="font-medium text-trust-700">Disponibles en toda la isla</span>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* Company Description */}
-      <section className="section-padding bg-white/50 backdrop-blur-sm">
+      <section className="bg-white/50 backdrop-blur-sm section-padding">
         <div className="container-max">
           <motion.div 
-            className="max-w-4xl mx-auto"
+            className="mx-auto max-w-4xl"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="glass-card text-center">
+            <div className="text-center glass-card">
               <motion.div 
-                className="text-6xl mb-6"
+                className="mb-6 text-6xl"
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
               >
                 🏠
               </motion.div>
               
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              <h2 className="mb-8 font-bold text-3xl md:text-4xl">
                 <span className="gradient-text">Nuestra Historia</span>
               </h2>
               
-              <div className="space-y-6 text-lg text-trust-600 leading-relaxed">
+              <div className="space-y-6 text-trust-600 text-lg leading-relaxed">
                 <p>
                   <strong className="text-primary-700">Bienestar y Cuidado en el Hogar</strong> es una iniciativa 
                   nacida del amor y la dedicación hacia nuestros adultos mayores. Entendemos que cada persona 
@@ -137,24 +137,24 @@ export default function AboutPage() {
       </section>
 
       {/* Principles Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-50/30 to-secondary-50/30">
+      <section className="bg-gradient-to-br from-primary-50/30 to-secondary-50/30 section-padding">
         <div className="container-max">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="mb-16 text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="mb-6 font-bold text-3xl md:text-4xl">
               <span className="gradient-text">Nuestros Principios</span>
             </h2>
-            <p className="text-xl text-trust-600 max-w-2xl mx-auto">
+            <p className="mx-auto max-w-2xl text-trust-600 text-xl">
               Los valores que guían cada uno de nuestros cuidados
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="gap-8 grid grid-cols-1 md:grid-cols-3">
             {principles.map((principle, index) => {
               const Icon = principle.icon;
               return (
@@ -165,21 +165,21 @@ export default function AboutPage() {
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
-                  className="glass-card text-center group"
+                  className="group text-center glass-card"
                 >
                   <div className="relative">
                     <motion.div 
-                      className="mx-auto w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300"
+                      className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-primary-600 shadow-lg group-hover:shadow-xl mx-auto mb-6 rounded-2xl w-16 h-16 transition-all duration-300"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.8 }}
                     >
                       <Icon className="w-8 h-8 text-white" />
                     </motion.div>
                     
-                    <div className="floating-element absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-secondary-400 to-secondary-500 rounded-full opacity-70"></div>
+                    <div className="-top-2 -right-2 absolute bg-gradient-to-br from-secondary-400 to-secondary-500 opacity-70 rounded-full w-6 h-6 floating-element"></div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold mb-4 gradient-text">
+                  <h3 className="mb-4 font-bold text-2xl gradient-text">
                     {principle.name}
                   </h3>
                   
@@ -194,26 +194,26 @@ export default function AboutPage() {
       </section>
 
       {/* Founder Section */}
-      <section className="section-padding bg-white/70 backdrop-blur-sm">
+      <section className="bg-white/70 backdrop-blur-sm section-padding">
         <div className="container-max">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="max-w-5xl mx-auto"
+            className="mx-auto max-w-5xl"
           >
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <div className="mb-12 text-center">
+              <h2 className="mb-6 font-bold text-3xl md:text-4xl">
                 <span className="gradient-text">Conoce a Nuestra Fundadora</span>
               </h2>
-              <p className="text-xl text-trust-600">
+              <p className="text-trust-600 text-xl">
                 La visión y el corazón detrás de nuestra misión
               </p>
             </div>
 
             <div className="glass-card">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+              <div className="items-center gap-8 grid grid-cols-1 lg:grid-cols-3">
                 <motion.div 
                   className="lg:col-span-1 text-center"
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -221,25 +221,25 @@ export default function AboutPage() {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <div className="relative inline-block">
+                  <div className="inline-block relative">
                     <motion.div 
-                      className="text-8xl mb-4 relative z-10"
+                      className="z-10 relative mb-4 text-8xl"
                       animate={{ y: [0, -10, 0] }}
                       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                     >
                       {founder.image}
                     </motion.div>
                     
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-200 to-secondary-200 rounded-full blur-2xl opacity-30 scale-150 animate-pulse"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-200 to-secondary-200 opacity-30 blur-2xl rounded-full scale-150 animate-pulse"></div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold mb-2 gradient-text">
+                  <h3 className="mb-2 font-bold text-2xl gradient-text">
                     {founder.name}
                   </h3>
-                  <p className="text-primary-600 font-medium mb-4">
+                  <p className="mb-4 font-medium text-primary-600">
                     {founder.role}
                   </p>
-                  <p className="text-sm text-trust-500 italic">
+                  <p className="text-trust-500 text-sm italic">
                     {founder.credentials}
                   </p>
                 </motion.div>
@@ -252,15 +252,15 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                 >
                   <div className="relative">
-                    <div className="floating-element-delayed absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-br from-primary-300 to-primary-400 rounded-full opacity-60"></div>
+                    <div className="-top-3 -left-3 absolute bg-gradient-to-br from-primary-300 to-primary-400 opacity-60 rounded-full w-8 h-8 floating-element-delayed"></div>
                     
-                    <blockquote className="text-lg text-trust-700 leading-relaxed relative z-10">
-                      <span className="text-4xl text-primary-300 absolute -top-2 -left-2">"</span>
+                    <blockquote className="z-10 relative text-trust-700 text-lg leading-relaxed">
+                      <span className="-top-2 -left-2 absolute text-primary-300 text-4xl">"</span>
                       {founder.description}
-                      <span className="text-4xl text-primary-300 absolute -bottom-6 right-0">"</span>
+                      <span className="right-0 -bottom-6 absolute text-primary-300 text-4xl">"</span>
                     </blockquote>
                     
-                    <div className="floating-element absolute -bottom-3 -right-3 w-6 h-6 bg-gradient-to-br from-secondary-300 to-secondary-400 rounded-full opacity-50"></div>
+                    <div className="-right-3 -bottom-3 absolute bg-gradient-to-br from-secondary-300 to-secondary-400 opacity-50 rounded-full w-6 h-6 floating-element"></div>
                   </div>
                 </motion.div>
               </div>
@@ -270,49 +270,49 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="section-padding bg-gradient-to-br from-trust-50 to-primary-50/20">
+      <section className="bg-gradient-to-br from-trust-50 to-primary-50/20 section-padding">
         <div className="container-max">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="mb-16 text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="mb-6 font-bold text-3xl md:text-4xl">
               <span className="gradient-text">Nuestra Filosofía</span>
             </h2>
-            <p className="text-xl text-trust-600 max-w-2xl mx-auto">
+            <p className="mx-auto max-w-2xl text-trust-600 text-xl">
               Los pilares que definen nuestro compromiso
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="gap-12 grid grid-cols-1 lg:grid-cols-2">
             {/* Mission */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="glass-card text-center group hover:shadow-2xl"
+              className="group hover:shadow-2xl text-center glass-card"
             >
               <div className="relative mb-8">
                 <motion.div 
-                  className="mx-auto w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-3xl flex items-center justify-center shadow-lg mb-6 group-hover:shadow-xl transition-all duration-500"
+                  className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-primary-600 shadow-lg group-hover:shadow-xl mx-auto mb-6 rounded-3xl w-20 h-20 transition-all duration-500"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                 >
                   <HeartIcon className="w-10 h-10 text-white" />
                 </motion.div>
                 
-                <div className="floating-element absolute top-0 right-4 w-4 h-4 bg-gradient-to-br from-secondary-400 to-secondary-500 rounded-full opacity-70"></div>
-                <div className="floating-element-delayed absolute bottom-0 left-4 w-3 h-3 bg-gradient-to-br from-primary-300 to-primary-400 rounded-full opacity-60"></div>
+                <div className="top-0 right-4 absolute bg-gradient-to-br from-secondary-400 to-secondary-500 opacity-70 rounded-full w-4 h-4 floating-element"></div>
+                <div className="bottom-0 left-4 absolute bg-gradient-to-br from-primary-300 to-primary-400 opacity-60 rounded-full w-3 h-3 floating-element-delayed"></div>
               </div>
               
-              <h3 className="text-2xl font-bold mb-6 gradient-text">
+              <h3 className="mb-6 font-bold text-2xl gradient-text">
                 Nuestra Misión
               </h3>
               
-              <p className="text-trust-600 leading-relaxed text-lg">
+              <p className="text-trust-600 text-lg leading-relaxed">
                 Brindar servicios de cuidado y acompañamiento de calidad a personas mayores, 
                 promoviendo su bienestar integral y autonomía en la comodidad de su hogar, 
                 con un enfoque humano, respetuoso y personalizado.
@@ -325,25 +325,25 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="glass-card text-center group hover:shadow-2xl"
+              className="group hover:shadow-2xl text-center glass-card"
             >
               <div className="relative mb-8">
                 <motion.div 
-                  className="mx-auto w-20 h-20 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-3xl flex items-center justify-center shadow-lg mb-6 group-hover:shadow-xl transition-all duration-500"
+                  className="flex justify-center items-center bg-gradient-to-br from-secondary-500 to-secondary-600 shadow-lg group-hover:shadow-xl mx-auto mb-6 rounded-3xl w-20 h-20 transition-all duration-500"
                   whileHover={{ scale: 1.1, rotate: -5 }}
                 >
                   <StarIcon className="w-10 h-10 text-white" />
                 </motion.div>
                 
-                <div className="floating-element absolute top-0 left-4 w-4 h-4 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full opacity-70"></div>
-                <div className="floating-element-delayed absolute bottom-0 right-4 w-3 h-3 bg-gradient-to-br from-secondary-300 to-secondary-400 rounded-full opacity-60"></div>
+                <div className="top-0 left-4 absolute bg-gradient-to-br from-primary-400 to-primary-500 opacity-70 rounded-full w-4 h-4 floating-element"></div>
+                <div className="right-4 bottom-0 absolute bg-gradient-to-br from-secondary-300 to-secondary-400 opacity-60 rounded-full w-3 h-3 floating-element-delayed"></div>
               </div>
               
-              <h3 className="text-2xl font-bold mb-6 gradient-text">
+              <h3 className="mb-6 font-bold text-2xl gradient-text">
                 Nuestra Visión
               </h3>
               
-              <p className="text-trust-600 leading-relaxed text-lg">
+              <p className="text-trust-600 text-lg leading-relaxed">
                 Ser la empresa líder en servicios de cuidado domiciliario para personas mayores, 
                 reconocida por la excelencia en nuestro trato humano y la confianza de las familias 
                 que nos eligen para el cuidado de sus seres queridos.
@@ -354,39 +354,39 @@ export default function AboutPage() {
       </section>
 
       {/* Final Message Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-900 text-white relative overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-900 overflow-hidden text-white section-padding">
         {/* Animated background elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse"></div>
-          <div className="floating-element absolute top-20 right-20 w-24 h-24 bg-secondary-300/10 rounded-full blur-xl"></div>
-          <div className="floating-element-delayed absolute bottom-20 left-1/4 w-40 h-40 bg-primary-300/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-28 h-28 bg-white/5 rounded-full blur-2xl animate-pulse delay-1000"></div>
+          <div className="top-10 left-10 absolute bg-white/5 blur-2xl rounded-full w-32 h-32 animate-pulse"></div>
+          <div className="top-20 right-20 absolute bg-secondary-300/10 blur-xl rounded-full w-24 h-24 floating-element"></div>
+          <div className="bottom-20 left-1/4 absolute bg-primary-300/5 blur-3xl rounded-full w-40 h-40 floating-element-delayed"></div>
+          <div className="right-10 bottom-10 absolute bg-white/5 blur-2xl rounded-full w-28 h-28 animate-pulse delay-1000"></div>
         </div>
         
-        <div className="container-max relative">
+        <div className="relative container-max">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center"
+            className="mx-auto max-w-4xl text-center"
           >
-            <div className="backdrop-blur-lg bg-white/10 rounded-3xl p-12 shadow-2xl border border-white/20">
+            <div className="bg-white/10 shadow-2xl backdrop-blur-lg p-12 border border-white/20 rounded-3xl">
               <motion.div 
-                className="text-6xl mb-8"
+                className="mb-8 text-6xl"
                 animate={{ rotate: [0, 5, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
                 💝
               </motion.div>
               
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-shadow">
-                <span className="bg-gradient-to-r from-white via-primary-100 to-white bg-clip-text text-transparent">
+              <h2 className="text-shadow mb-8 font-bold text-3xl md:text-5xl">
+                <span className="bg-clip-text bg-gradient-to-r from-white via-primary-100 to-white text-transparent">
                   Un Cuidado que Trasciende
                 </span>
               </h2>
               
-              <div className="space-y-6 text-lg md:text-xl leading-relaxed mb-10">
+              <div className="space-y-6 mb-10 text-lg md:text-xl leading-relaxed">
                 <p className="text-primary-100">
                   En <strong className="text-white">Bienestar y Cuidado en el Hogar</strong>, 
                   entendemos que cada persona mayor tiene una historia única, llena de sabiduría 
@@ -398,20 +398,20 @@ export default function AboutPage() {
                   ofrecemos compañía genuina y honramos la dignidad de cada persona que atendemos.
                 </p>
                 
-                <p className="text-white font-medium">
+                <p className="font-medium text-white">
                   Porque creemos que el amor y el respeto son la mejor medicina para el alma.
                 </p>
               </div>
               
               <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <div className="floating-element bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border border-white/30">
-                  <span className="text-white font-medium">❤️ Cuidado con Amor</span>
+                <div className="bg-white/20 backdrop-blur-sm px-6 py-3 border border-white/30 rounded-full floating-element">
+                  <span className="font-medium text-white">❤️ Cuidado con Amor</span>
                 </div>
-                <div className="floating-element-delayed bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border border-white/30">
-                  <span className="text-white font-medium">🤝 Compañía Genuina</span>
+                <div className="bg-white/20 backdrop-blur-sm px-6 py-3 border border-white/30 rounded-full floating-element-delayed">
+                  <span className="font-medium text-white">🤝 Compañía Genuina</span>
                 </div>
-                <div className="floating-element bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border border-white/30">
-                  <span className="text-white font-medium">🏡 Comodidad del Hogar</span>
+                <div className="bg-white/20 backdrop-blur-sm px-6 py-3 border border-white/30 rounded-full floating-element">
+                  <span className="font-medium text-white">🏡 Comodidad del Hogar</span>
                 </div>
               </div>
             </div>
@@ -420,16 +420,16 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/20 relative overflow-hidden">
+      <section className="relative bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/20 overflow-hidden section-padding">
         {/* Background animations */}
         <div className="absolute inset-0">
-          <div className="animate-gradient bg-gradient-to-r from-primary-200/20 via-secondary-200/20 to-primary-200/20 absolute inset-0"></div>
-          <div className="floating-element absolute top-10 left-10 w-20 h-20 bg-gradient-to-br from-primary-300/30 to-primary-400/30 rounded-full blur-xl"></div>
-          <div className="floating-element-delayed absolute bottom-10 right-10 w-32 h-32 bg-gradient-to-br from-secondary-300/20 to-secondary-400/20 rounded-full blur-2xl"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-primary-100/10 to-secondary-100/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-200/20 via-secondary-200/20 to-primary-200/20 animate-gradient"></div>
+          <div className="top-10 left-10 absolute bg-gradient-to-br from-primary-300/30 to-primary-400/30 blur-xl rounded-full w-20 h-20 floating-element"></div>
+          <div className="right-10 bottom-10 absolute bg-gradient-to-br from-secondary-300/20 to-secondary-400/20 blur-2xl rounded-full w-32 h-32 floating-element-delayed"></div>
+          <div className="top-1/2 left-1/2 absolute bg-gradient-to-br from-primary-100/10 to-secondary-100/10 blur-3xl rounded-full w-96 h-96 -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
         </div>
         
-        <div className="container-max relative">
+        <div className="relative container-max">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -437,20 +437,20 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="backdrop-blur-lg bg-white/70 rounded-3xl p-12 shadow-2xl border border-white/30 max-w-4xl mx-auto glow-shadow">
+            <div className="bg-white/70 glow-shadow shadow-2xl backdrop-blur-lg mx-auto p-12 border border-white/30 rounded-3xl max-w-4xl">
               <motion.div 
-                className="text-6xl mb-8"
+                className="mb-8 text-6xl"
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
                 📞
               </motion.div>
               
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 text-shadow">
+              <h2 className="text-shadow mb-8 font-bold text-3xl md:text-5xl">
                 <span className="gradient-text">¿Necesitas Nuestros Servicios?</span>
               </h2>
               
-              <p className="text-lg md:text-xl text-trust-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+              <p className="mx-auto mb-10 max-w-2xl text-trust-600 text-lg md:text-xl leading-relaxed">
                 Estamos aquí para ayudarte. Contáctanos hoy mismo y descubre cómo podemos 
                 mejorar la calidad de vida de tu ser querido con nuestro cuidado especializado.
               </p>
@@ -464,27 +464,27 @@ export default function AboutPage() {
                     href="https://wa.me/17867527884"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 group animate-pulse-glow"
+                    className="group inline-flex items-center gap-3 bg-gradient-to-r from-green-500 hover:from-green-600 to-green-600 hover:to-green-700 shadow-xl hover:shadow-2xl px-8 py-4 rounded-2xl font-semibold text-white text-lg transition-all animate-pulse-glow duration-300"
                   >
                     <PhoneIcon className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                     <span>Llamar Ahora</span>
                   </a>
                 </motion.div>
                 
-                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 inline-block shadow-lg">
-                  <div className="flex items-center justify-center gap-3 text-trust-700">
+                <div className="inline-block bg-white/80 shadow-lg backdrop-blur-sm p-6 rounded-xl">
+                  <div className="flex justify-center items-center gap-3 text-trust-700">
                     <PhoneIcon className="w-5 h-5 text-primary-600" />
                     <span className="font-bold text-xl gradient-text">(786) 752-7884</span>
                   </div>
-                  <p className="text-sm text-trust-500 mt-2">Disponible 24/7 para emergencias</p>
+                  <p className="mt-2 text-trust-500 text-sm">Disponible 24/7 para emergencias</p>
                 </div>
               </div>
               
-              <div className="mt-8 pt-8 border-t border-primary-200/50">
+              <div className="mt-8 pt-8 border-primary-200/50 border-t">
                 <p className="text-trust-500 text-sm">
                   <strong className="text-primary-700">Evaluación gratuita</strong> • 
-                  <strong className="text-primary-700 ml-2">Consulta sin compromiso</strong> • 
-                  <strong className="text-primary-700 ml-2">Atención personalizada</strong>
+                  <strong className="ml-2 text-primary-700">Consulta sin compromiso</strong> • 
+                  <strong className="ml-2 text-primary-700">Atención personalizada</strong>
                 </p>
               </div>
             </div>

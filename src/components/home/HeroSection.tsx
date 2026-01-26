@@ -63,7 +63,7 @@ export default function HeroSection() {
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute bg-gradient-to-br from-primary-400/60 to-secondary-400/60 rounded-full w-3 h-3 shadow-lg"
+            className="absolute bg-gradient-to-br from-primary-400/60 to-secondary-400/60 shadow-lg rounded-full w-3 h-3"
             style={{
               left: `${15 + i * 12}%`,
               top: `${25 + i * 8}%`
@@ -99,37 +99,37 @@ export default function HeroSection() {
               transition={{ delay: 0.3, duration: 0.8, ease: "backOut" }}
             >
               <motion.div 
-                className="flex items-center bg-white/80 backdrop-blur-lg shadow-xl border border-white/30 px-3 sm:px-4 py-1.5 sm:py-2 rounded-2xl group hover:bg-white/90 transition-all duration-300"
+                className="group flex items-center bg-white/80 hover:bg-white/90 shadow-xl backdrop-blur-lg px-3 sm:px-4 py-1.5 sm:py-2 border border-white/30 rounded-2xl transition-all duration-300"
                 whileHover={{ scale: 1.08, y: -3 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <div className="p-1 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-lg mr-2 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-emerald-100 to-emerald-200 mr-2 p-1 rounded-lg group-hover:scale-110 transition-transform duration-300">
                   <ShieldCheckIcon className="w-4 sm:w-5 h-4 sm:h-5 text-emerald-600" />
                 </div>
-                <span className="font-bold text-gray-700 text-xs group-hover:text-emerald-700 transition-colors duration-300">{t('benefits.items.professionals.title')}</span>
+                <span className="font-bold text-gray-700 group-hover:text-emerald-700 text-xs transition-colors duration-300">{t('benefits.items.professionals.title')}</span>
               </motion.div>
               <motion.div 
-                className="flex items-center bg-white/80 backdrop-blur-lg shadow-xl border border-white/30 px-3 sm:px-4 py-1.5 sm:py-2 rounded-2xl group hover:bg-white/90 transition-all duration-300"
+                className="group flex items-center bg-white/80 hover:bg-white/90 shadow-xl backdrop-blur-lg px-3 sm:px-4 py-1.5 sm:py-2 border border-white/30 rounded-2xl transition-all duration-300"
                 whileHover={{ scale: 1.08, y: -3 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <div className="p-1 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg mr-2 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-blue-100 to-blue-200 mr-2 p-1 rounded-lg group-hover:scale-110 transition-transform duration-300">
                   <ClockIcon className="w-4 sm:w-5 h-4 sm:h-5 text-blue-600" />
                 </div>
-                <span className="font-bold text-gray-700 text-xs group-hover:text-blue-700 transition-colors duration-300">{t('benefits.items.availability.title')}</span>
+                <span className="font-bold text-gray-700 group-hover:text-blue-700 text-xs transition-colors duration-300">{t('benefits.items.availability.title')}</span>
               </motion.div>
             </motion.div>
 
             {/* Enhanced Main Headlines with typing effect */}
             <div className="mb-4 sm:mb-5">
               <motion.h1 
-                className="font-bold text-6xl sm:text-7xl lg:text-left text-center leading-tight tracking-tight text-shadow"
+                className="text-shadow font-bold text-6xl sm:text-7xl lg:text-left text-center leading-tight tracking-tight"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 1 }}
               >
                 <motion.span 
-                  className="bg-gradient-to-r from-primary-600 via-secondary-600 to-primary-700 bg-clip-text text-transparent"
+                  className="bg-clip-text bg-gradient-to-r from-primary-600 via-secondary-600 to-primary-700 text-transparent"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7, duration: 0.8 }}
@@ -170,7 +170,7 @@ export default function HeroSection() {
               ].map((item, index) => (
                 <motion.div 
                   key={item.textKey}
-                  className="flex items-center space-x-1.5 sm:space-x-2 bg-white/80 backdrop-blur-lg border border-white/30 shadow-lg px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-2xl group hover:bg-white/90 hover:shadow-xl transition-all duration-300"
+                  className="group flex items-center space-x-1.5 sm:space-x-2 bg-white/80 hover:bg-white/90 shadow-lg hover:shadow-xl backdrop-blur-lg px-2.5 sm:px-3 py-1.5 sm:py-2 border border-white/30 rounded-2xl transition-all duration-300"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.7 + index * 0.1, duration: 0.6 }}
@@ -179,7 +179,7 @@ export default function HeroSection() {
                   <div className={`p-1 bg-gradient-to-br ${item.bgColor} rounded-lg group-hover:scale-110 transition-transform duration-300`}>
                     <item.icon className={`h-3.5 w-3.5 sm:h-4 sm:w-4 ${item.color}`} />
                   </div>
-                  <span className="font-semibold text-gray-700 text-xs group-hover:text-trust-800 transition-colors duration-300">{t(item.textKey)}</span>
+                  <span className="font-semibold text-gray-700 group-hover:text-trust-800 text-xs transition-colors duration-300">{t(item.textKey)}</span>
                 </motion.div>
               ))}  
             </motion.div>
@@ -198,9 +198,9 @@ export default function HeroSection() {
               >
                 <Link
                   href="/contacto"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 via-primary-600 to-primary-700 hover:from-primary-600 hover:via-primary-700 hover:to-primary-800 shadow-2xl hover:shadow-primary-500/25 px-4 sm:px-6 py-2.5 sm:py-3 border border-primary-400/50 hover:border-primary-300 rounded-2xl font-bold text-white text-sm sm:text-base transition-all duration-300 glow-shadow"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 hover:from-primary-600 via-primary-600 hover:via-primary-700 to-primary-700 hover:to-primary-800 glow-shadow shadow-2xl hover:shadow-primary-500/25 px-4 sm:px-6 py-2.5 sm:py-3 border border-primary-400/50 hover:border-primary-300 rounded-2xl font-bold text-white text-sm sm:text-base transition-all duration-300"
                 >
-                  <div className="p-1 bg-white/20 rounded-lg">
+                  <div className="bg-white/20 p-1 rounded-lg">
                     <HeartIcon className="w-4 h-4" />
                   </div>
                   {t('nav.freeEvaluation')}
@@ -209,19 +209,19 @@ export default function HeroSection() {
               
               <motion.a
                 href="https://wa.me/17867527884"
-                className="group flex items-center space-x-2 bg-white/80 backdrop-blur-lg hover:bg-white/90 border border-white/30 shadow-lg px-3 sm:px-4 py-2 sm:py-2.5 rounded-2xl text-gray-700 hover:text-primary-600 transition-all duration-300 hover:shadow-xl"
+                className="group flex items-center space-x-2 bg-white/80 hover:bg-white/90 shadow-lg hover:shadow-xl backdrop-blur-lg px-3 sm:px-4 py-2 sm:py-2.5 border border-white/30 rounded-2xl text-gray-700 hover:text-primary-600 transition-all duration-300"
                 whileHover={{ scale: 1.05, x: 5 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <motion.div
-                  className="bg-gradient-to-br from-emerald-100 to-emerald-200 group-hover:from-emerald-200 group-hover:to-emerald-300 p-1.5 rounded-full transition-all duration-300 shadow-sm"
+                  className="bg-gradient-to-br from-emerald-100 group-hover:from-emerald-200 to-emerald-200 group-hover:to-emerald-300 shadow-sm p-1.5 rounded-full transition-all duration-300"
                   whileHover={{ rotate: 15, scale: 1.1 }}
                 >
                   <PhoneIcon className="w-4 h-4 text-emerald-600" />
                 </motion.div>
                 <div>
-                  <div className="font-semibold text-xs group-hover:text-primary-700 transition-colors duration-300">{t('nav.callNow')}</div>
+                  <div className="font-semibold group-hover:text-primary-700 text-xs transition-colors duration-300">{t('nav.callNow')}</div>
                   <div className="font-bold text-primary-600 group-hover:text-primary-700 text-sm transition-colors duration-300">(786) 752-7884</div>
                 </div>
               </motion.a>
@@ -235,19 +235,19 @@ export default function HeroSection() {
               transition={{ delay: 2.2, duration: 0.8 }}
             >
               <motion.button 
-                className="group flex items-center space-x-2 bg-gradient-to-r from-primary-50/80 to-secondary-50/80 backdrop-blur-lg hover:from-primary-100/90 hover:to-secondary-100/90 border border-primary-200/50 px-4 py-2 rounded-2xl text-primary-600 hover:text-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="group flex items-center space-x-2 bg-gradient-to-r from-primary-50/80 hover:from-primary-100/90 to-secondary-50/80 hover:to-secondary-100/90 shadow-lg hover:shadow-xl backdrop-blur-lg px-4 py-2 border border-primary-200/50 rounded-2xl text-primary-600 hover:text-primary-700 transition-all duration-300"
                 whileHover={{ scale: 1.05, x: 5 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <motion.div
-                  className="p-1 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300"
+                  className="bg-gradient-to-br from-primary-100 group-hover:from-primary-200 to-primary-200 group-hover:to-primary-300 p-1 rounded-lg transition-all duration-300"
                   whileHover={{ scale: 1.2, rotate: 90 }}
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
                   <PlayCircleIcon className="w-5 h-5 text-primary-600" />
                 </motion.div>
                 <div className="text-left">
-                  <div className="font-medium text-xs group-hover:font-semibold transition-all duration-300">{t('hero.videoText1')}</div>
+                  <div className="font-medium group-hover:font-semibold text-xs transition-all duration-300">{t('hero.videoText1')}</div>
                   <div className="font-bold text-sm">{t('hero.videoText2')}</div>
                 </div>
               </motion.button>
@@ -279,7 +279,7 @@ export default function HeroSection() {
               <motion.div 
                 animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="-top-2 sm:-top-3 -left-2 sm:-left-3 absolute bg-white/90 backdrop-blur-lg shadow-2xl border border-white/30 p-2 sm:p-3 rounded-xl max-w-[160px] sm:max-w-[180px] hover:bg-white/95 transition-all duration-300"
+                className="-top-2 sm:-top-3 -left-2 sm:-left-3 absolute bg-white/90 hover:bg-white/95 shadow-2xl backdrop-blur-lg p-2 sm:p-3 border border-white/30 rounded-xl max-w-[160px] sm:max-w-[180px] transition-all duration-300"
               >
                 <div className="flex items-center space-x-1.5 sm:space-x-2">
                   <div className="flex justify-center items-center bg-gradient-to-br from-secondary-100 to-secondary-200 shadow-sm rounded-lg w-6 sm:w-8 h-6 sm:h-8">
@@ -296,7 +296,7 @@ export default function HeroSection() {
               <motion.div 
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
-                className="top-12 sm:top-14 -left-2 sm:-left-3 absolute bg-white/90 backdrop-blur-lg shadow-2xl border border-white/30 p-2 sm:p-3 rounded-xl max-w-[120px] sm:max-w-[140px] hover:bg-white/95 transition-all duration-300"
+                className="top-12 sm:top-14 -left-2 sm:-left-3 absolute bg-white/90 hover:bg-white/95 shadow-2xl backdrop-blur-lg p-2 sm:p-3 border border-white/30 rounded-xl max-w-[120px] sm:max-w-[140px] transition-all duration-300"
               >
                 <div className="gap-1.5 sm:gap-2 grid grid-cols-2 text-center">
                   <div>
@@ -313,17 +313,17 @@ export default function HeroSection() {
               <motion.div 
                 animate={{ y: [0, 12, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-                className="-right-2 sm:-right-3 -bottom-2 sm:-bottom-3 absolute bg-white/90 backdrop-blur-lg shadow-2xl border border-white/30 p-2 sm:p-3 rounded-xl max-w-[140px] sm:max-w-[160px] hover:bg-white/95 transition-all duration-300"
+                className="-right-2 sm:-right-3 -bottom-2 sm:-bottom-3 absolute bg-white/90 hover:bg-white/95 shadow-2xl backdrop-blur-lg p-2 sm:p-3 border border-white/30 rounded-xl max-w-[140px] sm:max-w-[160px] transition-all duration-300"
               >
                 <div className="flex items-center space-x-1.5">
                   <div className="flex -space-x-1">
-                    <div className="flex justify-center items-center bg-gradient-to-br from-primary-200 to-primary-300 border-2 border-white rounded-full w-5 sm:w-6 h-5 sm:h-6 shadow-sm">
+                    <div className="flex justify-center items-center bg-gradient-to-br from-primary-200 to-primary-300 shadow-sm border-2 border-white rounded-full w-5 sm:w-6 h-5 sm:h-6">
                       <span className="text-xs">⭐</span>
                     </div>
-                    <div className="flex justify-center items-center bg-gradient-to-br from-secondary-200 to-secondary-300 border-2 border-white rounded-full w-5 sm:w-6 h-5 sm:h-6 shadow-sm">
+                    <div className="flex justify-center items-center bg-gradient-to-br from-secondary-200 to-secondary-300 shadow-sm border-2 border-white rounded-full w-5 sm:w-6 h-5 sm:h-6">
                       <span className="text-xs">⭐</span>
                     </div>
-                    <div className="flex justify-center items-center bg-gradient-to-br from-primary-200 to-primary-300 border-2 border-white rounded-full w-5 sm:w-6 h-5 sm:h-6 shadow-sm">
+                    <div className="flex justify-center items-center bg-gradient-to-br from-primary-200 to-primary-300 shadow-sm border-2 border-white rounded-full w-5 sm:w-6 h-5 sm:h-6">
                       <span className="text-xs">⭐</span>
                     </div>
                   </div>
