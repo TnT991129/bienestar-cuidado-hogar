@@ -105,23 +105,27 @@ export const translations = {
     // FAQ
     faq: {
       title: 'Preguntas Frecuentes',
-      description: 'Resolvemos tus dudas más comunes',
+      description: 'Resolvemos tus dudas más comunes sobre nuestros servicios de acompañamiento',
       items: [
         {
           question: '¿Qué servicios incluye el acompañamiento en el hogar?',
-          answer: 'Incluye compañía, ayuda con actividades diarias, recordatorios amigables, preparación de comidas, y apoyo emocional no médico.'
+          answer: 'Nuestros servicios incluyen compañía personalizada, ayuda con actividades de la vida diaria, recordatorios amigables para medicamentos, preparación de comidas nutritivas, apoyo emocional, acompañamiento a citas médicas, actividades recreativas, y supervisión general no médica para garantizar el bienestar de tu ser querido.'
         },
         {
-          question: '¿Los acompañantes están capacitados?',
-          answer: 'Sí, todos nuestros acompañantes están capacitados y tienen experiencia en el acompañamiento no médico de adultos mayores.'
+          question: '¿Los acompañantes están capacitados y verificados?',
+          answer: 'Absolutamente. Todos nuestros acompañantes pasan por un riguroso proceso de selección que incluye verificación de antecedentes, referencias personales y profesionales, capacitación especializada en acompañamiento de adultos mayores, y evaluación continua de su desempeño.'
         },
         {
           question: '¿Puedo elegir el horario de atención?',
-          answer: 'Por supuesto, ofrecemos horarios flexibles desde unas pocas horas al día hasta cuidado las 24 horas.'
+          answer: 'Sí, ofrecemos total flexibilidad horaria. Puedes elegir desde unas pocas horas al día, medio tiempo, tiempo completo, o acompañamiento las 24 horas. También ofrecemos servicios de fin de semana y días festivos según tus necesidades específicas.'
         },
         {
-          question: '¿Qué pasa si no estoy satisfecho con el servicio?',
-          answer: 'Garantizamos la calidad del servicio. Si no está satisfecho, cambiaremos el acompañante o ajustaremos el plan.'
+          question: '¿Cuáles son sus tarifas y formas de pago?',
+          answer: 'Nuestras tarifas son competitivas y varían según el tipo de servicio y horario requerido. Ofrecemos planes personalizados para adaptarse a diferentes presupuestos. Aceptamos pagos semanales, quincenales o mensuales, y múltiples métodos de pago para tu conveniencia.'
+        },
+        {
+          question: '¿Cómo puedo comenzar con sus servicios?',
+          answer: 'Es muy sencillo: contacta con nosotros para una consulta gratuita, evaluaremos las necesidades específicas, te presentaremos opciones de acompañantes disponibles, coordinaremos el inicio del servicio en la fecha que prefieras, y mantendremos comunicación regular para asegurar tu completa satisfacción.'
         }
       ]
     },
@@ -288,23 +292,27 @@ export const translations = {
     // FAQ
     faq: {
       title: 'Frequently Asked Questions',
-      description: 'We answer your most common questions',
+      description: 'We answer your most common questions about our companionship services',
       items: [
         {
           question: 'What services does home companionship include?',
-          answer: 'It includes companionship, help with daily activities, friendly reminders, meal preparation, and non-medical emotional support.'
+          answer: 'Our services include personalized companionship, help with daily activities, friendly medication reminders, nutritious meal preparation, emotional support, medical appointment accompaniment, recreational activities, and general non-medical supervision to ensure your loved one\'s well-being.'
         },
         {
-          question: 'Are the companions trained?',
-          answer: 'Yes, all our companions are trained and have experience in non-medical care for seniors.'
+          question: 'Are the companions trained and verified?',
+          answer: 'Absolutely. All our companions go through a rigorous selection process including background checks, personal and professional references, specialized training in senior companionship, and continuous performance evaluation.'
         },
         {
           question: 'Can I choose the care schedule?',
-          answer: 'Of course, we offer flexible schedules from a few hours a day to 24-hour care.'
+          answer: 'Yes, we offer complete scheduling flexibility. You can choose from a few hours a day, part-time, full-time, or 24-hour companionship. We also offer weekend and holiday services according to your specific needs.'
         },
         {
-          question: 'What if I\'m not satisfied with the service?',
-          answer: 'We guarantee service quality. If you\'re not satisfied, we\'ll change the companion or adjust the plan.'
+          question: 'What are your rates and payment methods?',
+          answer: 'Our rates are competitive and vary according to the type of service and required schedule. We offer customized plans to fit different budgets. We accept weekly, biweekly, or monthly payments, and multiple payment methods for your convenience.'
+        },
+        {
+          question: 'How can I get started with your services?',
+          answer: 'It\'s very simple: contact us for a free consultation, we\'ll assess specific needs, present available companion options, coordinate service start on your preferred date, and maintain regular communication to ensure your complete satisfaction.'
         }
       ]
     },

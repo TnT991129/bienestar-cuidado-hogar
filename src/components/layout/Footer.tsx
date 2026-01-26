@@ -181,14 +181,14 @@ export default function Footer() {
                   </li>
                   <li className="flex items-center space-x-3">
                     <EnvelopeIcon className="w-5 h-5 text-primary-400" />
-                    <a href="mailto:info@cuidadosenior.com" className="text-trust-300 hover:text-white text-sm leading-6 transition-colors duration-200">
-                      info@cuidadosenior.com
+                    <a href="mailto:info@bienestarcuidado.com" className="text-trust-300 hover:text-white text-sm leading-6 transition-colors duration-200">
+                      info@bienestarcuidado.com
                     </a>
                   </li>
                   <li className="flex items-start space-x-3">
                     <MapPinIcon className="mt-1 w-5 h-5 text-primary-400" />
                     <span className="text-trust-300 text-sm leading-6">
-                      Ciudad de México, México
+                      Miami , FL, Estados Unidos
                     </span>
                   </li>
                   <li className="flex items-center space-x-3">
@@ -204,22 +204,7 @@ export default function Footer() {
         </div>
 
         {/* Values Section */}
-        <div className="mt-16 pt-8 border-trust-700 border-t">
-          <h3 className="mb-8 font-semibold text-white text-lg text-center leading-6">
-            Nuestros Valores
-          </h3>
-          <div className="gap-6 grid grid-cols-2 md:grid-cols-4">
-            {valores.map((valor) => (
-              <div key={valor.name} className="text-center">
-                <div className="flex justify-center items-center bg-primary-600 mx-auto rounded-lg w-12 h-12">
-                  <valor.icon className="w-6 h-6 text-white" aria-hidden="true" />
-                </div>
-                <h4 className="mt-4 font-semibold text-white text-sm">{valor.name}</h4>
-                <p className="mt-2 text-trust-300 text-xs">{valor.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        
 
         {/* Bottom Section */}
         <div className="mt-16 sm:mt-20 lg:mt-24 pt-8 border-trust-700 border-t">
@@ -242,7 +227,7 @@ export default function Footer() {
       </div>
 
       {/* Emergency Contact Banner */}
-      <div className="bg-secondary-600">
+      <div className="bottom-0 z-50 fixed bg-secondary-600 shadow-lg w-full">
         <div className="mx-auto px-6 sm:px-6 lg:px-8 py-3 max-w-7xl">
           <div className="text-center">
             <p className="font-medium text-white text-sm">

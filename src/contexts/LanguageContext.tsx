@@ -8,7 +8,7 @@ type Language = 'es' | 'en'
 interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
-  t: (key: string) => string
+  t: (key: string) => any
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
@@ -21,7 +21,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLanguageState(lang)
   }
 
-  const t = (key: string): string => {
+  const t = (key: string): any => {
     const keys = key.split('.')
     let value: any = translations[language]
     
@@ -34,7 +34,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       }
     }
     
-    return typeof value === 'string' ? value : key
+    return value
   }
 
   return (

@@ -12,10 +12,12 @@ export default function FAQSection() {
   // Safe array access for FAQ items
   const getFAQs = () => {
     const faqItems = t('faq.items')
+    console.log('FAQ Items:', faqItems)
     return Array.isArray(faqItems) ? faqItems : []
   }
   
   const faqs = getFAQs()
+  console.log('Processed FAQs:', faqs)
 
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20">
