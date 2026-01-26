@@ -1,4 +1,5 @@
-import type { Metadata } from 'next'
+'use client'
+
 import { motion } from 'framer-motion'
 import { 
   HeartIcon,
@@ -10,11 +11,6 @@ import {
   MapPinIcon,
   PhoneIcon
 } from '@heroicons/react/24/outline'
-
-export const metadata: Metadata = {
-  title: 'Sobre Nosotros - Bienestar y Cuidado en el Hogar | Historia Familiar',
-  description: 'Conoce nuestra historia familiar brindando acompañamiento no médico. Empresa familiar dedicada al bienestar de adultos mayores con valores de amor y respeto.',
-}
 
 const stats = [
   { name: 'Años de experiencia', value: '+3' },
@@ -308,7 +304,7 @@ export default function AboutPage() {
             <div className="lg:hidden block relative">
               {/* Continuous Vertical Line */}
               <motion.div 
-                className="absolute left-6 top-6 w-0.5 bg-gradient-to-b from-primary-200 via-primary-400 to-secondary-400 rounded-full"
+                className="top-6 left-6 absolute bg-gradient-to-b from-primary-200 via-primary-400 to-secondary-400 rounded-full w-0.5"
                 style={{ height: `${(timeline.length - 1) * 200 + 50}px` }}
                 initial={{ scaleY: 0 }}
                 whileInView={{ scaleY: 1 }}
@@ -318,7 +314,7 @@ export default function AboutPage() {
               
               {/* Animated Progress Dot */}
               <motion.div
-                className="absolute left-5 top-5 w-2 h-2 bg-secondary-500 rounded-full z-20"
+                className="top-5 left-5 z-20 absolute bg-secondary-500 rounded-full w-2 h-2"
                 initial={{ y: 0 }}
                 whileInView={{ y: `${(timeline.length - 1) * 200 + 40}px` }}
                 transition={{ 
@@ -329,7 +325,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
               />
 
-              <div className="space-y-16 relative z-10">
+              <div className="z-10 relative space-y-16">
                 {timeline.map((event, index) => (
                   <motion.div 
                     key={event.year} 
@@ -346,7 +342,7 @@ export default function AboutPage() {
                   >
                     {/* Timeline Dot with Pulse Animation */}
                     <motion.div 
-                      className="z-30 flex flex-shrink-0 justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full w-12 h-12 shadow-lg"
+                      className="z-30 flex flex-shrink-0 justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 shadow-lg rounded-full w-12 h-12"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{ 
@@ -375,7 +371,7 @@ export default function AboutPage() {
                       
                       {/* Pulse Ring */}
                       <motion.div
-                        className="absolute w-12 h-12 rounded-full border-2 border-primary-300"
+                        className="absolute border-2 border-primary-300 rounded-full w-12 h-12"
                         initial={{ scale: 1, opacity: 0.7 }}
                         animate={{ 
                           scale: [1, 1.5, 1],
@@ -402,7 +398,7 @@ export default function AboutPage() {
                       viewport={{ once: true }}
                     >
                       <motion.div 
-                        className="bg-white shadow-lg hover:shadow-xl p-6 rounded-2xl transition-all duration-300 border border-gray-100"
+                        className="bg-white shadow-lg hover:shadow-xl p-6 border border-gray-100 rounded-2xl transition-all duration-300"
                         whileHover={{ 
                           y: -5,
                           boxShadow: "0 25px 50px rgba(0,0,0,0.1)"
