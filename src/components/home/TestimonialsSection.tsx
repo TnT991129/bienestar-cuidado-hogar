@@ -115,12 +115,14 @@ export default function TestimonialsSection() {
             <div className="top-1/2 right-4 left-4 absolute flex justify-between -translate-y-1/2 pointer-events-none">
               <button
                 onClick={prevTestimonial}
+                title="Testimonio anterior"
                 className="flex justify-center items-center bg-white/90 hover:bg-white shadow-lg rounded-full w-12 h-12 text-trust-600 hover:text-primary-600 transition-all duration-200 pointer-events-auto"
               >
                 <ChevronLeftIcon className="w-6 h-6" />
               </button>
               <button
                 onClick={nextTestimonial}
+                title="Siguiente testimonio"
                 className="flex justify-center items-center bg-white/90 hover:bg-white shadow-lg rounded-full w-12 h-12 text-trust-600 hover:text-primary-600 transition-all duration-200 pointer-events-auto"
               >
                 <ChevronRightIcon className="w-6 h-6" />
@@ -133,6 +135,7 @@ export default function TestimonialsSection() {
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
+                  title={`Ir al testimonio ${index + 1}`}
                   className={`w-3 h-3 rounded-full transition-all duration-200 ${
                     index === currentTestimonial 
                       ? 'bg-primary-600 scale-110' 

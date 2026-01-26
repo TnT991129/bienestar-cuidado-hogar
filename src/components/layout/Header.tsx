@@ -121,8 +121,9 @@ export default function Header() {
               <span className="text-base">{languages.find(lang => lang.code === language)?.flag}</span>
               <span className="font-semibold text-sm">{languages.find(lang => lang.code === language)?.name}</span>
               <svg 
-                className="w-3 h-3 text-gray-500 transition-transform duration-300"
-                style={{ transform: languageMenuOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                className={`w-3 h-3 text-gray-500 transition-transform duration-300 ${
+                  languageMenuOpen ? 'rotate-180' : 'rotate-0'
+                }`}
                 fill="none" 
                 viewBox="0 0 24 24" 
                 stroke="currentColor"

@@ -209,12 +209,14 @@ export default function HowItWorksSection() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: (index * 0.15) + 0.6 }}
                     >
-                      {step.details.slice(0, 2).map((detail, detailIndex) => (
-                        <li key={detailIndex} className="flex items-start">
-                          <CheckCircleIcon className="flex-shrink-0 mt-0.5 mr-1.5 w-3 h-3 text-secondary-500" />
-                          <span className="leading-tight">{detail}</span>
-                        </li>
-                      ))}
+                      <ul className="list-none">
+                        {step.details.slice(0, 2).map((detail, detailIndex) => (
+                          <li key={detailIndex} className="flex items-start">
+                            <CheckCircleIcon className="flex-shrink-0 mt-0.5 mr-1.5 w-3 h-3 text-secondary-500" />
+                            <span className="leading-tight">{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </motion.ul>
                   </div>
                 </motion.div>

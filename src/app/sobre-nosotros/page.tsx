@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-// import { motion } from 'framer-motion' // No usado en esta optimización
+import { motion } from 'framer-motion'
 import { 
   HeartIcon,
   UserGroupIcon,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 const stats = [
-  { name: 'Años de experiencia', value: 'Varios' },
+  { name: 'Años de experiencia', value: '+3' },
   { name: 'Familias acompañadas', value: '300+' },
   { name: 'Acompañantes capacitados', value: '25+' },
   { name: 'Satisfacción familiar', value: '98%' }
@@ -99,72 +99,152 @@ export default function AboutPage() {
       {/* Mission Section */}
       <section className="py-24 sm:py-32">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="font-semibold text-primary-600 text-base leading-7">Quiénes Somos</h2>
-            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
+          {/* Header */}
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <h2 className="font-semibold text-primary-600 text-base uppercase leading-7 tracking-wide">
+              Quiénes Somos
+            </h2>
+            <p className="mt-4 font-bold text-trust-900 text-3xl sm:text-4xl lg:text-5xl leading-tight tracking-tight">
               Una Familia que Acompaña a Otras Familias
+            </p>
+            <p className="mx-auto mt-6 max-w-2xl text-trust-600 text-xl leading-8">
+              Brindamos acompañamiento no médico con amor, respeto y dedicación desde hace varios años
             </p>
           </div>
 
-          <div className="mx-auto mt-16 max-w-5xl">
-            <div className="items-center gap-12 grid grid-cols-1 lg:grid-cols-2">
-              {/* Mission Text */}
-              <div>
-                <div className="space-y-6 text-trust-600 text-lg leading-relaxed">
-                  <p>
-                    <strong className="text-trust-800">Bienestar y Cuidado en el Hogar</strong> nace como una iniciativa familiar 
-                    con un propósito claro: ofrecer acompañamiento y apoyo no médico en el hogar, brindando tranquilidad 
-                    tanto a las personas que cuidamos como a sus familias.
-                  </p>
-                  
-                  <p>
-                    Contamos con varios años de experiencia en el acompañamiento diario de adultos mayores y personas 
-                    con necesidades especiales, siempre desde un enfoque humano, respetuoso y responsable. Nuestro equipo 
-                    ha recibido formación y capacitación en <strong className="text-primary-600">asistencia no médica</strong>, 
-                    lo que nos permite brindar un servicio confiable, cercano y adaptado a cada situación.
-                  </p>
-                  
-                  <p>
-                    Creemos que el cuidado comienza con la presencia, la paciencia y la empatía. Por eso, nuestro compromiso 
-                    es ofrecer compañía, apoyo y bienestar en la comodidad del hogar, <strong className="text-trust-800">
-                    respetando la dignidad y la rutina</strong> de cada persona.
-                  </p>
+          {/* Main Content Grid */}
+          <div className="gap-12 lg:gap-16 grid grid-cols-1 lg:grid-cols-3">
+            
+            {/* Left Column - Mission & Vision */}
+            <div className="space-y-8 lg:col-span-2">
+              
+              {/* Mission Card */}
+              <div className="bg-white shadow-xl p-8 lg:p-10 border border-gray-100 rounded-3xl">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="flex-shrink-0">
+                    <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl w-12 h-12">
+                      <HeartIcon className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="mb-3 font-bold text-trust-900 text-2xl">Nuestra Misión</h3>
+                    <div className="space-y-4 text-trust-600 text-lg leading-relaxed">
+                      <p>
+                        <strong className="text-trust-800">Bienestar y Cuidado en el Hogar</strong> nace como una iniciativa familiar 
+                        con un propósito claro: ofrecer acompañamiento y apoyo no médico en el hogar, brindando tranquilidad 
+                        tanto a las personas que cuidamos como a sus familias.
+                      </p>
+                      <p>
+                        Contamos con varios años de experiencia en el acompañamiento diario de adultos mayores, 
+                        siempre desde un enfoque <strong className="text-primary-600">humano, respetuoso y responsable</strong>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                  <p>
-                    <strong className="text-primary-600">Nuestros servicios son estrictamente no médicos</strong> y están orientados 
-                    a mejorar la calidad de vida a través del acompañamiento y la asistencia diaria.
-                  </p>
+              {/* Vision Card */}
+              <div className="bg-gradient-to-br from-primary-50 to-secondary-50 p-8 lg:p-10 border-2 border-primary-100 rounded-3xl">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="flex justify-center items-center bg-gradient-to-br from-secondary-500 to-primary-500 rounded-xl w-12 h-12">
+                      <StarIcon className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="mb-3 font-bold text-trust-900 text-2xl">Nuestro Sueño</h3>
+                    <p className="text-trust-700 text-lg leading-relaxed">
+                      Queremos que cada adulto mayor se sienta <strong className="text-primary-600">acompañado, querido y valorado</strong>. 
+                      Aspiramos a ser la familia extendida que brinda compañía, escucha con paciencia, 
+                      comparte momentos especiales y hace que cada día sea un poco más brillante.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                  <div className="bg-blue-50 mt-6 p-4 rounded-lg">
-                    <p className="font-semibold text-blue-800 text-sm">
-                      Bienestar y Cuidado en el Hogar ofrece servicios de acompañamiento y apoyo no médico. 
+              {/* Values Highlight */}
+              <div className="bg-white shadow-xl p-8 lg:p-10 border border-gray-100 rounded-3xl">
+                <h3 className="mb-6 font-bold text-trust-900 text-xl text-center">
+                  Nuestros Principios Fundamentales
+                </h3>
+                <div className="gap-6 grid grid-cols-1 sm:grid-cols-3">
+                  <div className="text-center">
+                    <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-3 rounded-2xl w-16 h-16">
+                      <UserGroupIcon className="w-8 h-8 text-white" />
+                    </div>
+                    <h4 className="mb-2 font-semibold text-trust-900">Presencia</h4>
+                    <p className="text-trust-600 text-sm">Estar ahí cuando más se necesita</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center bg-gradient-to-br from-secondary-500 to-primary-500 mx-auto mb-3 rounded-2xl w-16 h-16">
+                      <ClockIcon className="w-8 h-8 text-white" />
+                    </div>
+                    <h4 className="mb-2 font-semibold text-trust-900">Paciencia</h4>
+                    <p className="text-trust-600 text-sm">Tiempo y comprensión sin prisa</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-3 rounded-2xl w-16 h-16">
+                      <HeartIcon className="w-8 h-8 text-white" />
+                    </div>
+                    <h4 className="mb-2 font-semibold text-trust-900">Empatía</h4>
+                    <p className="text-trust-600 text-sm">Entender y compartir sentimientos</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Important Notice */}
+              <div className="bg-blue-50 p-6 border border-blue-200 rounded-2xl">
+                <div className="flex items-start space-x-3">
+                  <ShieldCheckIcon className="flex-shrink-0 mt-0.5 w-6 h-6 text-blue-600" />
+                  <div>
+                    <h4 className="mb-2 font-semibold text-blue-900">Servicios No Médicos</h4>
+                    <p className="text-blue-800 text-sm leading-relaxed">
+                      <strong>Bienestar y Cuidado en el Hogar</strong> ofrece servicios de acompañamiento y apoyo no médico. 
                       No brindamos servicios médicos ni sustituimos la atención médica profesional.
                     </p>
                   </div>
                 </div>
-
-                {/* Vision */}
-                <div className="bg-gradient-to-r from-primary-50 to-secondary-50 mt-12 p-6 rounded-2xl">
-                  <h3 className="mb-4 font-bold text-trust-900 text-xl">Nuestro Sueño</h3>
-                  <p className="text-trust-700">
-                    Queremos que cada adulto mayor se sienta acompañado, querido y valorado. 
-                    Aspiramos a ser la familia extendida que brinda compañía, escucha con paciencia, 
-                    comparte momentos especiales y hace que cada día sea un poco más brillante 
-                    para quienes han dado tanto a sus familias y comunidades.
-                  </p>
-                </div>
               </div>
+            </div>
 
-              {/* Stats */}
-              <div className="gap-8 grid grid-cols-2">
-                {stats.map((stat, index) => (
-                  <div key={stat.name} className="bg-white shadow-lg p-6 rounded-2xl text-center">
-                    <dt className="font-bold text-primary-600 text-3xl sm:text-4xl">
-                      {stat.value}
-                    </dt>
-                    <dd className="mt-2 font-medium text-trust-600 text-sm">{stat.name}</dd>
+            {/* Right Column - Stats */}
+            <div className="lg:col-span-1">
+              <div className="top-8 sticky space-y-6">
+                <h3 className="mb-8 font-bold text-trust-900 text-xl text-center">
+                  Nuestros Números
+                </h3>
+                <div className="gap-4 grid grid-cols-2 lg:grid-cols-1">
+                  {stats.map((stat, index) => (
+                    <div key={stat.name} className="bg-white shadow-lg hover:shadow-xl p-6 border border-gray-100 rounded-2xl text-center transition-shadow duration-300">
+                      <div className="mb-2 font-bold text-primary-600 text-3xl sm:text-4xl">
+                        {stat.value}
+                      </div>
+                      <div className="font-medium text-trust-600 text-sm leading-tight">{stat.name}</div>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* CTA Card */}
+                <div className="bg-gradient-to-br from-primary-600 to-secondary-600 mt-8 p-6 rounded-2xl text-white text-center">
+                  <h4 className="mb-3 font-bold text-xl">¿Necesitas Acompañamiento?</h4>
+                  <p className="mb-4 text-primary-100 text-sm leading-relaxed">
+                    Contáctanos para una consulta gratuita y descubre cómo podemos ayudar a tu familia
+                  </p>
+                  <div className="flex sm:flex-row flex-col gap-2">
+                    <a 
+                      href="/contacto" 
+                      className="bg-white hover:bg-primary-50 px-4 py-2 rounded-lg font-semibold text-primary-600 text-sm transition-colors"
+                    >
+                      Contactar Ahora
+                    </a>
+                    <a 
+                      href="https://wa.me/17867527884" 
+                      className="hover:bg-white px-4 py-2 border-2 border-white rounded-lg font-semibold text-white hover:text-primary-600 text-sm transition-colors"
+                    >
+                      WhatsApp
+                    </a>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>
@@ -172,8 +252,16 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="bg-gradient-to-br from-trust-50 to-primary-50/30 py-24 sm:py-32">
-        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
+      <section className="relative py-24 sm:py-32 overflow-hidden">
+        {/* Background Image with Blur */}
+        <div 
+          className="z-0 absolute inset-0 bg-cover bg-center opacity-15 blur-sm timeline-bg"
+        ></div>
+        
+        {/* Gradient overlay */}
+        <div className="z-10 absolute inset-0 bg-gradient-to-br from-trust-50/95 to-primary-50/95"></div>
+        
+        <div className="z-20 relative mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestro Camino</h2>
             <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
@@ -186,7 +274,8 @@ export default function AboutPage() {
           </div>
 
           <div className="mx-auto mt-16 max-w-4xl">
-            <div className="relative">
+            {/* Desktop Timeline */}
+            <div className="hidden lg:block relative">
               {/* Timeline Line */}
               <div className="left-1/2 absolute bg-gradient-to-b from-primary-200 to-secondary-200 w-1 h-full -translate-x-1/2 transform"></div>
 
@@ -204,13 +293,151 @@ export default function AboutPage() {
                     <div className={`w-5/12 ${
                       index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'
                     }`}>
-                      <div className="bg-white shadow-lg p-6 rounded-2xl">
+                      <div className="bg-white shadow-lg hover:shadow-xl p-6 rounded-2xl transition-shadow duration-300">
                         <div className="mb-2 font-bold text-primary-600 text-2xl">{event.year}</div>
                         <h3 className="mb-3 font-semibold text-trust-900 text-xl">{event.title}</h3>
-                        <p className="text-trust-600">{event.description}</p>
+                        <p className="text-trust-600 leading-relaxed">{event.description}</p>
                       </div>
                     </div>
                   </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile Timeline */}
+            <div className="lg:hidden block relative">
+              {/* Continuous Vertical Line */}
+              <motion.div 
+                className="absolute left-6 top-6 w-0.5 bg-gradient-to-b from-primary-200 via-primary-400 to-secondary-400 rounded-full"
+                style={{ height: `${(timeline.length - 1) * 200 + 50}px` }}
+                initial={{ scaleY: 0 }}
+                whileInView={{ scaleY: 1 }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+                viewport={{ once: true }}
+              />
+              
+              {/* Animated Progress Dot */}
+              <motion.div
+                className="absolute left-5 top-5 w-2 h-2 bg-secondary-500 rounded-full z-20"
+                initial={{ y: 0 }}
+                whileInView={{ y: `${(timeline.length - 1) * 200 + 40}px` }}
+                transition={{ 
+                  duration: 2, 
+                  delay: 1.5,
+                  ease: "easeInOut"
+                }}
+                viewport={{ once: true }}
+              />
+
+              <div className="space-y-16 relative z-10">
+                {timeline.map((event, index) => (
+                  <motion.div 
+                    key={event.year} 
+                    className="relative flex items-start space-x-4"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: index * 0.2,
+                      type: "spring",
+                      stiffness: 100
+                    }}
+                    viewport={{ once: true }}
+                  >
+                    {/* Timeline Dot with Pulse Animation */}
+                    <motion.div 
+                      className="z-30 flex flex-shrink-0 justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full w-12 h-12 shadow-lg"
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      transition={{ 
+                        duration: 0.5, 
+                        delay: (index * 0.2) + 0.3,
+                        type: "spring",
+                        stiffness: 200
+                      }}
+                      whileHover={{ 
+                        scale: 1.1,
+                        boxShadow: "0 10px 25px rgba(0,0,0,0.2)"
+                      }}
+                      viewport={{ once: true }}
+                    >
+                      <motion.div
+                        initial={{ rotate: -180 }}
+                        whileInView={{ rotate: 0 }}
+                        transition={{ 
+                          duration: 0.6, 
+                          delay: (index * 0.2) + 0.5 
+                        }}
+                        viewport={{ once: true }}
+                      >
+                        <event.icon className="w-6 h-6 text-white" />
+                      </motion.div>
+                      
+                      {/* Pulse Ring */}
+                      <motion.div
+                        className="absolute w-12 h-12 rounded-full border-2 border-primary-300"
+                        initial={{ scale: 1, opacity: 0.7 }}
+                        animate={{ 
+                          scale: [1, 1.5, 1],
+                          opacity: [0.7, 0, 0.7]
+                        }}
+                        transition={{
+                          duration: 2,
+                          delay: (index * 0.2) + 1,
+                          repeat: Infinity,
+                          repeatDelay: 3
+                        }}
+                      />
+                    </motion.div>
+
+                    {/* Content with Slide Animation */}
+                    <motion.div 
+                      className="flex-1"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ 
+                        duration: 0.6, 
+                        delay: (index * 0.2) + 0.4 
+                      }}
+                      viewport={{ once: true }}
+                    >
+                      <motion.div 
+                        className="bg-white shadow-lg hover:shadow-xl p-6 rounded-2xl transition-all duration-300 border border-gray-100"
+                        whileHover={{ 
+                          y: -5,
+                          boxShadow: "0 25px 50px rgba(0,0,0,0.1)"
+                        }}
+                      >
+                        <motion.div 
+                          className="mb-2 font-bold text-primary-600 text-xl"
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          transition={{ delay: (index * 0.2) + 0.6 }}
+                          viewport={{ once: true }}
+                        >
+                          {event.year}
+                        </motion.div>
+                        <motion.h3 
+                          className="mb-3 font-semibold text-trust-900 text-lg"
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          transition={{ delay: (index * 0.2) + 0.7 }}
+                          viewport={{ once: true }}
+                        >
+                          {event.title}
+                        </motion.h3>
+                        <motion.p 
+                          className="text-trust-600 text-sm leading-relaxed"
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          transition={{ delay: (index * 0.2) + 0.8 }}
+                          viewport={{ once: true }}
+                        >
+                          {event.description}
+                        </motion.p>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
                 ))}
               </div>
             </div>
