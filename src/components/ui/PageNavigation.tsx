@@ -114,6 +114,7 @@ export default function PageNavigation() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -155,13 +156,11 @@ export default function PageNavigation() {
                     <motion.button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className={`
-                        relative group flex items-center space-x-3 px-4 py-3 rounded-2xl font-medium text-sm transition-all duration-300 overflow-hidden
-                        ${isActive 
-                          ? `bg-gradient-to-r ${item.color} text-white shadow-lg shadow-${item.color.split('-')[1]}-500/30` 
-                          : 'text-gray-600 hover:bg-gradient-to-r hover:' + item.gradient + ' hover:text-gray-800'
-                        }
-                      `}
+                      className={`relative group flex items-center space-x-3 px-4 py-3 rounded-2xl font-medium text-sm transition-all duration-300 overflow-hidden ${
+                        isActive 
+                          ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg' 
+                          : 'text-gray-600 hover:bg-gray-50 hover:text-gray-800'
+                      }`}
                       whileHover={{ scale: 1.05, x: isActive ? 0 : 5 }}
                       whileTap={{ scale: 0.95 }}
                       initial={{ opacity: 0, x: 20 }}
@@ -201,7 +200,7 @@ export default function PageNavigation() {
 
           {/* Versión Móvil - Completamente rediseñada */}
           <motion.div 
-            className="lg:hidden right-4 bottom-6 z-50 fixed"
+            className="lg:hidden right-3 bottom-20 z-50 fixed"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -217,8 +216,8 @@ export default function PageNavigation() {
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="bg-white/90 shadow-2xl backdrop-blur-xl p-3 border border-white/50 rounded-3xl">
-                    <div className="gap-2 grid grid-cols-2">
+                  <div className="bg-white/95 shadow-2xl backdrop-blur-xl p-4 border border-gray-200/50 rounded-3xl max-w-xs">
+                    <div className="gap-3 grid grid-cols-2">
                       {navItems.map((item, index) => {
                         const IconComponent = item.icon
                         const isActive = activeSection === item.id
@@ -227,13 +226,11 @@ export default function PageNavigation() {
                           <motion.button
                             key={item.id}
                             onClick={() => scrollToSection(item.id)}
-                            className={`
-                              relative group flex flex-col items-center justify-center p-3 rounded-2xl font-medium text-xs transition-all duration-300 overflow-hidden
-                              ${isActive 
-                                ? `bg-gradient-to-r ${item.color} text-white shadow-lg` 
-                                : 'text-gray-600 hover:bg-gradient-to-r hover:' + item.gradient + ' hover:text-gray-800'
-                              }
-                            `}
+                            className={`relative group flex flex-col items-center justify-center p-3 rounded-2xl font-medium text-xs transition-all duration-300 overflow-hidden ${
+                              isActive 
+                                ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg' 
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-800'
+                            }`}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             initial={{ opacity: 0, scale: 0.8 }}
@@ -276,15 +273,11 @@ export default function PageNavigation() {
             {/* Botón flotante principal */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
-              className={`
-                relative group bg-gradient-to-r ${activeItem?.color || 'from-primary-500 to-primary-600'} 
-                text-white shadow-2xl hover:shadow-3xl w-14 h-14 rounded-2xl 
-                flex items-center justify-center transition-all duration-300 overflow-hidden
-              `}
+              className="relative group bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-2xl hover:shadow-3xl w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 overflow-hidden"
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
               style={{
-                boxShadow: `0 10px 30px ${activeItem?.color?.includes('primary') ? 'rgba(59, 130, 246, 0.3)' : 'rgba(0, 0, 0, 0.2)'}`
+                boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)'
               }}
             >
               {/* Efecto de brillo */}

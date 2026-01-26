@@ -22,7 +22,7 @@ const navigation = {
   ],
   empresa: [
     { name: 'Sobre Nosotros', href: '/sobre-nosotros' },
-    { name: 'Nuestro Equipo', href: '/equipo' },
+    // { name: 'Nuestro Equipo', href: '/equipo' }, // Temporalmente oculto
     { name: 'Cómo Funciona', href: '/como-funciona' },
     { name: 'Testimonios', href: '/testimonios' },
   ],
@@ -69,7 +69,7 @@ export default function Footer() {
     ],
     empresa: [
       { name: t('nav.about'), href: '/sobre-nosotros' },
-      { name: t('nav.team'), href: '/equipo' },
+      // { name: t('nav.team'), href: '/equipo' }, // Temporalmente oculto
       { name: 'Cómo Funciona', href: '/como-funciona' },
       { name: 'Testimonios', href: '/testimonios' },
     ],

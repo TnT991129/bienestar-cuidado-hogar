@@ -119,13 +119,13 @@ export default function TestimonialsSection() {
 
                 {/* Testimonial Text */}
                 <blockquote className="mb-8 font-medium text-trust-800 text-xl md:text-2xl text-center leading-relaxed">
-                  "{testimonials[currentTestimonial]?.quote || ''}"
+                  "{testimonials[currentTestimonial]?.text || ''}"
                 </blockquote>
 
                 {/* Author */}
                 <div className="text-center">
                   <div className="mb-1 font-bold text-trust-900 text-lg">
-                    {testimonials[currentTestimonial]?.name || ''}
+                    {testimonials[currentTestimonial]?.author || ''}
                   </div>
                   <div className="text-trust-600">
                     {testimonials[currentTestimonial]?.role || ''}

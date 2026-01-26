@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import ServicesSection from '@/components/home/ServicesSection'
 import { 
   HeartIcon,
   HomeIcon,
@@ -8,463 +7,189 @@ import {
   ShieldCheckIcon,
   ChatBubbleLeftRightIcon,
   HandRaisedIcon,
-  CurrencyDollarIcon,
-  CalendarDaysIcon,
   PhoneIcon,
-  CheckCircleIcon
+  CheckCircleIcon,
+  ExclamationTriangleIcon,
+  DocumentTextIcon
 } from '@heroicons/react/24/outline'
 
 export const metadata: Metadata = {
-  title: 'Servicios de Acompañamiento en el Hogar - Bienestar y Cuidado en el Hogar',
-  description: 'Servicios completos de acompañamiento no médico para adultos mayores: asistencia personal, compañía, apoyo con tareas del hogar, acompañamiento y más. Planes personalizados 24/7.',
+  title: 'Servicios de Acompañamiento NO Médico - Bienestar y Cuidado en el Hogar LLC',
+  description: 'Servicios profesionales de acompañamiento y apoyo no médico para adultos mayores en Florida. Planes personalizados adaptados a cada familia.',
 }
 
-const mainServices = [
+const companionshipAreas = [
   {
-    id: 1,
-    name: 'Asistencia Personal NO Médica',
-    description: 'Asistencia especializada no médica con todas las actividades de cuidado personal diario.',
+    id: 'personal-daily',
+    name: 'Acompañamiento Personal Diario',
+    description: 'Apoyo respetuoso en las actividades diarias básicas, manteniendo la dignidad y autonomía de la persona.',
     icon: HeartIcon,
-    features: [
-      'Aseo e higiene personal completa',
-      'Ayuda con vestimenta y arreglo personal',
-      'Asistencia para comer y beber',
-      'Apoyo para caminar y movilidad',
-      'Cuidado de la piel y prevención de úlceras',
-      'Cambio de pañales si es necesario',
-      'Cuidado del cabello y uñas'
-    ],
-    pricing: 'Desde $25/hora',
-    availability: '24/7 disponible',
-    popular: false
+    services: [
+      'Apoyo con higiene personal y aseo',
+      'Asistencia para vestirse y desvestirse',
+      'Ayuda durante las comidas',
+      'Apoyo básico para movilidad en el hogar',
+      'Acompañamiento en rutinas diarias',
+      'Recordatorios amigables para el cuidado personal'
+    ]
   },
   {
-    id: 2,
+    id: 'companionship-emotional',
     name: 'Compañía y Apoyo Emocional',
-    description: 'Conversación, actividades recreativas y apoyo emocional para combatir la soledad.',
+    description: 'Presencia cálida y conversación significativa para combatir la soledad y mantener el bienestar emocional.',
     icon: ChatBubbleLeftRightIcon,
-    features: [
+    services: [
       'Conversación y compañía diaria',
-      'Actividades recreativas y juegos',
-      'Lectura de libros y periódicos',
-      'Apoyo emocional y escucha activa',
-      'Estimulación cognitiva',
-      'Acompañamiento en hobbies',
-      'Celebración de fechas especiales'
-    ],
-    pricing: 'Desde $20/hora',
-    availability: 'Horarios flexibles',
-    popular: true
+      'Actividades recreativas adaptadas',
+      'Lectura de libros, periódicos o revistas',
+      'Escucha activa y apoyo emocional',
+      'Acompañamiento en hobbies e intereses',
+      'Participación en actividades familiares'
+    ]
   },
   {
-    id: 3,
-    name: 'Tareas Domésticas Ligeras',
-    description: 'Mantenimiento básico del hogar para crear un ambiente limpio y seguro.',
+    id: 'home-support',
+    name: 'Apoyo en el Hogar',
+    description: 'Asistencia con tareas domésticas básicas para mantener un ambiente limpio, seguro y cómodo.',
     icon: HomeIcon,
-    features: [
-      'Limpieza ligera de la casa',
-      'Preparación de comidas nutritivas',
-      'Lavado de ropa y planchado',
-      'Organización de espacios',
-      'Mantenimiento del orden',
-      'Cuidado de plantas',
-      'Gestión de correspondencia básica'
-    ],
-    pricing: 'Desde $18/hora',
-    availability: 'Lun-Sáb disponible',
-    popular: false
+    services: [
+      'Tareas domésticas ligeras y organizadas',
+      'Preparación de comidas sencillas y nutritivas',
+      'Organización de espacios de vida',
+      'Lavado básico de ropa personal',
+      'Mantenimiento del orden en áreas comunes',
+      'Cuidado básico de plantas domésticas'
+    ]
   },
   {
-    id: 4,
-    name: 'Recordatorios de Medicación',
-    description: 'Supervisión y recordatorios para tomar medicamentos según prescripción médica.',
+    id: 'reminders-routines',
+    name: 'Recordatorios y Rutinas',
+    description: 'Apoyo para mantener horarios organizados y recordatorios importantes del día a día.',
     icon: ClockIcon,
-    features: [
-      'Recordatorios de horarios de medicinas',
-      'Organización de pastilleros',
-      'Seguimiento de tomas diarias',
-      'Comunicación con familia y médicos',
-      'Registro detallado de cumplimiento',
-      'Coordinación con farmacias',
-      'Alertas de reabastecimiento'
+    services: [
+      'Recordatorios de horarios y citas',
+      'Organización del día y actividades',
+      'Comunicación regular con la familia',
+      'Recordatorios de actividades importantes',
+      'Apoyo para mantener rutinas saludables',
+      'Coordinación de visitas familiares'
     ],
-    pricing: 'Incluido en otros servicios',
-    availability: '24/7 monitoreo',
-    popular: false
+    important: 'IMPORTANTE: No administramos medicamentos. Los recordatorios de medicación son únicamente informativos.'
   },
   {
-    id: 5,
-    name: 'Transporte y Acompañamiento',
-    description: 'Acompañamiento seguro a citas médicas, compras y actividades sociales.',
+    id: 'outside-accompaniment',
+    name: 'Acompañamiento Fuera del Hogar',
+    description: 'Compañía segura para salidas necesarias y actividades sociales fuera de la casa.',
     icon: UserGroupIcon,
-    features: [
-      'Transporte a citas médicas',
-      'Acompañamiento a compras',
+    services: [
+      'Acompañamiento a citas (sin intervención médica)',
+      'Compañía para compras básicas y necesarias',
       'Visitas a familiares y amigos',
       'Actividades sociales y recreativas',
-      'Trámites bancarios y oficiales',
-      'Paseos al aire libre',
-      'Eventos religiosos o culturales'
-    ],
-    pricing: 'Desde $30/hora + transporte',
-    availability: 'Con reserva previa',
-    popular: false
+      'Paseos al aire libre y parques',
+      'Eventos comunitarios o religiosos'
+    ]
   },
   {
-    id: 6,
-    name: 'Monitoreo de Seguridad 24/7',
-    description: 'Supervisión constante para prevenir accidentes y garantizar un entorno seguro.',
+    id: 'supervision-safety',
+    name: 'Supervisión General y Seguridad',
+    description: 'Presencia atenta para prevenir riesgos domésticos y mantener comunicación con la familia.',
     icon: ShieldCheckIcon,
-    features: [
-      'Prevención de caídas y accidentes',
-      'Supervisión continua de seguridad',
-      'Evaluación regular de riesgos domésticos',
-      'Comunicación inmediata de emergencias',
-      'Ambiente seguro y adaptado',
-      'Monitoreo nocturno disponible',
-      'Protocolos de emergencia establecidos'
-    ],
-    pricing: 'Desde $35/hora',
-    availability: '24/7 disponible',
-    popular: false
+    services: [
+      'Presencia y supervisión general',
+      'Observación de bienestar general',
+      'Prevención básica de caídas',
+      'Comunicación inmediata con familiares',
+      'Mantenimiento de ambiente seguro',
+      'Seguimiento de rutinas establecidas'
+    ]
   }
 ]
 
-const carePackages = [
+const workingProcess = [
   {
-    name: 'Cuidado Básico',
-    description: 'Ideal para personas independientes que necesitan apoyo ligero',
-    hours: '2-4 horas diarias',
-    price: 'Desde $400/semana',
-    features: [
-      'Compañía y conversación',
-      'Recordatorios de medicación',
-      'Tareas domésticas ligeras',
-      'Preparación de comidas',
-      'Supervisión de seguridad',
-      'Comunicación familiar diaria'
-    ],
-    popular: false
+    step: '01',
+    title: 'Consulta Inicial',
+    description: 'Conversación personalizada para conocer las necesidades específicas de su ser querido y las preferencias de la familia.'
   },
   {
-    name: 'Cuidado Completo',
-    description: 'Para personas que requieren asistencia integral diaria',
-    hours: '8-12 horas diarias',
-    price: 'Desde $800/semana',
-    features: [
-      'Todos los servicios básicos',
-      'Cuidado personal completo',
-      'Transporte y acompañamiento',
-      'Monitoreo médico',
-      'Actividades terapéuticas',
-      'Reportes médicos detallados',
-      'Coordinación con profesionales de salud'
-    ],
-    popular: true
+    step: '02', 
+    title: 'Diseño de Plan Personalizado',
+    description: 'Creamos un plan único adaptado a los horarios, rutinas y tipo de acompañamiento que mejor se ajuste a sus necesidades.'
   },
   {
-    name: 'Cuidado 24/7',
-    description: 'Atención completa las 24 horas para máxima tranquilidad',
-    hours: '24 horas diarias',
-    price: 'Desde $1,500/semana',
-    features: [
-      'Todos los servicios incluidos',
-      'Cuidado nocturno especializado',
-      'Enfermero de guardia disponible',
-      'Respuesta inmediata a emergencias',
-      'Acompañantes rotativos capacitados',
-      'Supervisión médica continua',
-      'Apoyo familiar 24/7'
-    ],
-    popular: false
+    step: '03',
+    title: 'Inicio del Acompañamiento',
+    description: 'Comenzamos el servicio con una transición gradual y supervisión cercana para asegurar comodidad y confianza.'
+  },
+  {
+    step: '04',
+    title: 'Seguimiento y Ajustes',
+    description: 'Evaluación continua del servicio y ajustes necesarios para garantizar la satisfacción completa de la familia.'
   }
 ]
 
-const specializedServices = [
-  {
-    name: 'Cuidado Post-Hospitalario',
-    description: 'Transición segura del hospital al hogar con cuidado especializado',
-    icon: HeartIcon,
-    duration: '2-8 semanas típicamente'
-  },
-  {
-    name: 'Cuidado para Demencia/Alzheimer',
-    description: 'Atención especializada para personas con deterioro cognitivo',
-    icon: UserGroupIcon,
-    duration: 'Cuidado a largo plazo'
-  },
-  {
-    name: 'Cuidado Paliativo',
-    description: 'Confort y dignidad en etapas finales de la vida',
-    icon: HeartIcon,
-    duration: 'Según necesidades médicas'
-  },
-  {
-    name: 'Respiro Familiar',
-    description: 'Descanso temporal para cuidadores familiares',
-    icon: CalendarDaysIcon,
-    duration: 'Desde unas horas hasta semanas'
-  }
-]
-
-export default function ServicesPage() {
+export default function ServiciosPage() {
   return (
-    <div className="bg-white">
-      <ServicesSection />
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-primary-50/20">
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-50 to-secondary-50 py-16 sm:py-20 overflow-hidden">
-        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="font-bold text-trust-900 text-4xl sm:text-5xl tracking-tight">
-              Servicios Completos de Cuidado
+      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 py-24 sm:py-32 text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-secondary-300/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="relative mx-auto px-6 lg:px-8 max-w-7xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 border border-white/30 rounded-full text-white/90 text-sm mb-6">
+              <HeartIcon className="w-4 h-4 mr-2" />
+              Servicios de Acompañamiento NO Médico
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold mb-8">
+              Acompañamiento Profesional{' '}
+              <span className="bg-gradient-to-r from-white via-primary-100 to-white bg-clip-text text-transparent">
+                Personalizado
+              </span>
             </h1>
-            <p className="mt-6 text-trust-600 text-lg leading-8">
-              Servicios completos de atención domiciliaria no médica para adultos mayores. 
-              Cuidado personalizado, profesional y con amor en la comodidad del hogar.
+            
+            <p className="text-xl md:text-2xl text-primary-100 mb-12 leading-relaxed max-w-3xl mx-auto">
+              Ofrecemos servicios de acompañamiento y apoyo no médico, 
+              adaptados cuidadosamente a las necesidades únicas de cada persona y familia.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Services */}
-      <section className="py-24 sm:py-32">
+      {/* Introducción */}
+      <section className="py-16 sm:py-20">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-semibold text-primary-600 text-base leading-7">Nuestros Servicios</h2>
-            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
-              Cuidado Integral No Médico
-            </p>
-            <p className="mt-6 text-trust-600 text-lg leading-8">
-              Ofrecemos una gama completa de servicios diseñados para mantener la independencia, 
-              dignidad y calidad de vida de tu ser querido.
-            </p>
-          </div>
-
-          <div className="gap-8 grid grid-cols-1 lg:grid-cols-3 mx-auto lg:mx-0 mt-16 lg:max-w-none max-w-2xl">
-            {mainServices.map((service) => (
-              <div 
-                key={service.id} 
-                className={`
-                  relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 
-                  border-2 h-full
-                  ${service.popular 
-                    ? 'border-primary-200 bg-gradient-to-br from-primary-50/50 to-secondary-50/50' 
-                    : 'border-gray-100 hover:border-primary-200'
-                  }
-                `}
-              >
-                {/* Popular Badge */}
-                {service.popular && (
-                  <div className="-top-px -right-px absolute">
-                    <div className="bg-gradient-to-r from-primary-500 to-secondary-500 px-4 py-1 rounded-tr-2xl rounded-bl-lg font-semibold text-white text-xs">
-                      Más Solicitado
-                    </div>
-                  </div>
-                )}
-
-                {/* Icon */}
-                <div className={`
-                  flex items-center justify-center w-16 h-16 rounded-xl mb-6
-                  ${service.popular 
-                    ? 'bg-gradient-to-br from-primary-500 to-secondary-500' 
-                    : 'bg-gradient-to-br from-trust-500 to-primary-500'
-                  }
-                `}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-
-                {/* Content */}
-                <h3 className="mb-4 font-semibold text-trust-900 text-xl">
-                  {service.name}
-                </h3>
-                <p className="mb-6 text-trust-600">
-                  {service.description}
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-start text-trust-700 text-sm">
-                      <CheckCircleIcon className="flex-shrink-0 mt-0.5 mr-2 w-4 h-4 text-primary-500" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Pricing and Availability */}
-                <div className="mt-auto pt-4 border-gray-200 border-t">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-trust-600 text-sm">Precio:</span>
-                    <span className="font-semibold text-primary-600">{service.pricing}</span>
-                  </div>
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-trust-600 text-sm">Disponibilidad:</span>
-                    <span className="text-trust-800 text-sm">{service.availability}</span>
-                  </div>
-                  
-                  <button className={`
-                    w-full py-3 px-4 rounded-xl text-sm font-semibold transition-all duration-200
-                    ${service.popular 
-                      ? 'bg-gradient-to-r from-primary-600 to-secondary-600 text-white hover:from-primary-700 hover:to-secondary-700' 
-                      : 'bg-primary-100 text-primary-700 hover:bg-primary-200'
-                    }
-                  `}>
-                    Más Información
-                  </button>
-                </div>
+          <div className="mx-auto max-w-4xl">
+            <div className="bg-white/70 backdrop-blur-lg border border-white/40 shadow-2xl p-8 lg:p-12 rounded-3xl">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-trust-900 mb-6">
+                  Nuestro Enfoque de Acompañamiento
+                </h2>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Care Packages */}
-      <section className="bg-gradient-to-br from-trust-50 to-primary-50/30 py-24 sm:py-32">
-        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-semibold text-primary-600 text-base leading-7">Paquetes de Cuidado</h2>
-            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
-              Planes Diseñados para Cada Necesidad
-            </p>
-            <p className="mt-6 text-trust-600 text-lg leading-8">
-              Selecciona el nivel de cuidado que mejor se adapte a las necesidades de tu ser querido. 
-              Todos nuestros planes son personalizables.
-            </p>
-          </div>
-
-          <div className="gap-8 grid grid-cols-1 lg:grid-cols-3 mx-auto lg:mx-0 mt-16 lg:max-w-none max-w-2xl">
-            {carePackages.map((packageItem, index) => (
-              <div 
-                key={packageItem.name} 
-                className={`
-                  relative bg-white rounded-2xl shadow-xl overflow-hidden
-                  ${packageItem.popular ? 'ring-2 ring-primary-500 scale-105' : ''}
-                `}
-              >
-                {packageItem.popular && (
-                  <div className="top-0 right-0 left-0 absolute bg-gradient-to-r from-primary-500 to-secondary-500 py-2 font-semibold text-white text-sm text-center">
-                    Plan Más Popular
-                  </div>
-                )}
+              
+              <div className="space-y-6 text-lg text-trust-700 leading-relaxed">
+                <p>
+                  En <strong>Bienestar y Cuidado en el Hogar LLC</strong>, nos especializamos en brindar servicios de 
+                  <strong> acompañamiento y apoyo no médico</strong> para adultos mayores que desean mantener su 
+                  independencia en la comodidad de su propio hogar.
+                </p>
                 
-                <div className={`p-8 ${packageItem.popular ? 'pt-16' : ''}`}>
-                  <h3 className="mb-2 font-bold text-trust-900 text-2xl">{packageItem.name}</h3>
-                  <p className="mb-4 text-trust-600">{packageItem.description}</p>
-                  
-                  <div className="mb-6">
-                    <div className="flex items-baseline">
-                      <span className="font-bold text-primary-600 text-3xl">{packageItem.price}</span>
-                    </div>
-                    <p className="text-trust-600 text-sm">{packageItem.hours}</p>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {packageItem.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <CheckCircleIcon className="flex-shrink-0 mt-0.5 mr-3 w-5 h-5 text-primary-500" />
-                        <span className="text-trust-700 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button className={`
-                    w-full py-3 px-6 rounded-xl font-semibold transition-all duration-200
-                    ${packageItem.popular 
-                      ? 'bg-gradient-to-r from-primary-600 to-secondary-600 text-white hover:from-primary-700 hover:to-secondary-700 shadow-lg' 
-                      : 'bg-primary-100 text-primary-700 hover:bg-primary-200'
-                    }
-                  `}>
-                    Consultar Este Plan
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Specialized Services */}
-      <section className="py-24 sm:py-32">
-        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-semibold text-primary-600 text-base leading-7">Servicios Especializados</h2>
-            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
-              Atención Especializada para Necesidades Específicas
-            </p>
-            <p className="mt-6 text-trust-600 text-lg leading-8">
-              Contamos con protocolos y personal especializado para situaciones que requieren cuidado específico.
-            </p>
-          </div>
-
-          <div className="gap-6 grid grid-cols-1 md:grid-cols-2 mx-auto mt-16 max-w-4xl">
-            {specializedServices.map((service) => (
-              <div key={service.name} className="bg-white shadow-lg p-6 border border-gray-100 rounded-2xl">
-                <div className="flex items-start space-x-4">
-                  <div className="flex flex-shrink-0 justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg w-12 h-12">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="mb-2 font-semibold text-trust-900 text-lg">{service.name}</h3>
-                    <p className="mb-3 text-trust-600">{service.description}</p>
-                    <p className="font-medium text-primary-600 text-sm">{service.duration}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="bg-gradient-to-br from-primary-50 to-secondary-50 py-24 sm:py-32">
-        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-semibold text-primary-600 text-base leading-7">Proceso Simple</h2>
-            <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
-              Cómo Comenzar con Nuestros Servicios
-            </p>
-          </div>
-
-          <div className="mx-auto mt-16 max-w-5xl">
-            <div className="gap-8 grid grid-cols-1 md:grid-cols-4">
-              <div className="text-center">
-                <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-4 rounded-full w-16 h-16 font-bold text-white text-xl">
-                  1
-                </div>
-                <h3 className="mb-2 font-semibold text-trust-900">Evaluación Gratuita</h3>
-                <p className="text-trust-600 text-sm">
-                  Visitamos tu hogar para evaluar necesidades y diseñar un plan personalizado
+                <p>
+                  Entendemos que cada persona es única, con sus propias rutinas, preferencias y necesidades. 
+                  Por eso, nuestro enfoque se centra en <strong>planes completamente personalizados</strong> que 
+                  se adaptan al ritmo de vida y las necesidades específicas de su ser querido.
                 </p>
-              </div>
-
-              <div className="text-center">
-                <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-4 rounded-full w-16 h-16 font-bold text-white text-xl">
-                  2
-                </div>
-                <h3 className="mb-2 font-semibold text-trust-900">Selección del Cuidador</h3>
-                <p className="text-trust-600 text-sm">
-                  Elegimos al cuidador perfecto basado en personalidad y necesidades específicas
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-4 rounded-full w-16 h-16 font-bold text-white text-xl">
-                  3
-                </div>
-                <h3 className="mb-2 font-semibold text-trust-900">Inicio del Servicio</h3>
-                <p className="text-trust-600 text-sm">
-                  Comenzamos el cuidado con una transición suave y supervisión cercana
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-4 rounded-full w-16 h-16 font-bold text-white text-xl">
-                  4
-                </div>
-                <h3 className="mb-2 font-semibold text-trust-900">Monitoreo Continuo</h3>
-                <p className="text-trust-600 text-sm">
-                  Evaluamos regularmente la calidad del servicio y ajustamos según sea necesario
+                
+                <p>
+                  Nuestros servicios están diseñados para complementar el cuidado médico profesional, 
+                  proporcionando la <strong>compañía, apoyo y tranquilidad</strong> que tanto usted como su 
+                  familia necesitan.
                 </p>
               </div>
             </div>
@@ -472,32 +197,234 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 sm:py-32">
+      {/* Áreas de Acompañamiento */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-primary-50/30 to-secondary-50/20">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <div className="bg-gradient-to-r from-primary-600 to-secondary-600 p-8 rounded-2xl text-white">
-              <h2 className="mb-4 font-bold text-3xl">
-                ¿Listo para Comenzar el Mejor Cuidado para Tu Ser Querido?
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-trust-900 mb-6">
+              <span className="gradient-text">Áreas de Apoyo</span> Disponibles
+            </h2>
+            <p className="text-xl text-trust-600 max-w-3xl mx-auto">
+              Cada área puede combinarse en un plan personalizado diseñado específicamente 
+              para las necesidades de su ser querido
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {companionshipAreas.map((area, index) => {
+              const IconComponent = area.icon
+              return (
+                <div key={area.id} className="group bg-white/80 backdrop-blur-lg border border-white/50 shadow-xl hover:shadow-2xl p-8 rounded-3xl transition-all duration-500 hover:scale-105">
+                  <div className="flex items-center mb-6">
+                    <div className="flex items-center justify-center bg-gradient-to-br from-primary-500 to-primary-600 w-14 h-14 rounded-2xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="w-7 h-7 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-trust-900 text-lg leading-tight">
+                        {area.name}
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  <p className="text-trust-600 mb-6 leading-relaxed">
+                    {area.description}
+                  </p>
+                  
+                  <ul className="space-y-3">
+                    {area.services.map((service, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <CheckCircleIcon className="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" />
+                        <span className="text-trust-700 text-sm">{service}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  {area.important && (
+                    <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
+                      <div className="flex items-start">
+                        <ExclamationTriangleIcon className="w-5 h-5 text-amber-600 mt-0.5 mr-2 flex-shrink-0" />
+                        <p className="text-amber-800 text-sm font-medium">{area.important}</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Cómo Trabajamos */}
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-trust-900 mb-6">
+              <span className="gradient-text">Cómo</span> Trabajamos
+            </h2>
+            <p className="text-xl text-trust-600 max-w-2xl mx-auto">
+              Un proceso simple y personalizado para comenzar el mejor acompañamiento para su ser querido
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {workingProcess.map((step, index) => (
+              <div key={index} className="text-center group">
+                <div className="relative mb-6">
+                  <div className="bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto w-20 h-20 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
+                    <span className="text-white font-bold text-2xl">{step.step}</span>
+                  </div>
+                  {index < workingProcess.length - 1 && (
+                    <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-primary-200 to-transparent"></div>
+                  )}
+                </div>
+                <h3 className="font-bold text-trust-900 text-lg mb-3">{step.title}</h3>
+                <p className="text-trust-600 text-sm leading-relaxed">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Planes Personalizados */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-trust-50 to-primary-50/20">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="bg-white/80 backdrop-blur-lg border border-white/50 shadow-2xl p-8 lg:p-12 rounded-3xl">
+              <div className="flex items-center justify-center mb-8">
+                <DocumentTextIcon className="w-16 h-16 text-primary-600" />
+              </div>
+              
+              <h2 className="text-3xl md:text-4xl font-bold text-trust-900 mb-6">
+                <span className="gradient-text">Planes Completamente</span> Personalizados
               </h2>
-              <p className="mb-6 text-primary-100">
-                Nuestro equipo está disponible para una evaluación gratuita y sin compromiso. 
-                Descubre cómo podemos ayudar a mejorar la calidad de vida de tu familia.
+              
+              <div className="space-y-6 text-lg text-trust-700 text-left max-w-3xl mx-auto">
+                <div className="flex items-start">
+                  <CheckCircleIcon className="w-6 h-6 text-primary-600 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <p><strong>No existen planes estándar:</strong> Cada servicio se diseña específicamente para las necesidades, rutinas y preferencias de su ser querido.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <CheckCircleIcon className="w-6 h-6 text-primary-600 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <p><strong>Horarios flexibles:</strong> Desde unas pocas horas al día hasta acompañamiento las 24 horas, adaptándonos a sus necesidades.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <CheckCircleIcon className="w-6 h-6 text-primary-600 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <p><strong>Nivel de apoyo personalizado:</strong> Desde compañía ligera hasta apoyo más integral, todo definido tras nuestra consulta inicial.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <CheckCircleIcon className="w-6 h-6 text-primary-600 mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <p><strong>Servicios combinables:</strong> Mezclamos las áreas de apoyo que mejor respondan a las necesidades específicas de cada situación.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección Legal/Aclaratoria */}
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
+          <div className="mx-auto max-w-5xl">
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-8 rounded-r-3xl">
+              <div className="flex items-start">
+                <ExclamationTriangleIcon className="w-8 h-8 text-blue-600 mr-4 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                    Importante: Servicios NO Médicos
+                  </h3>
+                  
+                  <div className="space-y-4 text-blue-800">
+                    <p className="font-semibold text-lg">
+                      Todos nuestros servicios son de acompañamiento y apoyo NO MÉDICO.
+                    </p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="font-bold mb-2">NO proporcionamos:</h4>
+                        <ul className="space-y-1 text-sm">
+                          <li>• Servicios médicos, clínicos o de enfermería</li>
+                          <li>• Administración de medicamentos</li>
+                          <li>• Diagnósticos o tratamientos médicos</li>
+                          <li>• Cuidados terapéuticos especializados</li>
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-bold mb-2">SÍ proporcionamos:</h4>
+                        <ul className="space-y-1 text-sm">
+                          <li>• Compañía y apoyo emocional</li>
+                          <li>• Asistencia con actividades diarias</li>
+                          <li>• Supervisión general de seguridad</li>
+                          <li>• Apoyo en tareas domésticas básicas</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <p className="font-medium border-t border-blue-200 pt-4">
+                      <strong>Nuestros servicios complementan pero no sustituyen la atención médica profesional.</strong> 
+                      Siempre recomendamos mantener el seguimiento regular con los profesionales de la salud de su ser querido.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 sm:py-32 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 text-white">
+        <div className="mx-auto px-6 lg:px-8 max-w-7xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl p-12 rounded-3xl">
+              <HeartIcon className="w-16 h-16 mx-auto mb-8 text-primary-100" />
+              
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                ¿Listo para una Consulta Personalizada?
+              </h2>
+              
+              <p className="text-xl text-primary-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Cada familia es única, y cada plan de acompañamiento también debe serlo. 
+                Hablemos sobre las necesidades específicas de su ser querido y diseñemos 
+                juntos el mejor plan de apoyo.
               </p>
-              <div className="flex sm:flex-row flex-col justify-center gap-4">
+              
+              <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
                 <a
                   href="/contacto"
-                  className="inline-flex justify-center items-center bg-white hover:bg-primary-50 shadow-lg px-6 py-3 border border-transparent rounded-xl font-medium text-primary-600 text-base transition-colors duration-200"
+                  className="inline-flex items-center justify-center bg-white hover:bg-primary-50 shadow-lg hover:shadow-xl px-8 py-4 rounded-2xl font-semibold text-primary-600 text-lg transition-all duration-300 group"
                 >
-                  Evaluación Gratuita
+                  <DocumentTextIcon className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                  Consulta Gratuita
                 </a>
+                
                 <a
                   href="https://wa.me/17867527884"
-                  className="inline-flex justify-center items-center hover:bg-white/10 px-6 py-3 border-2 border-white/30 rounded-xl font-medium text-white text-base transition-colors duration-200"
+                  className="inline-flex items-center justify-center bg-transparent hover:bg-white/10 border-2 border-white/30 hover:border-white/50 px-8 py-4 rounded-2xl font-semibold text-white text-lg transition-all duration-300 group"
                 >
-                  <PhoneIcon className="mr-2 w-5 h-5" />
+                  <PhoneIcon className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                   Llamar: (786) 752-7884
                 </a>
+              </div>
+              
+              <div className="text-primary-100 text-sm">
+                <p className="mb-2">
+                  <strong>Consulta sin compromiso</strong> • <strong>Evaluación personalizada</strong> • <strong>Disponible 24/7</strong>
+                </p>
+                <p>
+                  Licenciados y asegurados en el Estado de Florida
+                </p>
               </div>
             </div>
           </div>

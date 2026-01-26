@@ -86,19 +86,19 @@ export const translations = {
       description: 'Testimonios reales de familias satisfechas',
       items: [
         {
-          text: 'El cuidado que recibió mi madre fue excepcional. Los acompañantes fueron muy atentos y cariñosos.',
-          author: 'María González',
-          role: 'Hija de usuaria'
+          text: 'Desde que contamos con el acompañamiento de Bienestar y Cuidado en el Hogar, mi mamá se siente mucho más tranquila y acompañada. Para nuestra familia ha sido un gran alivio saber que no está sola y que recibe un trato respetuoso y cariñoso todos los días.',
+          author: 'María R.',
+          role: 'Familiar de adulto mayor'
         },
         {
-          text: 'Gracias a este servicio, mi padre pudo quedarse en casa con la atención que necesitaba. Excelente servicio.',
-          author: 'Carlos Rodríguez',
-          role: 'Hijo de usuario'
+          text: 'Lo que más valoramos es la paciencia y el trato humano. Siempre han sido muy atentos, responsables y cercanos con mi padre. Se nota que hacen su trabajo con vocación y respeto.',
+          author: 'Carlos M.',
+          role: 'Hijo de adulto mayor'
         },
         {
-          text: 'Personal muy capacitado y confiable. Me dieron mucha tranquilidad sabiendo que mamá estaba bien cuidada.',
-          author: 'Ana Martínez',
-          role: 'Hija de usuaria'
+          text: 'Buscábamos a alguien que brindara compañía y apoyo en el hogar, y encontramos justo eso. La comunicación ha sido clara desde el inicio y el trato siempre ha sido amable y profesional. Estamos muy agradecidos.',
+          author: 'Laura G.',
+          role: 'Familiar'
         }
       ]
     },
@@ -273,19 +273,19 @@ export const translations = {
       description: 'Real testimonials from satisfied families',
       items: [
         {
-          text: 'The care my mother received was exceptional. The companions were very attentive and caring.',
-          author: 'Mirian González',
-          role: "User's daughter"
+          text: 'Since we have the accompaniment of Bienestar y Cuidado en el Hogar, my mom feels much calmer and more accompanied. For our family it has been a great relief to know that she is not alone and that she receives respectful and loving treatment every day.',
+          author: 'María R.',
+          role: 'Family member of elderly adult'
         },
         {
-          text: 'Thanks to this service, my father was able to stay at home with the care he needed. Excellent service.',
-          author: 'Charles Wilson',
-          role: 'User\'s son'
+          text: 'What we value most is the patience and human treatment. They have always been very attentive, responsible and close to my father. You can tell they do their job with vocation and respect.',
+          author: 'Carlos M.',
+          role: 'Son of elderly adult'
         },
         {
-          text: 'Very trained and reliable staff. They gave me great peace of mind knowing that mom was well cared for.',
-          author: 'Anna Davis',
-          role: 'User\'s daughter'
+          text: 'We were looking for someone to provide companionship and support at home, and we found just that. Communication has been clear from the beginning and the treatment has always been friendly and professional. We are very grateful.',
+          author: 'Laura G.',
+          role: 'Family member'
         }
       ]
     },

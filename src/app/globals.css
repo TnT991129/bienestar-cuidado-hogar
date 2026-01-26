@@ -188,19 +188,50 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Hide scrollbar for all elements */
+* {
+  /* Firefox */
+  scrollbar-width: none;
+  /* Internet Explorer and Edge */
+  -ms-overflow-style: none;
 }
 
-::-webkit-scrollbar-track {
-  @apply bg-trust-100;
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, Opera) */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-primary-400 rounded-full;
+/* Hide scrollbar for body and html */
+body, html {
+  /* Firefox */
+  scrollbar-width: none;
+  /* Internet Explorer and Edge */
+  -ms-overflow-style: none;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary-500;
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Ensure scrolling still works */
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for specific utility class */
+.scrollbar-hide {
+  /* Firefox */
+  scrollbar-width: none;
+  /* Internet Explorer and Edge */
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

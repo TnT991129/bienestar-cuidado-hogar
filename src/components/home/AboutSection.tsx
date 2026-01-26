@@ -11,8 +11,8 @@ import {
 } from '@heroicons/react/24/outline'
 
 const stats = [
-  { name: 'Años de experiencia', value: 'Varios' },
-  { name: 'Familias acompañadas', value: '300+' },
+  { name: 'Años de experiencia', value: '3+' },
+  { name: 'Familias acompañadas', value: '100+' },
   { name: 'Acompañantes capacitados', value: '25+' },
   { name: 'Satisfacción familiar', value: '98%' }
 ]
@@ -107,7 +107,7 @@ export default function AboutSection() {
                 </p>
                 
                 <p>
-                  Contamos con varios años de experiencia en el acompañamiento diario de adultos mayores y personas 
+                  Contamos con 3+ años de experiencia en el acompañamiento diario de adultos mayores y personas 
                   con necesidades especiales, siempre desde un enfoque humano, respetuoso y responsable. Nuestro equipo 
                   ha recibido formación y capacitación en asistencia no médica, lo que nos permite brindar un servicio 
                   confiable, cercano y adaptado a cada situación.

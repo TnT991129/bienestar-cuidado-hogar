@@ -14,7 +14,7 @@ import {
 export default function HeroSection() {
   const { t } = useLanguage()
   return (
-    <section className="relative flex justify-center items-center bg-gradient-to-br from-primary-50/50 via-white to-secondary-50/40 min-h-screen overflow-hidden">
+    <section className="relative flex justify-center items-center bg-gradient-to-br from-primary-50/50 via-white to-secondary-50/40 min-h-[85vh] lg:min-h-screen overflow-hidden">
       {/* Enhanced Modern Background decoration */}
       <div className="z-0 absolute inset-0">
         <motion.div 
@@ -83,7 +83,7 @@ export default function HeroSection() {
         ))}
       </div>
 
-      <div className="z-10 relative lg:flex lg:items-center lg:gap-x-16 mx-auto px-6 lg:px-8 py-8 sm:py-12 lg:py-16 max-w-7xl">
+      <div className="z-10 relative lg:flex lg:items-center lg:gap-x-16 mx-auto px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-16 pb-8 sm:pb-12 lg:pb-16 max-w-7xl">
         <div className="lg:flex-auto mx-auto lg:mx-0 lg:pr-8 max-w-2xl lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -300,7 +300,7 @@ export default function HeroSection() {
               >
                 <div className="gap-1.5 sm:gap-2 grid grid-cols-2 text-center">
                   <div>
-                    <div className="font-bold text-primary-600 text-sm sm:text-base">15+</div>
+                    <div className="font-bold text-primary-600 text-sm sm:text-base">3+</div>
                     <div className="text-trust-600 text-xs">{t('hero.yearsLabel')}</div>
                   </div>
                   <div>

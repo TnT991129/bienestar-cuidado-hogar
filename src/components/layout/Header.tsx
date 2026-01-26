@@ -22,7 +22,7 @@ export default function Header() {
     { name: t('nav.home'), href: '/' },
     { name: t('nav.about'), href: '/sobre-nosotros' },
     { name: t('nav.services'), href: '/servicios' },
-    { name: t('nav.team'), href: '/equipo' },
+    // { name: t('nav.team'), href: '/equipo' }, // Temporalmente oculto
     { name: t('nav.contact'), href: '/contacto' },
   ]
 
