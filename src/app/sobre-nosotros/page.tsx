@@ -273,7 +273,8 @@ export default function AboutPage() {
             {/* Desktop Timeline */}
             <div className="hidden lg:block relative">
               {/* Timeline Line */}
-              <div className="left-1/2 absolute bg-gradient-to-b from-primary-200 to-secondary-200 w-1 h-full -translate-x-1/2 transform"></div>
+              <div className="left-1/2 absolute bg-gradient-to-b from-primary-200 to-secondary-200 w-1 -translate-x-1/2 transform" 
+                   style={{ height: `${timeline.length * 160}px` }}></div>
 
               <div className="space-y-12">
                 {timeline.map((event, index) => (
@@ -305,7 +306,7 @@ export default function AboutPage() {
               {/* Continuous Vertical Line */}
               <motion.div 
                 className="top-6 left-6 absolute bg-gradient-to-b from-primary-200 via-primary-400 to-secondary-400 rounded-full w-0.5"
-                style={{ height: `${(timeline.length - 1) * 200 + 50}px` }}
+                style={{ height: `${timeline.length * 200 + 100}px` }}
                 initial={{ scaleY: 0 }}
                 whileInView={{ scaleY: 1 }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}
@@ -316,7 +317,7 @@ export default function AboutPage() {
               <motion.div
                 className="top-5 left-5 z-20 absolute bg-secondary-500 rounded-full w-2 h-2"
                 initial={{ y: 0 }}
-                whileInView={{ y: `${(timeline.length - 1) * 200 + 40}px` }}
+                whileInView={{ y: `${(timeline.length - 1) * 200 + 80}px` }}
                 transition={{ 
                   duration: 2, 
                   delay: 1.5,
