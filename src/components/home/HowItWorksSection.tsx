@@ -86,8 +86,16 @@ const benefits = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="bg-white py-24 sm:py-32">
-      <div className="mx-auto px-6 lg:px-8 max-w-7xl">
+    <section className="bg-gradient-to-br from-white via-primary-50/20 to-secondary-50/10 py-24 sm:py-32 relative overflow-hidden">
+      {/* Modern Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-primary-200/20 to-primary-300/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-br from-secondary-200/15 to-secondary-300/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="floating-element absolute top-1/4 left-1/4 w-4 h-4 bg-gradient-to-br from-primary-400/60 to-primary-500/60 rounded-full"></div>
+        <div className="floating-element-delayed absolute bottom-1/3 right-1/3 w-6 h-6 bg-gradient-to-br from-secondary-400/50 to-secondary-500/50 rounded-full"></div>
+      </div>
+      
+      <div className="mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -95,10 +103,13 @@ export default function HowItWorksSection() {
           transition={{ duration: 0.8 }}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="font-semibold text-primary-600 text-base leading-7">Cómo Funciona</h2>
-          <p className="mt-2 font-bold text-trust-900 text-3xl sm:text-4xl tracking-tight">
-            Un Proceso Simple y Transparente
-          </p>
+          <div className="inline-flex items-center bg-gradient-to-r from-primary-100/80 to-secondary-100/80 backdrop-blur-sm border border-primary-200/30 px-4 py-2 rounded-full font-semibold text-primary-600 text-sm shadow-lg mb-4">
+            <span>Cómo Funciona</span>
+          </div>
+          <h2 className="mt-2 font-bold text-3xl sm:text-4xl tracking-tight text-shadow">
+            <span className="gradient-text">Un Proceso Simple</span>{' '}
+            <span className="text-trust-900">y Transparente</span>
+          </h2>
           <p className="mt-6 text-trust-600 text-lg leading-8">
             Desde el primer contacto hasta el inicio del acompañamiento, nuestro proceso está diseñado 
             para ser claro, rápido y completamente adaptado a tus necesidades.
@@ -144,7 +155,7 @@ export default function HowItWorksSection() {
                   {/* Step Circle and Number for Mobile */}
                   <div className="relative flex-shrink-0">
                     <motion.div 
-                      className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 shadow-lg rounded-full w-16 h-16"
+                      className="flex justify-center items-center bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-500 shadow-2xl rounded-2xl w-16 h-16 group"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{ 
@@ -153,13 +164,14 @@ export default function HowItWorksSection() {
                         type: "spring",
                         stiffness: 200
                       }}
+                      whileHover={{ scale: 1.1, rotate: 5 }}
                     >
-                      <step.icon className="w-7 h-7 text-white" />
+                      <step.icon className="w-7 h-7 text-white group-hover:scale-110 transition-transform duration-300" />
                     </motion.div>
                     
                     {/* Step Number Badge for Mobile */}
                     <motion.div 
-                      className="-top-1 -right-1 absolute flex justify-center items-center bg-secondary-500 rounded-full w-6 h-6 font-bold text-white text-xs"
+                      className="-top-1 -right-1 absolute flex justify-center items-center bg-gradient-to-br from-secondary-500 to-secondary-600 shadow-lg rounded-full w-6 h-6 font-bold text-white text-xs"
                       initial={{ scale: 0, rotate: -180 }}
                       whileInView={{ scale: 1, rotate: 0 }}
                       transition={{ 
@@ -194,11 +206,12 @@ export default function HowItWorksSection() {
                     
                     {/* Duration for Mobile */}
                     <motion.div 
-                      className="inline-flex items-center bg-primary-100 mb-3 px-2 py-1 rounded-full font-medium text-primary-700 text-xs"
+                      className="inline-flex items-center bg-gradient-to-r from-primary-100/90 to-primary-200/90 backdrop-blur-sm border border-primary-200/50 shadow-lg mb-3 px-3 py-1.5 rounded-full font-semibold text-primary-700 text-xs"
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: (index * 0.15) + 0.5 }}
                     >
+                      <div className="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse"></div>
                       Duración: {step.duration}
                     </motion.div>
 

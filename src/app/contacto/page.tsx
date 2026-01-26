@@ -14,7 +14,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Contacto - Bienestar y Cuidado en el Hogar | Evaluación Gratuita 24/7',
-  description: 'Contáctanos para una evaluación gratuita de acompañamiento en el hogar. Disponible 24/7 para emergencias. Llama al +1 (786) 752-7884 o solicita información sin compromiso.',
+  description: 'Contáctanos para una evaluación gratuita de acompañamiento en el hogar. Disponible 24/7 para emergencias. Llama al (786) 752-7884 o solicita información sin compromiso.',
 }
 
 const contactMethods = [
@@ -22,7 +22,7 @@ const contactMethods = [
     name: 'Llamada de Emergencia 24/7',
     description: 'Para situaciones urgentes y consultas inmediatas',
     icon: PhoneIcon,
-    contact: '+1 (786) 752-7884',
+    contact: '(786) 752-7884',
     action: 'https://wa.me/17867527884',
     primary: true,
     available: '24 horas, 7 días'
@@ -31,7 +31,7 @@ const contactMethods = [
     name: 'WhatsApp Business',
     description: 'Respuesta rápida por chat, fotos y documentos',
     icon: ChatBubbleLeftRightIcon,
-    contact: '+1 (786) 752-7884',
+    contact: '(786) 752-7884',
     action: 'https://wa.me/17867527884',
     primary: false,
     available: 'Lun-Dom: 7AM-10PM'
@@ -62,7 +62,7 @@ const officeLocations = [
     address: 'Av. Principal 1234, Piso 3',
     city: 'Centro, Ciudad',
     zipCode: '12345',
-    phone: '+1 (786) 260-2693',
+    phone: '(786) 752-7884',
     email: 'info@bienestarhogar.com',
     hours: {
       weekdays: 'Lunes - Viernes: 8:00 AM - 8:00 PM',
@@ -76,7 +76,7 @@ const officeLocations = [
     address: 'Calle Norte 567',
     city: 'Zona Norte, Ciudad',
     zipCode: '12346',
-    phone: '+1 (786) 260-2693',
+    phone: '(786) 752-7884',
     email: 'norte@bienestarhogar.com',
     hours: {
       weekdays: 'Lunes - Viernes: 9:00 AM - 6:00 PM',
@@ -138,7 +138,7 @@ export default function ContactPage() {
                     className="inline-flex items-center bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-semibold text-white transition-colors duration-200"
                   >
                     <PhoneIcon className="mr-2 w-4 h-4" />
-                    Llamar Ahora: +1 (786) 752-7884
+                    Llamar Ahora: (786) 752-7884
                   </a>
                 </div>
               </div>
@@ -277,7 +277,7 @@ export default function ContactPage() {
                       name="phone"
                       id="phone"
                       className="px-4 py-3 border border-gray-300 focus:border-primary-500 rounded-xl focus:ring-2 focus:ring-primary-500 w-full transition-colors"
-                      placeholder="+1 (786) 752-7884"
+                      placeholder="(786) 752-7884"
                     />
                   </div>
                   
@@ -500,7 +500,7 @@ export default function ContactPage() {
                 className="inline-flex items-center bg-gradient-to-r from-primary-600 hover:from-primary-700 to-secondary-600 hover:to-secondary-700 shadow-lg px-6 py-3 border border-transparent rounded-xl font-medium text-white text-base transition-colors duration-200"
               >
                 <PhoneIcon className="mr-2 w-5 h-5" />
-                Llámanos: +1 (786) 752-7884
+                Llámanos: (786) 752-7884
               </a>
             </div>
           </div>
