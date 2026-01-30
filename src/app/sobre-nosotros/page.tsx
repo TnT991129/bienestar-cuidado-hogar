@@ -47,13 +47,13 @@ export default function AboutPage() {
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-primary-50/20 min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative flex items-center min-h-screen overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
             src="/sobre-nosotros-nuevo.webp" 
             alt="Cuidado y bienestar en el hogar" 
-            className="object-cover object-right-top md:object-center w-full h-full"
+            className="w-full h-full object-cover object-right-top md:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/50"></div>
         </div>
@@ -66,7 +66,7 @@ export default function AboutPage() {
           
           {/* Subtle pattern overlay */}
           <div className="absolute inset-0 opacity-5">
-            <div className="bg-gradient-to-r from-transparent via-white/20 to-transparent w-full h-full transform -skew-y-12"></div>
+            <div className="bg-gradient-to-r from-transparent via-white/20 to-transparent w-full h-full -skew-y-12 transform"></div>
           </div>
           
           {/* Floating orbs */}
@@ -83,7 +83,7 @@ export default function AboutPage() {
           >
             {/* Badge superior */}
             <motion.div
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 mb-6"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md mb-6 px-6 py-2 border border-white/20 rounded-full"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -113,7 +113,7 @@ export default function AboutPage() {
             
             {/* Estadísticas */}
             <motion.div
-              className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-12"
+              className="flex sm:flex-row flex-col justify-center items-center gap-8 mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -136,21 +136,21 @@ export default function AboutPage() {
 
             {/* Botones de acción */}
             <motion.div
-              className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8"
+              className="flex sm:flex-row flex-col justify-center items-center gap-4 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <button className="bg-primary-600 hover:bg-primary-700 shadow-xl px-8 py-4 rounded-full font-semibold text-white transform transition-all duration-300 hover:scale-105">
+              <button className="bg-primary-600 hover:bg-primary-700 shadow-xl px-8 py-4 rounded-full font-semibold text-white hover:scale-105 transition-all duration-300 transform">
                 Conoce nuestros servicios
               </button>
-              <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300">
+              <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md px-8 py-4 border border-white/30 rounded-full font-semibold text-white transition-all duration-300">
                 Contactar ahora
               </button>
             </motion.div>
             
             <motion.div
-              className="inline-flex items-center gap-3 bg-white/90 shadow-2xl backdrop-blur-lg px-8 py-4 rounded-full border border-white/20"
+              className="inline-flex items-center gap-3 bg-white/90 shadow-2xl backdrop-blur-lg px-8 py-4 border border-white/20 rounded-full"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.7 }}
@@ -162,7 +162,7 @@ export default function AboutPage() {
 
           {/* Elementos decorativos flotantes */}
           <motion.div
-            className="bottom-10 left-10 absolute bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-xl"
+            className="bottom-10 left-10 absolute bg-white/5 backdrop-blur-sm p-4 border border-white/10 rounded-xl"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
@@ -174,7 +174,7 @@ export default function AboutPage() {
           </motion.div>
 
           <motion.div
-            className="top-1/2 right-10 absolute bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-xl"
+            className="top-1/2 right-10 absolute bg-white/5 backdrop-blur-sm p-4 border border-white/10 rounded-xl"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1 }}
@@ -200,7 +200,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="mb-6 font-display font-medium text-3xl md:text-4xl text-trust-800 tracking-wide">
+              <h2 className="mb-6 font-display font-medium text-trust-800 text-3xl md:text-4xl tracking-wide">
                 {t('about.historyTitle')}
               </h2>
               <div className="flex justify-center items-center gap-3">
@@ -214,7 +214,7 @@ export default function AboutPage() {
             <div className="gap-20 grid grid-cols-1 lg:grid-cols-5">
               
               {/* Main Content Column */}
-              <div className="lg:col-span-3 space-y-16">
+              <div className="space-y-16 lg:col-span-3">
                 
                 {/* First Paragraph - Featured */}
                 <motion.div 
@@ -223,7 +223,7 @@ export default function AboutPage() {
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                 >
-                  <p className="font-sans text-xl md:text-2xl text-trust-600 leading-relaxed first-letter:font-display first-letter:text-5xl first-letter:font-semibold first-letter:text-primary-600 first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:leading-none">
+                  <p className="first-letter:float-left first-letter:mt-1 first-letter:mr-3 first-letter:font-display font-sans first-letter:font-semibold text-trust-600 first-letter:text-primary-600 text-xl md:text-2xl first-letter:text-5xl leading-relaxed first-letter:leading-none">
                     {t('about.historyContent')[0]}
                   </p>
                 </motion.div>
@@ -236,7 +236,7 @@ export default function AboutPage() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
                   >
-                    <p className="font-sans text-lg text-trust-600 leading-relaxed">
+                    <p className="font-sans text-trust-600 text-lg leading-relaxed">
                       {t('about.historyContent')[1]}
                     </p>
                   </motion.div>
@@ -247,7 +247,7 @@ export default function AboutPage() {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     viewport={{ once: true }}
                   >
-                    <p className="font-sans text-lg text-trust-600 leading-relaxed">
+                    <p className="font-sans text-trust-600 text-lg leading-relaxed">
                       {t('about.historyContent')[2]}
                     </p>
                   </motion.div>
@@ -258,7 +258,7 @@ export default function AboutPage() {
               {/* Sidebar */}
               <div className="lg:col-span-2">
                 <motion.div 
-                  className="lg:sticky lg:top-24 space-y-8"
+                  className="lg:top-24 lg:sticky space-y-8"
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
@@ -266,7 +266,7 @@ export default function AboutPage() {
                 >
                   
                   {/* Mission Card */}
-                  <div className="bg-white shadow-sm hover:shadow-md border border-trust-100 p-8 rounded-lg transition-all duration-300">
+                  <div className="bg-white shadow-sm hover:shadow-md p-8 border border-trust-100 rounded-lg transition-all duration-300">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="bg-gradient-to-br from-primary-500 to-primary-600 rounded-full w-3 h-3"></div>
                       <h3 className="font-display font-semibold text-primary-800 text-lg">Nuestra Esencia</h3>
@@ -277,7 +277,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Values Card */}
-                  <div className="bg-gradient-to-br from-primary-50/50 to-secondary-50/30 border border-primary-100 p-8 rounded-lg">
+                  <div className="bg-gradient-to-br from-primary-50/50 to-secondary-50/30 p-8 border border-primary-100 rounded-lg">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-full w-3 h-3"></div>
                       <h3 className="font-display font-semibold text-secondary-800 text-lg">Nuestros Valores</h3>
@@ -305,7 +305,7 @@ export default function AboutPage() {
 
             {/* Bottom Section */}
             <motion.div 
-              className="mt-24 pt-12 border-t border-trust-150"
+              className="mt-24 pt-12 border-trust-150 border-t"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}

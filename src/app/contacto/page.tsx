@@ -154,7 +154,7 @@ export default function ContactPage() {
           <img 
             src="/hero-contacto.svg" 
             alt="Contacto y comunicación" 
-            className="object-cover w-full h-full opacity-30"
+            className="opacity-30 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-primary-600/75 via-primary-700/65 to-secondary-700/75"></div>
         </div>
