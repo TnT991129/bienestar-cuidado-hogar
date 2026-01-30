@@ -75,12 +75,12 @@ export default function AboutPage() {
         </div>
         
         <div className="relative container-max section-padding">
-          <div className="flex flex-col justify-center items-center min-h-screen -mt-20">
+          <div className="flex flex-col justify-center items-center -mt-20 min-h-screen">
             
             {/* Header Section */}
             <div className="mb-12 text-center">
               <motion.div
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2 border border-white/20 rounded-full mb-6"
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md mb-6 px-6 py-2 border border-white/20 rounded-full"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
@@ -111,28 +111,28 @@ export default function AboutPage() {
             
             {/* Stats Section */}
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 mb-12 w-full max-w-2xl"
+              className="gap-8 lg:gap-12 grid grid-cols-1 sm:grid-cols-3 mb-12 w-full max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <div className="text-center">
-                <div className="font-bold text-white text-3xl md:text-4xl mb-2">100+</div>
+                <div className="mb-2 font-bold text-white text-3xl md:text-4xl">100+</div>
                 <div className="text-white/70 text-sm">Familias atendidas</div>
               </div>
               <div className="text-center">
-                <div className="font-bold text-white text-3xl md:text-4xl mb-2">24/7</div>
+                <div className="mb-2 font-bold text-white text-3xl md:text-4xl">24/7</div>
                 <div className="text-white/70 text-sm">Disponibilidad</div>
               </div>
               <div className="text-center">
-                <div className="font-bold text-white text-3xl md:text-4xl mb-2">5+</div>
+                <div className="mb-2 font-bold text-white text-3xl md:text-4xl">5+</div>
                 <div className="text-white/70 text-sm">Años de experiencia</div>
               </div>
             </motion.div>
 
             {/* CTA Section */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 mb-8"
+              className="flex sm:flex-row flex-col gap-4 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
