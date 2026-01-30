@@ -75,71 +75,67 @@ export default function AboutPage() {
         </div>
         
         <div className="relative container-max section-padding">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            {/* Badge superior */}
-            <motion.div
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md mb-6 px-6 py-2 border border-white/20 rounded-full"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-            >
-              <HeartIcon className="w-4 h-4 text-white/80" />
-              <span className="font-medium text-white/90 text-sm">Cuidado con amor desde 2020</span>
-            </motion.div>
-
-            <motion.h1 
-              className="text-shadow mb-8 font-bold text-4xl md:text-6xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <span className="text-white">{t('about.title').split(' ')[0]}</span>{' '}
-              <span className="text-white/90">{t('about.title').split(' ').slice(1).join(' ')}</span>
-            </motion.h1>
+          <div className="flex flex-col justify-center items-center min-h-screen -mt-20">
             
-            <motion.p 
-              className="mx-auto mb-12 max-w-3xl text-white/80 text-xl md:text-2xl leading-relaxed"
+            {/* Header Section */}
+            <div className="mb-12 text-center">
+              <motion.div
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2 border border-white/20 rounded-full mb-6"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+              >
+                <HeartIcon className="w-4 h-4 text-white/80" />
+                <span className="font-medium text-white/90 text-sm">Cuidado con amor desde 2020</span>
+              </motion.div>
+
+              <motion.h1 
+                className="text-shadow mb-6 font-bold text-4xl md:text-6xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <span className="text-white">{t('about.title').split(' ')[0]}</span>{' '}
+                <span className="text-white/90">{t('about.title').split(' ').slice(1).join(' ')}</span>
+              </motion.h1>
+              
+              <motion.p 
+                className="mx-auto mb-8 max-w-3xl text-white/80 text-xl md:text-2xl leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              >
+                {t('about.subtitle')}
+              </motion.p>
+            </div>
+            
+            {/* Stats Section */}
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 mb-12 w-full max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              {t('about.subtitle')}
-            </motion.p>
-            
-            {/* Estadísticas */}
-            <motion.div
-              className="flex sm:flex-row flex-col justify-center items-center gap-8 mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
               <div className="text-center">
-                <div className="font-bold text-white text-3xl md:text-4xl">100+</div>
+                <div className="font-bold text-white text-3xl md:text-4xl mb-2">100+</div>
                 <div className="text-white/70 text-sm">Familias atendidas</div>
               </div>
-              <div className="hidden sm:block bg-white/20 rounded-full w-px h-12"></div>
               <div className="text-center">
-                <div className="font-bold text-white text-3xl md:text-4xl">24/7</div>
+                <div className="font-bold text-white text-3xl md:text-4xl mb-2">24/7</div>
                 <div className="text-white/70 text-sm">Disponibilidad</div>
               </div>
-              <div className="hidden sm:block bg-white/20 rounded-full w-px h-12"></div>
               <div className="text-center">
-                <div className="font-bold text-white text-3xl md:text-4xl">5+</div>
+                <div className="font-bold text-white text-3xl md:text-4xl mb-2">5+</div>
                 <div className="text-white/70 text-sm">Años de experiencia</div>
               </div>
             </motion.div>
 
-            {/* Botones de acción */}
+            {/* CTA Section */}
             <motion.div
-              className="flex sm:flex-row flex-col justify-center items-center gap-4 mb-8"
+              className="flex flex-col sm:flex-row gap-4 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
             >
               <button className="bg-primary-600 hover:bg-primary-700 shadow-xl px-8 py-4 rounded-full font-semibold text-white hover:scale-105 transition-all duration-300 transform">
                 Conoce nuestros servicios
@@ -148,42 +144,47 @@ export default function AboutPage() {
                 Contactar ahora
               </button>
             </motion.div>
-            
+
+            {/* Location Badge */}
             <motion.div
               className="inline-flex items-center gap-3 bg-white/90 shadow-2xl backdrop-blur-lg px-8 py-4 border border-white/20 rounded-full"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
               <MapPinIcon className="w-5 h-5 text-primary-600" />
               <span className="font-semibold text-trust-700">{t('about.location')}</span>
             </motion.div>
-          </motion.div>
 
-          {/* Elementos decorativos flotantes */}
-          <motion.div
-            className="bottom-10 left-10 absolute bg-white/5 backdrop-blur-sm p-4 border border-white/10 rounded-xl"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
-          >
-            <div className="flex items-center gap-3">
-              <div className="bg-green-500 rounded-full w-3 h-3 animate-pulse"></div>
-              <span className="font-medium text-white text-sm">Disponible ahora</span>
-            </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="top-1/2 right-10 absolute bg-white/5 backdrop-blur-sm p-4 border border-white/10 rounded-xl"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 1 }}
-          >
-            <div className="flex items-center gap-2">
-              <StarIcon className="w-4 h-4 text-yellow-400" />
-              <span className="font-medium text-white text-sm">5.0 ★★★★★</span>
-            </div>
-          </motion.div>
+          {/* Floating Elements */}
+          <div className="absolute inset-0 pointer-events-none">
+            <motion.div
+              className="bottom-10 left-4 lg:left-10 absolute bg-white/5 backdrop-blur-sm p-4 border border-white/10 rounded-xl pointer-events-auto"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.7 }}
+            >
+              <div className="flex items-center gap-3">
+                <div className="bg-green-500 rounded-full w-3 h-3 animate-pulse"></div>
+                <span className="font-medium text-white text-sm">Disponible ahora</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="top-1/2 right-4 lg:right-10 absolute bg-white/5 backdrop-blur-sm p-4 border border-white/10 rounded-xl pointer-events-auto"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.8 }}
+            >
+              <div className="flex items-center gap-2">
+                <StarIcon className="w-4 h-4 text-yellow-400" />
+                <span className="font-medium text-white text-sm">5.0 ★★★★★</span>
+              </div>
+            </motion.div>
+          </div>
+
         </div>
       </section>
 
