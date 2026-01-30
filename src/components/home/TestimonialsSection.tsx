@@ -61,8 +61,8 @@ export default function TestimonialsSection() {
             <span>{t('testimonials.title')}</span>
           </div>
           <h2 className="text-shadow mt-2 font-bold text-3xl sm:text-4xl tracking-tight">
-            <span className="gradient-text">Testimonios</span>{' '}
-            <span className="text-trust-900">Reales</span>
+            <span className="gradient-text">{t('testimonials.visualTitle').split(' ')[0]}</span>{' '}
+            <span className="text-trust-900">{t('testimonials.visualTitle').split(' ').slice(1).join(' ')}</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-trust-600 text-lg leading-8">
             {t('testimonials.description')}

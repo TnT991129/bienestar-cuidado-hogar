@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 import { 
   HomeIcon, 
   StarIcon, 
@@ -22,51 +23,51 @@ interface NavItem {
   gradient: string
 }
 
-const navItems: NavItem[] = [
+const getNavItems = (t: any): NavItem[] => [
   { 
     id: 'hero', 
-    label: 'Inicio', 
-    shortLabel: 'Inicio',
+    label: t('pageNav.inicio'), 
+    shortLabel: t('pageNav.inicio'),
     icon: HomeIcon, 
     color: 'from-primary-500 to-primary-600',
     gradient: 'from-primary-50 to-primary-100'
   },
   { 
     id: 'beneficios', 
-    label: 'Beneficios', 
-    shortLabel: 'Beneficios',
+    label: t('pageNav.beneficios'), 
+    shortLabel: t('pageNav.beneficios'),
     icon: StarIcon, 
     color: 'from-amber-500 to-orange-500',
     gradient: 'from-amber-50 to-orange-100'
   },
   { 
     id: 'como-funciona', 
-    label: 'Cómo Funciona', 
-    shortLabel: 'Proceso',
+    label: t('pageNav.comoFunciona'), 
+    shortLabel: t('pageNav.proceso'),
     icon: CogIcon, 
     color: 'from-emerald-500 to-teal-500',
     gradient: 'from-emerald-50 to-teal-100'
   },
   { 
     id: 'testimonios', 
-    label: 'Testimonios', 
-    shortLabel: 'Testimonios',
+    label: t('pageNav.testimonios'), 
+    shortLabel: t('pageNav.testimonios'),
     icon: ChatBubbleLeftRightIcon, 
     color: 'from-purple-500 to-indigo-500',
     gradient: 'from-purple-50 to-indigo-100'
   },
   { 
     id: 'faq', 
-    label: 'Preguntas', 
-    shortLabel: 'FAQ',
+    label: t('pageNav.faq'), 
+    shortLabel: t('pageNav.faq'),
     icon: QuestionMarkCircleIcon, 
     color: 'from-blue-500 to-cyan-500',
     gradient: 'from-blue-50 to-cyan-100'
   },
   { 
     id: 'cta', 
-    label: 'Contacto', 
-    shortLabel: 'Contacto',
+    label: t('pageNav.contacto'), 
+    shortLabel: t('pageNav.contacto'),
     icon: PhoneIcon, 
     color: 'from-rose-500 to-pink-500',
     gradient: 'from-rose-50 to-pink-100'
@@ -77,6 +78,9 @@ export default function PageNavigation() {
   const [activeSection, setActiveSection] = useState('hero')
   const [isVisible, setIsVisible] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
+  const { t } = useLanguage()
+  
+  const navItems = getNavItems(t)
 
   useEffect(() => {
     // Mostrar navegación después de scroll inicial
@@ -273,7 +277,7 @@ export default function PageNavigation() {
             {/* Botón flotante principal */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="relative group bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-2xl hover:shadow-3xl w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 overflow-hidden"
+              className="group relative flex justify-center items-center bg-gradient-to-r from-primary-500 to-primary-600 shadow-2xl hover:shadow-3xl rounded-2xl w-14 h-14 overflow-hidden text-white transition-all duration-300"
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
               style={{

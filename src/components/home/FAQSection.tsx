@@ -41,8 +41,8 @@ export default function FAQSection() {
             <span>FAQ</span>
           </div>
           <h2 className="text-shadow mb-4 font-bold text-3xl md:text-4xl">
-            <span className="gradient-text">Preguntas</span>{' '}
-            <span className="text-trust-900">Frecuentes</span>
+            <span className="gradient-text">{t('faq.title').split(' ')[0]}</span>{' '}
+            <span className="text-trust-900">{t('faq.title').split(' ').slice(1).join(' ')}</span>
           </h2>
           <p className="mx-auto max-w-2xl text-trust-600 text-xl">
             {t('faq.description')}

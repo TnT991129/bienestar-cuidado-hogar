@@ -1,0 +1,46 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="contactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ecfdf5;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#a7f3d0;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#10b981;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:0.8" />
+    </linearGradient>
+    <radialGradient id="contactGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#34d399;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.3" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#contactGradient)"/>
+  
+  <!-- Communication waves -->
+  <circle cx="300" cy="200" r="50" fill="none" stroke="#34d399" stroke-width="3" opacity="0.4"/>
+  <circle cx="300" cy="200" r="80" fill="none" stroke="#10b981" stroke-width="2" opacity="0.3"/>
+  <circle cx="300" cy="200" r="110" fill="none" stroke="#34d399" stroke-width="1" opacity="0.2"/>
+  
+  <circle cx="900" cy="350" r="40" fill="none" stroke="#34d399" stroke-width="3" opacity="0.5"/>
+  <circle cx="900" cy="350" r="65" fill="none" stroke="#10b981" stroke-width="2" opacity="0.4"/>
+  <circle cx="900" cy="350" r="90" fill="none" stroke="#34d399" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Phone/communication icons -->
+  <rect x="250" y="320" width="120" height="80" rx="15" fill="url(#contactGlow)" opacity="0.6"/>
+  <circle cx="310" cy="360" r="8" fill="#10b981" opacity="0.7"/>
+  
+  <!-- Message bubbles -->
+  <path d="M500 150 Q520 130, 550 150 L600 150 Q620 150, 620 170 L620 220 Q620 240, 600 240 L570 240 L550 260 L550 240 L520 240 Q500 240, 500 220 Z" fill="#34d399" opacity="0.4"/>
+  <path d="M700 300 Q720 280, 750 300 L800 300 Q820 300, 820 320 L820 370 Q820 390, 800 390 L770 390 L750 410 L750 390 L720 390 Q700 390, 700 370 Z" fill="#10b981" opacity="0.5"/>
+  
+  <!-- Connection lines -->
+  <path d="M200 400 Q400 350, 600 400 Q800 450, 1000 400" fill="none" stroke="#34d399" stroke-width="3" opacity="0.4"/>
+  <path d="M150 450 Q350 400, 550 450 Q750 500, 950 450" fill="none" stroke="#10b981" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Abstract connection nodes -->
+  <circle cx="200" cy="400" r="8" fill="#10b981" opacity="0.6"/>
+  <circle cx="600" cy="400" r="10" fill="#34d399" opacity="0.7"/>
+  <circle cx="1000" cy="400" r="8" fill="#10b981" opacity="0.6"/>
+  
+  <!-- Bottom wave -->
+  <path d="M0 520 Q300 480, 600 520 T1200 500 V600 H0 Z" fill="#34d399" opacity="0.3"/>
+</svg>

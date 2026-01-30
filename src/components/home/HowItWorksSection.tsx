@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 import { 
   PhoneIcon,
   UserGroupIcon,
@@ -10,81 +11,47 @@ import {
   HeartIcon
 } from '@heroicons/react/24/outline'
 
-const steps = [
+const getSteps = (t: any) => [
   {
     step: 1,
-    title: 'Contacto Inicial',
-    description: 'Llamas o nos escribes para contarnos sobre tus necesidades de acompañamiento',
-    details: [
-      'Conversación telefónica sin compromiso',
-      'Evaluamos necesidades básicas',
-      'Programamos visita domiciliaria',
-      'Respondemos todas tus preguntas'
-    ],
+    title: t('howItWorks.detailedSteps.contact.title'),
+    description: t('howItWorks.detailedSteps.contact.description'),
+    details: t('howItWorks.detailedSteps.contact.details'),
     icon: PhoneIcon,
-    duration: '15 minutos'
+    duration: t('howItWorks.detailedSteps.contact.duration')
   },
   {
     step: 2,
-    title: 'Evaluación Gratuita',
-    description: 'Visitamos tu hogar para conocer la situación y diseñar el plan perfecto',
-    details: [
-      'Evaluación completa del hogar',
-      'Entrevista con la familia',
-      'Análisis de necesidades específicas',
-      'Recomendaciones personalizadas'
-    ],
+    title: t('howItWorks.detailedSteps.evaluation.title'),
+    description: t('howItWorks.detailedSteps.evaluation.description'),
+    details: t('howItWorks.detailedSteps.evaluation.details'),
     icon: ClipboardDocumentCheckIcon,
-    duration: '60-90 minutos'
+    duration: t('howItWorks.detailedSteps.evaluation.duration')
   },
   {
     step: 3,
-    title: 'Selección del Acompañante',
-    description: 'Elegimos al acompañante perfecto basado en personalidad y necesidades',
-    details: [
-      'Matching personalizado',
-      'Presentación del acompañante',
-      'Período de prueba',
-      'Ajustes si es necesario'
-    ],
+    title: t('howItWorks.detailedSteps.selection.title'),
+    description: t('howItWorks.detailedSteps.selection.description'),
+    details: t('howItWorks.detailedSteps.selection.details'),
     icon: UserGroupIcon,
-    duration: '24-48 horas'
+    duration: t('howItWorks.detailedSteps.selection.duration')
   },
   {
     step: 4,
-    title: 'Inicio del Acompañamiento',
-    description: 'Comenzamos el servicio con supervisión cercana y seguimiento continuo',
-    details: [
-      'Primera semana supervisada',
-      'Reportes diarios',
-      'Ajustes del plan',
-      'Comunicación constante'
-    ],
+    title: t('howItWorks.detailedSteps.start.title'),
+    description: t('howItWorks.detailedSteps.start.description'),
+    details: t('howItWorks.detailedSteps.start.details'),
     icon: PlayIcon,
-    duration: 'Inmediato'
+    duration: t('howItWorks.detailedSteps.start.duration')
   }
 ]
 
-const benefits = [
-  {
-    title: 'Proceso Transparente',
-    description: 'Cada paso está claramente definido sin sorpresas ni costos ocultos'
-  },
-  {
-    title: 'Evaluación Gratuita',
-    description: 'La evaluación inicial no tiene costo y no genera ningún compromiso'
-  },
-  {
-    title: 'Flexibilidad Total',
-    description: 'Podemos ajustar el plan en cualquier momento según cambien las necesidades'
-  },
-  {
-    title: 'Inicio Rápido',
-    description: 'En situaciones urgentes podemos comenzar el mismo día del contacto'
-  }
-]
 
 export default function HowItWorksSection() {
+  const { t } = useLanguage()
+  const steps = getSteps(t)
+  const benefits = t('howItWorks.benefits')
+
   return (
     <section className="relative bg-gradient-to-br from-white via-primary-50/20 to-secondary-50/10 py-24 sm:py-32 overflow-hidden">
       {/* Modern Background Elements */}
@@ -104,15 +71,14 @@ export default function HowItWorksSection() {
           className="mx-auto max-w-2xl text-center"
         >
           <div className="inline-flex items-center bg-gradient-to-r from-primary-100/80 to-secondary-100/80 shadow-lg backdrop-blur-sm mb-4 px-4 py-2 border border-primary-200/30 rounded-full font-semibold text-primary-600 text-sm">
-            <span>Cómo Funciona</span>
+            <span>{t('howItWorks.title')}</span>
           </div>
           <h2 className="text-shadow mt-2 font-bold text-3xl sm:text-4xl tracking-tight">
-            <span className="gradient-text">Un Proceso Simple</span>{' '}
-            <span className="text-trust-900">y Transparente</span>
+            <span className="gradient-text">{t('howItWorks.processTitle')}</span>{' '}
+            <span className="text-trust-900">{t('howItWorks.processSubtitle')}</span>
           </h2>
           <p className="mt-6 text-trust-600 text-lg leading-8">
-            Desde el primer contacto hasta el inicio del acompañamiento, nuestro proceso está diseñado 
-            para ser claro, rápido y completamente adaptado a tus necesidades.
+            {t('howItWorks.description')}
           </p>
         </motion.div>
 
@@ -212,7 +178,7 @@ export default function HowItWorksSection() {
                       transition={{ duration: 0.4, delay: (index * 0.15) + 0.5 }}
                     >
                       <div className="bg-primary-500 mr-2 rounded-full w-2 h-2 animate-pulse"></div>
-                      Duración: {step.duration}
+                      {t('howItWorks.durationLabel')} {step.duration}
                     </motion.div>
 
                     {/* Details for Mobile */}
@@ -299,7 +265,7 @@ export default function HowItWorksSection() {
                     
                     {/* Duration */}
                     <div className="inline-flex items-center bg-primary-100 mb-4 px-3 py-1 rounded-full font-medium text-primary-700 text-sm">
-                      Duración: {step.duration}
+                      {t('howItWorks.durationLabel')} {step.duration}
                     </div>
 
                     {/* Details */}
@@ -328,11 +294,10 @@ export default function HowItWorksSection() {
         >
           <div className="mb-8 lg:mb-12 text-center">
             <h3 className="mb-3 lg:mb-4 font-bold text-trust-900 text-xl lg:text-2xl">
-              ¿Por Qué Nuestro Proceso es Diferente?
+              {t('howItWorks.whyDifferent.title')}
             </h3>
             <p className="mx-auto px-4 lg:px-0 max-w-3xl text-trust-600 text-sm lg:text-base">
-              Hemos perfeccionado nuestro proceso a lo largo de los años para garantizar 
-              la mejor experiencia tanto para las familias como para nuestros acompañantes.
+              {t('howItWorks.whyDifferent.description')}
             </p>
           </div>
 

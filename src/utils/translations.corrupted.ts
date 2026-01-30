@@ -244,7 +244,13 @@ export const translations = {
       heroTitle: 'Acompañamiento No Médico',
       heroSubtitle: 'en el Hogar',
       heroDescription: 'Brindamos servicios de acompañamiento no médico para adultos mayores y personas con discapacidad, enfocados en el bienestar, la companía y el respeto en la comodidad del hogar.',
-      location: 'Disponible en todo Miami',
+      location: 'Disponibles en toda la isla',
+      historyTitle: 'Nuestra Historia',
+      historyContent: [
+        'Bienestar y Cuidado en el Hogar es una iniciativa nacida del amor y la dedicación hacia nuestros adultos mayores. Entendemos que cada persona merece envejecer con dignidad, respeto y cariño en la comodidad de su propio hogar.',
+        'Nuestro enfoque se centra en brindar un cuidado personalizado que respeta la individualidad, las preferencias y los hábitos de cada persona. No solo nos enfocamos en las necesidades físicas, sino también en el bienestar emocional y social.',
+        'Creemos firmemente que el hogar es el lugar donde las personas se sienten más seguras y cómodas. Por eso, nuestra misión es hacer posible que puedan permanecer en su entorno familiar, manteniendo su independencia con el apoyo necesario.'
+      ],
       historyTitle: 'Nuestra Historia',
       historyContent: [
         'Bienestar y Cuidado en el Hogar es una iniciativa nacida del amor y la dedicación hacia nuestros adultos mayores. Entendemos que cada persona merece envejecer con dignidad, respeto y cariño en la comodidad de su propio hogar.',
@@ -256,7 +262,6 @@ export const translations = {
       companyDescription: 'Bienestar y Cuidado en el Hogar LLC nace del deseo de ofrecer un enfoque más humano y personalizado en el cuidado de adultos mayores. Entendemos que cada persona es única, con su propia historia, personalidad y necesidades específicas.',
       principles: {
         title: 'Nuestros Principios',
-        description: 'Los valores fundamentales que guían nuestro trabajo diario',
         presence: {
           name: 'Presencia',
           description: 'Estar disponibles y atentos cuando más se necesita.'
@@ -273,50 +278,6 @@ export const translations = {
       founder: {
         name: 'Mirian González Guillén',
         role: 'Fundadora',
-        credentials: 'Con experiencia en acompañamiento familiar a adultos mayores',
-        description: 'Mirian inicia esta iniciativa motivada por el deseo de ofrecer un trato más humano, cercano y respetuoso a las personas adultas mayores. Su visión se fundamenta en la importancia del acompañamiento, la paciencia y el apoyo cotidiano como pilares del bienestar en el hogar.',
-        title: 'Nuestra Fundadora',
-        subtitle: 'Experiencia y Dedicación'
-      },
-      philosophy: {
-        title: 'Nuestra Filosofía',
-        subtitle: 'Cuidado con Corazón'
-      },
-      mission: {
-        title: 'Nuestra Misión',
-        content: 'Brindar servicios de acompañamiento no médico de la más alta calidad, respetando la dignidad y promoviendo la independencia de nuestros usuarios en la comodidad de su hogar.'
-      },
-      vision: {
-        title: 'Nuestra Visión',
-        content: 'Ser la empresa líder en servicios de acompañamiento no médico, reconocida por nuestro enfoque humano, profesional y personalizado en el cuidado de adultos mayores.'
-      },
-      finalMessage: {
-        title: 'Lista para Comenzar',
-        content: [
-          'Nuestro compromiso es ser el apoyo que necesitas para garantizar el bienestar y la felicidad de tu ser querido en casa.',
-          'Cada día trabajamos con dedicación, respeto y mucho amor.',
-          'Tu familia es nuestra prioridad.'
-        ],
-        badges: [
-          'Licenciados en Florida',
-          'Personal Capacitado',
-          'Disponible 24/7'
-        ]
-      },
-      cta: {
-        title: '¿Listo para Comenzar?',
-        description: 'Contáctanos hoy mismo para una evaluación gratuita y descubre cómo podemos ayudarte.',
-        callButton: 'Llamar Ahora',
-        availability: 'Disponible 24/7',
-        services: [
-          'Evaluación gratuita',
-          'Sin compromiso',
-          'Respuesta inmediata'
-        ]
-      },
-      founder: {
-        name: 'Mirian González Guillén',
-        role: 'Fundadora',
         credentials: 'Con experiencia en el acompañamiento familiar de adultos mayores',
         description: 'Mirian inicia esta iniciativa motivada por el deseo de ofrecer un trato más humano, cercano y respetuoso a las personas mayores. Su visión se basa en la importancia de la compañía, la paciencia y el apoyo diario como pilares del bienestar en el hogar.'
       },
@@ -328,16 +289,16 @@ export const translations = {
     // Services Page
     services: {
       title: 'Nuestros Servicios',
-      subtitle: 'Cuidado integral para adultos mayores y personas con discapacidad',
+      subtitle: 'Cuidado integral para adultos mayores',
       personalCare: 'Asistencia Personal NO Médica',
       companionship: 'Compañía y Acompañamiento',
       medication: 'Recordatorios Amigables',
       housekeeping: 'Apoyo con Tareas del Hogar',
       heroTitle: 'Servicios de Acompañamiento',
       heroSubtitle: 'NO Médico',
-      heroDescription: 'Servicios profesionales de acompañamiento y apoyo no médico para adultos mayores y personas con discapacidad en Florida. Planes personalizados adaptados a cada familia.',
-      areas: [
-        {
+      heroDescription: 'Servicios profesionales de acompañamiento y apoyo no médico para adultos mayores en Florida. Planes personalizados adaptados a cada familia.',
+      companionshipAreas: {
+        personalDaily: {
           name: 'Acompañamiento Personal Diario',
           description: 'Apoyo respetuoso en las actividades diarias básicas, manteniendo la dignidad y autonomía de la persona.',
           services: [
@@ -349,7 +310,7 @@ export const translations = {
             'Recordatorios amigables para el cuidado personal'
           ]
         },
-        {
+        companionshipEmotional: {
           name: 'Compañía y Apoyo Emocional',
           description: 'Presencia cálida y conversación significativa para combatir la soledad y mantener el bienestar emocional.',
           services: [
@@ -361,7 +322,7 @@ export const translations = {
             'Participación en actividades familiares'
           ]
         },
-        {
+        homeSupport: {
           name: 'Apoyo en el Hogar',
           description: 'Asistencia con tareas domésticas básicas y organización del espacio para mantener un ambiente seguro y confortable.',
           services: [
@@ -373,7 +334,7 @@ export const translations = {
             'Supervisión de servicios domésticos'
           ]
         },
-        {
+        medicationReminders: {
           name: 'Recordatorios de Medicación',
           description: 'Recordatorios amigables y organización de medicamentos según las indicaciones médicas.',
           services: [
@@ -384,7 +345,7 @@ export const translations = {
             'Registro de cumplimiento'
           ]
         },
-        {
+        transportation: {
           name: 'Transporte y Acompañamiento',
           description: 'Acompañamiento a citas médicas, compras y actividades sociales.',
           services: [
@@ -395,7 +356,7 @@ export const translations = {
             'Visitas familiares'
           ]
         },
-        {
+        safetyMonitoring: {
           name: 'Monitoreo de Seguridad',
           description: 'Supervisión constante para prevenir caídas y garantizar un entorno seguro.',
           services: [
@@ -405,22 +366,25 @@ export const translations = {
             'Comunicación de emergencias',
             'Ambiente seguro'
           ]
-        },
-        {
-          name: 'Atención a Personas con Discapacidad',
-          description: 'Acompañamiento especializado y apoyo personalizado para personas con discapacidades físicas, intelectuales o del desarrollo.',
-          services: [
-            'Apoyo en actividades de la vida diaria adaptadas',
-            'Acompañamiento a terapias y citas médicas especializadas',
-            'Asistencia con movilidad y transferencias seguras',
-            'Apoyo en comunicación y socialización',
-            'Supervisión en actividades recreativas adaptadas',
-            'Asistencia con tecnología de apoyo',
-            'Apoyo en rutinas de ejercicio terapéutico básico',
-            'Acompañamiento en programas de integración comunitaria'
-          ]
         }
-      ],
+      },
+      importantNoticeTitle: 'Aviso Importante',
+      importantNotice: 'Nuestros servicios son de acompañamiento y apoyo NO MÉDICO. No proporcionamos servicios médicos, de enfermería o tratamientos de salud. Siempre consulte con profesionales médicos para necesidades de atención sanitaria.',
+      getStarted: 'Comenzar Ahora',
+      scheduleEvaluation: 'Programar Evaluación Gratuita',
+      weProvide: 'Brindamos',
+      whatWeDont: 'Lo que NO hacemos',
+      weDoNot: 'NO proporcionamos',
+      medicalServices: 'Servicios médicos o de enfermería',
+      healthTreatments: 'Tratamientos de salud',
+      medicalProcedures: 'Procedimientos médicos',
+      nursingCare: 'Cuidados de enfermería',
+      personalizedPlans: 'Planes Personalizados',
+      personalizedPlansDesc: 'Cada plan se adapta a las necesidades y preferencias individuales',
+      flexibleSchedules: 'Horarios Flexibles',
+      flexibleSchedulesDesc: 'Desde unas pocas horas hasta cuidado las 24 horas',
+      trainedCompanions: 'Acompañantes Capacitados',
+      trainedCompanionsDesc: 'Personal con experiencia y formación especializada',
       workingProcess: [
         {
           step: '01',
@@ -443,15 +407,17 @@ export const translations = {
           description: 'Evaluación continua del servicio y ajustes necesarios para garantizar la satisfacción completa de la familia.'
         }
       ],
+      heroTitle: 'Servicios de Acompañamiento NO Médico',
       heroMainTitle: 'Acompañamiento Profesional',
-      heroPersonalized: 'Personalizado',
+      heroSubtitle: 'No Médico',
+      heroDescription: 'Ofrecemos servicios de acompañamiento y apoyo no médico, adaptados cuidadosamente a las necesidades únicas de cada persona y familia.',
       approachTitle: 'Nuestro Enfoque de Acompañamiento',
-      approachDescription1: 'Nos especializamos en brindar servicios de acompañamiento y apoyo no médico para adultos mayores y personas con discapacidad que desean mantener su independencia y bienestar en la comodidad de su hogar.',
+      approachDescription1: 'Nos especializamos en brindar servicios de acompañamiento y apoyo no médico para adultos mayores que desean mantener su independencia y bienestar en la comodidad de su hogar.',
       approachDescription2: 'Entendemos que cada persona es única, con sus propias rutinas, preferencias y necesidades.',
       approachDescription3: 'Nuestros servicios están diseñados para complementar el cuidado médico profesional, proporcionando la compañía, apoyo y tranquilidad que tanto usted como su familia necesitan.',
       approachDescription4: 'Por eso, ofrecemos un enfoque completamente personalizado que se adapta a cada situación individual.',
       areasTitle1: 'Áreas de Apoyo',
-      areasTitle2: 'Disponibles',
+      areasTitle2: 'Disponibles', 
       areasDescription: 'Cada área puede combinarse en un plan personalizado diseñado específicamente para las necesidades de su ser querido',
       howWorkTitle1: 'Cómo',
       howWorkTitle2: 'Trabajamos',
@@ -494,11 +460,7 @@ export const translations = {
         },
         footer: 'Consulta sin compromiso • Evaluación personalizada • Disponible 24/7',
         license: 'Licenciados y asegurados en el Estado de Florida'
-      },
-      importantNoticeTitle: 'Aviso Importante',
-      importantNotice: 'Nuestros servicios son de acompañamiento y apoyo NO MÉDICO. No proporcionamos servicios médicos, de enfermería o tratamientos de salud. Siempre consulte con profesionales médicos para necesidades de atención sanitaria.',
-      getStarted: 'Comenzar Ahora',
-      scheduleEvaluation: 'Programar Evaluación Gratuita'
+      }
     },
     // Team Page
     team: {
@@ -508,7 +470,7 @@ export const translations = {
     // Contact Page
     contact: {
       title: 'Contáctanos',
-      // subtitle: 'Estamos aquí para ayudarte',
+      subtitle: 'Estamos aquí para ayudarte',
       name: 'Nombre',
       email: 'Email',
       phone: 'Teléfono',
@@ -516,7 +478,7 @@ export const translations = {
       send: 'Enviar Mensaje',
       getInTouch: 'Ponte en Contacto',
       heroTitle: 'Contáctanos Hoy',
-      heroSubtitle: 'Estamos Listos para Ayudarte',
+      // heroSubtitle: 'Estamos Listos para Ayudarte',
       heroDescription: 'Nuestro equipo está disponible para responder todas tus preguntas y ayudarte a encontrar la solución de acompañamiento perfecta para tu familia.',
       emergencyLine: 'Línea de Emergencia',
       emergencyDesc: 'Disponible 24/7 para situaciones urgentes',
@@ -587,17 +549,6 @@ export const translations = {
           phone: '(786) 000-0000',
           message: 'Cuéntanos sobre tus necesidades específicas...'
         },
-        labels: {
-          phoneRequired: 'Número de teléfono (requerido para respuesta rápida)',
-          careInfo: 'Información del Cuidado',
-          relationshipLabel: '¿Cuál es tu relación con la persona que necesita cuidado?',
-          tellUsMore: 'Cuéntanos más detalles (opcional)',
-          placeholderDetails: 'Cualquier información adicional que nos ayude a entender mejor tus necesidades...',
-          acceptCommunications: 'y comunicaciones relacionadas.',
-          privacyPolicy: 'política de privacidad',
-          phone: 'Teléfono',
-          scheduleTitle: 'Horarios de Atención'
-        },
         options: {
           serviceTypes: [
             'Compañía y apoyo emocional',
@@ -614,7 +565,42 @@ export const translations = {
             'En las próximas 2 semanas',
             'El próximo mes',
             'Estoy investigando opciones'
+          ],
+          relationshipTypes: [
+            'Selecciona una opción',
+            'Hijo/Hija',
+            'Cónyuge',
+            'Hermano/Hermana',
+            'Nieto/Nieta',
+            'Familiar',
+            'Cuidador profesional',
+            'Otro'
+          ],
+          serviceOptions: [
+            'Compañía y apoyo emocional',
+            'Asistencia personal diaria',
+            'Apoyo en tareas del hogar ligeras',
+            'Recordatorios amigables de medicamentos',
+            'Acompañamiento fuera del hogar',
+            'Supervisión general de seguridad',
+            'Preparación de comidas nutritivas',
+            'Acompañamiento especializado'
           ]
+        },
+        labels: {
+          phoneRequired: 'Teléfono *',
+          careInfo: 'Información del Cuidado',
+          relationshipLabel: 'Relación con la persona a cuidar',
+          tellUsMore: 'Cuéntanos más sobre tus necesidades',
+          placeholderDetails: 'Describe la situación actual, necesidades específicas, horarios preferidos, ubicación en Florida, etc...',
+          privacyPolicy: 'Ver política de privacidad',
+          acceptCommunications: 'Entiendo que puedo cancelar estas comunicaciones en cualquier momento.',
+          phone: 'Teléfono',
+          scheduleTitle: 'Horarios de Atención',
+          coverageAreas: 'Áreas de Cobertura',
+          surroundingAreas: 'Y áreas circundantes',
+          trustMessage1: 'Más de 100 familias han confiado en nosotros.',
+          trustMessage2: 'Únete a ellas y descubre la tranquilidad que tu familia merece.'
         }
       },
       office: {
@@ -642,29 +628,30 @@ export const translations = {
           'Palm Beach County',
           'Y áreas circundantes'
         ]
+      }
       },
       serviceQuestions: {
         whenNeeded: '¿Cuándo necesitas el servicio?',
-        servicesInterest: '¿Qué servicios te interesan? (Selecciona todos los que apliquen)',
+        servicesInterest: 'Servicios de Interés (selecciona todos los que apliquen)',
         acceptInfo: 'Acepto recibir información',
-        aboutServices: 'sobre servicios de acompañamiento',
-        professionalService: 'Brindamos servicios profesionales de acompañamiento no médico en todo el sur de Florida',
+        aboutServices: 'sobre servicios de acompañamiento no médico.',
+        professionalService: 'Servicio profesional de acompañamiento a domicilio en toda Florida',
         availableServices: 'Servicios Disponibles'
       },
-      trustIndicators: {
-        yearsExperience: 'Años de experiencia en cuidado de adultos mayores',
-        familySatisfaction: 'Satisfacción familiar garantizada',
-        familiesServed: 'Familias atendidas con excelencia'
-      },
-      finalCTA: {
-        callLabel: 'Llama ahora',
-        whatsappLabel: 'Escríbenos por WhatsApp',
-        footer: 'Respuesta garantizada en menos de 2 horas • Evaluación gratuita • Disponible 24/7'
-      },
-      responseTime: 'Respuesta inmediata',
+      responseTime: 'Respuesta en 2 horas',
       location: {
         title1: 'Nuestra',
         title2: 'Ubicación'
+      },
+      trustIndicators: {
+        yearsExperience: 'Años de Experiencia',
+        familySatisfaction: 'Satisfacción Familiar',
+        familiesServed: 'Familias Atendidas'
+      },
+      finalCTA: {
+        callLabel: 'Llamar:',
+        whatsappLabel: 'WhatsApp',
+        footer: 'Evaluación 100% gratuita • Sin compromiso • Disponible 24/7'
       }
     }
   },
@@ -845,6 +832,11 @@ export const translations = {
           text: 'What we value most is the patience and human treatment. They have always been very attentive, responsible and close to my father. You can tell they do their job with vocation and respect.',
           author: 'Carlos M.',
           role: 'Son of elderly adult'
+        },
+        {
+          text: 'We were looking for someone to provide companionship and support at home, and we found just that. Communication has been clear from the beginning and the treatment has always been friendly and professional. We are very grateful.',
+          author: 'Laura G.',
+          role: 'Family member'
         }
       ]
     },
@@ -860,6 +852,18 @@ export const translations = {
         {
           question: 'Are the companions trained and verified?',
           answer: 'Absolutely. All our companions go through a rigorous selection process including background checks, personal and professional references, specialized training in senior companionship, and continuous performance evaluation.'
+        },
+        {
+          question: 'Can I choose the care schedule?',
+          answer: 'Yes, we offer complete scheduling flexibility. You can choose from a few hours a day, part-time, full-time, or 24-hour companionship. We also offer weekend and holiday services according to your specific needs.'
+        },
+        {
+          question: 'What are your rates and payment methods?',
+          answer: 'Our rates are competitive and vary according to the type of service and required schedule. We offer customized plans to fit different budgets. We accept weekly, biweekly, or monthly payments, and multiple payment methods for your convenience.'
+        },
+        {
+          question: 'How can I get started with your services?',
+          answer: 'It\'s very simple: contact us for a free consultation, we\'ll assess specific needs, present available companion options, coordinate service start on your preferred date, and maintain regular communication to ensure your complete satisfaction.'
         }
       ]
     },
@@ -896,7 +900,7 @@ export const translations = {
       heroTitle: 'Non-Medical Companionship',
       heroSubtitle: 'at Home',
       heroDescription: 'We provide non-medical companionship services for seniors and people with disabilities, focused on well-being, companionship and respect in the comfort of home.',
-      location: 'Available throughout Miami',
+      location: 'Available throughout the island',
       historyTitle: 'Our Story',
       historyContent: [
         'Bienestar y Cuidado en el Hogar is an initiative born from love and dedication to our seniors. We understand that every person deserves to age with dignity, respect and affection in the comfort of their own home.',
@@ -908,7 +912,6 @@ export const translations = {
       companyDescription: 'Bienestar y Cuidado en el Hogar LLC was born from the desire to offer a more humane and personalized approach to senior care. We understand that each person is unique, with their own history, personality and specific needs.',
       principles: {
         title: 'Our Principles',
-        description: 'The fundamental values that guide our daily work',
         presence: {
           name: 'Presence',
           description: 'Being available and attentive when needed most.'
@@ -926,45 +929,7 @@ export const translations = {
         name: 'Mirian González Guillén',
         role: 'Founder',
         credentials: 'With experience in family companionship for seniors',
-        description: 'Mirian starts this initiative motivated by the desire to offer more humane, close and respectful treatment to elderly people. Her vision is based on the importance of companionship, patience and daily support as pillars of home well-being.',
-        title: 'Our Founder',
-        subtitle: 'Experience and Dedication'
-      },
-      philosophy: {
-        title: 'Our Philosophy',
-        subtitle: 'Care with Heart'
-      },
-      mission: {
-        title: 'Our Mission',
-        content: 'To provide the highest quality non-medical companionship services, respecting dignity and promoting the independence of our users in the comfort of their home.'
-      },
-      vision: {
-        title: 'Our Vision',
-        content: 'To be the leading company in non-medical companionship services, recognized for our human, professional and personalized approach to senior care.'
-      },
-      finalMessage: {
-        title: 'Ready to Begin',
-        content: [
-          'Our commitment is to be the support you need to ensure the well-being and happiness of your loved one at home.',
-          'Every day we work with dedication, respect and lots of love.',
-          'Your family is our priority.'
-        ],
-        badges: [
-          'Licensed in Florida',
-          'Trained Staff',
-          'Available 24/7'
-        ]
-      },
-      cta: {
-        title: 'Ready to Get Started?',
-        description: 'Contact us today for a free evaluation and discover how we can help you.',
-        callButton: 'Call Now',
-        availability: 'Available 24/7',
-        services: [
-          'Free evaluation',
-          'No commitment',
-          'Immediate response'
-        ]
+        description: 'Mirian starts this initiative motivated by the desire to offer more humane, close and respectful treatment to elderly people. Her vision is based on the importance of companionship, patience and daily support as pillars of home well-being.'
       },
       readyTitle: 'Ready to Begin',
       readySubtitle: 'Together We Care for Those You Love Most',
@@ -982,8 +947,8 @@ export const translations = {
       heroTitle: 'NON-Medical Companionship',
       heroSubtitle: 'Services',
       heroDescription: 'Professional companionship and non-medical support services for seniors in Florida. Personalized plans adapted to each family.',
-      areas: [
-        {
+      companionshipAreas: {
+        personalDaily: {
           name: 'Daily Personal Companionship',
           description: 'Respectful support in basic daily activities, maintaining the person\'s dignity and autonomy.',
           services: [
@@ -995,7 +960,7 @@ export const translations = {
             'Friendly reminders for personal care'
           ]
         },
-        {
+        companionshipEmotional: {
           name: 'Companionship and Emotional Support',
           description: 'Warm presence and meaningful conversation to combat loneliness and maintain emotional well-being.',
           services: [
@@ -1007,7 +972,7 @@ export const translations = {
             'Participation in family activities'
           ]
         },
-        {
+        homeSupport: {
           name: 'Home Support',
           description: 'Assistance with basic household tasks and space organization to maintain a safe and comfortable environment.',
           services: [
@@ -1019,7 +984,7 @@ export const translations = {
             'Supervision of household services'
           ]
         },
-        {
+        medicationReminders: {
           name: 'Medication Reminders',
           description: 'Friendly reminders and medication organization according to medical instructions.',
           services: [
@@ -1030,7 +995,7 @@ export const translations = {
             'Compliance record keeping'
           ]
         },
-        {
+        transportation: {
           name: 'Transportation and Accompaniment',
           description: 'Accompaniment to medical appointments, shopping and social activities.',
           services: [
@@ -1041,7 +1006,7 @@ export const translations = {
             'Family visits'
           ]
         },
-        {
+        safetyMonitoring: {
           name: 'Safety Monitoring',
           description: 'Constant supervision to prevent falls and ensure a safe environment.',
           services: [
@@ -1051,22 +1016,25 @@ export const translations = {
             'Emergency communication',
             'Safe environment'
           ]
-        },
-        {
-          name: 'Care for People with Disabilities',
-          description: 'Specialized companionship and personalized support for individuals with physical, intellectual, or developmental disabilities.',
-          services: [
-            'Support with adapted daily living activities',
-            'Accompaniment to therapies and specialized medical appointments',
-            'Assistance with mobility and safe transfers',
-            'Communication and socialization support',
-            'Supervision in adapted recreational activities',
-            'Assistance with assistive technology',
-            'Support with basic therapeutic exercise routines',
-            'Accompaniment in community integration programs'
-          ]
         }
-      ],
+      },
+      importantNoticeTitle: 'Important Notice',
+      importantNotice: 'Our services are NON-MEDICAL companionship and support. We do not provide medical services, nursing, or health treatments. Always consult with medical professionals for healthcare needs.',
+      getStarted: 'Get Started',
+      scheduleEvaluation: 'Schedule Free Evaluation',
+      weProvide: 'We Provide',
+      whatWeDont: 'What We DON\'T Do',
+      weDoNot: 'We do NOT provide',
+      medicalServices: 'Medical or nursing services',
+      healthTreatments: 'Health treatments',
+      medicalProcedures: 'Medical procedures',
+      nursingCare: 'Nursing care',
+      personalizedPlans: 'Personalized Plans',
+      personalizedPlansDesc: 'Each plan is adapted to individual needs and preferences',
+      flexibleSchedules: 'Flexible Schedules',
+      flexibleSchedulesDesc: 'From a few hours to 24-hour care',
+      trainedCompanions: 'Trained Companions',
+      trainedCompanionsDesc: 'Staff with experience and specialized training',
       workingProcess: [
         {
           step: '01',
@@ -1089,10 +1057,12 @@ export const translations = {
           description: 'Continuous service evaluation and necessary adjustments to guarantee complete family satisfaction.'
         }
       ],
+      heroTitle: 'NON-Medical Companionship Services',
       heroMainTitle: 'Professional Companionship',
-      heroPersonalized: 'Personalized',
+      heroSubtitle: 'Non-Medical',
+      heroDescription: 'We offer companionship and non-medical support services, carefully adapted to the unique needs of each person and family.',
       approachTitle: 'Our Companionship Approach',
-      approachDescription1: 'We specialize in providing companionship and non-medical support services for seniors and people with disabilities who want to maintain their independence and well-being in the comfort of their home.',
+      approachDescription1: 'We specialize in providing companionship and non-medical support services for seniors who want to maintain their independence and well-being in the comfort of their home.',
       approachDescription2: 'We understand that each person is unique, with their own routines, preferences and needs.',
       approachDescription3: 'Our services are designed to complement professional medical care, providing the companionship, support and peace of mind that both you and your family need.',
       approachDescription4: 'That is why we offer a completely personalized approach that adapts to each individual situation.',
@@ -1140,11 +1110,7 @@ export const translations = {
         },
         footer: 'No-commitment consultation • Personalized evaluation • Available 24/7',
         license: 'Licensed and insured in the State of Florida'
-      },
-      importantNoticeTitle: 'Important Notice',
-      importantNotice: 'Our services are NON-MEDICAL companionship and support. We do not provide medical services, nursing, or health treatments. Always consult with medical professionals for healthcare needs.',
-      getStarted: 'Get Started',
-      scheduleEvaluation: 'Schedule Free Evaluation'
+      }
     },
     // Team Page
     team: {
@@ -1180,13 +1146,13 @@ export const translations = {
       popularBadge: 'POPULAR',
       officialBadge: 'OFFICIAL',
       freeEvaluationTitle: 'Request Your Free Evaluation',
-      freeEvaluationDesc: 'Completing this form is the first step towards your family peace of mind',
+      freeEvaluationDesc: 'Completing this form is the first step toward your family\'s peace of mind',
       whyChooseTitle: 'Why Choose Us?',
       qualityGuarantee: 'Quality Guarantee',
-      qualityDesc: 'The highest quality companionship',
+      qualityDesc: 'Companionship of the highest quality',
       homeComfort: 'Home',
       homeDesc: 'Support in the comfort of home',
-      needUrgentHelp: 'Need urgent help?',
+      needUrgentHelp: 'Need Urgent Help?',
       available24Hours: 'Available 24 hours a day',
       callEmergency: 'Emergency Call',
       urgentSituations: 'For situations requiring immediate attention',
@@ -1203,7 +1169,7 @@ export const translations = {
       contactMethods: {
         title1: 'Contact',
         title2: 'Methods',
-        description: 'Multiple communication options to provide you with the best service and quick response'
+        description: 'Multiple communication options to provide you with the best care and quick response'
       },
       requestEvaluation: {
         title1: 'Request Your',
@@ -1213,15 +1179,15 @@ export const translations = {
         serviceInfo: 'Service Information',
         additionalInfo: 'Additional Information',
         submitButton: 'Request Free Evaluation',
-        freeEvaluation: '100% free evaluation',
-        noCommitment: 'No commitment',
+        freeEvaluation: '100% Free Evaluation',
+        noCommitment: 'No Commitment',
         available24h: 'Available 24/7',
-        footer: 'free • No commitment • Available 24/7'
+        footer: '100% free • No commitment • Available 24/7'
       },
       form: {
         fields: {
           name: 'Full name',
-          email: 'Email',
+          email: 'Email address',
           phone: 'Phone',
           serviceType: 'Service type',
           urgency: 'Urgency',
@@ -1233,22 +1199,11 @@ export const translations = {
           phone: '(786) 000-0000',
           message: 'Tell us about your specific needs...'
         },
-        labels: {
-          phoneRequired: 'Phone number (required for quick response)',
-          careInfo: 'Care Information',
-          relationshipLabel: 'What is your relationship to the person who needs care?',
-          tellUsMore: 'Tell us more details (optional)',
-          placeholderDetails: 'Any additional information that helps us better understand your needs...',
-          acceptCommunications: 'and related communications.',
-          privacyPolicy: 'privacy policy',
-          phone: 'Phone',
-          scheduleTitle: 'Business Hours'
-        },
         options: {
           serviceTypes: [
             'Companionship and emotional support',
             'Daily personal assistance',
-            'Household support',
+            'Light housekeeping support',
             'Medication reminders',
             'Appointment accompaniment',
             'Meal preparation',
@@ -1257,10 +1212,45 @@ export const translations = {
           urgencyLevels: [
             'Immediately (24-48 hours)',
             'This week',
-            'In the next 2 weeks',
+            'Within the next 2 weeks',
             'Next month',
-            'I am researching options'
+            'I am exploring options'
+          ],
+          relationshipTypes: [
+            'Select an option',
+            'Son/Daughter',
+            'Spouse',
+            'Brother/Sister',
+            'Grandchild',
+            'Family Member',
+            'Professional Caregiver',
+            'Other'
+          ],
+          serviceOptions: [
+            'Companionship and emotional support',
+            'Daily personal assistance',
+            'Light housekeeping support',
+            'Friendly medication reminders',
+            'Accompaniment outside the home',
+            'General safety supervision',
+            'Nutritious meal preparation',
+            'Specialized accompaniment'
           ]
+        },
+        labels: {
+          phoneRequired: 'Phone *',
+          careInfo: 'Care Information',
+          relationshipLabel: 'Relationship to the person receiving care',
+          tellUsMore: 'Tell us more about your needs',
+          placeholderDetails: 'Describe the current situation, specific needs, preferred schedules, location in Florida, etc...',
+          privacyPolicy: 'View privacy policy',
+          acceptCommunications: 'I understand I can cancel these communications at any time.',
+          phone: 'Phone',
+          scheduleTitle: 'Business Hours',
+          coverageAreas: 'Coverage Areas',
+          surroundingAreas: 'And surrounding areas',
+          trustMessage1: 'More than 100 families have trusted us.',
+          trustMessage2: 'Join them and discover the peace of mind your family deserves.'
         }
       },
       office: {
@@ -1271,11 +1261,11 @@ export const translations = {
         city: 'Miami, Florida and metropolitan areas',
         businessHours: 'Monday - Friday: 8:00 AM - 6:00 PM',
         weekendHours: 'Saturdays: 9:00 AM - 4:00 PM',
-        emergencyHours: 'Emergency: 24/7 available',
+        emergencyHours: 'Emergencies: 24/7 available',
         services: [
           'Companionship and emotional support',
           'Daily personal assistance',
-          'Light household support',
+          'Light housekeeping support',
           'Medication reminders',
           'Medical appointment accompaniment',
           'Nutritious meal preparation',
@@ -1284,34 +1274,29 @@ export const translations = {
         coverageTitle: 'Coverage Areas',
         coverageAreas: [
           'Miami-Dade County',
-          'Broward County',
+          'Broward County', 
           'Palm Beach County',
           'And surrounding areas'
         ]
-      },
-      serviceQuestions: {
-        whenNeeded: 'When do you need the service?',
-        servicesInterest: 'What services are you interested in? (Select all that apply)',
-        acceptInfo: 'I accept to receive information',
-        aboutServices: 'about companionship services',
-        professionalService: 'We provide professional non-medical companionship services throughout South Florida',
-        availableServices: 'Available Services'
-      },
-      trustIndicators: {
-        yearsExperience: 'Years of experience in senior care',
-        familySatisfaction: 'Guaranteed family satisfaction',
-        familiesServed: 'Families served with excellence'
-      },
-      finalCTA: {
-        callLabel: 'Call now',
-        whatsappLabel: 'Text us on WhatsApp',
-        footer: 'Guaranteed response in less than 2 hours • Free evaluation • Available 24/7'
-      },
-      responseTime: 'Immediate response',
-      location: {
-        title1: 'Our',
-        title2: 'Location'
       }
+    },
+    serviceQuestions: {
+      whenNeeded: 'When do you need the service?',
+      servicesInterest: 'Services of Interest (select all that apply)',
+      acceptInfo: 'I accept to receive information',
+      aboutServices: 'about non-medical companionship services.',
+      professionalService: 'Professional home companionship service throughout Florida',
+      availableServices: 'Available Services'
+    },
+    responseTime: 'Response in 2 hours',
+    location: {
+      title1: 'Our',
+      title2: 'Location'
+    },
+    trustIndicators: {
+      yearsExperience: 'Years of Experience',
+      familySatisfaction: 'Family Satisfaction',
+      familiesServed: 'Families Served'
     },
     finalCTA: {
       callLabel: 'Call:',

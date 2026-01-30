@@ -1,0 +1,30 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="warmGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef7cd;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#fde68a;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#f59e0b;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.9" />
+    </linearGradient>
+    <radialGradient id="heartGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.2" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#warmGradient)"/>
+  
+  <!-- Soft abstract shapes representing care and warmth -->
+  <circle cx="200" cy="150" r="80" fill="url(#heartGlow)" opacity="0.7"/>
+  <circle cx="900" cy="400" r="120" fill="url(#heartGlow)" opacity="0.5"/>
+  <circle cx="600" cy="300" r="100" fill="url(#heartGradient)" opacity="0.6"/>
+  
+  <!-- Heart-like shapes -->
+  <path d="M300 200 C280 180, 240 180, 240 220 C240 260, 300 320, 300 320 C300 320, 360 260, 360 220 C360 180, 320 180, 300 200 Z" fill="#f59e0b" opacity="0.3"/>
+  <path d="M800 450 C785 435, 755 435, 755 465 C755 495, 800 540, 800 540 C800 540, 845 495, 845 465 C845 435, 815 435, 800 450 Z" fill="#d97706" opacity="0.4"/>
+  
+  <!-- Gentle waves representing comfort -->
+  <path d="M0 400 Q300 360, 600 400 T1200 380 V600 H0 Z" fill="#fbbf24" opacity="0.3"/>
+  <path d="M0 450 Q400 410, 800 450 T1200 430 V600 H0 Z" fill="#f59e0b" opacity="0.2"/>
+</svg>

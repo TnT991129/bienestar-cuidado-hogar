@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 import { 
   HeartIcon,
   UserGroupIcon,
@@ -12,42 +13,65 @@ import {
   PhoneIcon
 } from '@heroicons/react/24/outline'
 
-const principles = [
+const getPrinciples = (t: any) => [
   {
-    name: 'Presencia',
-    description: 'Estar disponibles y atentos cuando más se necesita.',
+    name: t('about.principles.presence.name'),
+    description: t('about.principles.presence.description'),
     icon: UserGroupIcon
   },
   {
-    name: 'Paciencia',
-    description: 'Respetar los tiempos, hábitos y necesidades de cada persona.',
+    name: t('about.principles.patience.name'),
+    description: t('about.principles.patience.description'),
     icon: ClockIcon
   },
   {
-    name: 'Empatía',
-    description: 'Escuchar, comprender y acompañar desde el respeto y la sensibilidad.',
+    name: t('about.principles.empathy.name'),
+    description: t('about.principles.empathy.description'),
     icon: HeartIcon
   }
 ]
 
-const founder = {
-  name: 'Mirian González Guillén',
-  role: 'Fundadora',
-  credentials: 'Con experiencia en el acompañamiento familiar de adultos mayores',
-  description: 'Mirian inicia esta iniciativa motivada por el deseo de ofrecer un trato más humano, cercano y respetuoso a las personas mayores. Su visión se basa en la importancia de la compañía, la paciencia y el apoyo diario como pilares del bienestar en el hogar.',
+const getFounder = (t: any) => ({
+  name: t('about.founder.name'),
+  role: t('about.founder.role'),
+  credentials: t('about.founder.credentials'),
+  description: t('about.founder.description'),
   image: '👩‍🦳'
-};
+});
 
 export default function AboutPage() {
+  const { t } = useLanguage()
+  const principles = getPrinciples(t)
+  const founder = getFounder(t)
+  
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-primary-50/20 min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600/10 via-secondary-500/10 to-primary-400/5 py-20 sm:py-32 overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="-top-40 -right-40 absolute bg-gradient-to-br from-primary-200/30 to-secondary-200/30 blur-3xl rounded-full w-80 h-80 animate-pulse"></div>
-          <div className="-bottom-40 -left-40 absolute bg-gradient-to-br from-secondary-200/30 to-primary-200/30 blur-3xl rounded-full w-80 h-80 animate-pulse delay-1000"></div>
-          <div className="top-1/2 left-1/2 absolute bg-gradient-to-br from-primary-100/20 to-secondary-100/20 blur-3xl rounded-full w-96 h-96 -translate-x-1/2 -translate-y-1/2 animate-pulse delay-500"></div>
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/sobre-nosotros-nuevo.webp" 
+            alt="Cuidado y bienestar en el hogar" 
+            className="object-cover object-right-top md:object-center w-full h-full"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/50"></div>
+        </div>
+        
+        {/* Elegant Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">          
+          {/* Subtle geometric shapes */}
+          <div className="-top-20 -right-20 absolute bg-gradient-to-br from-white/5 to-transparent blur-2xl rounded-full w-96 h-96 animate-float"></div>
+          <div className="-bottom-32 -left-32 absolute bg-gradient-to-br from-white/5 to-transparent blur-3xl rounded-full w-80 h-80 animate-float-delayed"></div>
+          
+          {/* Subtle pattern overlay */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="bg-gradient-to-r from-transparent via-white/20 to-transparent w-full h-full transform -skew-y-12"></div>
+          </div>
+          
+          {/* Floating orbs */}
+          <div className="top-1/4 right-1/4 absolute bg-gradient-to-br from-white/10 to-transparent blur-xl rounded-full w-32 h-32 animate-bounce-slow"></div>
+          <div className="bottom-1/3 left-1/3 absolute bg-gradient-to-br from-white/10 to-transparent blur-xl rounded-full w-24 h-24 animate-bounce-slow delay-700"></div>
         </div>
         
         <div className="relative container-max section-padding">
@@ -57,82 +81,254 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+            {/* Badge superior */}
+            <motion.div
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 mb-6"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              <HeartIcon className="w-4 h-4 text-white/80" />
+              <span className="font-medium text-white/90 text-sm">Cuidado con amor desde 2020</span>
+            </motion.div>
+
             <motion.h1 
               className="text-shadow mb-8 font-bold text-4xl md:text-6xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="gradient-text">Sobre</span>{' '}
-              <span className="text-trust-800">Nosotros</span>
+              <span className="text-white">{t('about.title').split(' ')[0]}</span>{' '}
+              <span className="text-white/90">{t('about.title').split(' ').slice(1).join(' ')}</span>
             </motion.h1>
             
             <motion.p 
-              className="mx-auto mb-8 max-w-3xl text-trust-600 text-xl md:text-2xl leading-relaxed"
+              className="mx-auto mb-12 max-w-3xl text-white/80 text-xl md:text-2xl leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Comprometidos con el bienestar y la dignidad de las personas mayores
+              {t('about.subtitle')}
             </motion.p>
             
+            {/* Estadísticas */}
             <motion.div
-              className="inline-flex items-center gap-3 bg-white/80 shadow-xl backdrop-blur-lg px-6 py-3 rounded-full"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              <div className="text-center">
+                <div className="font-bold text-white text-3xl md:text-4xl">100+</div>
+                <div className="text-white/70 text-sm">Familias atendidas</div>
+              </div>
+              <div className="hidden sm:block bg-white/20 rounded-full w-px h-12"></div>
+              <div className="text-center">
+                <div className="font-bold text-white text-3xl md:text-4xl">24/7</div>
+                <div className="text-white/70 text-sm">Disponibilidad</div>
+              </div>
+              <div className="hidden sm:block bg-white/20 rounded-full w-px h-12"></div>
+              <div className="text-center">
+                <div className="font-bold text-white text-3xl md:text-4xl">5+</div>
+                <div className="text-white/70 text-sm">Años de experiencia</div>
+              </div>
+            </motion.div>
+
+            {/* Botones de acción */}
+            <motion.div
+              className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <MapPinIcon className="w-5 h-5 text-primary-600" />
-              <span className="font-medium text-trust-700">Disponibles en toda la isla</span>
+              <button className="bg-primary-600 hover:bg-primary-700 shadow-xl px-8 py-4 rounded-full font-semibold text-white transform transition-all duration-300 hover:scale-105">
+                Conoce nuestros servicios
+              </button>
+              <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300">
+                Contactar ahora
+              </button>
             </motion.div>
+            
+            <motion.div
+              className="inline-flex items-center gap-3 bg-white/90 shadow-2xl backdrop-blur-lg px-8 py-4 rounded-full border border-white/20"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+            >
+              <MapPinIcon className="w-5 h-5 text-primary-600" />
+              <span className="font-semibold text-trust-700">{t('about.location')}</span>
+            </motion.div>
+          </motion.div>
+
+          {/* Elementos decorativos flotantes */}
+          <motion.div
+            className="bottom-10 left-10 absolute bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-xl"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.8 }}
+          >
+            <div className="flex items-center gap-3">
+              <div className="bg-green-500 rounded-full w-3 h-3 animate-pulse"></div>
+              <span className="font-medium text-white text-sm">Disponible ahora</span>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="top-1/2 right-10 absolute bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-xl"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            <div className="flex items-center gap-2">
+              <StarIcon className="w-4 h-4 text-yellow-400" />
+              <span className="font-medium text-white text-sm">5.0 ★★★★★</span>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Company Description */}
-      <section className="bg-white/50 backdrop-blur-sm section-padding">
+      <section className="bg-gradient-to-b from-trust-50/30 to-white section-padding">
         <div className="container-max">
-          <motion.div 
-            className="mx-auto max-w-4xl"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-center glass-card">
-              <motion.div 
-                className="mb-6 text-6xl"
-                animate={{ rotate: [0, 10, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-              >
-                🏠
-              </motion.div>
-              
-              <h2 className="mb-8 font-bold text-3xl md:text-4xl">
-                <span className="gradient-text">Nuestra Historia</span>
+          <div className="mx-auto max-w-6xl">
+            
+            {/* Opening Section */}
+            <motion.div 
+              className="mb-24 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="mb-6 font-display font-medium text-3xl md:text-4xl text-trust-800 tracking-wide">
+                {t('about.historyTitle')}
               </h2>
-              
-              <div className="space-y-6 text-trust-600 text-lg leading-relaxed">
-                <p>
-                  <strong className="text-primary-700">Bienestar y Cuidado en el Hogar</strong> es una iniciativa 
-                  nacida del amor y la dedicación hacia nuestros adultos mayores. Entendemos que cada persona 
-                  merece envejecer con dignidad, respeto y cariño en la comodidad de su propio hogar.
-                </p>
-                
-                <p>
-                  Nuestro enfoque se centra en brindar un <strong className="text-primary-700">cuidado personalizado</strong> 
-                  que respeta la individualidad, las preferencias y los hábitos de cada persona. No solo nos enfocamos 
-                  en las necesidades físicas, sino también en el bienestar emocional y social.
-                </p>
-                
-                <p>
-                  Creemos firmemente que el hogar es el lugar donde las personas se sienten más seguras y cómodas. 
-                  Por eso, nuestra misión es hacer posible que puedan permanecer en su entorno familiar, 
-                  manteniendo su independencia con el apoyo necesario.
-                </p>
+              <div className="flex justify-center items-center gap-3">
+                <div className="bg-gradient-to-r from-primary-400 to-primary-600 rounded-full w-12 h-0.5"></div>
+                <div className="bg-primary-500 rounded-full w-1.5 h-1.5"></div>
+                <div className="bg-gradient-to-r from-primary-600 to-primary-400 rounded-full w-12 h-0.5"></div>
               </div>
+            </motion.div>
+
+            {/* Main Content Grid */}
+            <div className="gap-20 grid grid-cols-1 lg:grid-cols-5">
+              
+              {/* Main Content Column */}
+              <div className="lg:col-span-3 space-y-16">
+                
+                {/* First Paragraph - Featured */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <p className="font-sans text-xl md:text-2xl text-trust-600 leading-relaxed first-letter:font-display first-letter:text-5xl first-letter:font-semibold first-letter:text-primary-600 first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:leading-none">
+                    {t('about.historyContent')[0]}
+                  </p>
+                </motion.div>
+
+                {/* Second and Third Paragraphs */}
+                <div className="space-y-12">
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <p className="font-sans text-lg text-trust-600 leading-relaxed">
+                      {t('about.historyContent')[1]}
+                    </p>
+                  </motion.div>
+
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    viewport={{ once: true }}
+                  >
+                    <p className="font-sans text-lg text-trust-600 leading-relaxed">
+                      {t('about.historyContent')[2]}
+                    </p>
+                  </motion.div>
+                </div>
+
+              </div>
+
+              {/* Sidebar */}
+              <div className="lg:col-span-2">
+                <motion.div 
+                  className="lg:sticky lg:top-24 space-y-8"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  
+                  {/* Mission Card */}
+                  <div className="bg-white shadow-sm hover:shadow-md border border-trust-100 p-8 rounded-lg transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-gradient-to-br from-primary-500 to-primary-600 rounded-full w-3 h-3"></div>
+                      <h3 className="font-display font-semibold text-primary-800 text-lg">Nuestra Esencia</h3>
+                    </div>
+                    <p className="font-sans text-trust-600 leading-relaxed">
+                      Cuidado personalizado y profesional que mejora la calidad de vida de nuestros usuarios y sus familias.
+                    </p>
+                  </div>
+
+                  {/* Values Card */}
+                  <div className="bg-gradient-to-br from-primary-50/50 to-secondary-50/30 border border-primary-100 p-8 rounded-lg">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-full w-3 h-3"></div>
+                      <h3 className="font-display font-semibold text-secondary-800 text-lg">Nuestros Valores</h3>
+                    </div>
+                    <div className="space-y-2 font-sans text-trust-600 text-sm">
+                      <div className="flex items-center gap-2">
+                        <div className="bg-primary-400 rounded-full w-1 h-1"></div>
+                        <span>Compromiso y dedicación</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="bg-primary-400 rounded-full w-1 h-1"></div>
+                        <span>Profesionalismo constante</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="bg-primary-400 rounded-full w-1 h-1"></div>
+                        <span>Calidez humana genuina</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </motion.div>
+              </div>
+
             </div>
-          </motion.div>
+
+            {/* Bottom Section */}
+            <motion.div 
+              className="mt-24 pt-12 border-t border-trust-150"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-center">
+                <p className="mb-4 font-display font-medium text-trust-700 text-lg">
+                  Comprometidos con la excelencia desde nuestros inicios
+                </p>
+                <div className="flex justify-center items-center gap-6 font-sans text-trust-500 text-sm">
+                  <span className="flex items-center gap-2">
+                    <div className="bg-primary-500 rounded-full w-2 h-2"></div>
+                    Fundada con propósito
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <div className="bg-secondary-500 rounded-full w-2 h-2"></div>
+                    Creciendo juntos
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
@@ -147,10 +343,10 @@ export default function AboutPage() {
             className="mb-16 text-center"
           >
             <h2 className="mb-6 font-bold text-3xl md:text-4xl">
-              <span className="gradient-text">Nuestros Principios</span>
+              <span className="gradient-text">{t('about.principles.title')}</span>
             </h2>
             <p className="mx-auto max-w-2xl text-trust-600 text-xl">
-              Los valores que guían cada uno de nuestros cuidados
+              {t('about.principles.description')}
             </p>
           </motion.div>
 
@@ -205,10 +401,10 @@ export default function AboutPage() {
           >
             <div className="mb-12 text-center">
               <h2 className="mb-6 font-bold text-3xl md:text-4xl">
-                <span className="gradient-text">Conoce a Nuestra Fundadora</span>
+                <span className="gradient-text">{t('about.founder.title')}</span>
               </h2>
               <p className="text-trust-600 text-xl">
-                La visión y el corazón detrás de nuestra misión
+                {t('about.founder.subtitle')}
               </p>
             </div>
 
@@ -280,10 +476,10 @@ export default function AboutPage() {
             className="mb-16 text-center"
           >
             <h2 className="mb-6 font-bold text-3xl md:text-4xl">
-              <span className="gradient-text">Nuestra Filosofía</span>
+              <span className="gradient-text">{t('about.philosophy.title')}</span>
             </h2>
             <p className="mx-auto max-w-2xl text-trust-600 text-xl">
-              Los pilares que definen nuestro compromiso
+              {t('about.philosophy.subtitle')}
             </p>
           </motion.div>
 
@@ -309,13 +505,11 @@ export default function AboutPage() {
               </div>
               
               <h3 className="mb-6 font-bold text-2xl gradient-text">
-                Nuestra Misión
+                {t('about.mission.title')}
               </h3>
               
               <p className="text-trust-600 text-lg leading-relaxed">
-                Brindar servicios de cuidado y acompañamiento de calidad a personas mayores, 
-                promoviendo su bienestar integral y autonomía en la comodidad de su hogar, 
-                con un enfoque humano, respetuoso y personalizado.
+                {t('about.mission.content')}
               </p>
             </motion.div>
 
@@ -340,13 +534,11 @@ export default function AboutPage() {
               </div>
               
               <h3 className="mb-6 font-bold text-2xl gradient-text">
-                Nuestra Visión
+                {t('about.vision.title')}
               </h3>
               
               <p className="text-trust-600 text-lg leading-relaxed">
-                Ser la empresa líder en servicios de cuidado domiciliario para personas mayores, 
-                reconocida por la excelencia en nuestro trato humano y la confianza de las familias 
-                que nos eligen para el cuidado de sus seres queridos.
+                {t('about.vision.content')}
               </p>
             </motion.div>
           </div>
@@ -382,36 +574,33 @@ export default function AboutPage() {
               
               <h2 className="text-shadow mb-8 font-bold text-3xl md:text-5xl">
                 <span className="bg-clip-text bg-gradient-to-r from-white via-primary-100 to-white text-transparent">
-                  Un Cuidado que Trasciende
+                  {t('about.finalMessage.title')}
                 </span>
               </h2>
               
               <div className="space-y-6 mb-10 text-lg md:text-xl leading-relaxed">
                 <p className="text-primary-100">
-                  En <strong className="text-white">Bienestar y Cuidado en el Hogar</strong>, 
-                  entendemos que cada persona mayor tiene una historia única, llena de sabiduría 
-                  y experiencias invaluables.
+                  {t('about.finalMessage.content')[0]}
                 </p>
                 
                 <p className="text-primary-50">
-                  Nuestro compromiso va más allá del cuidado básico: creamos lazos de confianza, 
-                  ofrecemos compañía genuina y honramos la dignidad de cada persona que atendemos.
+                  {t('about.finalMessage.content')[1]}
                 </p>
                 
                 <p className="font-medium text-white">
-                  Porque creemos que el amor y el respeto son la mejor medicina para el alma.
+                  {t('about.finalMessage.content')[2]}
                 </p>
               </div>
               
               <div className="flex flex-wrap justify-center gap-4 mt-8">
                 <div className="bg-white/20 backdrop-blur-sm px-6 py-3 border border-white/30 rounded-full floating-element">
-                  <span className="font-medium text-white">❤️ Cuidado con Amor</span>
+                  <span className="font-medium text-white">{t('about.finalMessage.badges')[0]}</span>
                 </div>
                 <div className="bg-white/20 backdrop-blur-sm px-6 py-3 border border-white/30 rounded-full floating-element-delayed">
-                  <span className="font-medium text-white">🤝 Compañía Genuina</span>
+                  <span className="font-medium text-white">{t('about.finalMessage.badges')[1]}</span>
                 </div>
                 <div className="bg-white/20 backdrop-blur-sm px-6 py-3 border border-white/30 rounded-full floating-element">
-                  <span className="font-medium text-white">🏡 Comodidad del Hogar</span>
+                  <span className="font-medium text-white">{t('about.finalMessage.badges')[2]}</span>
                 </div>
               </div>
             </div>
@@ -447,12 +636,11 @@ export default function AboutPage() {
               </motion.div>
               
               <h2 className="text-shadow mb-8 font-bold text-3xl md:text-5xl">
-                <span className="gradient-text">¿Necesitas Nuestros Servicios?</span>
+                <span className="gradient-text">{t('about.cta.title')}</span>
               </h2>
               
               <p className="mx-auto mb-10 max-w-2xl text-trust-600 text-lg md:text-xl leading-relaxed">
-                Estamos aquí para ayudarte. Contáctanos hoy mismo y descubre cómo podemos 
-                mejorar la calidad de vida de tu ser querido con nuestro cuidado especializado.
+                {t('about.cta.description')}
               </p>
               
               <div className="space-y-6">
@@ -467,7 +655,7 @@ export default function AboutPage() {
                     className="group inline-flex items-center gap-3 bg-gradient-to-r from-green-500 hover:from-green-600 to-green-600 hover:to-green-700 shadow-xl hover:shadow-2xl px-8 py-4 rounded-2xl font-semibold text-white text-lg transition-all animate-pulse-glow duration-300"
                   >
                     <PhoneIcon className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                    <span>Llamar Ahora</span>
+                    <span>{t('about.cta.callButton')}</span>
                   </a>
                 </motion.div>
                 
@@ -476,15 +664,15 @@ export default function AboutPage() {
                     <PhoneIcon className="w-5 h-5 text-primary-600" />
                     <span className="font-bold text-xl gradient-text">(786) 752-7884</span>
                   </div>
-                  <p className="mt-2 text-trust-500 text-sm">Disponible 24/7 para emergencias</p>
+                  <p className="mt-2 text-trust-500 text-sm">{t('about.cta.availability')}</p>
                 </div>
               </div>
               
               <div className="mt-8 pt-8 border-primary-200/50 border-t">
                 <p className="text-trust-500 text-sm">
-                  <strong className="text-primary-700">Evaluación gratuita</strong> • 
-                  <strong className="ml-2 text-primary-700">Consulta sin compromiso</strong> • 
-                  <strong className="ml-2 text-primary-700">Atención personalizada</strong>
+                  <strong className="text-primary-700">{t('about.cta.services')[0]}</strong> • 
+                  <strong className="ml-2 text-primary-700">{t('about.cta.services')[1]}</strong> • 
+                  <strong className="ml-2 text-primary-700">{t('about.cta.services')[2]}</strong>
                 </p>
               </div>
             </div>

@@ -107,7 +107,7 @@ export default function BenefitsSection() {
           className="mx-auto max-w-2xl text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.1 }}
           viewport={{ once: true }}
         >
           <h2 className="text-shadow mb-4 font-bold text-3xl sm:text-4xl tracking-tight">
@@ -137,7 +137,7 @@ export default function BenefitsSection() {
                   className="group relative hover:shadow-2xl overflow-hidden text-center transition-all duration-500 glass-card"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  transition={{ duration: 0.1}}
                   viewport={{ once: true }}
                   whileHover={{ y: -12, scale: 1.03 }}
                 >

@@ -1,4 +1,6 @@
-import type { Metadata } from 'next'
+'use client'
+
+import { useLanguage } from '@/contexts/LanguageContext'
 import { 
   PhoneIcon,
   EnvelopeIcon,
@@ -13,117 +15,180 @@ import {
   DocumentTextIcon
 } from '@heroicons/react/24/outline'
 
-export const metadata: Metadata = {
-  title: 'Contacto - Bienestar y Cuidado en el Hogar | Evaluación Gratuita 24/7',
-  description: 'Contáctanos para una evaluación gratuita de acompañamiento en el hogar. Disponible 24/7 para emergencias. Llama al (786) 752-7884 o solicita información sin compromiso.',
-}
+const getQuickStats = (t: any) => [
+  { 
+    icon: ClockIcon,
+    label: t('contact.quickStats.responseGuaranteed'), 
+    value: t('contact.quickStats.responseTime') 
+  },
+  { 
+    icon: ShieldCheckIcon,
+    label: t('contact.quickStats.availability'), 
+    value: t('contact.quickStats.allDay') 
+  },
+  { 
+    icon: CheckCircleIcon,
+    label: t('contact.quickStats.freeEvaluation'), 
+    value: t('contact.quickStats.oneHundredPercent') 
+  },
+  { 
+    icon: UserGroupIcon,
+    label: t('contact.quickStats.familiesServed'), 
+    value: t('contact.quickStats.familiesCount') 
+  }
+];
 
-const contactMethods = [
+const getContactMethods = (t: any) => [
   {
     id: 'emergency',
-    name: 'Línea de Emergencia',
-    description: 'Disponible 24/7 para situaciones urgentes',
+    name: t('contact.emergencyLine'),
+    description: t('contact.emergencyDesc'),
     icon: PhoneIcon,
     contact: '(786) 752-7884',
     action: 'tel:+17867527884',
-    actionText: 'Llamar Ahora',
+    actionText: t('contact.callNow'),
     primary: true,
-    available: '24 horas • 7 días',
-    badge: 'URGENTE'
+    available: t('contact.available24'),
+    badge: t('contact.urgentBadge')
   },
   {
     id: 'whatsapp',
-    name: 'WhatsApp Business',
-    description: 'Chat rápido con respuesta inmediata',
+    name: t('contact.whatsappBusiness'),
+    description: t('contact.whatsappDesc'),
     icon: ChatBubbleLeftRightIcon,
     contact: '(786) 752-7884',
     action: 'https://wa.me/17867527884',
-    actionText: 'Enviar Mensaje',
+    actionText: t('contact.sendMessage'),
     primary: false,
-    available: 'Lun-Dom: 7AM-10PM',
-    badge: 'POPULAR'
+    available: t('contact.availableWeek'),
+    badge: t('contact.popularBadge')
   },
   {
     id: 'email',
-    name: 'Email Corporativo',
-    description: 'Para consultas detalladas y documentación',
+    name: t('contact.emailCorporate'),
+    description: t('contact.emailDesc'),
     icon: EnvelopeIcon,
     contact: 'info@bienestarhogar.com',
     action: 'mailto:info@bienestarhogar.com',
-    actionText: 'Escribir Email',
+    actionText: t('contact.sendEmail'),
     primary: false,
-    available: 'Respuesta < 2 horas',
-    badge: null
+    available: t('contact.availableBusiness'),
+    badge: t('contact.officialBadge')
   }
 ]
 
-const officeInfo = {
-  name: 'Oficina Principal Florida',
-  address: 'Servicio a Domicilio en Toda Florida',
-  city: 'Miami-Dade, Broward, Palm Beach',
-  phone: '(786) 752-7884',
-  email: 'info@bienestarhogar.com',
-  hours: {
-    business: 'Lunes - Viernes: 8:00 AM - 8:00 PM',
-    weekend: 'Sábados y Domingos: 9:00 AM - 6:00 PM',
-    emergency: 'Línea de emergencia: 24/7'
+const getFormFields = (t: any) => [
+  {
+    id: 'nombre',
+    label: t('contact.form.fields.name'),
+    type: 'text' as const,
+    placeholder: t('contact.form.placeholders.name'),
+    required: true
   },
-  services: ['Evaluaciones Domiciliarias', 'Consultas Virtuales', 'Servicios de Emergencia', 'Seguimiento Continuo']
-}
-
-const quickStats = [
-  { label: 'Respuesta Garantizada', value: '< 2 Horas', icon: ClockIcon },
-  { label: 'Disponibilidad', value: '24/7', icon: ShieldCheckIcon },
-  { label: 'Evaluación Gratuita', value: '100%', icon: HeartIcon },
-  { label: 'Familias Atendidas', value: '100+', icon: UserGroupIcon }
+  {
+    id: 'correo',
+    label: t('contact.form.fields.email'),
+    type: 'email' as const,
+    placeholder: t('contact.form.placeholders.email'),
+    required: true
+  },
+  {
+    id: 'telefono',
+    label: t('contact.form.fields.phone'),
+    type: 'tel' as const,
+    placeholder: t('contact.form.placeholders.phone'),
+    required: true
+  },
+  {
+    id: 'tipoServicio',
+    label: t('contact.form.fields.serviceType'),
+    type: 'select' as const,
+    options: t('contact.form.options.serviceTypes'),
+    required: true
+  },
+  {
+    id: 'urgencia',
+    label: t('contact.form.fields.urgency'),
+    type: 'select' as const,
+    options: t('contact.form.options.urgencyLevels'),
+    required: true
+  },
+  {
+    id: 'mensaje',
+    label: t('contact.form.fields.message'),
+    type: 'textarea' as const,
+    placeholder: t('contact.form.placeholders.message'),
+    required: true,
+    rows: 4
+  }
 ]
 
+const getOfficeInfo = (t: any) => ({
+  name: t('contact.office.name'),
+  address: t('contact.office.address'),
+  phone: t('contact.office.phone'),
+  email: t('contact.office.email'),
+  city: t('contact.office.city'),
+  hours: {
+    business: t('contact.office.businessHours'),
+    weekend: t('contact.office.weekendHours'),
+    emergency: t('contact.office.emergencyHours')
+  },
+  services: t('contact.office.services')
+})
+
 export default function ContactPage() {
+  const { t } = useLanguage()
+  const contactMethods = getContactMethods(t)
+  const formFields = getFormFields(t)
+  const quickStats = getQuickStats(t)
+  const officeInfo = getOfficeInfo(t)
+  
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-primary-50/20">
+    <div className="bg-gradient-to-br from-slate-50 via-white to-primary-50/20 min-h-screen">
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 py-24 sm:py-32 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 py-24 sm:py-32 overflow-hidden text-white">
+        {/* Background Image */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-secondary-300/10 rounded-full blur-3xl"></div>
+          <img 
+            src="/hero-contacto.svg" 
+            alt="Contacto y comunicación" 
+            className="object-cover w-full h-full opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/75 via-primary-700/65 to-secondary-700/75"></div>
+        </div>
+        <div className="absolute inset-0">
+          <div className="top-10 left-10 absolute bg-white/10 blur-3xl rounded-full w-72 h-72"></div>
+          <div className="right-10 bottom-10 absolute bg-secondary-300/10 blur-3xl rounded-full w-96 h-96"></div>
         </div>
         
         <div className="relative mx-auto px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 border border-white/30 rounded-full text-white/90 text-sm mb-6">
-              <HeartIcon className="w-4 h-4 mr-2" />
-              Contáctanos Hoy
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-8">
-              Estamos Aquí para{' '}
-              <span className="bg-gradient-to-r from-white via-primary-100 to-white bg-clip-text text-transparent">
-                Ayudarte
-              </span>
+            <h1 className="mb-8 font-bold text-4xl md:text-6xl">
+              {t('contact.heroSubtitle')}{' '}
             </h1>
             
-            <p className="text-xl md:text-2xl text-primary-100 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Evaluación gratuita, disponibilidad 24/7 para emergencias y respuesta inmediata 
-              a todas tus consultas sobre el cuidado de tu ser querido.
+            <p className="mx-auto mb-12 max-w-3xl text-primary-100 text-xl md:text-2xl leading-relaxed">
+              {t('contact.heroDescription')}
             </p>
             
             {/* Emergency CTA */}
-            <div className="bg-red-500/20 backdrop-blur-lg border border-red-300/30 p-8 rounded-3xl mb-8 max-w-2xl mx-auto">
-              <div className="flex items-center justify-center mb-4">
-                <div className="bg-red-500 p-3 rounded-full animate-pulse mr-4">
+            <div className="bg-red-500/20 backdrop-blur-lg mx-auto mb-8 p-8 border border-red-300/30 rounded-3xl max-w-2xl">
+              <div className="flex justify-center items-center mb-4">
+                <div className="bg-red-500 mr-4 p-3 rounded-full animate-pulse">
                   <PhoneIcon className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">¿Necesitas Ayuda Urgente?</h3>
-                  <p className="text-red-100">Disponible las 24 horas del día</p>
+                  <h3 className="font-bold text-white text-xl">{t('contact.needUrgentHelp')}</h3>
+                  <p className="text-red-100">{t('contact.available24Hours')}</p>
                 </div>
               </div>
               <a
                 href="tel:+17867527884"
-                className="inline-flex items-center bg-red-600 hover:bg-red-700 shadow-lg hover:shadow-xl px-8 py-4 rounded-2xl font-semibold text-white text-lg transition-all duration-300 group"
+                className="group inline-flex items-center bg-red-600 hover:bg-red-700 shadow-lg hover:shadow-xl px-8 py-4 rounded-2xl font-semibold text-white text-lg transition-all duration-300"
               >
-                <PhoneIcon className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                <PhoneIcon className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
                 Llamar: (786) 752-7884
               </a>
             </div>
@@ -132,18 +197,18 @@ export default function ContactPage() {
       </section>
 
       {/* Quick Stats */}
-      <section className="py-16 -mt-16 relative z-10">
+      <section className="z-10 relative -mt-16 py-16">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="bg-white/80 backdrop-blur-lg border border-white/50 shadow-2xl p-8 rounded-3xl max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="bg-white/80 shadow-2xl backdrop-blur-lg mx-auto p-8 border border-white/50 rounded-3xl max-w-5xl">
+            <div className="gap-8 grid grid-cols-2 lg:grid-cols-4">
               {quickStats.map((stat, index) => {
                 const IconComponent = stat.icon
                 return (
-                  <div key={index} className="text-center group">
-                    <div className="bg-gradient-to-br from-primary-500 to-secondary-500 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div key={index} className="group text-center">
+                    <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mx-auto mb-4 rounded-2xl w-16 h-16 group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    <div className="text-3xl font-bold text-trust-900 mb-1">{stat.value}</div>
+                    <div className="mb-1 font-bold text-trust-900 text-3xl">{stat.value}</div>
                     <div className="text-trust-600 text-sm">{stat.label}</div>
                   </div>
                 )
@@ -156,16 +221,16 @@ export default function ContactPage() {
       {/* Contact Methods */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-trust-900 mb-6">
-              <span className="gradient-text">Formas de</span> Contacto
+          <div className="mb-16 text-center">
+            <h2 className="mb-6 font-bold text-trust-900 text-3xl md:text-4xl">
+              <span className="gradient-text">{t('contact.contactMethods.title1')}</span> {t('contact.contactMethods.title2')}
             </h2>
-            <p className="text-xl text-trust-600 max-w-3xl mx-auto">
-              Múltiples opciones de comunicación para brindarte la mejor atención y respuesta rápida
+            <p className="mx-auto max-w-3xl text-trust-600 text-xl">
+              {t('contact.contactMethods.description')}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="gap-8 grid grid-cols-1 md:grid-cols-3 mx-auto max-w-5xl">
             {contactMethods.map((method) => {
               const IconComponent = method.icon
               return (
@@ -198,12 +263,12 @@ export default function ContactPage() {
                       </div>
                     </div>
                     
-                    <p className="text-trust-600 mb-6 leading-relaxed">
+                    <p className="mb-6 text-trust-600 leading-relaxed">
                       {method.description}
                     </p>
                     
                     <div className="mb-6">
-                      <div className="font-bold text-primary-600 text-lg mb-2">
+                      <div className="mb-2 font-bold text-primary-600 text-lg">
                         {method.contact}
                       </div>
                       <div className="text-trust-500 text-sm">
@@ -230,26 +295,26 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-primary-50/30 to-secondary-50/20">
+      <section className="bg-gradient-to-br from-primary-50/30 to-secondary-50/20 py-16 sm:py-20">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-trust-900 mb-6">
-                <span className="gradient-text">Solicita tu</span> Evaluación Gratuita
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 font-bold text-trust-900 text-3xl md:text-4xl">
+                <span className="gradient-text">{t('contact.requestEvaluation.title1')}</span> {t('contact.requestEvaluation.title2')}
               </h2>
-              <p className="text-xl text-trust-600 max-w-2xl mx-auto">
-                Completa el formulario y nos pondremos en contacto contigo en menos de 2 horas
+              <p className="mx-auto max-w-2xl text-trust-600 text-xl">
+                {t('contact.requestEvaluation.description')}
               </p>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-lg border border-white/50 shadow-2xl p-8 lg:p-12 rounded-3xl">
+            <div className="bg-white/80 shadow-2xl backdrop-blur-lg p-8 lg:p-12 border border-white/50 rounded-3xl">
               <form className="space-y-8">
                 {/* Personal Information */}
                 <div>
-                  <h3 className="text-xl font-bold text-trust-900 mb-6">Información Personal</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <h3 className="mb-6 font-bold text-trust-900 text-xl">{t('contact.requestEvaluation.personalInfo')}</h3>
+                  <div className="gap-6 grid grid-cols-1 md:grid-cols-2">
                     <div>
-                      <label htmlFor="firstName" className="block font-medium text-trust-900 text-sm mb-3">
+                      <label htmlFor="firstName" className="block mb-3 font-medium text-trust-900 text-sm">
                         Nombre *
                       </label>
                       <input
@@ -257,13 +322,13 @@ export default function ContactPage() {
                         name="firstName"
                         id="firstName"
                         required
-                        className="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
+                        className="px-4 py-4 border border-gray-300 focus:border-primary-500 rounded-2xl focus:ring-2 focus:ring-primary-500/20 w-full transition-all duration-300"
                         placeholder="Tu nombre"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="lastName" className="block font-medium text-trust-900 text-sm mb-3">
+                      <label htmlFor="lastName" className="block mb-3 font-medium text-trust-900 text-sm">
                         Apellido *
                       </label>
                       <input
@@ -271,27 +336,27 @@ export default function ContactPage() {
                         name="lastName"
                         id="lastName"
                         required
-                        className="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
+                        className="px-4 py-4 border border-gray-300 focus:border-primary-500 rounded-2xl focus:ring-2 focus:ring-primary-500/20 w-full transition-all duration-300"
                         placeholder="Tu apellido"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block font-medium text-trust-900 text-sm mb-3">
-                        Teléfono *
+                      <label htmlFor="phone" className="block mb-3 font-medium text-trust-900 text-sm">
+                        {t('contact.form.labels.phoneRequired')}
                       </label>
                       <input
                         type="tel"
                         name="phone"
                         id="phone"
                         required
-                        className="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
+                        className="px-4 py-4 border border-gray-300 focus:border-primary-500 rounded-2xl focus:ring-2 focus:ring-primary-500/20 w-full transition-all duration-300"
                         placeholder="(786) 752-7884"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block font-medium text-trust-900 text-sm mb-3">
+                      <label htmlFor="email" className="block mb-3 font-medium text-trust-900 text-sm">
                         Email *
                       </label>
                       <input
@@ -299,7 +364,7 @@ export default function ContactPage() {
                         name="email"
                         id="email"
                         required
-                        className="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
+                        className="px-4 py-4 border border-gray-300 focus:border-primary-500 rounded-2xl focus:ring-2 focus:ring-primary-500/20 w-full transition-all duration-300"
                         placeholder="tu@email.com"
                       />
                     </div>
@@ -308,16 +373,16 @@ export default function ContactPage() {
 
                 {/* Care Information */}
                 <div>
-                  <h3 className="text-xl font-bold text-trust-900 mb-6">Información del Cuidado</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <h3 className="mb-6 font-bold text-trust-900 text-xl">{t('contact.form.labels.careInfo')}</h3>
+                  <div className="gap-6 grid grid-cols-1 md:grid-cols-2">
                     <div>
-                      <label htmlFor="relationship" className="block font-medium text-trust-900 text-sm mb-3">
-                        Relación con la persona a cuidar
+                      <label htmlFor="relationship" className="block mb-3 font-medium text-trust-900 text-sm">
+                        {t('contact.form.labels.relationshipLabel')}
                       </label>
                       <select
                         name="relationship"
                         id="relationship"
-                        className="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
+                        className="px-4 py-4 border border-gray-300 focus:border-primary-500 rounded-2xl focus:ring-2 focus:ring-primary-500/20 w-full transition-all duration-300"
                       >
                         <option>Selecciona una opción</option>
                         <option>Hijo/a</option>
@@ -331,19 +396,17 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="urgency" className="block font-medium text-trust-900 text-sm mb-3">
-                        ¿Cuándo necesitas el servicio?
+                      <label htmlFor="urgency" className="block mb-3 font-medium text-trust-900 text-sm">
+                        {t('contact.serviceQuestions.whenNeeded')}
                       </label>
                       <select
                         name="urgency"
                         id="urgency"
-                        className="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
+                        className="px-4 py-4 border border-gray-300 focus:border-primary-500 rounded-2xl focus:ring-2 focus:ring-primary-500/20 w-full transition-all duration-300"
                       >
-                        <option>Inmediatamente (24-48 horas)</option>
-                        <option>Esta semana</option>
-                        <option>En las próximas 2 semanas</option>
-                        <option>El próximo mes</option>
-                        <option>Estoy investigando opciones</option>
+                        {t('contact.form.options.urgencyLevels').map((option: string, index: number) => (
+                          <option key={index} value={option}>{option}</option>
+                        ))}
                       </select>
                     </div>
                   </div>
@@ -351,10 +414,10 @@ export default function ContactPage() {
 
                 {/* Services of Interest */}
                 <div>
-                  <label className="block font-medium text-trust-900 text-sm mb-6">
-                    Servicios de Interés (selecciona todos los que apliquen)
+                  <label className="block mb-6 font-medium text-trust-900 text-sm">
+                    {t('contact.serviceQuestions.servicesInterest')}
                   </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="gap-4 grid grid-cols-1 sm:grid-cols-2">
                     {[
                       'Compañía y apoyo emocional',
                       'Asistencia personal diaria',
@@ -365,10 +428,10 @@ export default function ContactPage() {
                       'Apoyo post-hospitalario',
                       'Acompañamiento especializado'
                     ].map((service) => (
-                      <label key={service} className="flex items-center p-4 bg-gray-50 hover:bg-primary-50 rounded-xl transition-colors cursor-pointer">
+                      <label key={service} className="flex items-center bg-gray-50 hover:bg-primary-50 p-4 rounded-xl transition-colors cursor-pointer">
                         <input
                           type="checkbox"
-                          className="w-5 h-5 text-primary-600 border-gray-300 rounded focus:ring-2 focus:ring-primary-500"
+                          className="border-gray-300 rounded focus:ring-2 focus:ring-primary-500 w-5 h-5 text-primary-600"
                         />
                         <span className="ml-3 text-trust-700">{service}</span>
                       </label>
@@ -378,32 +441,32 @@ export default function ContactPage() {
 
                 {/* Additional Information */}
                 <div>
-                  <label htmlFor="message" className="block font-medium text-trust-900 text-sm mb-3">
-                    Cuéntanos más sobre tus necesidades
+                  <label htmlFor="message" className="block mb-3 font-medium text-trust-900 text-sm">
+                    {t('contact.form.labels.tellUsMore')}
                   </label>
                   <textarea
                     name="message"
                     id="message"
                     rows={5}
-                    className="w-full px-4 py-4 border border-gray-300 rounded-2xl focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
-                    placeholder="Describe la situación actual, necesidades específicas, horarios preferidos, ubicación en Florida, etc..."
+                    className="px-4 py-4 border border-gray-300 focus:border-primary-500 rounded-2xl focus:ring-2 focus:ring-primary-500/20 w-full transition-all duration-300"
+                    placeholder={t('contact.form.labels.placeholderDetails')}
                   />
                 </div>
 
                 {/* Privacy Notice */}
-                <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-2xl">
+                <div className="bg-blue-50 p-6 border-blue-400 border-l-4 rounded-r-2xl">
                   <div className="flex items-start">
                     <input
                       type="checkbox"
                       id="privacy"
                       required
-                      className="mt-1 w-5 h-5 text-primary-600 border-gray-300 rounded focus:ring-2 focus:ring-primary-500"
+                      className="mt-1 border-gray-300 rounded focus:ring-2 focus:ring-primary-500 w-5 h-5 text-primary-600"
                     />
                     <label htmlFor="privacy" className="ml-3 text-blue-800 text-sm leading-relaxed">
-                      <span className="font-semibold">Acepto recibir información</span> sobre servicios de acompañamiento no médico. 
-                      Entiendo que puedo cancelar estas comunicaciones en cualquier momento.{' '}
+                      <span className="font-semibold">{t('contact.serviceQuestions.acceptInfo')}</span> {t('contact.serviceQuestions.aboutServices')} 
+                      {t('contact.form.labels.acceptCommunications')}{' '}
                       <a href="/privacidad" className="text-blue-600 hover:text-blue-700 underline">
-                        Ver política de privacidad
+                        {t('contact.form.labels.privacyPolicy')}
                       </a>
                     </label>
                   </div>
@@ -413,24 +476,24 @@ export default function ContactPage() {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="inline-flex items-center bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 shadow-lg hover:shadow-xl px-12 py-5 rounded-2xl font-bold text-white text-lg transition-all duration-300 group"
+                    className="group inline-flex items-center bg-gradient-to-r from-primary-600 hover:from-primary-700 to-secondary-600 hover:to-secondary-700 shadow-lg hover:shadow-xl px-12 py-5 rounded-2xl font-bold text-white text-lg transition-all duration-300"
                   >
-                    <DocumentTextIcon className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />
-                    Solicitar Evaluación Gratuita
+                    <DocumentTextIcon className="mr-3 w-6 h-6 group-hover:scale-110 transition-transform" />
+                    {t('contact.requestEvaluation.submitButton')}
                   </button>
                   
-                  <div className="mt-6 flex items-center justify-center space-x-6 text-sm text-trust-600">
+                  <div className="flex justify-center items-center space-x-6 mt-6 text-trust-600 text-sm">
                     <div className="flex items-center">
-                      <CheckCircleIcon className="w-5 h-5 text-green-500 mr-2" />
-                      Evaluación 100% gratuita
+                      <CheckCircleIcon className="mr-2 w-5 h-5 text-green-500" />
+                      {t('contact.requestEvaluation.freeEvaluation')}
                     </div>
                     <div className="flex items-center">
-                      <CheckCircleIcon className="w-5 h-5 text-green-500 mr-2" />
-                      Sin compromiso
+                      <CheckCircleIcon className="mr-2 w-5 h-5 text-green-500" />
+                      {t('contact.requestEvaluation.noCommitment')}
                     </div>
                     <div className="flex items-center">
-                      <CheckCircleIcon className="w-5 h-5 text-green-500 mr-2" />
-                      Respuesta en 2 horas
+                      <CheckCircleIcon className="mr-2 w-5 h-5 text-green-500" />
+                      {t('contact.responseTime')}
                     </div>
                   </div>
                 </div>
@@ -443,35 +506,35 @@ export default function ContactPage() {
       {/* Office Information */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-trust-900 mb-6">
-              <span className="gradient-text">Nuestra</span> Ubicación
+          <div className="mb-16 text-center">
+            <h2 className="mb-6 font-bold text-trust-900 text-3xl md:text-4xl">
+              <span className="gradient-text">{t('contact.location.title1')}</span> {t('contact.location.title2')}
             </h2>
-            <p className="text-xl text-trust-600 max-w-2xl mx-auto">
-              Servicio profesional de acompañamiento a domicilio en toda Florida
+            <p className="mx-auto max-w-2xl text-trust-600 text-xl">
+              {t('contact.serviceQuestions.professionalService')}
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/80 backdrop-blur-lg border border-white/50 shadow-2xl p-8 lg:p-12 rounded-3xl">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="mx-auto max-w-4xl">
+            <div className="bg-white/80 shadow-2xl backdrop-blur-lg p-8 lg:p-12 border border-white/50 rounded-3xl">
+              <div className="gap-12 grid grid-cols-1 lg:grid-cols-2">
                 {/* Contact Information */}
                 <div>
                   <div className="flex items-center mb-8">
-                    <div className="bg-gradient-to-br from-primary-500 to-secondary-500 w-16 h-16 rounded-2xl flex items-center justify-center mr-4">
+                    <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 mr-4 rounded-2xl w-16 h-16">
                       <MapPinIcon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-trust-900">{officeInfo.name}</h3>
+                      <h3 className="font-bold text-trust-900 text-2xl">{officeInfo.name}</h3>
                       <p className="text-trust-600">{officeInfo.address}</p>
                     </div>
                   </div>
                   
                   <div className="space-y-6">
                     <div className="flex items-center">
-                      <PhoneIcon className="w-6 h-6 text-primary-600 mr-4" />
+                      <PhoneIcon className="mr-4 w-6 h-6 text-primary-600" />
                       <div>
-                        <div className="font-semibold text-trust-900">Teléfono</div>
+                        <div className="font-semibold text-trust-900">{t('contact.form.labels.phone')}</div>
                         <a href="tel:+17867527884" className="text-primary-600 hover:text-primary-700 text-lg">
                           {officeInfo.phone}
                         </a>
@@ -479,7 +542,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="flex items-center">
-                      <EnvelopeIcon className="w-6 h-6 text-primary-600 mr-4" />
+                      <EnvelopeIcon className="mr-4 w-6 h-6 text-primary-600" />
                       <div>
                         <div className="font-semibold text-trust-900">Email</div>
                         <a href={`mailto:${officeInfo.email}`} className="text-primary-600 hover:text-primary-700">
@@ -489,13 +552,13 @@ export default function ContactPage() {
                     </div>
 
                     <div className="flex items-start">
-                      <ClockIcon className="w-6 h-6 text-primary-600 mr-4 mt-1" />
+                      <ClockIcon className="mt-1 mr-4 w-6 h-6 text-primary-600" />
                       <div>
-                        <div className="font-semibold text-trust-900 mb-2">Horarios de Atención</div>
+                        <div className="mb-2 font-semibold text-trust-900">{t('contact.form.labels.scheduleTitle')}</div>
                         <div className="space-y-1 text-trust-600">
                           <p>{officeInfo.hours.business}</p>
                           <p>{officeInfo.hours.weekend}</p>
-                          <p className="text-red-600 font-semibold">{officeInfo.hours.emergency}</p>
+                          <p className="font-semibold text-red-600">{officeInfo.hours.emergency}</p>
                         </div>
                       </div>
                     </div>
@@ -504,24 +567,23 @@ export default function ContactPage() {
 
                 {/* Services */}
                 <div>
-                  <h4 className="text-xl font-bold text-trust-900 mb-6">Servicios Disponibles</h4>
+                  <h4 className="mb-6 font-bold text-trust-900 text-xl">{t('contact.serviceQuestions.availableServices')}</h4>
                   <div className="space-y-4">
                     {officeInfo.services.map((service, index) => (
-                      <div key={index} className="flex items-center p-4 bg-primary-50 rounded-xl">
-                        <CheckCircleIcon className="w-6 h-6 text-primary-600 mr-4 flex-shrink-0" />
-                        <span className="text-trust-700 font-medium">{service}</span>
+                      <div key={index} className="flex items-center bg-primary-50 p-4 rounded-xl">
+                        <CheckCircleIcon className="flex-shrink-0 mr-4 w-6 h-6 text-primary-600" />
+                        <span className="font-medium text-trust-700">{service}</span>
                       </div>
                     ))}
                   </div>
 
-                  <div className="mt-8 p-6 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl">
-                    <h5 className="font-bold text-trust-900 mb-3">Áreas de Cobertura</h5>
-                    <p className="text-trust-700 mb-4">{officeInfo.city}</p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-trust-600">
-                      <div>• Miami-Dade County</div>
-                      <div>• Broward County</div>
-                      <div>• Palm Beach County</div>
-                      <div>• Y áreas circundantes</div>
+                  <div className="bg-gradient-to-br from-primary-50 to-secondary-50 mt-8 p-6 rounded-2xl">
+                    <h5 className="mb-3 font-bold text-trust-900">{t('contact.office.coverageTitle')}</h5>
+                    <p className="mb-4 text-trust-700">{officeInfo.city}</p>
+                    <div className="gap-2 grid grid-cols-1 sm:grid-cols-2 text-trust-600 text-sm">
+                      {t('contact.office.coverageAreas').map((area: string, index: number) => (
+                        <div key={index}>• {area}</div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -532,66 +594,66 @@ export default function ContactPage() {
       </section>
 
       {/* Trust Indicators & Final CTA */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 text-white">
+      <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 py-24 sm:py-32 text-white">
         <div className="mx-auto px-6 lg:px-8 max-w-7xl">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl p-12 rounded-3xl">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="bg-white/10 shadow-2xl backdrop-blur-lg p-12 border border-white/20 rounded-3xl">
+              <h2 className="mb-6 font-bold text-3xl md:text-5xl">
                 ¿Listo para Comenzar?
               </h2>
               
-              <p className="text-xl text-primary-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+              <p className="mx-auto mb-10 max-w-2xl text-primary-100 text-xl leading-relaxed">
                 Más de 100 familias han confiado en nosotros. 
                 Únete a ellas y descubre la tranquilidad que tu familia merece.
               </p>
 
               {/* Trust indicators */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+              <div className="gap-6 grid grid-cols-1 sm:grid-cols-3 mb-12">
                 <div className="text-center">
-                  <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="flex justify-center items-center bg-white/20 mx-auto mb-4 rounded-full w-16 h-16">
                     <ShieldCheckIcon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="font-bold text-2xl mb-1">3+</div>
-                  <div className="text-primary-100 text-sm">Años de Experiencia</div>
+                  <div className="mb-1 font-bold text-2xl">3+</div>
+                  <div className="text-primary-100 text-sm">{t('contact.trustIndicators.yearsExperience')}</div>
                 </div>
                 
                 <div className="text-center">
-                  <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="flex justify-center items-center bg-white/20 mx-auto mb-4 rounded-full w-16 h-16">
                     <StarIcon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="font-bold text-2xl mb-1">4.9/5</div>
-                  <div className="text-primary-100 text-sm">Satisfacción Familiar</div>
+                  <div className="mb-1 font-bold text-2xl">4.9/5</div>
+                  <div className="text-primary-100 text-sm">{t('contact.trustIndicators.familySatisfaction')}</div>
                 </div>
                 
                 <div className="text-center">
-                  <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="flex justify-center items-center bg-white/20 mx-auto mb-4 rounded-full w-16 h-16">
                     <UserGroupIcon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="font-bold text-2xl mb-1">100+</div>
-                  <div className="text-primary-100 text-sm">Familias Atendidas</div>
+                  <div className="mb-1 font-bold text-2xl">100+</div>
+                  <div className="text-primary-100 text-sm">{t('contact.trustIndicators.familiesServed')}</div>
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <div className="flex sm:flex-row flex-col justify-center gap-4">
                 <a
                   href="tel:+17867527884"
-                  className="inline-flex items-center justify-center bg-white hover:bg-primary-50 shadow-lg hover:shadow-xl px-8 py-4 rounded-2xl font-semibold text-primary-600 text-lg transition-all duration-300 group"
+                  className="group inline-flex justify-center items-center bg-white hover:bg-primary-50 shadow-lg hover:shadow-xl px-8 py-4 rounded-2xl font-semibold text-primary-600 text-lg transition-all duration-300"
                 >
-                  <PhoneIcon className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                  Llamar: (786) 752-7884
+                  <PhoneIcon className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
+                  {t('contact.finalCTA.callLabel')} (786) 752-7884
                 </a>
                 
                 <a
                   href="https://wa.me/17867527884"
-                  className="inline-flex items-center justify-center bg-transparent hover:bg-white/10 border-2 border-white/30 hover:border-white/50 px-8 py-4 rounded-2xl font-semibold text-white text-lg transition-all duration-300"
+                  className="inline-flex justify-center items-center bg-transparent hover:bg-white/10 px-8 py-4 border-2 border-white/30 hover:border-white/50 rounded-2xl font-semibold text-white text-lg transition-all duration-300"
                 >
-                  <ChatBubbleLeftRightIcon className="w-5 h-5 mr-2" />
-                  WhatsApp
+                  <ChatBubbleLeftRightIcon className="mr-2 w-5 h-5" />
+                  {t('contact.finalCTA.whatsappLabel')}
                 </a>
               </div>
               
-              <div className="text-primary-100 text-sm mt-8">
-                <strong>Evaluación 100% gratuita</strong> • <strong>Sin compromiso</strong> • <strong>Disponible 24/7</strong>
+              <div className="mt-8 text-primary-100 text-sm">
+                {t('contact.finalCTA.footer')}
               </div>
             </div>
           </div>
