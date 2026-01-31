@@ -74,115 +74,153 @@ export default function AboutPage() {
           <div className="bottom-1/3 left-1/3 absolute bg-gradient-to-br from-white/10 to-transparent blur-xl rounded-full w-24 h-24 animate-bounce-slow delay-700"></div>
         </div>
         
-        <div className="relative container-max section-padding">
-          <div className="flex flex-col justify-center items-center -mt-20 min-h-screen">
+        <div className="relative container-max">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-8 min-h-screen items-center justify-center px-4 sm:px-6">
             
-            {/* Header Section */}
-            <div className="mb-12 text-center">
+            {/* Main Content - Mobile First */}
+            <div className="lg:col-span-7 w-full max-w-2xl lg:max-w-none text-center lg:text-left pt-20 sm:pt-24 lg:pt-0">
+              
+              {/* Badge */}
               <motion.div
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md mb-6 px-6 py-2 border border-white/20 rounded-full"
-                initial={{ opacity: 0, y: -20 }}
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 sm:px-4 border border-white/20 rounded-full mb-4 sm:mb-6"
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
               >
                 <HeartIcon className="w-4 h-4 text-white/80" />
-                <span className="font-medium text-white/90 text-sm">Cuidado con amor desde 2020</span>
+                <span className="font-medium text-white/90 text-xs sm:text-sm">Cuidado con amor desde 2020</span>
               </motion.div>
 
+              {/* Title - Responsive sizing */}
               <motion.h1 
-                className="text-shadow mb-6 font-bold text-4xl md:text-6xl"
-                initial={{ opacity: 0, y: 20 }}
+                className="text-shadow mb-4 sm:mb-6 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight"
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <span className="text-white">{t('about.title').split(' ')[0]}</span>{' '}
-                <span className="text-white/90">{t('about.title').split(' ').slice(1).join(' ')}</span>
+                <span className="text-white block">{t('about.title').split(' ')[0]}</span>
+                <span className="text-white/90 block">{t('about.title').split(' ').slice(1).join(' ')}</span>
               </motion.h1>
               
+              {/* Description */}
               <motion.p 
-                className="mx-auto mb-8 max-w-3xl text-white/80 text-xl md:text-2xl leading-relaxed"
+                className="mb-6 sm:mb-8 mx-auto lg:mx-0 max-w-lg lg:max-w-xl text-white/80 text-base sm:text-lg lg:text-xl leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
                 {t('about.subtitle')}
               </motion.p>
+
+              {/* CTA Buttons - Mobile optimized */}
+              <motion.div
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 justify-center lg:justify-start"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <button className="bg-primary-600 hover:bg-primary-700 shadow-xl px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-white hover:scale-105 transition-all duration-300 transform text-sm sm:text-base">
+                  Conoce nuestros servicios
+                </button>
+                <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md px-6 sm:px-8 py-3 sm:py-4 border border-white/30 rounded-full font-semibold text-white transition-all duration-300 text-sm sm:text-base">
+                  Contactar ahora
+                </button>
+              </motion.div>
+
+              {/* Location */}
+              <motion.div
+                className="inline-flex items-center gap-2 sm:gap-3 bg-white/90 shadow-xl backdrop-blur-lg px-4 sm:px-6 py-2 sm:py-3 border border-white/20 rounded-full"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+                <MapPinIcon className="w-4 h-4 text-primary-600" />
+                <span className="font-medium text-trust-700 text-xs sm:text-sm">{t('about.location')}</span>
+              </motion.div>
+
             </div>
-            
-            {/* Stats Section */}
-            <motion.div
-              className="gap-8 lg:gap-12 grid grid-cols-1 sm:grid-cols-3 mb-12 w-full max-w-2xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <div className="text-center">
-                <div className="mb-2 font-bold text-white text-3xl md:text-4xl">100+</div>
-                <div className="text-white/70 text-sm">Familias atendidas</div>
-              </div>
-              <div className="text-center">
-                <div className="mb-2 font-bold text-white text-3xl md:text-4xl">24/7</div>
-                <div className="text-white/70 text-sm">Disponibilidad</div>
-              </div>
-              <div className="text-center">
-                <div className="mb-2 font-bold text-white text-3xl md:text-4xl">5+</div>
-                <div className="text-white/70 text-sm">Años de experiencia</div>
-              </div>
-            </motion.div>
 
-            {/* CTA Section */}
-            <motion.div
-              className="flex sm:flex-row flex-col gap-4 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              <button className="bg-primary-600 hover:bg-primary-700 shadow-xl px-8 py-4 rounded-full font-semibold text-white hover:scale-105 transition-all duration-300 transform">
-                Conoce nuestros servicios
-              </button>
-              <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md px-8 py-4 border border-white/30 rounded-full font-semibold text-white transition-all duration-300">
-                Contactar ahora
-              </button>
-            </motion.div>
+            {/* Stats & Visual Elements - Mobile optimized */}
+            <div className="lg:col-span-5 w-full max-w-sm sm:max-w-md lg:max-w-sm xl:max-w-md mt-8 lg:mt-0 flex flex-col justify-center items-center lg:items-end space-y-4 lg:space-y-8">
+              
+              {/* Stats Cards - Mobile layout improved */}
+              <motion.div
+                className="grid grid-cols-2 sm:grid-cols-1 gap-3 sm:gap-4 w-full"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+              >
+                {/* Main stat card */}
+                <div className="col-span-2 sm:col-span-1 bg-white/10 backdrop-blur-md p-4 sm:p-6 border border-white/20 rounded-2xl text-center">
+                  <div className="font-bold text-white text-2xl sm:text-4xl mb-1 sm:mb-2">100+</div>
+                  <div className="text-white/70 text-xs sm:text-sm">Familias atendidas</div>
+                </div>
+                
+                {/* Secondary stats - side by side on mobile */}
+                <div className="bg-white/10 backdrop-blur-md p-3 sm:p-6 border border-white/20 rounded-2xl text-center">
+                  <div className="font-bold text-white text-xl sm:text-3xl mb-1 sm:mb-2">24/7</div>
+                  <div className="text-white/70 text-xs">Disponibilidad</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md p-3 sm:p-6 border border-white/20 rounded-2xl text-center">
+                  <div className="font-bold text-white text-xl sm:text-3xl mb-1 sm:mb-2">5+</div>
+                  <div className="text-white/70 text-xs">Años experiencia</div>
+                </div>
+              </motion.div>
 
-            {/* Location Badge */}
-            <motion.div
-              className="inline-flex items-center gap-3 bg-white/90 shadow-2xl backdrop-blur-lg px-8 py-4 border border-white/20 rounded-full"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <MapPinIcon className="w-5 h-5 text-primary-600" />
-              <span className="font-semibold text-trust-700">{t('about.location')}</span>
-            </motion.div>
+              {/* Features List - Mobile compact */}
+              <motion.div
+                className="bg-white/5 backdrop-blur-sm p-4 sm:p-6 border border-white/10 rounded-2xl w-full"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              >
+                <div className="space-y-2 sm:space-y-3">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="bg-green-500 rounded-full w-2 h-2 animate-pulse"></div>
+                    <span className="text-white text-xs sm:text-sm">Disponible ahora</span>
+                  </div>
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <StarIcon className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400" />
+                    <span className="text-white text-xs sm:text-sm">Calificación 5.0 estrellas</span>
+                  </div>
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <ShieldCheckIcon className="w-3 sm:w-4 h-3 sm:h-4 text-blue-400" />
+                    <span className="text-white text-xs sm:text-sm">Personal certificado</span>
+                  </div>
+                </div>
+              </motion.div>
+
+            </div>
 
           </div>
 
-          {/* Floating Elements */}
-          <div className="absolute inset-0 pointer-events-none">
+          {/* Decorative Elements */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            {/* Geometric shapes */}
             <motion.div
-              className="bottom-10 left-4 lg:left-10 absolute bg-white/5 backdrop-blur-sm p-4 border border-white/10 rounded-xl pointer-events-auto"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.7 }}
-            >
-              <div className="flex items-center gap-3">
-                <div className="bg-green-500 rounded-full w-3 h-3 animate-pulse"></div>
-                <span className="font-medium text-white text-sm">Disponible ahora</span>
-              </div>
-            </motion.div>
-
+              className="top-1/4 left-1/4 absolute bg-primary-400/20 blur-3xl rounded-full w-32 h-32"
+              animate={{ 
+                scale: [1, 1.1, 1],
+                rotate: [0, 180, 360]
+              }}
+              transition={{ 
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            />
             <motion.div
-              className="top-1/2 right-4 lg:right-10 absolute bg-white/5 backdrop-blur-sm p-4 border border-white/10 rounded-xl pointer-events-auto"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.8 }}
-            >
-              <div className="flex items-center gap-2">
-                <StarIcon className="w-4 h-4 text-yellow-400" />
-                <span className="font-medium text-white text-sm">5.0 ★★★★★</span>
-              </div>
-            </motion.div>
+              className="bottom-1/4 right-1/3 absolute bg-secondary-400/20 blur-3xl rounded-full w-24 h-24"
+              animate={{ 
+                scale: [1.1, 1, 1.1],
+                rotate: [360, 180, 0]
+              }}
+              transition={{ 
+                duration: 15,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            />
           </div>
 
         </div>

@@ -44,7 +44,7 @@ export default function ServiciosPage() {
     <div className="bg-gradient-to-br from-slate-50 via-white to-primary-50/20 min-h-screen">
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 py-24 sm:py-32 overflow-hidden text-white">
+      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 py-24 sm:py-22 overflow-hidden text-white">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
