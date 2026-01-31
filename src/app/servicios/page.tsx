@@ -122,7 +122,7 @@ export default function ServiciosPage() {
           </div>
 
           <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {companionshipAreas.map((area, index) => {
+            {companionshipAreas.map((area: any, index: number) => {
               const IconComponent = area.icon
               return (
                 <div key={area.id} className="group bg-white/80 shadow-xl hover:shadow-2xl backdrop-blur-lg p-8 border border-white/50 rounded-3xl hover:scale-105 transition-all duration-500">
@@ -142,7 +142,7 @@ export default function ServiciosPage() {
                   </p>
                   
                   <ul className="space-y-3">
-                    {area.services.map((service, idx) => (
+                    {area.services.map((service: string, idx: number) => (
                       <li key={idx} className="flex items-start">
                         <CheckCircleIcon className="flex-shrink-0 mt-0.5 mr-3 w-5 h-5 text-primary-600" />
                         <span className="text-trust-700 text-sm">{service}</span>
@@ -178,7 +178,7 @@ export default function ServiciosPage() {
           </div>
 
           <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-            {workingProcess.map((step, index) => (
+            {workingProcess.map((step: any, index: number) => (
               <div key={index} className="group text-center">
                 <div className="relative mb-6">
                   <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 shadow-xl group-hover:shadow-2xl mx-auto rounded-2xl w-20 h-20 group-hover:scale-110 transition-all duration-300">

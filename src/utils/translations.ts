@@ -238,8 +238,6 @@ export const translations = {
       title: 'Sobre Nosotros',
       subtitle: 'Comprometidos con el bienestar y la dignidad de las personas mayores',
       description: 'Somos una empresa especializada en brindar servicios de acompañamiento no médico en el hogar para adultos mayores...',
-      mission: 'Nuestra Misión',
-      vision: 'Nuestra Visión',
       values: 'Nuestros Valores',
       heroTitle: 'Acompañamiento No Médico',
       heroSubtitle: 'en el Hogar',
@@ -313,12 +311,6 @@ export const translations = {
           'Sin compromiso',
           'Respuesta inmediata'
         ]
-      },
-      founder: {
-        name: 'Mirian González Guillén',
-        role: 'Fundadora',
-        credentials: 'Con experiencia en el acompañamiento familiar de adultos mayores',
-        description: 'Mirian inicia esta iniciativa motivada por el deseo de ofrecer un trato más humano, cercano y respetuoso a las personas mayores. Su visión se basa en la importancia de la compañía, la paciencia y el apoyo diario como pilares del bienestar en el hogar.'
       },
       readyTitle: 'Lista para Comenzar',
       readySubtitle: 'Juntos Cuidamos a Quienes Más Amas',
@@ -890,8 +882,6 @@ export const translations = {
       title: 'About Us',
       subtitle: 'Dedicated to senior care',
       description: 'We are a company specialized in providing NON-medical companionship services for seniors...',
-      mission: 'Our Mission',
-      vision: 'Our Vision',
       values: 'Our Values',
       heroTitle: 'Non-Medical Companionship',
       heroSubtitle: 'at Home',

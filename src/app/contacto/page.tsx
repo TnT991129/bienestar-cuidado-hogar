@@ -569,7 +569,7 @@ export default function ContactPage() {
                 <div>
                   <h4 className="mb-6 font-bold text-trust-900 text-xl">{t('contact.serviceQuestions.availableServices')}</h4>
                   <div className="space-y-4">
-                    {officeInfo.services.map((service, index) => (
+                    {officeInfo.services.map((service: string, index: number) => (
                       <div key={index} className="flex items-center bg-primary-50 p-4 rounded-xl">
                         <CheckCircleIcon className="flex-shrink-0 mr-4 w-6 h-6 text-primary-600" />
                         <span className="font-medium text-trust-700">{service}</span>

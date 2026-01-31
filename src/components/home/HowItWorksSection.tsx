@@ -189,7 +189,7 @@ export default function HowItWorksSection() {
                       transition={{ duration: 0.5, delay: (index * 0.15) + 0.6 }}
                     >
                       <ul className="list-none">
-                        {step.details.slice(0, 2).map((detail, detailIndex) => (
+                        {step.details.slice(0, 2).map((detail: string, detailIndex: number) => (
                           <li key={detailIndex} className="flex items-start">
                             <CheckCircleIcon className="flex-shrink-0 mt-0.5 mr-1.5 w-3 h-3 text-secondary-500" />
                             <span className="leading-tight">{detail}</span>
@@ -270,7 +270,7 @@ export default function HowItWorksSection() {
 
                     {/* Details */}
                     <ul className="justify-center items-center space-y-2 text-trust-600 text-sm">
-                      {step.details.map((detail, detailIndex) => (
+                      {step.details.map((detail: string, detailIndex: number) => (
                         <li key={detailIndex} className="flex items-start">
                           <CheckCircleIcon className="flex-shrink-0 items-center mt-0.5 mr-2 w-4 h-4 text-secondary-500" />
                           {detail}
@@ -302,7 +302,7 @@ export default function HowItWorksSection() {
           </div>
 
           <div className="gap-4 lg:gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-4 lg:px-0">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit: any, index: number) => (
               <motion.div 
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
