@@ -40,6 +40,12 @@ export default function ServiciosPage() {
   const companionshipAreas = getCompanionshipAreas(t)
   const workingProcess = getWorkingProcess(t)
   
+  // Helper para rutas de assets en GitHub Pages
+  const getAssetPath = (path: string) => {
+    const basePath = process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''
+    return `${basePath}${path}`
+  }
+  
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-primary-50/20 min-h-screen">
       
@@ -48,7 +54,7 @@ export default function ServiciosPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/hero-servicios.svg" 
+            src={getAssetPath("/hero-servicios.svg")} 
             alt="Servicios de cuidado personalizado" 
             className="opacity-35 w-full h-full object-cover"
           />

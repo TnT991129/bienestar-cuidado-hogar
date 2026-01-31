@@ -144,6 +144,12 @@ export default function ContactPage() {
   const quickStats = getQuickStats(t)
   const officeInfo = getOfficeInfo(t)
   
+  // Helper para rutas de assets en GitHub Pages
+  const getAssetPath = (path: string) => {
+    const basePath = process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''
+    return `${basePath}${path}`
+  }
+  
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-primary-50/20 min-h-screen">
       
@@ -152,7 +158,7 @@ export default function ContactPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/hero-contacto.svg" 
+            src={getAssetPath("/hero-contacto.svg")} 
             alt="Contacto y comunicación" 
             className="opacity-30 w-full h-full object-cover"
           />

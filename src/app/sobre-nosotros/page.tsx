@@ -44,6 +44,12 @@ export default function AboutPage() {
   const principles = getPrinciples(t)
   const founder = getFounder(t)
   
+  // Helper para rutas de assets en GitHub Pages
+  const getAssetPath = (path: string) => {
+    const basePath = process.env.NODE_ENV === 'production' ? '/bienestar-cuidado-hogar' : ''
+    return `${basePath}${path}`
+  }
+  
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-primary-50/20 min-h-screen">
       {/* Hero Section */}
@@ -51,7 +57,7 @@ export default function AboutPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/sobre-nosotros-nuevo.webp" 
+            src={getAssetPath("/sobre-nosotros-nuevo.webp")}
             alt="Cuidado y bienestar en el hogar" 
             className="w-full h-full object-cover object-right-top md:object-center"
           />
