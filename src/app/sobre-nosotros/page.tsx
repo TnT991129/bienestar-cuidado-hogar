@@ -75,14 +75,14 @@ export default function AboutPage() {
         </div>
         
         <div className="relative container-max">
-          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-8 min-h-screen items-center justify-center px-4 sm:px-6">
+          <div className="flex flex-col justify-center items-center gap-6 lg:gap-8 lg:grid lg:grid-cols-12 px-4 sm:px-6 min-h-screen">
             
             {/* Main Content - Mobile First */}
-            <div className="lg:col-span-7 w-full max-w-2xl lg:max-w-none text-center lg:text-left pt-20 sm:pt-24 lg:pt-0">
+            <div className="lg:col-span-7 pt-20 sm:pt-24 lg:pt-0 w-full lg:max-w-none max-w-2xl lg:text-left text-center">
               
               {/* Badge */}
               <motion.div
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 sm:px-4 border border-white/20 rounded-full mb-4 sm:mb-6"
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md mb-4 sm:mb-6 px-3 sm:px-4 py-2 border border-white/20 rounded-full"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
@@ -98,13 +98,13 @@ export default function AboutPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <span className="text-white block">{t('about.title').split(' ')[0]}</span>
-                <span className="text-white/90 block">{t('about.title').split(' ').slice(1).join(' ')}</span>
+                <span className="block text-white">{t('about.title').split(' ')[0]}</span>
+                <span className="block text-white/90">{t('about.title').split(' ').slice(1).join(' ')}</span>
               </motion.h1>
               
               {/* Description */}
               <motion.p 
-                className="mb-6 sm:mb-8 mx-auto lg:mx-0 max-w-lg lg:max-w-xl text-white/80 text-base sm:text-lg lg:text-xl leading-relaxed"
+                className="mx-auto lg:mx-0 mb-6 sm:mb-8 max-w-lg lg:max-w-xl text-white/80 text-base sm:text-lg lg:text-xl leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -114,15 +114,15 @@ export default function AboutPage() {
 
               {/* CTA Buttons - Mobile optimized */}
               <motion.div
-                className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 justify-center lg:justify-start"
+                className="flex sm:flex-row flex-col justify-center lg:justify-start gap-3 sm:gap-4 mb-6 sm:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                <button className="bg-primary-600 hover:bg-primary-700 shadow-xl px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-white hover:scale-105 transition-all duration-300 transform text-sm sm:text-base">
+                <button className="bg-primary-600 hover:bg-primary-700 shadow-xl px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-white text-sm sm:text-base hover:scale-105 transition-all duration-300 transform">
                   Conoce nuestros servicios
                 </button>
-                <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md px-6 sm:px-8 py-3 sm:py-4 border border-white/30 rounded-full font-semibold text-white transition-all duration-300 text-sm sm:text-base">
+                <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md px-6 sm:px-8 py-3 sm:py-4 border border-white/30 rounded-full font-semibold text-white text-sm sm:text-base transition-all duration-300">
                   Contactar ahora
                 </button>
               </motion.div>
@@ -141,28 +141,28 @@ export default function AboutPage() {
             </div>
 
             {/* Stats & Visual Elements - Mobile optimized */}
-            <div className="lg:col-span-5 w-full max-w-sm sm:max-w-md lg:max-w-sm xl:max-w-md mt-8 lg:mt-0 flex flex-col justify-center items-center lg:items-end space-y-4 lg:space-y-8">
+            <div className="flex flex-col justify-center items-center lg:items-end space-y-4 lg:space-y-8 lg:col-span-5 mt-8 lg:mt-0 w-full max-w-sm lg:max-w-sm sm:max-w-md xl:max-w-md">
               
               {/* Stats Cards - Mobile layout improved */}
               <motion.div
-                className="grid grid-cols-2 sm:grid-cols-1 gap-3 sm:gap-4 w-full"
+                className="gap-3 sm:gap-4 grid grid-cols-2 sm:grid-cols-1 w-full"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
                 {/* Main stat card */}
                 <div className="col-span-2 sm:col-span-1 bg-white/10 backdrop-blur-md p-4 sm:p-6 border border-white/20 rounded-2xl text-center">
-                  <div className="font-bold text-white text-2xl sm:text-4xl mb-1 sm:mb-2">100+</div>
+                  <div className="mb-1 sm:mb-2 font-bold text-white text-2xl sm:text-4xl">100+</div>
                   <div className="text-white/70 text-xs sm:text-sm">Familias atendidas</div>
                 </div>
                 
                 {/* Secondary stats - side by side on mobile */}
                 <div className="bg-white/10 backdrop-blur-md p-3 sm:p-6 border border-white/20 rounded-2xl text-center">
-                  <div className="font-bold text-white text-xl sm:text-3xl mb-1 sm:mb-2">24/7</div>
+                  <div className="mb-1 sm:mb-2 font-bold text-white text-xl sm:text-3xl">24/7</div>
                   <div className="text-white/70 text-xs">Disponibilidad</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md p-3 sm:p-6 border border-white/20 rounded-2xl text-center">
-                  <div className="font-bold text-white text-xl sm:text-3xl mb-1 sm:mb-2">5+</div>
+                  <div className="mb-1 sm:mb-2 font-bold text-white text-xl sm:text-3xl">5+</div>
                   <div className="text-white/70 text-xs">Años experiencia</div>
                 </div>
               </motion.div>
@@ -195,7 +195,7 @@ export default function AboutPage() {
           </div>
 
           {/* Decorative Elements */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {/* Geometric shapes */}
             <motion.div
               className="top-1/4 left-1/4 absolute bg-primary-400/20 blur-3xl rounded-full w-32 h-32"
@@ -210,7 +210,7 @@ export default function AboutPage() {
               }}
             />
             <motion.div
-              className="bottom-1/4 right-1/3 absolute bg-secondary-400/20 blur-3xl rounded-full w-24 h-24"
+              className="right-1/3 bottom-1/4 absolute bg-secondary-400/20 blur-3xl rounded-full w-24 h-24"
               animate={{ 
                 scale: [1.1, 1, 1.1],
                 rotate: [360, 180, 0]
