@@ -53,7 +53,7 @@ export default function AboutPage() {
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-primary-50/20 min-h-screen">
       {/* Hero Section */}
-      <section className="relative flex items-center min-h-screen overflow-hidden">
+      <section className="relative flex items-center min-h-screen lg:min-h-screen overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
@@ -81,14 +81,14 @@ export default function AboutPage() {
         </div>
         
         <div className="relative container-max">
-          <div className="flex flex-col justify-center items-center gap-6 lg:gap-8 lg:grid lg:grid-cols-12 px-4 sm:px-6 min-h-screen">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-4 lg:gap-8 min-h-[90vh] lg:min-h-screen items-center justify-center px-4 sm:px-6 py-8 lg:py-0">
             
             {/* Main Content - Mobile First */}
-            <div className="lg:col-span-7 pt-20 sm:pt-24 lg:pt-0 w-full lg:max-w-none max-w-2xl lg:text-left text-center">
+            <div className="lg:col-span-7 w-full max-w-2xl lg:max-w-none text-center lg:text-left order-1 lg:order-1">
               
               {/* Badge */}
               <motion.div
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md mb-4 sm:mb-6 px-3 sm:px-4 py-2 border border-white/20 rounded-full"
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md mb-3 sm:mb-4 lg:mb-6 px-3 sm:px-4 py-2 border border-white/20 rounded-full"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
@@ -99,7 +99,7 @@ export default function AboutPage() {
 
               {/* Title - Responsive sizing */}
               <motion.h1 
-                className="text-shadow mb-4 sm:mb-6 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight"
+                className="text-shadow mb-3 sm:mb-4 lg:mb-6 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -110,7 +110,7 @@ export default function AboutPage() {
               
               {/* Description */}
               <motion.p 
-                className="mx-auto lg:mx-0 mb-6 sm:mb-8 max-w-lg lg:max-w-xl text-white/80 text-base sm:text-lg lg:text-xl leading-relaxed"
+                className="mx-auto lg:mx-0 mb-4 sm:mb-6 lg:mb-8 max-w-lg lg:max-w-xl text-white/80 text-sm sm:text-base lg:text-xl leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -120,22 +120,22 @@ export default function AboutPage() {
 
               {/* CTA Buttons - Mobile optimized */}
               <motion.div
-                className="flex sm:flex-row flex-col justify-center lg:justify-start gap-3 sm:gap-4 mb-6 sm:mb-8"
+                className="flex flex-col sm:flex-row justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4 mb-4 sm:mb-6 lg:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                <button className="bg-primary-600 hover:bg-primary-700 shadow-xl px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-white text-sm sm:text-base hover:scale-105 transition-all duration-300 transform">
+                <button className="bg-primary-600 hover:bg-primary-700 shadow-xl px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 rounded-full font-semibold text-white text-xs sm:text-sm lg:text-base hover:scale-105 transition-all duration-300 transform">
                   Conoce nuestros servicios
                 </button>
-                <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md px-6 sm:px-8 py-3 sm:py-4 border border-white/30 rounded-full font-semibold text-white text-sm sm:text-base transition-all duration-300">
+                <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 border border-white/30 rounded-full font-semibold text-white text-xs sm:text-sm lg:text-base transition-all duration-300">
                   Contactar ahora
                 </button>
               </motion.div>
 
               {/* Location */}
               <motion.div
-                className="inline-flex items-center gap-2 sm:gap-3 bg-white/90 shadow-xl backdrop-blur-lg px-4 sm:px-6 py-2 sm:py-3 border border-white/20 rounded-full"
+                className="inline-flex items-center gap-2 sm:gap-3 bg-white/90 shadow-xl backdrop-blur-lg px-3 sm:px-4 lg:px-6 py-2 sm:py-2 lg:py-3 border border-white/20 rounded-full"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
@@ -147,40 +147,40 @@ export default function AboutPage() {
             </div>
 
             {/* Stats & Visual Elements - Mobile optimized */}
-            <div className="flex flex-col justify-center items-center lg:items-end space-y-4 lg:space-y-8 lg:col-span-5 mt-8 lg:mt-0 w-full max-w-sm lg:max-w-sm sm:max-w-md xl:max-w-md">
+            <div className="lg:col-span-5 w-full max-w-sm sm:max-w-md lg:max-w-sm xl:max-w-md order-2 lg:order-2 flex flex-col justify-center items-center lg:items-end space-y-3 lg:space-y-6 mt-4 lg:mt-0">
               
               {/* Stats Cards - Mobile layout improved */}
               <motion.div
-                className="gap-3 sm:gap-4 grid grid-cols-2 sm:grid-cols-1 w-full"
+                className="grid grid-cols-3 lg:grid-cols-1 gap-2 sm:gap-3 lg:gap-4 w-full"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
                 {/* Main stat card */}
-                <div className="col-span-2 sm:col-span-1 bg-white/10 backdrop-blur-md p-4 sm:p-6 border border-white/20 rounded-2xl text-center">
-                  <div className="mb-1 sm:mb-2 font-bold text-white text-2xl sm:text-4xl">100+</div>
-                  <div className="text-white/70 text-xs sm:text-sm">Familias atendidas</div>
+                <div className="col-span-3 lg:col-span-1 bg-white/10 backdrop-blur-md p-3 sm:p-4 lg:p-6 border border-white/20 rounded-2xl text-center">
+                  <div className="font-bold text-white text-xl sm:text-2xl lg:text-4xl mb-0.5 sm:mb-1 lg:mb-2">100+</div>
+                  <div className="text-white/70 text-xs lg:text-sm">Familias atendidas</div>
                 </div>
                 
-                {/* Secondary stats - side by side on mobile */}
-                <div className="bg-white/10 backdrop-blur-md p-3 sm:p-6 border border-white/20 rounded-2xl text-center">
-                  <div className="mb-1 sm:mb-2 font-bold text-white text-xl sm:text-3xl">24/7</div>
-                  <div className="text-white/70 text-xs">Disponibilidad</div>
+                {/* Secondary stats - horizontal on mobile */}
+                <div className="bg-white/10 backdrop-blur-md p-2 sm:p-3 lg:p-6 border border-white/20 rounded-2xl text-center">
+                  <div className="font-bold text-white text-lg sm:text-xl lg:text-3xl mb-0.5 lg:mb-2">24/7</div>
+                  <div className="text-white/70 text-xs">Disponible</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-md p-3 sm:p-6 border border-white/20 rounded-2xl text-center">
-                  <div className="mb-1 sm:mb-2 font-bold text-white text-xl sm:text-3xl">5+</div>
-                  <div className="text-white/70 text-xs">Años experiencia</div>
+                <div className="bg-white/10 backdrop-blur-md p-2 sm:p-3 lg:p-6 border border-white/20 rounded-2xl text-center">
+                  <div className="font-bold text-white text-lg sm:text-xl lg:text-3xl mb-0.5 lg:mb-2">5+</div>
+                  <div className="text-white/70 text-xs">Años exp.</div>
                 </div>
               </motion.div>
 
               {/* Features List - Mobile compact */}
               <motion.div
-                className="bg-white/5 backdrop-blur-sm p-4 sm:p-6 border border-white/10 rounded-2xl w-full"
+                className="bg-white/5 backdrop-blur-sm p-3 sm:p-4 lg:p-6 border border-white/10 rounded-2xl w-full"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                <div className="space-y-2 sm:space-y-3">
+                <div className="space-y-1.5 sm:space-y-2 lg:space-y-3">
                   <div className="flex items-center gap-2 sm:gap-3">
                     <div className="bg-green-500 rounded-full w-2 h-2 animate-pulse"></div>
                     <span className="text-white text-xs sm:text-sm">Disponible ahora</span>
