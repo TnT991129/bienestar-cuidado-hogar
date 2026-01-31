@@ -59,7 +59,8 @@ export default function AboutPage() {
           <img 
             src={getAssetPath("/sobre-nosotros-nuevo.webp")}
             alt="Cuidado y bienestar en el hogar" 
-            className="w-full h-full object-cover object-right-top md:object-center"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: '75% 50%' }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/50"></div>
         </div>
@@ -81,7 +82,7 @@ export default function AboutPage() {
         </div>
         
         <div className="relative container-max">
-          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-4 lg:gap-8 min-h-[85vh] lg:min-h-screen items-center justify-center px-4 sm:px-6 py-4 sm:py-6 lg:py-0">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-4 lg:gap-8 min-h-[85vh] lg:min-h-screen items-center justify-center px-4 sm:px-6 py-2 sm:py-4 lg:py-0">
             
             {/* Main Content - Mobile First */}
             <div className="lg:col-span-7 w-full max-w-2xl lg:max-w-none text-center lg:text-left order-1 lg:order-1">
@@ -94,12 +95,12 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.1 }}
               >
                 <HeartIcon className="w-4 h-4 text-white/80" />
-                <span className="font-medium text-white/90 text-xs sm:text-sm">Cuidado con amor desde 2020</span>
+                <span className="font-medium text-white/90 text-xs sm:text-sm">{t('about.heroBadge')}</span>
               </motion.div>
 
               {/* Title - Responsive sizing */}
               <motion.h1 
-                className="text-shadow mb-2 sm:mb-3 lg:mb-6 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl leading-tight"
+                className="text-shadow mb-2 sm:mb-3 lg:mb-6 font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -110,7 +111,7 @@ export default function AboutPage() {
               
               {/* Description */}
               <motion.p 
-                className="mx-auto lg:mx-0 mb-3 sm:mb-4 lg:mb-8 max-w-lg lg:max-w-xl text-white/80 text-sm sm:text-base lg:text-xl leading-relaxed"
+                className="mx-auto lg:mx-0 mb-3 sm:mb-4 lg:mb-8 max-w-lg lg:max-w-xl text-white/80 text-base sm:text-lg lg:text-2xl leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -126,10 +127,10 @@ export default function AboutPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <button className="bg-primary-600 hover:bg-primary-700 shadow-xl px-4 sm:px-5 lg:px-8 py-2 sm:py-2.5 lg:py-4 rounded-full font-semibold text-white text-xs sm:text-sm lg:text-base hover:scale-105 transition-all duration-300 transform">
-                  Conoce nuestros servicios
+                  {t('about.heroButtons.services')}
                 </button>
                 <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md px-4 sm:px-5 lg:px-8 py-2 sm:py-2.5 lg:py-4 border border-white/30 rounded-full font-semibold text-white text-xs sm:text-sm lg:text-base transition-all duration-300">
-                  Contactar ahora
+                  {t('about.heroButtons.contact')}
                 </button>
               </motion.div>
 
@@ -159,17 +160,17 @@ export default function AboutPage() {
                 {/* All stats cards same size */}
                 <div className="bg-white/10 backdrop-blur-md p-2 sm:p-3 lg:p-6 border border-white/20 rounded-xl lg:rounded-2xl text-center">
                   <div className="font-bold text-white text-sm sm:text-lg lg:text-4xl mb-0.5 lg:mb-2">100+</div>
-                  <div className="text-white/70 text-xs lg:text-sm leading-tight">Familias</div>
+                  <div className="text-white/70 text-xs lg:text-sm leading-tight">{t('about.stats.families')}</div>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-md p-2 sm:p-3 lg:p-6 border border-white/20 rounded-xl lg:rounded-2xl text-center">
                   <div className="font-bold text-white text-sm sm:text-lg lg:text-4xl mb-0.5 lg:mb-2">24/7</div>
-                  <div className="text-white/70 text-xs lg:text-sm leading-tight">Disponible</div>
+                  <div className="text-white/70 text-xs lg:text-sm leading-tight">{t('about.stats.available')}</div>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-md p-2 sm:p-3 lg:p-6 border border-white/20 rounded-xl lg:rounded-2xl text-center">
                   <div className="font-bold text-white text-sm sm:text-lg lg:text-4xl mb-0.5 lg:mb-2">5+</div>
-                  <div className="text-white/70 text-xs lg:text-sm leading-tight">Años</div>
+                  <div className="text-white/70 text-xs lg:text-sm leading-tight">{t('about.stats.years')}</div>
                 </div>
               </motion.div>
 
@@ -183,15 +184,15 @@ export default function AboutPage() {
                 <div className="space-y-1 sm:space-y-1.5 lg:space-y-3">
                   <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
                     <div className="bg-green-500 rounded-full w-1.5 sm:w-2 h-1.5 sm:h-2 animate-pulse"></div>
-                    <span className="text-white text-xs sm:text-sm">Disponible ahora</span>
+                    <span className="text-white text-xs sm:text-sm">{t('about.features.available')}</span>
                   </div>
                   <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
                     <StarIcon className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400" />
-                    <span className="text-white text-xs sm:text-sm">5.0 estrellas</span>
+                    <span className="text-white text-xs sm:text-sm">{t('about.features.rating')}</span>
                   </div>
                   <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3">
                     <ShieldCheckIcon className="w-3 sm:w-4 h-3 sm:h-4 text-blue-400" />
-                    <span className="text-white text-xs sm:text-sm">Personal certificado</span>
+                    <span className="text-white text-xs sm:text-sm">{t('about.features.certified')}</span>
                   </div>
                 </div>
               </motion.div>
@@ -314,10 +315,10 @@ export default function AboutPage() {
                   <div className="bg-white shadow-sm hover:shadow-md p-8 border border-trust-100 rounded-lg transition-all duration-300">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="bg-gradient-to-br from-primary-500 to-primary-600 rounded-full w-3 h-3"></div>
-                      <h3 className="font-display font-semibold text-primary-800 text-lg">Nuestra Esencia</h3>
+                      <h3 className="font-display font-semibold text-primary-800 text-lg">{t('about.sidebar.essence.title')}</h3>
                     </div>
                     <p className="font-sans text-trust-600 leading-relaxed">
-                      Cuidado personalizado y profesional que mejora la calidad de vida de nuestros usuarios y sus familias.
+                      {t('about.sidebar.essence.description')}
                     </p>
                   </div>
 
@@ -325,20 +326,20 @@ export default function AboutPage() {
                   <div className="bg-gradient-to-br from-primary-50/50 to-secondary-50/30 p-8 border border-primary-100 rounded-lg">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-full w-3 h-3"></div>
-                      <h3 className="font-display font-semibold text-secondary-800 text-lg">Nuestros Valores</h3>
+                      <h3 className="font-display font-semibold text-secondary-800 text-lg">{t('about.sidebar.values.title')}</h3>
                     </div>
                     <div className="space-y-2 font-sans text-trust-600 text-sm">
                       <div className="flex items-center gap-2">
                         <div className="bg-primary-400 rounded-full w-1 h-1"></div>
-                        <span>Compromiso y dedicación</span>
+                        <span>{t('about.sidebar.values.items.commitment')}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="bg-primary-400 rounded-full w-1 h-1"></div>
-                        <span>Profesionalismo constante</span>
+                        <span>{t('about.sidebar.values.items.professionalism')}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="bg-primary-400 rounded-full w-1 h-1"></div>
-                        <span>Calidez humana genuina</span>
+                        <span>{t('about.sidebar.values.items.warmth')}</span>
                       </div>
                     </div>
                   </div>
@@ -358,16 +359,16 @@ export default function AboutPage() {
             >
               <div className="text-center">
                 <p className="mb-4 font-display font-medium text-trust-700 text-lg">
-                  Comprometidos con la excelencia desde nuestros inicios
+                  {t('about.bottomSection.title')}
                 </p>
                 <div className="flex justify-center items-center gap-6 font-sans text-trust-500 text-sm">
                   <span className="flex items-center gap-2">
                     <div className="bg-primary-500 rounded-full w-2 h-2"></div>
-                    Fundada con propósito
+                    {t('about.bottomSection.founded')}
                   </span>
                   <span className="flex items-center gap-2">
                     <div className="bg-secondary-500 rounded-full w-2 h-2"></div>
-                    Creciendo juntos
+                    {t('about.bottomSection.growing')}
                   </span>
                 </div>
               </div>
