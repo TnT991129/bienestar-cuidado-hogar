@@ -82,10 +82,10 @@ export default function AboutPage() {
         </div>
         
         <div className="relative container-max">
-          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-4 lg:gap-8 min-h-[85vh] lg:min-h-screen items-center justify-center px-4 sm:px-6 py-2 sm:py-4 lg:py-0">
+          <div className="flex flex-col justify-center items-center gap-4 lg:gap-8 lg:grid lg:grid-cols-12 px-4 sm:px-6 py-2 sm:py-4 lg:py-0 min-h-[85vh] lg:min-h-screen">
             
             {/* Main Content - Mobile First */}
-            <div className="lg:col-span-7 w-full max-w-2xl lg:max-w-none text-center lg:text-left order-1 lg:order-1">
+            <div className="order-1 lg:order-1 lg:col-span-7 w-full lg:max-w-none max-w-2xl lg:text-left text-center">
               
               {/* Badge */}
               <motion.div
@@ -121,7 +121,7 @@ export default function AboutPage() {
 
               {/* CTA Buttons - Mobile optimized */}
               <motion.div
-                className="flex flex-col sm:flex-row justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4 mb-3 sm:mb-4 lg:mb-8"
+                className="flex sm:flex-row flex-col justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4 mb-3 sm:mb-4 lg:mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -148,28 +148,28 @@ export default function AboutPage() {
             </div>
 
             {/* Stats & Visual Elements - Mobile optimized */}
-            <div className="lg:col-span-5 w-full max-w-sm sm:max-w-md lg:max-w-sm xl:max-w-md order-2 lg:order-2 flex flex-col justify-center items-center lg:items-end space-y-2 lg:space-y-6 mt-2 lg:mt-0">
+            <div className="flex flex-col justify-center items-center lg:items-end space-y-2 lg:space-y-6 order-2 lg:order-2 lg:col-span-5 mt-2 lg:mt-0 w-full max-w-sm lg:max-w-sm sm:max-w-md xl:max-w-md">
               
               {/* Stats Cards - Mobile layout improved - All 3 in a row */}
               <motion.div
-                className="grid grid-cols-3 lg:grid-cols-1 gap-1.5 sm:gap-2 lg:gap-4 w-full"
+                className="gap-1.5 sm:gap-2 lg:gap-4 grid grid-cols-3 lg:grid-cols-1 w-full"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
                 {/* All stats cards same size */}
                 <div className="bg-white/10 backdrop-blur-md p-2 sm:p-3 lg:p-6 border border-white/20 rounded-xl lg:rounded-2xl text-center">
-                  <div className="font-bold text-white text-sm sm:text-lg lg:text-4xl mb-0.5 lg:mb-2">100+</div>
+                  <div className="mb-0.5 lg:mb-2 font-bold text-white text-sm sm:text-lg lg:text-4xl">100+</div>
                   <div className="text-white/70 text-xs lg:text-sm leading-tight">{t('about.stats.families')}</div>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-md p-2 sm:p-3 lg:p-6 border border-white/20 rounded-xl lg:rounded-2xl text-center">
-                  <div className="font-bold text-white text-sm sm:text-lg lg:text-4xl mb-0.5 lg:mb-2">24/7</div>
+                  <div className="mb-0.5 lg:mb-2 font-bold text-white text-sm sm:text-lg lg:text-4xl">24/7</div>
                   <div className="text-white/70 text-xs lg:text-sm leading-tight">{t('about.stats.available')}</div>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-md p-2 sm:p-3 lg:p-6 border border-white/20 rounded-xl lg:rounded-2xl text-center">
-                  <div className="font-bold text-white text-sm sm:text-lg lg:text-4xl mb-0.5 lg:mb-2">5+</div>
+                  <div className="mb-0.5 lg:mb-2 font-bold text-white text-sm sm:text-lg lg:text-4xl">5+</div>
                   <div className="text-white/70 text-xs lg:text-sm leading-tight">{t('about.stats.years')}</div>
                 </div>
               </motion.div>
