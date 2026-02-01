@@ -955,43 +955,6 @@ export const translations = {
         founded: 'Founded with purpose',
         growing: 'Growing together'
       },
-      heroSubtitle: 'at Home',
-      heroDescription: 'We provide non-medical companionship services for seniors and people with disabilities, focused on well-being, companionship and respect in the comfort of home.',
-      location: 'Available throughout Miami',
-      heroBadge: 'Care with love since 2020',
-      heroButtons: {
-        services: 'Discover our services',
-        contact: 'Contact now'
-      },
-      stats: {
-        families: 'Families',
-        available: 'Available',
-        years: 'Years'
-      },
-      features: {
-        available: 'Available now',
-        rating: '5.0 stars',
-        certified: 'Certified staff'
-      },
-      sidebar: {
-        essence: {
-          title: 'Our Essence',
-          description: 'Personalized and professional care that improves the quality of life of our users and their families.'
-        },
-        values: {
-          title: 'Our Values',
-          items: {
-            commitment: 'Commitment and dedication',
-            professionalism: 'Constant professionalism',
-            warmth: 'Genuine human warmth'
-          }
-        }
-      },
-      bottomSection: {
-        title: 'Committed to excellence since our beginnings',
-        founded: 'Founded with purpose',
-        growing: 'Growing together'
-      },
       historyTitle: 'Our Story',
       historyContent: [
         'Bienestar y Cuidado en el Hogar is an initiative born from love and dedication to our seniors. We understand that every person deserves to age with dignity, respect and affection in the comfort of their own home.',
