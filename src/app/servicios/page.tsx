@@ -57,8 +57,7 @@ export default function ServiciosPage() {
           <img 
             src={getAssetPath("/servicios.webp")} 
             alt="Servicios de cuidado personalizado" 
-            className="opacity-70 w-full h-full object-cover"
-            style={{ objectPosition: '50% 30%' }}
+            className="opacity-70 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/15"></div>
         </div>
@@ -75,7 +74,7 @@ export default function ServiciosPage() {
           <div className="bottom-1/3 left-1/4 absolute bg-primary-100/20 backdrop-blur-sm rounded-full w-12 sm:w-24 h-12 sm:h-24 animate-bounce-slow delay-300"></div>
         </div>
         
-        <div className="relative mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-7xl py-8 sm:py-12 lg:py-0">
+        <div className="relative mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-0 w-full max-w-7xl">
           <div className="flex lg:flex-row flex-col items-center gap-8 sm:gap-12 lg:gap-16">
             
             {/* Main Content */}
@@ -119,28 +118,28 @@ export default function ServiciosPage() {
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-center gap-3 sm:gap-4 hover:bg-primary-50/50 p-2 sm:p-3 rounded-xl transition-colors">
                     <div className="bg-gradient-to-br from-primary-100 to-primary-200 p-1.5 sm:p-2 rounded-lg">
-                      <HeartIcon className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600" />
+                      <HeartIcon className="w-4 sm:w-5 h-4 sm:h-5 text-primary-600" />
                     </div>
                     <span className="font-medium text-gray-700 text-sm">{t('services.featuredServices.companionship')}</span>
                   </div>
                   
                   <div className="flex items-center gap-3 sm:gap-4 hover:bg-secondary-50/50 p-2 sm:p-3 rounded-xl transition-colors">
                     <div className="bg-gradient-to-br from-secondary-100 to-secondary-200 p-1.5 sm:p-2 rounded-lg">
-                      <HomeIcon className="w-4 h-4 sm:w-5 sm:h-5 text-secondary-600" />
+                      <HomeIcon className="w-4 sm:w-5 h-4 sm:h-5 text-secondary-600" />
                     </div>
                     <span className="font-medium text-gray-700 text-sm">{t('services.featuredServices.homeAssistance')}</span>
                   </div>
                   
                   <div className="flex items-center gap-3 sm:gap-4 hover:bg-primary-50/50 p-2 sm:p-3 rounded-xl transition-colors">
                     <div className="bg-gradient-to-br from-green-100 to-green-200 p-1.5 sm:p-2 rounded-lg">
-                      <ClockIcon className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
+                      <ClockIcon className="w-4 sm:w-5 h-4 sm:h-5 text-green-600" />
                     </div>
                     <span className="font-medium text-gray-700 text-sm">{t('services.featuredServices.available247')}</span>
                   </div>
                   
                   <div className="flex items-center gap-3 sm:gap-4 hover:bg-blue-50/50 p-2 sm:p-3 rounded-xl transition-colors">
                     <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-1.5 sm:p-2 rounded-lg">
-                      <ShieldCheckIcon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
+                      <ShieldCheckIcon className="w-4 sm:w-5 h-4 sm:h-5 text-blue-600" />
                     </div>
                     <span className="font-medium text-gray-700 text-sm">{t('services.featuredServices.trainedStaff')}</span>
                   </div>
@@ -170,29 +169,84 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      {/* Introducción */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      {/* Introducción - Nuestro Enfoque */}
+      <section className="relative bg-gradient-to-br from-trust-50 via-primary-50/30 to-secondary-50/20 py-12 sm:py-16 lg:py-20 overflow-hidden">
+        {/* Elementos decorativos de fondo */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="top-10 right-10 absolute bg-gradient-to-br from-primary-200/20 to-primary-300/20 blur-3xl rounded-full w-72 h-72 animate-pulse"></div>
+          <div className="bottom-10 left-10 absolute bg-gradient-to-br from-secondary-200/15 to-secondary-300/15 blur-3xl rounded-full w-96 h-96 animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="mx-auto max-w-4xl">
-            <div className="bg-white/70 shadow-2xl backdrop-blur-lg p-6 sm:p-8 lg:p-12 border border-white/40 rounded-3xl">
-              <div className="mb-6 sm:mb-8 text-center">
-                <h2 className="mb-4 sm:mb-6 font-bold text-trust-900 text-2xl sm:text-3xl md:text-4xl">
-                  {t('services.approachTitle')}
-                </h2>
+            <div className="relative bg-gradient-to-br from-white/90 to-white/70 shadow-2xl backdrop-blur-xl p-6 sm:p-8 lg:p-12 border border-white/50 rounded-3xl overflow-hidden">
+              {/* Borde decorativo superior */}
+              <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-primary-500 via-secondary-500 to-primary-500 h-1"></div>
+              
+              {/* Íconos decorativos flotantes */}
+              <div className="absolute top-6 right-6 opacity-10">
+                <svg className="w-16 h-16 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                </svg>
               </div>
               
-              <div className="space-y-4 sm:space-y-6 text-trust-700 text-base sm:text-lg leading-relaxed">
-                <p>
-                  {t('services.approachDescription1')}
-                </p>
+              <div className="relative">
+                <div className="mb-6 sm:mb-8 text-center">
+                  <div className="inline-flex items-center bg-gradient-to-r from-primary-100/80 to-secondary-100/80 shadow-lg backdrop-blur-sm mb-4 px-4 py-2 border border-primary-200/30 rounded-full font-semibold text-primary-600 text-sm">
+                    <svg className="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    Enfoque Especializado
+                  </div>
+                  <h2 className="mb-4 sm:mb-6 font-bold bg-clip-text bg-gradient-to-r from-trust-800 to-primary-700 text-transparent text-2xl sm:text-3xl md:text-4xl">
+                    {t('services.approachTitle')}
+                  </h2>
+                </div>
                 
-                <p>
-                  {t('services.approachDescription2')}
-                </p>
+                <div className="space-y-6 sm:space-y-8 text-trust-700 text-base sm:text-lg leading-relaxed">
+                  <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-primary-50/50 to-transparent rounded-xl border-l-4 border-primary-500">
+                    <div className="flex-shrink-0 bg-primary-100 mt-1 p-2 rounded-lg">
+                      <svg className="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <p className="flex-1">
+                      {t('services.approachDescription1')}
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary-50/50 to-transparent rounded-xl border-l-4 border-secondary-500">
+                    <div className="flex-shrink-0 bg-secondary-100 mt-1 p-2 rounded-lg">
+                      <svg className="w-5 h-5 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <p className="flex-1">
+                      {t('services.approachDescription2')}
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-trust-50/50 to-transparent rounded-xl border-l-4 border-trust-500">
+                    <div className="flex-shrink-0 bg-trust-100 mt-1 p-2 rounded-lg">
+                      <svg className="w-5 h-5 text-trust-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <p className="flex-1">
+                      {t('services.approachDescription3')}
+                    </p>
+                  </div>
+                </div>
                 
-                <p>
-                  {t('services.approachDescription3')}
-                </p>
+                {/* CTA sutil */}
+                <div className="flex justify-center mt-8 sm:mt-10">
+                  <div className="flex items-center bg-gradient-to-r from-primary-600 to-secondary-600 shadow-lg hover:shadow-xl px-6 py-3 rounded-full font-medium text-white text-sm transition-all duration-300 hover:scale-105">
+                    <svg className="mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                    {t('services.learnMoreAboutApproach')}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -273,7 +327,7 @@ export default function ServiciosPage() {
             <div className="inline-flex items-center bg-gradient-to-r from-primary-100/80 to-secondary-100/80 shadow-lg backdrop-blur-sm mb-4 px-4 py-2 border border-primary-200/30 rounded-full font-semibold text-primary-600 text-sm">
               <span>Proceso Simple</span>
             </div>
-            <h2 className="mb-4 sm:mb-6 font-bold text-trust-900 text-2xl sm:text-3xl md:text-4xl text-shadow">
+            <h2 className="text-shadow mb-4 sm:mb-6 font-bold text-trust-900 text-2xl sm:text-3xl md:text-4xl">
               <span className="gradient-text">{t('services.howWorkTitle1')}</span> {t('services.howWorkTitle2')}
             </h2>
             <p className="mx-auto px-4 max-w-2xl text-trust-600 text-lg sm:text-xl">
@@ -364,7 +418,7 @@ export default function ServiciosPage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="group text-center relative"
+                  className="group relative text-center"
                 >
                   {/* Animated Progress Line */}
                   {index < workingProcess.length - 1 && (
@@ -443,7 +497,7 @@ export default function ServiciosPage() {
               </div>
               
               <h2 className="mb-4 sm:mb-6 font-bold text-trust-900 text-2xl sm:text-3xl md:text-4xl">
-                <span className="gradient-text">Planes Completamente</span> <span className="block sm:inline">Personalizados</span>
+                {t('services.personalizedPlansTitle')}
               </h2>
               
               <div className="space-y-4 sm:space-y-6 mx-auto max-w-3xl text-trust-700 text-base sm:text-lg text-left">

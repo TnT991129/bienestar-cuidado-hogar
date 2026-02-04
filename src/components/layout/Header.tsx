@@ -61,28 +61,25 @@ export default function Header() {
           {/* Mobile Phone CTA */}
           <motion.a
             href="https://wa.me/17867527884"
-            className="flex justify-center items-center bg-gradient-to-r from-green-500 hover:from-green-600 to-green-600 hover:to-green-700 shadow-md hover:shadow-lg rounded-full w-10 h-10 text-white transition-all duration-300"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="flex justify-center items-center bg-slate-800 hover:bg-slate-900 shadow-sm hover:shadow-md rounded-lg w-10 h-10 text-white transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
-            <PhoneIcon className="w-5 h-5" />
+            <PhoneIcon className="w-4 h-4" />
           </motion.a>
 
           {/* Modern Hamburger Menu Button */}
           <motion.button
             type="button"
-            className="group inline-flex relative justify-center items-center bg-gradient-to-r from-primary-50 hover:from-primary-100 to-secondary-50 hover:to-secondary-100 shadow-sm hover:shadow-md -m-2.5 p-3 border border-primary-200/50 rounded-xl text-primary-700 transition-all duration-300"
+            className="group inline-flex relative justify-center items-center bg-white hover:bg-slate-50 shadow-sm hover:shadow-md -m-2.5 p-3 border border-slate-200 rounded-lg text-slate-700 hover:text-slate-900 transition-all duration-300"
             onClick={() => setMobileMenuOpen(true)}
-            whileHover={{ scale: 1.05, rotate: 5 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <span className="sr-only">Abrir menú principal</span>
-            <div className="relative">
-              <Bars3Icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
-              <div className="-top-1 -right-1 absolute bg-gradient-to-r from-secondary-400 to-secondary-500 rounded-full w-2 h-2 animate-pulse"></div>
-            </div>
+            <Bars3Icon className="w-5 h-5 transition-transform duration-200" aria-hidden="true" />
           </motion.button>
         </div>
 
@@ -221,7 +218,7 @@ export default function Header() {
       </nav>
       </motion.header>
 
-      {/* Enhanced Mobile Menu - Full Screen Overlay */}
+      {/* Enhanced Mobile Menu - Elegant Overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div 
@@ -230,9 +227,9 @@ export default function Header() {
             exit={{ opacity: 0 }}
             className="lg:hidden z-[9999] fixed inset-0"
           >
-            {/* Enhanced Backdrop with Blur Effect */}
+            {/* Elegant Backdrop */}
             <motion.div 
-              className="fixed inset-0 bg-gradient-to-br from-black/60 via-primary-900/20 to-secondary-900/20 backdrop-blur-sm" 
+              className="fixed inset-0 bg-slate-900/80 backdrop-blur-md" 
               onClick={() => setMobileMenuOpen(false)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -245,64 +242,53 @@ export default function Header() {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: '100%', opacity: 0 }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              className="right-0 z-[9999] fixed inset-y-0 bg-gradient-to-br from-white via-primary-50/30 to-secondary-50/20 shadow-2xl backdrop-blur-xl px-0 border-white/20 border-l w-full sm:max-w-sm overflow-y-auto"
+              className="right-0 z-[9999] fixed inset-y-0 bg-white shadow-2xl px-0 w-full sm:max-w-sm overflow-y-auto"
             >
-              {/* Enhanced Header */}
-              <div className="relative bg-gradient-to-r from-primary-600 via-primary-700 to-secondary-700 shadow-lg px-6 py-8">
-                {/* Decorative Background Elements */}
-                <div className="absolute inset-0 overflow-hidden">
-                  <div className="-top-4 -right-4 absolute bg-white/10 blur-2xl rounded-full w-24 h-24"></div>
-                  <div className="-bottom-4 -left-4 absolute bg-secondary-300/20 blur-3xl rounded-full w-32 h-32"></div>
-                </div>
-                
-                <div className="relative flex justify-between items-center">
+              {/* Clean Header */}
+              <div className="bg-slate-50 border-slate-200 border-b px-6 py-6">
+                <div className="flex justify-between items-center">
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 }}
                     className="flex items-center"
                   >
-                    <Link href="/" className="group flex items-center -m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                      <div className="relative bg-white/20 shadow-lg backdrop-blur-sm px-4 py-3 border border-white/30 rounded-2xl">
-                        <div className="text-center">
-                          <h1 className="font-bold text-white text-lg leading-tight group-hover:scale-105 transition-transform duration-300">
-                            <span className="bg-clip-text bg-gradient-to-r from-white via-primary-100 to-white text-transparent">
-                              Bienestar y Cuidado
-                            </span>
-                          </h1>
-                          <p className="mt-0.5 font-medium text-white/90 text-xs tracking-wide">
-                            EN EL HOGAR
-                          </p>
-                        </div>
-                        <div className="-top-1 -right-1 absolute bg-gradient-to-r from-green-400 to-green-500 rounded-full w-3 h-3 animate-pulse"></div>
+                    <Link href="/" className="group flex items-center" onClick={() => setMobileMenuOpen(false)}>
+                      <div className="text-left">
+                        <h1 className="font-bold text-slate-900 text-lg leading-tight">
+                          Bienestar y Cuidado
+                        </h1>
+                        <p className="mt-0.5 font-medium text-slate-600 text-sm">
+                          EN EL HOGAR
+                        </p>
                       </div>
                     </Link>
                   </motion.div>
                   
                   <motion.button
                     type="button"
-                    className="group bg-white/20 hover:bg-white/30 shadow-lg backdrop-blur-sm -m-2.5 p-3 border border-white/30 rounded-xl text-white transition-all duration-300"
+                    className="group bg-white hover:bg-slate-100 shadow-sm -m-2 p-2 border border-slate-200 rounded-lg text-slate-600 hover:text-slate-900 transition-all duration-200"
                     onClick={() => setMobileMenuOpen(false)}
-                    whileHover={{ scale: 1.1, rotate: 90 }}
-                    whileTap={{ scale: 0.9 }}
-                    initial={{ opacity: 0, rotate: -90 }}
-                    animate={{ opacity: 1, rotate: 0 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
                   >
                     <span className="sr-only">Cerrar menú</span>
-                    <XMarkIcon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
+                    <XMarkIcon className="w-5 h-5 transition-transform duration-200" aria-hidden="true" />
                   </motion.button>
                 </div>
               </div>
 
               {/* Menu Content */}
-              <div className="relative flex flex-col px-6 py-8 h-full">
+              <div className="flex flex-col px-6 py-8 h-full">
                 {/* Navigation Links */}
-                <div className="space-y-1 mb-8">
+                <div className="space-y-2 mb-8">
                   <motion.h3 
-                    className="mb-4 font-medium text-trust-500 text-sm uppercase tracking-wider"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    className="mb-6 font-semibold text-slate-900 text-sm uppercase tracking-wide"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                   >
                     Navegación
@@ -317,40 +303,37 @@ export default function Header() {
                     >
                       <Link
                         href={item.href}
-                        className={`group flex items-center justify-between bg-white/50 hover:bg-white/70 backdrop-blur-sm border border-white/30 shadow-sm hover:shadow-md -mx-1 px-6 py-4 rounded-2xl font-medium text-base transition-all duration-300 ${
+                        className={`group flex items-center justify-between px-4 py-4 rounded-lg font-medium text-base transition-all duration-200 hover:bg-slate-50 ${
                           pathname === item.href
-                            ? 'text-primary-700 bg-gradient-to-r from-primary-100/70 to-secondary-100/70 border-primary-200/50 shadow-md'
-                            : 'text-trust-700 hover:text-primary-600'
+                            ? 'text-slate-900 bg-slate-100 border-l-4 border-slate-900'
+                            : 'text-slate-700 hover:text-slate-900'
                         }`}
                         onClick={() => setMobileMenuOpen(false)}
                       >
-                        <span className="flex items-center gap-3">
-                          <div className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                            pathname === item.href
-                              ? 'bg-gradient-to-r from-primary-500 to-secondary-500 scale-125'
-                              : 'bg-trust-300 group-hover:bg-primary-400 group-hover:scale-110'
-                          }`}></div>
+                        <span className="flex items-center">
                           {item.name}
                         </span>
                         <motion.div
-                          className="text-trust-400 group-hover:text-primary-500 transition-colors duration-300"
+                          className="text-slate-400 group-hover:text-slate-600 transition-colors duration-200"
                           whileHover={{ x: 3 }}
                         >
-                          →
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
                         </motion.div>
                       </Link>
                     </motion.div>
                   ))}
                 </div>
 
-                {/* Language Selector - Enhanced */}
+                {/* Language Selector */}
                 <motion.div 
-                  className="bg-gradient-to-r from-white/60 to-white/40 shadow-lg backdrop-blur-sm mb-8 p-4 border border-white/40 rounded-2xl"
+                  className="bg-slate-50 mb-8 p-4 border border-slate-200 rounded-lg"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
                 >
-                  <h4 className="mb-3 font-medium text-trust-600 text-sm uppercase tracking-wider">
+                  <h4 className="mb-3 font-semibold text-slate-900 text-sm uppercase tracking-wide">
                     {t('nav.language') || 'Idioma'}
                   </h4>
                   <div className="gap-2 grid grid-cols-2">
@@ -360,18 +343,18 @@ export default function Header() {
                         onClick={() => {
                           handleLanguageChange(lang.code);
                         }}
-                        className={`flex items-center justify-center space-x-2 px-4 py-3 rounded-xl font-medium text-sm transition-all duration-300 ${
+                        className={`flex items-center justify-center space-x-2 px-3 py-2.5 rounded-md font-medium text-sm transition-all duration-200 ${
                           language === lang.code
-                            ? 'bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-lg scale-105'
-                            : 'bg-white/70 hover:bg-white/90 text-trust-700 hover:text-primary-600 border border-white/50 hover:border-primary-200'
+                            ? 'bg-slate-900 text-white'
+                            : 'bg-white hover:bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200'
                         }`}
-                        whileHover={{ scale: language === lang.code ? 1.05 : 1.02 }}
-                        whileTap={{ scale: 0.95 }}
-                        initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.9 + index * 0.1 }}
                       >
-                        <span className="text-lg">{lang.flag}</span>
+                        <span className="text-base">{lang.flag}</span>
                         <span>{lang.name}</span>
                         {language === lang.code && (
                           <motion.span 
@@ -388,54 +371,55 @@ export default function Header() {
                   </div>
                 </motion.div>
 
-                {/* Action Buttons - Enhanced */}
-                <div className="space-y-4 mt-auto">
+                {/* Action Buttons */}
+                <div className="space-y-3 mt-auto">
                   <motion.a
                     href="https://wa.me/17867527884"
-                    className="group flex justify-center items-center space-x-3 bg-gradient-to-r from-green-500 hover:from-green-600 via-green-600 hover:via-green-700 to-green-700 hover:to-green-800 shadow-xl hover:shadow-2xl px-6 py-4 rounded-2xl font-semibold text-white text-lg transition-all duration-300"
-                    whileHover={{ scale: 1.02, y: -2 }}
+                    className="group flex justify-center items-center space-x-3 bg-slate-800 hover:bg-slate-900 shadow-sm hover:shadow-md px-6 py-4 rounded-lg font-semibold text-white transition-all duration-200"
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.2 }}
                   >
-                    <PhoneIcon className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
+                    <PhoneIcon className="w-5 h-5" />
                     <span>{t('nav.callNow')}</span>
-                    <div className="bg-white/20 rounded-full w-2 h-2 animate-pulse"></div>
                   </motion.a>
                   
                   <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.3 }}
                   >
                     <Link
                       href="/contacto"
-                      className="group flex justify-center items-center space-x-2 bg-gradient-to-r from-primary-600 hover:from-primary-700 via-primary-700 hover:via-primary-800 to-secondary-700 hover:to-secondary-800 shadow-xl hover:shadow-2xl px-6 py-4 rounded-2xl w-full font-semibold text-white text-lg transition-all duration-300"
+                      className="group flex justify-center items-center space-x-2 bg-white hover:bg-slate-50 shadow-sm hover:shadow-md px-6 py-4 border border-slate-200 rounded-lg w-full font-semibold text-slate-800 hover:text-slate-900 transition-all duration-200"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <span>{t('nav.freeEvaluation')}</span>
                       <motion.div
-                        className="text-white/80"
+                        className="text-slate-500"
                         whileHover={{ x: 3 }}
                         transition={{ type: "spring", stiffness: 400, damping: 17 }}
                       >
-                        →
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
                       </motion.div>
                     </Link>
                   </motion.div>
                   
                   {/* Contact Info Footer */}
                   <motion.div 
-                    className="bg-white/30 backdrop-blur-sm mt-6 p-4 border border-white/40 rounded-xl text-center"
+                    className="bg-slate-50 mt-6 p-4 border border-slate-200 rounded-lg text-center"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.4 }}
                   >
-                    <p className="text-trust-600 text-sm">
-                      <span className="font-semibold text-primary-700">(786) 752-7884</span>
+                    <p className="text-slate-900 text-sm">
+                      <span className="font-semibold">(786) 752-7884</span>
                     </p>
-                    <p className="mt-1 text-trust-500 text-xs">
+                    <p className="mt-1 text-slate-600 text-xs">
                       Disponible 24/7 para emergencias
                     </p>
                   </motion.div>
