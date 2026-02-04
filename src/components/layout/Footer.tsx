@@ -93,7 +93,7 @@ export default function Footer() {
       icon: HeartIcon,
     },
     {
-      name: 'Profesionalismo',
+      name: 'Responsabilidad',
       description: 'Servicios de la más alta calidad',
       icon: UserGroupIcon,
     },

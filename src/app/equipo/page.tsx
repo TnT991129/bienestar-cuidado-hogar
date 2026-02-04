@@ -36,7 +36,7 @@ export default function TeamPage() {
             </h1>
             
             <p className="mx-auto mb-12 max-w-3xl text-primary-100 text-xl md:text-2xl leading-relaxed">
-              Estamos preparando una presentación especial de nuestro equipo de acompañantes profesionales. 
+              Estamos preparando una presentación especial de nuestro equipo de acompañantes capacitados. 
               Esta sección estará disponible muy pronto.
             </p>
             

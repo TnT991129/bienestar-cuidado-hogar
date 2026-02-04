@@ -335,7 +335,7 @@ export default function AboutPage() {
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="bg-primary-400 rounded-full w-1 h-1"></div>
-                        <span>{t('about.sidebar.values.items.professionalism')}</span>
+                        <span>{t('about.sidebar.values.items.responsibility')}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="bg-primary-400 rounded-full w-1 h-1"></div>

@@ -24,7 +24,7 @@ const values = [
     icon: HeartIcon
   },
   {
-    name: 'Profesionalismo',
+    name: 'Responsabilidad',
     description: 'Nuestros cuidadores están altamente capacitados y mantienen los más altos estándares de atención.',
     icon: AcademicCapIcon
   },
@@ -127,7 +127,7 @@ export default function AboutSection() {
                 <div className="bg-blue-50 mt-6 p-4 rounded-lg">
                   <p className="font-semibold text-blue-800 text-sm">
                     Bienestar y Cuidado en el Hogar ofrece servicios de acompañamiento y apoyo no médico. 
-                    No brindamos servicios médicos ni sustituimos la atención médica profesional.
+                    No brindamos servicios médicos ni sustituimos la atención médica especializada.
                   </p>
                 </div>
               </div>

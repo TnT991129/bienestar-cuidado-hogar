@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { 
   HeartIcon,
@@ -50,38 +51,121 @@ export default function ServiciosPage() {
     <div className="bg-gradient-to-br from-slate-50 via-white to-primary-50/20 min-h-screen">
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-700 py-24 sm:py-22 overflow-hidden text-white">
+      <section className="relative flex items-center bg-gradient-to-br from-primary-50/30 to-secondary-50/20 min-h-screen sm:min-h-[90vh] overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src={getAssetPath("/hero-servicios.svg")} 
+            src={getAssetPath("/servicios.webp")} 
             alt="Servicios de cuidado personalizado" 
-            className="opacity-35 w-full h-full object-cover"
+            className="opacity-70 w-full h-full object-cover"
+            style={{ objectPosition: '50% 30%' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/70 via-primary-700/60 to-secondary-700/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/15"></div>
         </div>
-        <div className="absolute inset-0">
-          <div className="top-10 left-10 absolute bg-white/10 blur-3xl rounded-full w-72 h-72"></div>
-          <div className="right-10 bottom-10 absolute bg-secondary-300/10 blur-3xl rounded-full w-96 h-96"></div>
+
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Floating orbs - mejor responsive */}
+          <div className="top-10 sm:top-20 left-4 sm:left-20 absolute bg-gradient-to-br from-primary-300/30 to-primary-400/30 blur-3xl rounded-full w-48 sm:w-96 h-48 sm:h-96 animate-float"></div>
+          <div className="top-16 sm:top-32 right-4 sm:right-16 absolute bg-gradient-to-br from-secondary-300/25 to-secondary-400/25 blur-3xl rounded-full w-40 sm:w-80 h-40 sm:h-80 animate-float-delayed"></div>
+          <div className="bottom-10 sm:bottom-20 left-1/4 sm:left-1/3 absolute bg-gradient-to-br from-primary-200/20 to-secondary-200/20 blur-3xl rounded-full w-32 sm:w-64 h-32 sm:h-64 animate-bounce-slow"></div>
+          
+          {/* Geometric shapes - mejor responsive */}
+          <div className="top-1/4 right-1/4 absolute bg-white/10 backdrop-blur-sm rounded-2xl w-16 sm:w-32 h-16 sm:h-32 rotate-45 animate-pulse"></div>
+          <div className="bottom-1/3 left-1/4 absolute bg-primary-100/20 backdrop-blur-sm rounded-full w-12 sm:w-24 h-12 sm:h-24 animate-bounce-slow delay-300"></div>
         </div>
         
-        <div className="relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="inline-flex items-center bg-white/20 backdrop-blur-sm mb-4 sm:mb-6 px-3 sm:px-4 py-2 border border-white/30 rounded-full text-white/90 text-xs sm:text-sm">
-              <HeartIcon className="mr-2 w-3 sm:w-4 h-3 sm:h-4" />
-              {t('services.heroTitle')}
+        <div className="relative mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-7xl py-8 sm:py-12 lg:py-0">
+          <div className="flex lg:flex-row flex-col items-center gap-8 sm:gap-12 lg:gap-16">
+            
+            {/* Main Content */}
+            <div className="flex-1 lg:text-left text-center">
+              <div className="inline-flex items-center bg-white/90 shadow-xl hover:shadow-2xl backdrop-blur-lg mb-6 px-4 py-2.5 border border-white/40 rounded-full text-gray-700 text-sm transition-all duration-300">
+                <div className="bg-gradient-to-r from-primary-500 to-secondary-500 mr-3 p-1.5 rounded-full">
+                  <HeartIcon className="w-4 h-4 text-white" />
+                </div>
+                <span className="font-medium">{t('services.heroTitle')}</span>
+              </div>
+              
+              <h1 className="mb-6 sm:mb-8 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">
+                <span className="block bg-clip-text bg-gradient-to-r from-primary-600 via-secondary-600 to-primary-700 text-transparent">
+                  {t('services.heroMainTitle')}
+                </span>
+                <span className="block mt-1 sm:mt-2 text-trust-800">
+                  {t('services.heroPersonalized')}
+                </span>
+              </h1>
+              
+              <p className="mx-auto lg:mx-0 mb-8 sm:mb-10 max-w-2xl text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed">
+                {t('services.heroDescription')}
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex sm:flex-row flex-col justify-center lg:justify-start gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <button className="bg-gradient-to-r from-primary-600 hover:from-primary-700 to-secondary-600 hover:to-secondary-700 shadow-xl hover:shadow-2xl px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-white text-sm sm:text-base hover:scale-105 transition-all duration-300 transform">
+                  {t('services.heroButtons.allServices')}
+                </button>
+                <button className="bg-white/90 hover:bg-white backdrop-blur-lg px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary-200 hover:border-primary-300 rounded-full font-semibold text-primary-700 hover:text-primary-800 text-sm sm:text-base hover:scale-105 transition-all duration-300 transform">
+                  {t('services.heroButtons.freeConsultation')}
+                </button>
+              </div>
             </div>
-            
-            <h1 className="mb-6 sm:mb-8 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
-              {t('services.heroMainTitle')}{' '}
-              <span className="bg-clip-text bg-gradient-to-r from-white via-primary-100 to-white text-transparent block sm:inline">
-                {t('services.heroPersonalized')}
-              </span>
-            </h1>
-            
-            <p className="mx-auto mb-8 sm:mb-12 max-w-3xl text-primary-100 text-lg sm:text-xl md:text-2xl leading-relaxed px-2">
-              {t('services.heroDescription')}
-            </p>
+
+            {/* Stats/Features Panel */}
+            <div className="w-full lg:w-auto lg:min-w-[320px]">
+              <div className="bg-white/80 shadow-2xl backdrop-blur-lg p-6 sm:p-8 border border-white/40 rounded-3xl">
+                <h3 className="mb-4 sm:mb-6 font-bold text-trust-800 text-lg sm:text-xl text-center">{t('services.featuredServices.title')}</h3>
+                
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-center gap-3 sm:gap-4 hover:bg-primary-50/50 p-2 sm:p-3 rounded-xl transition-colors">
+                    <div className="bg-gradient-to-br from-primary-100 to-primary-200 p-1.5 sm:p-2 rounded-lg">
+                      <HeartIcon className="w-4 h-4 sm:w-5 sm:h-5 text-primary-600" />
+                    </div>
+                    <span className="font-medium text-gray-700 text-sm">{t('services.featuredServices.companionship')}</span>
+                  </div>
+                  
+                  <div className="flex items-center gap-3 sm:gap-4 hover:bg-secondary-50/50 p-2 sm:p-3 rounded-xl transition-colors">
+                    <div className="bg-gradient-to-br from-secondary-100 to-secondary-200 p-1.5 sm:p-2 rounded-lg">
+                      <HomeIcon className="w-4 h-4 sm:w-5 sm:h-5 text-secondary-600" />
+                    </div>
+                    <span className="font-medium text-gray-700 text-sm">{t('services.featuredServices.homeAssistance')}</span>
+                  </div>
+                  
+                  <div className="flex items-center gap-3 sm:gap-4 hover:bg-primary-50/50 p-2 sm:p-3 rounded-xl transition-colors">
+                    <div className="bg-gradient-to-br from-green-100 to-green-200 p-1.5 sm:p-2 rounded-lg">
+                      <ClockIcon className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
+                    </div>
+                    <span className="font-medium text-gray-700 text-sm">{t('services.featuredServices.available247')}</span>
+                  </div>
+                  
+                  <div className="flex items-center gap-3 sm:gap-4 hover:bg-blue-50/50 p-2 sm:p-3 rounded-xl transition-colors">
+                    <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-1.5 sm:p-2 rounded-lg">
+                      <ShieldCheckIcon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
+                    </div>
+                    <span className="font-medium text-gray-700 text-sm">{t('services.featuredServices.trainedStaff')}</span>
+                  </div>
+                </div>
+
+                {/* Quick stats */}
+                <div className="bg-gradient-to-r from-primary-50 to-secondary-50 mt-4 sm:mt-6 p-3 sm:p-4 rounded-2xl">
+                  <div className="flex justify-between items-center text-center">
+                    <div>
+                      <div className="font-bold text-primary-700 text-lg sm:text-2xl">100+</div>
+                      <div className="text-gray-600 text-xs">{t('services.stats.families')}</div>
+                    </div>
+                    <div>
+                      <div className="font-bold text-secondary-700 text-lg sm:text-2xl">5+</div>
+                      <div className="text-gray-600 text-xs">{t('services.stats.years')}</div>
+                    </div>
+                    <div>
+                      <div className="font-bold text-green-700 text-lg sm:text-2xl">24/7</div>
+                      <div className="text-gray-600 text-xs">{t('services.stats.available')}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -122,7 +206,7 @@ export default function ServiciosPage() {
             <h2 className="mb-4 sm:mb-6 font-bold text-trust-900 text-2xl sm:text-3xl md:text-4xl">
               <span className="gradient-text">{t('services.areasTitle1')}</span> {t('services.areasTitle2')}
             </h2>
-            <p className="mx-auto max-w-3xl text-trust-600 text-lg sm:text-xl px-4">
+            <p className="mx-auto px-4 max-w-3xl text-trust-600 text-lg sm:text-xl">
               {t('services.areasDescription')}
             </p>
           </div>
@@ -131,7 +215,7 @@ export default function ServiciosPage() {
             {companionshipAreas.map((area: any, index: number) => {
               const IconComponent = area.icon
               return (
-                <div key={area.id} className="group bg-white/80 shadow-xl hover:shadow-2xl backdrop-blur-lg p-6 sm:p-8 border border-white/50 rounded-3xl hover:scale-105 transition-all duration-500">
+                <div key={`area-${area.id}-${index}`} className="group bg-white/80 shadow-xl hover:shadow-2xl backdrop-blur-lg p-6 sm:p-8 border border-white/50 rounded-3xl hover:scale-105 transition-all duration-500">
                   <div className="flex items-center mb-4 sm:mb-6">
                     <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-primary-600 mr-3 sm:mr-4 rounded-2xl w-12 sm:w-14 h-12 sm:h-14 group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="w-6 sm:w-7 h-6 sm:h-7 text-white" />
@@ -172,37 +256,179 @@ export default function ServiciosPage() {
       </section>
 
       {/* Cómo Trabajamos */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="mb-12 sm:mb-16 text-center">
-            <h2 className="mb-4 sm:mb-6 font-bold text-trust-900 text-2xl sm:text-3xl md:text-4xl">
+      <section className="relative bg-gradient-to-br from-white via-primary-50/20 to-secondary-50/10 py-12 sm:py-16 lg:py-20 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="top-20 right-10 absolute bg-gradient-to-br from-primary-200/20 to-primary-300/20 blur-3xl rounded-full w-64 h-64 animate-pulse"></div>
+          <div className="bottom-20 left-10 absolute bg-gradient-to-br from-secondary-200/15 to-secondary-300/15 blur-3xl rounded-full w-72 h-72 animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="z-10 relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-12 sm:mb-16 text-center"
+          >
+            <div className="inline-flex items-center bg-gradient-to-r from-primary-100/80 to-secondary-100/80 shadow-lg backdrop-blur-sm mb-4 px-4 py-2 border border-primary-200/30 rounded-full font-semibold text-primary-600 text-sm">
+              <span>Proceso Simple</span>
+            </div>
+            <h2 className="mb-4 sm:mb-6 font-bold text-trust-900 text-2xl sm:text-3xl md:text-4xl text-shadow">
               <span className="gradient-text">{t('services.howWorkTitle1')}</span> {t('services.howWorkTitle2')}
             </h2>
-            <p className="mx-auto max-w-2xl text-trust-600 text-lg sm:text-xl px-4">
+            <p className="mx-auto px-4 max-w-2xl text-trust-600 text-lg sm:text-xl">
               {t('services.howWorkDescription')}
             </p>
+          </motion.div>
+
+          {/* Mobile/Tablet: Vertical flow */}
+          <div className="lg:hidden">
+            {workingProcess.map((step: any, index: number) => (
+              <motion.div 
+                key={`mobile-step-${index}`} 
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                className={`relative flex items-start gap-4 ${index < workingProcess.length - 1 ? 'mb-12 pb-12' : ''}`}
+              >
+                {/* Vertical connecting line */}
+                {index < workingProcess.length - 1 && (
+                  <motion.div 
+                    className="top-16 left-8 z-0 absolute bg-gradient-to-b from-primary-300 to-secondary-300 w-0.5"
+                    style={{ height: 'calc(100% + 1rem)' }}
+                    initial={{ scaleY: 0 }}
+                    whileInView={{ scaleY: 1 }}
+                    transition={{ duration: 1, delay: (index * 0.15) + 0.4 }}
+                  >
+                    {/* Animated dot */}
+                    <motion.div
+                      className="left-1/2 absolute bg-secondary-500 rounded-full w-2 h-2 -translate-x-1/2"
+                      initial={{ top: 0 }}
+                      whileInView={{ top: '100%' }}
+                      transition={{ 
+                        duration: 1.5, 
+                        delay: (index * 0.15) + 1,
+                        ease: "easeInOut"
+                      }}
+                    />
+                  </motion.div>
+                )}
+
+                {/* Step Circle */}
+                <div className="relative flex-shrink-0">
+                  <motion.div 
+                    className="flex justify-center items-center bg-gradient-to-br from-primary-500 via-primary-600 to-secondary-500 shadow-2xl rounded-2xl w-16 h-16"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ 
+                      duration: 0.5, 
+                      delay: index * 0.15,
+                      type: "spring",
+                      stiffness: 200
+                    }}
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                  >
+                    <span className="font-bold text-white text-xl">{step.step}</span>
+                  </motion.div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 pt-1">
+                  <motion.h3 
+                    className="mb-2 font-bold text-trust-900 text-lg"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: (index * 0.15) + 0.3 }}
+                  >
+                    {step.title}
+                  </motion.h3>
+                  <motion.p 
+                    className="text-trust-600 text-sm leading-relaxed"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: (index * 0.15) + 0.4 }}
+                  >
+                    {step.description}
+                  </motion.p>
+                </div>
+              </motion.div>
+            ))}
           </div>
 
-          <div className="gap-6 sm:gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {workingProcess.map((step: any, index: number) => (
-              <div key={index} className="group text-center">
-                <div className="relative mb-4 sm:mb-6">
-                  <div className="flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 shadow-xl group-hover:shadow-2xl mx-auto rounded-2xl w-16 sm:w-20 h-16 sm:h-20 group-hover:scale-110 transition-all duration-300">
-                    <span className="font-bold text-white text-xl sm:text-2xl">{step.step}</span>
-                  </div>
+          {/* Desktop: Horizontal layout */}
+          <div className="hidden lg:block">
+            <div className="gap-6 sm:gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+              {workingProcess.map((step: any, index: number) => (
+                <motion.div 
+                  key={`desktop-step-${index}`} 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="group text-center relative"
+                >
+                  {/* Animated Progress Line */}
                   {index < workingProcess.length - 1 && (
-                    <>
-                      <div className="hidden lg:block top-8 sm:top-10 left-full absolute bg-gradient-to-r from-primary-200 to-transparent w-full h-0.5"></div>
-                      <div className="lg:hidden flex justify-center mt-4">
-                        <div className="bg-primary-200 rounded-full w-1 h-8"></div>
+                    <motion.div 
+                      className="top-8 left-8 z-0 absolute h-0.5"
+                      style={{ 
+                        width: 'calc(100% + 2rem)',
+                        left: '4rem'
+                      }}
+                      initial={{ scaleX: 0 }}
+                      whileInView={{ scaleX: 1 }}
+                      transition={{ duration: 0.8, delay: (index * 0.2) + 0.6 }}
+                    >
+                      <div className="bg-gradient-to-r from-primary-300 to-secondary-300 rounded-full w-full h-full">
+                        {/* Animated dot */}
+                        <motion.div
+                          className="top-1/2 absolute bg-secondary-500 rounded-full w-2 h-2 -translate-y-1/2"
+                          initial={{ left: '0%' }}
+                          whileInView={{ left: 'calc(100% - 8px)' }}
+                          transition={{ 
+                            duration: 1.5, 
+                            delay: (index * 0.2) + 1.4,
+                            ease: "easeInOut"
+                          }}
+                        />
                       </div>
-                    </>
+                    </motion.div>
                   )}
-                </div>
-                <h3 className="mb-2 sm:mb-3 font-bold text-trust-900 text-base sm:text-lg">{step.title}</h3>
-                <p className="text-trust-600 text-sm leading-relaxed px-2">{step.description}</p>
-              </div>
-            ))}
+
+                  {/* Step Circle */}
+                  <motion.div 
+                    className="z-10 relative flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 shadow-xl group-hover:shadow-2xl mx-auto mb-4 sm:mb-6 rounded-2xl w-16 sm:w-20 h-16 sm:h-20"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ 
+                      duration: 0.5, 
+                      delay: index * 0.2,
+                      type: "spring",
+                      stiffness: 200
+                    }}
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                  >
+                    <span className="font-bold text-white text-xl sm:text-2xl">{step.step}</span>
+                  </motion.div>
+
+                  <motion.h3 
+                    className="mb-2 sm:mb-3 font-bold text-trust-900 text-base sm:text-lg"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: (index * 0.2) + 0.3 }}
+                  >
+                    {step.title}
+                  </motion.h3>
+                  <motion.p 
+                    className="px-2 text-trust-600 text-sm leading-relaxed"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: (index * 0.2) + 0.4 }}
+                  >
+                    {step.description}
+                  </motion.p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -313,14 +539,14 @@ export default function ServiciosPage() {
                 {t('services.cta.title')}
               </h2>
               
-              <p className="mx-auto mb-8 sm:mb-10 max-w-2xl text-primary-100 text-lg sm:text-xl leading-relaxed px-2">
+              <p className="mx-auto mb-8 sm:mb-10 px-2 max-w-2xl text-primary-100 text-lg sm:text-xl leading-relaxed">
                 {t('services.cta.description')}
               </p>
               
-              <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <div className="flex sm:flex-row flex-col justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
                 <a
                   href="/contacto"
-                  className="group inline-flex justify-center items-center bg-white hover:bg-primary-50 shadow-lg hover:shadow-xl px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-primary-600 text-base sm:text-lg transition-all duration-300"
+                  className="group inline-flex justify-center items-center bg-white hover:bg-primary-50 shadow-lg hover:shadow-xl px-5 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-primary-600 text-sm sm:text-base lg:text-lg transition-all duration-300"
                 >
                   <DocumentTextIcon className="mr-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:scale-110 transition-transform" />
                   {t('services.cta.buttons.consultation')}
@@ -328,7 +554,7 @@ export default function ServiciosPage() {
                 
                 <a
                   href="https://wa.me/17867527884"
-                  className="group inline-flex justify-center items-center bg-transparent hover:bg-white/10 px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 hover:border-white/50 rounded-2xl font-semibold text-white text-base sm:text-lg transition-all duration-300"
+                  className="group inline-flex justify-center items-center bg-transparent hover:bg-white/10 px-5 sm:px-6 lg:px-8 py-3 sm:py-4 border-2 border-white/30 hover:border-white/50 rounded-2xl font-semibold text-white text-sm sm:text-base lg:text-lg transition-all duration-300"
                 >
                   <PhoneIcon className="mr-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:scale-110 transition-transform" />
                   {t('services.cta.buttons.call')}

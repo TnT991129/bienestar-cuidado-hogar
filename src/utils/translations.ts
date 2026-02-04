@@ -45,7 +45,7 @@ export const translations = {
           title: 'Cuidado Personalizado',
           description: 'Planes de atención adaptados a necesidades específicas.'
         },
-        professionals: {
+        trained: {
           title: 'Personal Capacitado',
           description: 'Acompañantes con experiencia en cuidado no médico.'
         },
@@ -178,7 +178,7 @@ export const translations = {
           role: 'Hijo de adulto mayor'
         },
         {
-          text: 'Buscábamos a alguien que brindara compañía y apoyo en el hogar, y encontramos justo eso. La comunicación ha sido clara desde el inicio y el trato siempre ha sido amable y profesional. Estamos muy agradecidos.',
+          text: 'Buscábamos a alguien que brindara compañía y apoyo en el hogar, y encontramos justo eso. La comunicación ha sido clara desde el inicio y el trato siempre ha sido amable y responsable. Estamos muy agradecidos.',
           author: 'Laura G.',
           role: 'Familiar'
         }
@@ -195,7 +195,7 @@ export const translations = {
         },
         {
           question: '¿Los acompañantes están capacitados y verificados?',
-          answer: 'Absolutamente. Todos nuestros acompañantes pasan por un riguroso proceso de selección que incluye verificación de antecedentes, referencias personales y profesionales, capacitación especializada en acompañamiento de adultos mayores, y evaluación continua de su desempeño.'
+          answer: 'Absolutamente. Todos nuestros acompañantes pasan por un riguroso proceso de selección que incluye verificación de antecedentes, referencias personales y laborales, capacitación especializada en acompañamiento de adultos mayores, y evaluación continua de su desempeño.'
         },
         {
           question: '¿Puedo elegir el horario de atención?',
@@ -231,7 +231,7 @@ export const translations = {
       address: 'Dirección',
       followUs: 'Síguenos',
       allRightsReserved: 'Todos los derechos reservados.',
-      legalDisclaimer: 'IMPORTANTE: Nuestros servicios son de acompañamiento y apoyo NO MÉDICO. No proporcionamos servicios médicos, de enfermería o tratamientos de salud. Siempre consulte con profesionales médicos para necesidades de atención sanitaria.'
+      legalDisclaimer: 'IMPORTANTE: Nuestros servicios son de acompañamiento y apoyo NO MÉDICO. No proporcionamos servicios médicos, de enfermería o tratamientos de salud. Siempre consulte con médicos calificados para necesidades de atención sanitaria.'
     },
     // About Page
     about: {
@@ -261,13 +261,13 @@ export const translations = {
       sidebar: {
         essence: {
           title: 'Nuestra Esencia',
-          description: 'Cuidado personalizado y profesional que mejora la calidad de vida de nuestros usuarios y sus familias.'
+          description: 'Cuidado personalizado y especializado que mejora la calidad de vida de nuestros usuarios y sus familias.'
         },
         values: {
           title: 'Nuestros Valores',
           items: {
             commitment: 'Compromiso y dedicación',
-            professionalism: 'Profesionalismo constante',
+            responsibility: 'Responsabilidad constante',
             warmth: 'Calidez humana genuina'
           }
         }
@@ -320,7 +320,7 @@ export const translations = {
       },
       vision: {
         title: 'Nuestra Visión',
-        content: 'Ser la empresa líder en servicios de acompañamiento no médico, reconocida por nuestro enfoque humano, profesional y personalizado en el cuidado de adultos mayores.'
+        content: 'Ser la empresa líder en servicios de acompañamiento no médico, reconocida por nuestro enfoque humano, especializado y personalizado en el cuidado de adultos mayores.'
       },
       finalMessage: {
         title: 'Lista para Comenzar',
@@ -361,7 +361,7 @@ export const translations = {
       housekeeping: 'Apoyo con Tareas del Hogar',
       heroTitle: 'Servicios de Acompañamiento',
       heroSubtitle: 'NO Médico',
-      heroDescription: 'Servicios profesionales de acompañamiento y apoyo no médico para adultos mayores y personas con discapacidad en Florida. Planes personalizados adaptados a cada familia.',
+      heroDescription: 'Servicios especializados de acompañamiento y apoyo no médico para adultos mayores y personas con discapacidad en Florida. Planes personalizados adaptados a cada familia.',
       areas: [
         {
           name: 'Acompañamiento Personal Diario',
@@ -469,12 +469,12 @@ export const translations = {
           description: 'Evaluación continua del servicio y ajustes necesarios para garantizar la satisfacción completa de la familia.'
         }
       ],
-      heroMainTitle: 'Acompañamiento Profesional',
+      heroMainTitle: 'Acompañamiento Especializado',
       heroPersonalized: 'Personalizado',
       approachTitle: 'Nuestro Enfoque de Acompañamiento',
       approachDescription1: 'Nos especializamos en brindar servicios de acompañamiento y apoyo no médico para adultos mayores y personas con discapacidad que desean mantener su independencia y bienestar en la comodidad de su hogar.',
       approachDescription2: 'Entendemos que cada persona es única, con sus propias rutinas, preferencias y necesidades.',
-      approachDescription3: 'Nuestros servicios están diseñados para complementar el cuidado médico profesional, proporcionando la compañía, apoyo y tranquilidad que tanto usted como su familia necesitan.',
+      approachDescription3: 'Nuestros servicios están diseñados para complementar el cuidado médico especializado, proporcionando la compañía, apoyo y tranquilidad que tanto usted como su familia necesitan.',
       approachDescription4: 'Por eso, ofrecemos un enfoque completamente personalizado que se adapta a cada situación individual.',
       areasTitle1: 'Áreas de Apoyo',
       areasTitle2: 'Disponibles',
@@ -509,7 +509,7 @@ export const translations = {
             '• Apoyo en tareas domésticas básicas'
           ]
         },
-        disclaimer: 'Nuestros servicios complementan pero no sustituyen la atención médica profesional. Siempre recomendamos mantener el seguimiento regular con los profesionales de la salud de su ser querido.'
+        disclaimer: 'Nuestros servicios complementan pero no sustituyen la atención médica especializada. Siempre recomendamos mantener el seguimiento regular con los médicos de la salud de su ser querido.'
       },
       cta: {
         title: '¿Listo para una Consulta Personalizada?',
@@ -522,9 +522,25 @@ export const translations = {
         license: 'Licenciados y asegurados en el Estado de Florida'
       },
       importantNoticeTitle: 'Aviso Importante',
-      importantNotice: 'Nuestros servicios son de acompañamiento y apoyo NO MÉDICO. No proporcionamos servicios médicos, de enfermería o tratamientos de salud. Siempre consulte con profesionales médicos para necesidades de atención sanitaria.',
+      importantNotice: 'Nuestros servicios son de acompañamiento y apoyo NO MÉDICO. No proporcionamos servicios médicos, de enfermería o tratamientos de salud. Siempre consulte con médicos calificados para necesidades de atención sanitaria.',
       getStarted: 'Comenzar Ahora',
-      scheduleEvaluation: 'Programar Evaluación Gratuita'
+      scheduleEvaluation: 'Programar Evaluación Gratuita',
+      heroButtons: {
+        allServices: 'Ver Todos los Servicios',
+        freeConsultation: 'Consulta Gratuita'
+      },
+      featuredServices: {
+        title: 'Servicios Destacados',
+        companionship: 'Compañía y Apoyo Emocional',
+        homeAssistance: 'Asistencia en el Hogar',
+        available247: 'Disponible 24/7',
+        trainedStaff: 'Personal Capacitado'
+      },
+      stats: {
+        families: 'Familias',
+        years: 'Años',
+        available: 'Disponible'
+      }
     },
     // Team Page
     team: {
@@ -674,7 +690,7 @@ export const translations = {
         servicesInterest: '¿Qué servicios te interesan? (Selecciona todos los que apliquen)',
         acceptInfo: 'Acepto recibir información',
         aboutServices: 'sobre servicios de acompañamiento',
-        professionalService: 'Brindamos servicios profesionales de acompañamiento no médico en todo el sur de Florida',
+        professionalService: 'Brindamos servicios especializados de acompañamiento no médico en todo el sur de Florida',
         availableServices: 'Servicios Disponibles'
       },
       trustIndicators: {
@@ -740,7 +756,7 @@ export const translations = {
           title: 'Personalized Care',
           description: 'Care plans adapted to specific needs.'
         },
-        professionals: {
+        trained: {
           title: 'Trained Staff',
           description: 'Companions with experience in non-medical care.'
         },
@@ -863,7 +879,7 @@ export const translations = {
       description: 'Real testimonials from satisfied families',
       items: [
         {
-          text: 'Since we have the accompaniment of Bienestar y Cuidado en el Hogar, my mom feels much calmer and more accompanied. For our family it has been a great relief to know that she is not alone and that she receives respectful and loving treatment every day.',
+          text: 'Since we have the accompaniment of Comfort & Care at Home, my mom feels much calmer and more accompanied. For our family it has been a great relief to know that she is not alone and that she receives respectful and loving treatment every day.',
           author: 'María R.',
           role: 'Family member of elderly adult'
         },
@@ -885,7 +901,7 @@ export const translations = {
         },
         {
           question: 'Are the companions trained and verified?',
-          answer: 'Absolutely. All our companions go through a rigorous selection process including background checks, personal and professional references, specialized training in senior companionship, and continuous performance evaluation.'
+          answer: 'Absolutely. All our companions go through a rigorous selection process including background checks, personal and employment references, specialized training in senior companionship, and continuous performance evaluation.'
         }
       ]
     },
@@ -909,7 +925,7 @@ export const translations = {
       address: 'Address',
       followUs: 'Follow Us',
       allRightsReserved: 'All rights reserved.',
-      legalDisclaimer: 'IMPORTANT: Our services are NON-MEDICAL companionship and support. We do not provide medical services, nursing, or health treatments. Always consult with medical professionals for healthcare needs.'
+      legalDisclaimer: 'IMPORTANT: Our services are NON-MEDICAL companionship and support. We do not provide medical services, nursing, or health treatments. Always consult with qualified doctors for healthcare needs.'
     },
     // About Page
     about: {
@@ -939,13 +955,13 @@ export const translations = {
       sidebar: {
         essence: {
           title: 'Our Essence',
-          description: 'Personalized and professional care that improves the quality of life of our users and their families.'
+          description: 'Personalized and specialized care that improves the quality of life of our users and their families.'
         },
         values: {
           title: 'Our Values',
           items: {
             commitment: 'Commitment and dedication',
-            professionalism: 'Constant professionalism',
+            responsibility: 'Constant responsibility',
             warmth: 'Genuine human warmth'
           }
         }
@@ -957,13 +973,13 @@ export const translations = {
       },
       historyTitle: 'Our Story',
       historyContent: [
-        'Bienestar y Cuidado en el Hogar is an initiative born from love and dedication to our seniors. We understand that every person deserves to age with dignity, respect and affection in the comfort of their own home.',
+        'Comfort & Care at Home is an initiative born from love and dedication to our seniors. We understand that every person deserves to age with dignity, respect and affection in the comfort of their own home.',
         'Our approach focuses on providing personalized care that respects the individuality, preferences and habits of each person. We focus not only on physical needs, but also on emotional and social well-being.',
         'We firmly believe that home is where people feel safest and most comfortable. Therefore, our mission is to make it possible for them to remain in their family environment, maintaining their independence with the necessary support.'
       ],
       companyTitle: 'A Family Business',
       companySubtitle: 'Committed to Well-being',
-      companyDescription: 'Bienestar y Cuidado en el Hogar LLC was born from the desire to offer a more humane and personalized approach to senior care. We understand that each person is unique, with their own history, personality and specific needs.',
+      companyDescription: 'Comfort & Care at Home LLC was born from the desire to offer a more humane and personalized approach to senior care. We understand that each person is unique, with their own history, personality and specific needs.',
       principles: {
         title: 'Our Principles',
         description: 'The fundamental values that guide our daily work',
@@ -998,7 +1014,7 @@ export const translations = {
       },
       vision: {
         title: 'Our Vision',
-        content: 'To be the leading company in non-medical companionship services, recognized for our human, professional and personalized approach to senior care.'
+        content: 'To be the leading company in non-medical companionship services, recognized for our human, specialized and personalized approach to senior care.'
       },
       finalMessage: {
         title: 'Ready to Begin',
@@ -1039,7 +1055,7 @@ export const translations = {
       housekeeping: 'Household Support',
       heroTitle: 'NON-Medical Companionship',
       heroSubtitle: 'Services',
-      heroDescription: 'Professional companionship and non-medical support services for seniors in Florida. Personalized plans adapted to each family.',
+      heroDescription: 'Specialized companionship and non-medical support services for seniors in Florida. Personalized plans adapted to each family.',
       areas: [
         {
           name: 'Daily Personal Companionship',
@@ -1147,12 +1163,12 @@ export const translations = {
           description: 'Continuous service evaluation and necessary adjustments to guarantee complete family satisfaction.'
         }
       ],
-      heroMainTitle: 'Professional Companionship',
+      heroMainTitle: 'Specialized Companionship',
       heroPersonalized: 'Personalized',
       approachTitle: 'Our Companionship Approach',
       approachDescription1: 'We specialize in providing companionship and non-medical support services for seniors and people with disabilities who want to maintain their independence and well-being in the comfort of their home.',
       approachDescription2: 'We understand that each person is unique, with their own routines, preferences and needs.',
-      approachDescription3: 'Our services are designed to complement professional medical care, providing the companionship, support and peace of mind that both you and your family need.',
+      approachDescription3: 'Our services are designed to complement specialized medical care, providing the companionship, support and peace of mind that both you and your family need.',
       approachDescription4: 'That is why we offer a completely personalized approach that adapts to each individual situation.',
       areasTitle1: 'Support Areas',
       areasTitle2: 'Available',
@@ -1187,7 +1203,7 @@ export const translations = {
             '• Support with basic household tasks'
           ]
         },
-        disclaimer: 'Our services complement but do not substitute professional medical care. We always recommend maintaining regular follow-up with your loved one\'s healthcare professionals.'
+        disclaimer: 'Our services complement but do not substitute specialized medical care. We always recommend maintaining regular follow-up with your loved one\'s healthcare specialists.'
       },
       cta: {
         title: 'Ready for a Personalized Consultation?',
@@ -1200,9 +1216,25 @@ export const translations = {
         license: 'Licensed and insured in the State of Florida'
       },
       importantNoticeTitle: 'Important Notice',
-      importantNotice: 'Our services are NON-MEDICAL companionship and support. We do not provide medical services, nursing, or health treatments. Always consult with medical professionals for healthcare needs.',
+      importantNotice: 'Our services are NON-MEDICAL companionship and support. We do not provide medical services, nursing, or health treatments. Always consult with qualified doctors for healthcare needs.',
       getStarted: 'Get Started',
-      scheduleEvaluation: 'Schedule Free Evaluation'
+      scheduleEvaluation: 'Schedule Free Evaluation',
+      heroButtons: {
+        allServices: 'View All Services',
+        freeConsultation: 'Free Consultation'
+      },
+      featuredServices: {
+        title: 'Featured Services',
+        companionship: 'Companionship & Emotional Support',
+        homeAssistance: 'Home Assistance',
+        available247: 'Available 24/7',
+        trainedStaff: 'Trained Staff'
+      },
+      stats: {
+        families: 'Families',
+        years: 'Years',
+        available: 'Available'
+      }
     },
     // Team Page
     team: {
@@ -1322,7 +1354,7 @@ export const translations = {
         }
       },
       office: {
-        name: 'Bienestar y Cuidado en el Hogar LLC',
+        name: 'Comfort & Care at Home LLC',
         address: 'Miami, Florida',
         phone: '(786) 752-7884',
         email: 'info@bienestarhogar.com',
@@ -1352,7 +1384,7 @@ export const translations = {
         servicesInterest: 'What services are you interested in? (Select all that apply)',
         acceptInfo: 'I accept to receive information',
         aboutServices: 'about companionship services',
-        professionalService: 'We provide professional non-medical companionship services throughout South Florida',
+        professionalService: 'We provide specialized non-medical companionship services throughout South Florida',
         availableServices: 'Available Services'
       },
       trustIndicators: {

@@ -106,7 +106,7 @@ export default function HeroSection() {
                 <div className="bg-gradient-to-br from-emerald-100 to-emerald-200 mr-2 p-1 rounded-lg group-hover:scale-110 transition-transform duration-300">
                   <ShieldCheckIcon className="w-4 sm:w-5 h-4 sm:h-5 text-emerald-600" />
                 </div>
-                <span className="font-bold text-gray-700 group-hover:text-emerald-700 text-xs transition-colors duration-300">{t('benefits.items.professionals.title')}</span>
+                <span className="font-bold text-gray-700 group-hover:text-emerald-700 text-xs transition-colors duration-300">{t('benefits.items.trained.title')}</span>
               </motion.div>
               <motion.div 
                 className="group flex items-center bg-white/80 hover:bg-white/90 shadow-xl backdrop-blur-lg px-3 sm:px-4 py-1.5 sm:py-2 border border-white/30 rounded-2xl transition-all duration-300"

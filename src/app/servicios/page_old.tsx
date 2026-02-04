@@ -158,7 +158,7 @@ const carePackages = [
       'Monitoreo médico',
       'Actividades terapéuticas',
       'Reportes médicos detallados',
-      'Coordinación con profesionales de salud'
+      'Coordinación con especialistas de salud'
     ],
     popular: true
   },
@@ -221,7 +221,7 @@ export default function ServicesPage() {
             </h1>
             <p className="mt-6 text-trust-600 text-lg leading-8">
               Servicios completos de atención domiciliaria no médica para adultos mayores. 
-              Cuidado personalizado, profesional y con amor en la comodidad del hogar.
+              Cuidado personalizado, especializado y con amor en la comodidad del hogar.
             </p>
           </div>
         </div>

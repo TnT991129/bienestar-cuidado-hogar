@@ -21,12 +21,12 @@ const benefits = [
   {
     id: 2,
     name: 'Comodidad del Hogar',
-    description: 'Atención profesional en su propio hogar.',
+    description: 'Atención especializada en su propio hogar.',
     icon: HomeIcon,
   },
   {
     id: 3,
-    name: 'Equipo Profesional',
+    name: 'Equipo Capacitado',
     description: 'Acompañantes capacitados con experiencia especializada.',
     icon: UserGroupIcon,
   },
@@ -62,8 +62,8 @@ export default function BenefitsSection() {
     },
     {
       id: 2,
-      name: t('benefits.items.professionals.title'),
-      description: t('benefits.items.professionals.description'),
+      name: t('benefits.items.trained.title'),
+      description: t('benefits.items.trained.description'),
       icon: UserGroupIcon,
     },
     {
